@@ -1,0 +1,15 @@
+# Lokale Entwicklungs- und Referenzdateien
+reference/
+
+# Sicherungen und Testreste
+*.bak
+*.bak-*
+*.backup
+*.backup-*
+*.broken
+*.broken-*
+*~
+
+# Editor-/Systemdateien
+.DS_Store
+Thumbs.db

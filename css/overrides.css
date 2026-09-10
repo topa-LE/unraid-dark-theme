@@ -1,0 +1,3555 @@
+/* ========================================
+   topa-LE Unraid CSS Overrides
+   ======================================== */
+
+.unapi {
+  --color-header-text-primary: #ffffff !important;
+}
+
+.unapi .text-header-text-primary {
+  color: #ffffff !important;
+}
+
+.nav-item a {
+  color: #ebe4e4 !important;
+}
+
+.usage-bar {
+  box-shadow: 0 0px 0 #989898, inset 0 1px 0 #202020;
+}
+
+table.dashboard td.stopgap {
+  background-color: #1e2528;
+}
+
+table.dashboard tr.last > td {
+  background-color: #2a363a;
+}
+
+table.disk_status tbody tr.tr_last {
+  background-color: #2c383c;
+}
+
+table.dashboard tbody td {
+  background-color: #2a363a;
+}
+
+
+img,
+svg,
+i,
+.icon {
+    filter: saturate(50%) brightness(95%) !important;
+}
+
+
+:root,
+.unapi {
+  --topa-green: rgb(79, 138, 16) !important;
+}
+
+i.fa.fa-circle.orb.green-orb::before {
+  color: var(--topa-green) !important;
+}
+
+span.green-text {
+  color: rgb(79, 138, 16) !important;
+}
+
+span.green-strong {
+  color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Process / PRE Box
+   ======================================== */
+
+pre {
+  background: #263238 !important;
+  border: 1px solid #383735 !important;
+  border-radius: 4px !important;
+}
+
+
+button:active,
+.btn:active,
+.uk-button:active {
+  background: #263238 !important;
+}
+
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.uk-button {
+  background: #161d20 !important;
+  border: 1px solid #445860 !important;
+  border-radius: 5px !important;
+
+  color: #d7dfe3 !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn:hover,
+.uk-button:hover {
+  background: #364850 !important;
+  border-color: #556b74 !important;
+  color: #ffffff !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Soft Radius für Boxen
+   ======================================== */
+
+table,
+pre,
+textarea,
+input,
+select,
+.panel,
+.module,
+.box,
+.widget,
+.ArrayOperation-Table,
+.disk_status,
+table.dashboard,
+.unassigned_devices,
+[class*="panel"],
+[class*="box"],
+[class*="widget"] {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+
+
+/* ========================================
+   topa-LE Override
+   ONLY Content Section Headers
+   ======================================== */
+
+.title,
+.sectionhead,
+.array_status,
+.content > .title,
+div.title {
+  background: #13181a !important;
+
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* NICHT Header oben beeinflussen */
+.text-header-text-primary,
+.text-header-text-secondary,
+header,
+header *,
+.top-header,
+.navbar,
+.navbar * {
+  background: unset !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Linkfarben / Hover
+   ======================================== */
+
+a,
+a:visited,
+.text-primary,
+a.link,
+table a,
+.listing a {
+  color: #356282 !important;
+}
+
+a:hover,
+a:focus,
+.text-primary:hover,
+table a:hover,
+.listing a:hover {
+  color: #6f93ad !important;
+
+  transition: color 0.15s ease;
+}
+
+a:active,
+a.selected,
+a.active {
+  color: #d7e2ea !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Linkfarben getrennt: Navi hell, Content ruhiger
+   ======================================== */
+
+/* Top Navigation wieder hell */
+#nav-item a,
+.nav-item a,
+#nav-block #nav-item a {
+  color: #c9d4dc !important;
+}
+
+#nav-item a:hover,
+.nav-item a:hover,
+#nav-block #nav-item a:hover {
+  color: #ffffff !important;
+}
+
+/* Content Links etwas heller als Test */
+.content a,
+table a,
+tbody a,
+.disk_status a,
+.share_status a {
+  color: #6f93ad !important;
+}
+
+.content a:hover,
+table a:hover,
+tbody a:hover,
+.disk_status a:hover,
+.share_status a:hover {
+  color: #b7c8d4 !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   ArrayOperation Radius nur außen
+   ======================================== */
+
+/* innere Tabellenbereiche KEIN Radius */
+.ArrayOperation-Table table,
+.ArrayOperation-Table tbody,
+.ArrayOperation-Table tr,
+.ArrayOperation-Table td,
+.array_status td,
+.array_status tr {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* nur äußerer Container */
+.ArrayOperation-Table,
+.array_status {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   ArrayOperation nur außen Radius
+   ======================================== */
+
+/* nur äußerer Container */
+table.ArrayOperation-Table.array_status {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* ALLE inneren Elemente komplett flach */
+table.ArrayOperation-Table.array_status tbody,
+table.ArrayOperation-Table.array_status tr,
+table.ArrayOperation-Table.array_status td,
+table.ArrayOperation-Table.array_status td.line {
+  border-radius: 0 !important;
+  overflow: visible !important;
+  background-clip: padding-box !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Radius gezielt statt global
+   ======================================== */
+
+/* Standard-Tabellen außen leicht rund */
+table.disk_status,
+table.share_status,
+table.dashboard,
+table.tablesorter {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* Section Header */
+.title,
+.sectionhead,
+.array_status_content > .title,
+.content > .title,
+div.title {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* Array-Vorgang: NUR äußere Tabelle, innen komplett flach */
+table.ArrayOperation-Table.array_status {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+table.ArrayOperation-Table.array_status tbody,
+table.ArrayOperation-Table.array_status tr,
+table.ArrayOperation-Table.array_status td {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+
+/* ========================================
+   topa-LE FINAL FIX
+   ArrayOperation innen komplett ohne Radius
+   ======================================== */
+
+/* WICHTIG:
+   Alte globale Regeln haben .ArrayOperation-Table und .array_status erwischt.
+   Deshalb hier maximal spezifisch zurücksetzen.
+*/
+
+html body table.ArrayOperation-Table.array_status,
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ALLES innerhalb der Array-Vorgang-Tabelle flach */
+html body table.ArrayOperation-Table.array_status > tbody,
+html body table.ArrayOperation-Table.array_status > tbody > tr,
+html body table.ArrayOperation-Table.array_status > tbody > tr > td,
+html body table.ArrayOperation-Table.array_status.noshift > tbody,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* Zeilen/TDs dürfen keine eigenen runden Ecken erzeugen */
+html body table.ArrayOperation-Table.array_status tr *,
+html body table.ArrayOperation-Table.array_status td *,
+html body table.ArrayOperation-Table.array_status.noshift tr *,
+html body table.ArrayOperation-Table.array_status.noshift td * {
+  border-radius: 0 !important;
+}
+
+
+/* ========================================
+   topa-LE FINAL FIX
+   ArrayOperation innen komplett ohne Radius
+   ======================================== */
+
+/* WICHTIG:
+   Alte globale Regeln haben .ArrayOperation-Table und .array_status erwischt.
+   Deshalb hier maximal spezifisch zurücksetzen.
+*/
+
+html body table.ArrayOperation-Table.array_status,
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ALLES innerhalb der Array-Vorgang-Tabelle flach */
+html body table.ArrayOperation-Table.array_status > tbody,
+html body table.ArrayOperation-Table.array_status > tbody > tr,
+html body table.ArrayOperation-Table.array_status > tbody > tr > td,
+html body table.ArrayOperation-Table.array_status.noshift > tbody,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* Zeilen/TDs dürfen keine eigenen runden Ecken erzeugen */
+html body table.ArrayOperation-Table.array_status tr *,
+html body table.ArrayOperation-Table.array_status td *,
+html body table.ArrayOperation-Table.array_status.noshift tr *,
+html body table.ArrayOperation-Table.array_status.noshift td * {
+  border-radius: 0 !important;
+}
+
+
+/* ========================================
+   topa-LE FINAL FIX
+   ArrayOperation innen komplett ohne Radius
+   ======================================== */
+
+/* WICHTIG:
+   Alte globale Regeln haben .ArrayOperation-Table und .array_status erwischt.
+   Deshalb hier maximal spezifisch zurücksetzen.
+*/
+
+html body table.ArrayOperation-Table.array_status,
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ALLES innerhalb der Array-Vorgang-Tabelle flach */
+html body table.ArrayOperation-Table.array_status > tbody,
+html body table.ArrayOperation-Table.array_status > tbody > tr,
+html body table.ArrayOperation-Table.array_status > tbody > tr > td,
+html body table.ArrayOperation-Table.array_status.noshift > tbody,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr,
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* Zeilen/TDs dürfen keine eigenen runden Ecken erzeugen */
+html body table.ArrayOperation-Table.array_status tr *,
+html body table.ArrayOperation-Table.array_status td *,
+html body table.ArrayOperation-Table.array_status.noshift tr *,
+html body table.ArrayOperation-Table.array_status.noshift td * {
+  border-radius: 0 !important;
+}
+
+
+/* ========================================
+   topa-LE FINAL FIX
+   Array-Vorgang als eine geschlossene Box
+   ======================================== */
+
+table.ArrayOperation-Table.array_status {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  background: #111819 !important;
+}
+
+table.ArrayOperation-Table.array_status tbody,
+table.ArrayOperation-Table.array_status tr,
+table.ArrayOperation-Table.array_status td {
+  border-radius: 0 !important;
+  border-spacing: 0 !important;
+  background: #111819 !important;
+}
+
+table.ArrayOperation-Table.array_status td {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Radius sauber nur für Standard-Tabellen außen
+   ======================================== */
+
+table.disk_status,
+table.share_status,
+table.dashboard,
+table.tablesorter {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* Array-Vorgang erstmal KOMPLETT ohne Radius-Fix lassen */
+table.ArrayOperation-Table.array_status,
+table.ArrayOperation-Table.array_status tbody,
+table.ArrayOperation-Table.array_status tr,
+table.ArrayOperation-Table.array_status td {
+  border-radius: 0 !important;
+  border-spacing: initial !important;
+  border-collapse: separate !important;
+  overflow: visible !important;
+}
+
+
+/* ========================================
+   topa-LE HARD FIX
+   Array-Vorgang: keine Einzel-Kacheln
+   ======================================== */
+
+table.ArrayOperation-Table.array_status,
+table.ArrayOperation-Table.array_status.noshift {
+  --table-gap: 0 !important;
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+table.ArrayOperation-Table.array_status > tbody,
+table.ArrayOperation-Table.array_status > tbody > tr,
+table.ArrayOperation-Table.array_status > tbody > tr > td,
+table.ArrayOperation-Table.array_status.noshift > tbody,
+table.ArrayOperation-Table.array_status.noshift > tbody > tr,
+table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+  border-radius: 0 !important;
+  border-spacing: 0 !important;
+  margin: 0 !important;
+  background-clip: border-box !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Titillium Web Font
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+table,
+thead,
+tbody,
+tr,
+td,
+th,
+span,
+div,
+a {
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   span.green Originalfarbe
+   ======================================== */
+
+span.green,
+.green-text,
+.green-strong,
+span.green-text,
+span.green-strong {
+  color: #7fbf4d !important;
+}
+
+span.strong {
+  font-size: 16px;
+}
+
+font-size: 16px;
+
+i.green-orb,
+i.fa-circle.green-orb,
+.green.orb-orb::before {
+  color: #7fbf4d !important;
+  background-color: #7fbf4d !important;
+}
+
+
+}
+
+
+/* ========================================
+   topa-LE Override
+   USB Absent Header passend zum Theme
+   ======================================== */
+
+table.usb_absent thead tr:first-child td {
+  background: #13181a !important;
+  color: #d6dde3 !important;
+  border-color: #223247 !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Unraid Plus dezent orange + kein kursiv
+   ======================================== */
+
+.text-header-text-secondary em,
+.text-header-text-secondary i,
+.text-header-text-secondary strong,
+.text-header-text-secondary .font-semibold strong {
+  font-style: normal !important;
+  color: #d88b52 !important;
+  font-weight: 600 !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Switch ON eigenes Grün
+   ======================================== */
+
+.switch-button-label.on {
+  color: #7fbf4d !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Switch Background eigenes Grün
+   ======================================== */
+
+.switch-button-background.checked {
+  background-color: #7fbf4d !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Switch Background finales Grün
+   ======================================== */
+
+.switch-button-background.checked {
+  background-color: #7fbf4d !important;
+}
+
+
+/* ========================================
+   topa-LE Override
+   Greenbar Default Unraid Green
+   ======================================== */
+
+span.greenbar {
+  background: #7fbf4d !important;
+  background-color: #7fbf4d !important;
+  border-color: #7fbf4d !important;
+}
+
+
+/* ========================================
+   TOPA-LE FONT FIX
+   Titillium Web Regular als Standard
+   ======================================== */
+
+html,
+body,
+#template,
+#main,
+.content,
+.page_content {
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+/* Header / Buttons dürfen kräftiger bleiben */
+h1, h2, h3,
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+
+/* ========================================
+   TOPA-LE TABLE HEADER
+   ======================================== */
+
+table.unraid thead tr:first-child > td {
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    background-color: #19191a !important;
+}
+
+
+/* ========================================
+   TOPA-LE FONT FIX
+   Titillium Web Regular als Standard
+   ======================================== */
+
+html,
+body,
+#template,
+#main,
+.content,
+.page_content {
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+/* Header / Buttons dürfen kräftiger bleiben */
+h1, h2, h3,
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+
+
+
+/* ========================================
+   TOPA-LE USB_MOUNTS HEADER
+   ======================================== */
+
+table.usb_mounts thead tr:first-child td {
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    background-color: #202a31 !important;
+}
+
+
+/* ========================================
+   TOPA-LE GLOBAL DARK HEADER TEST
+   Alt: #19191a
+   Neu: #0c0e0f
+   ======================================== */
+
+table.unraid thead tr:first-child > td,
+table.usb_mounts thead tr:first-child td,
+.tablesorter-header,
+.title,
+.sectionhead,
+.panel-header,
+thead td {
+    background-color: #0c0e0f !important;
+    background-image: none !important;
+}
+
+
+/* ========================================
+   TOPA-LE USAGE BAR BACKGROUND
+   ======================================== */
+
+div.usage-bar {
+    background-color: #0c0e0f !important;
+    border: 1px solid rgba(255,255,255,0.04) !important;
+}
+
+
+/* ========================================
+   TOPA-LE USAGE BAR BACKGROUND
+   ======================================== */
+
+div.usage-bar {
+    background-color: #0c0e0f !important;
+    border: 1px solid rgba(255,255,255,0.04) !important;
+}
+
+
+/* ========================================
+   ======================================== */
+
+.unapi.dark {
+    --ui-primary: #faa55f !important;
+}
+
+
+
+/* ========================================
+
+/* ========================================
+   TOPA-LE REAL SETTINGS PANELS
+   ======================================== */
+
+.Panels .Panel {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10,12,14,0.94) 0%,
+            rgba(16,20,24,0.94) 100%
+        ) !important;
+
+    border:
+        1px solid rgba(75,90,105,0.18) !important;
+
+    border-radius:
+        12px !important;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.30) !important;
+
+    transition:
+        all 0.18s ease !important;
+}
+
+/* Hover */
+
+.Panels .Panel:hover {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(14,18,22,1) 0%,
+            rgba(20,26,32,1) 100%
+        ) !important;
+
+    border:
+        1px solid rgba(100,120,140,0.24) !important;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.42) !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ========================================
+   TOPA-LE PANEL BG UPDATE
+   ======================================== */
+
+.Panels .Panel {
+    background: linear-gradient(
+        180deg,
+        rgb(12 13 15 / 94%) 0%,
+        rgba(16, 20, 24, 0.94) 100%
+    ) !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL BG FINAL TEST
+   ======================================== */
+
+.Panels .Panel {
+    background: #252f33 !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL BG #2b373b
+   ======================================== */
+
+.Panels .Panel {
+    background: #2b373b !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL BORDER DARKER
+   ======================================== */
+
+.Panels .Panel {
+
+    border:
+        1px solid rgba(12,14,16,0.85) !important;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.34) !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL HOVER LIGHTER
+   ======================================== */
+
+.Panels .Panel:hover {
+
+    background:
+        #344247 !important;
+
+    border:
+        1px solid rgba(70,85,95,0.38) !important;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.42) !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL HOVER DARK BORDER
+   ======================================== */
+
+.Panels .Panel:hover {
+    background: #344247 !important;
+    border: 1px solid rgba(12,14,16,0.95) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.42) !important;
+}
+
+
+/* ========================================
+   TOPA-LE PANEL RADIUS 4PX
+   ======================================== */
+
+.Panels .Panel,
+.Panels .Panel:hover {
+
+    border-radius:
+        4px !important;
+}
+
+
+
+
+/* ========================================
+   TOPA-LE MIDDLE MAIN CARD
+   tile2 / db_box2
+   ======================================== */
+
+div#tile2 {
+
+    padding:
+        6px !important;
+
+    margin-bottom:
+        10px !important;
+}
+
+/* Hauptcontainer */
+
+div#tile2 > table#db_box2.dashboard {
+
+    background:
+        #243136 !important;
+
+    border-radius:
+        6px !important;
+
+    overflow:
+        hidden !important;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.24) !important;
+}
+
+/* Innenbereiche */
+
+div#tile2 table#db_box2.dashboard tbody,
+div#tile2 table#db_box2.dashboard tbody td {
+
+    background:
+        #243136 !important;
+}
+
+/* Hover */
+
+div#tile2 > table#db_box2.dashboard:hover {
+
+    background:
+        #2b3a3f !important;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.34) !important;
+}
+
+
+/* ========================================
+   TOPA-LE DASHBOARD CARDS FINAL
+   ======================================== */
+
+/* ----------------------------------------
+   Tile Wrapper
+---------------------------------------- */
+
+div#tile1,
+div#tile2,
+div#tile3 {
+
+    padding:
+        6px !important;
+
+    margin-bottom:
+        10px !important;
+}
+
+/* ----------------------------------------
+   Alle Dashboard Cards
+---------------------------------------- */
+
+div#tile1 > table.dashboard,
+div#tile2 > table.dashboard,
+div#tile3 > table.dashboard {
+
+    background:
+        #243136 !important;
+
+    border:
+        1px solid rgba(22,28,32,0.95) !important;
+
+    border-radius:
+        6px !important;
+
+    overflow:
+        hidden !important;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.26) !important;
+
+    transition:
+        all 0.16s ease !important;
+}
+
+/* ----------------------------------------
+   Innere Bereiche
+---------------------------------------- */
+
+div#tile1 table.dashboard tbody,
+div#tile1 table.dashboard tbody td,
+div#tile2 table.dashboard tbody,
+div#tile2 table.dashboard tbody td,
+div#tile3 table.dashboard tbody,
+div#tile3 table.dashboard tbody td {
+
+    background:
+        #243136 !important;
+}
+
+/* ----------------------------------------
+   Hover
+---------------------------------------- */
+
+div#tile1 > table.dashboard:hover,
+div#tile2 > table.dashboard:hover,
+div#tile3 > table.dashboard:hover {
+
+    background:
+        #2b3a3f !important;
+
+    border:
+        1px solid rgba(30,36,40,1) !important;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.34) !important;
+}
+
+
+/* ========================================
+
+/* ========================================
+   TOPA-LE DASHBOARD BORDER 2PX
+   ======================================== */
+
+div#tile1 > table.dashboard,
+div#tile2 > table.dashboard,
+div#tile3 > table.dashboard {
+
+    border:
+        2px solid rgba(18,22,26,0.96) !important;
+}
+
+/* Hover */
+
+div#tile1 > table.dashboard:hover,
+div#tile2 > table.dashboard:hover,
+div#tile3 > table.dashboard:hover {
+
+    border:
+        2px solid rgba(28,34,38,1) !important;
+}
+
+
+/* ========================================
+   TOPA-LE DASHBOARD BORDER REAL TARGET
+   Border sitzt sichtbar auf tbody/card body
+   ======================================== */
+
+div#tile1 > table.dashboard > tbody,
+div#tile2 > table.dashboard > tbody,
+div#tile3 > table.dashboard > tbody {
+    border: 2px solid rgba(18,22,26,0.96) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 0 0 1px rgba(55,68,74,0.18) !important;
+}
+
+div#tile1 > table.dashboard > tbody:hover,
+div#tile2 > table.dashboard > tbody:hover,
+div#tile3 > table.dashboard > tbody:hover {
+    border-color: rgba(28,34,38,1) !important;
+}
+
+
+/* ========================================
+   TOPA-LE DASHBOARD BORDER FINAL
+   ======================================== */
+
+div#tile1 > table.dashboard > tbody,
+div#tile2 > table.dashboard > tbody,
+div#tile3 > table.dashboard > tbody {
+
+    border:
+        1px solid rgb(33 37 41 / 96%) !important;
+}
+
+
+/* ========================================
+   TOPA-LE USER PROFILE FONT
+   ======================================== */
+
+#UserProfile .text-xs {
+
+    font-size:
+        13px !important;
+}
+
+
+/* ========================================
+   TOPA-LE USER PROFILE FONT 14PX
+   ======================================== */
+
+#UserProfile .text-xs {
+
+    font-size:
+        14px !important;
+}
+
+
+/* ========================================
+   TOPA-LE TILE1 SHADOW/PADDING MATCH
+   Linke Dashboard-Box wie Mitte/Rechts
+   ======================================== */
+
+div#tile1 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+div#tile1 > table.dashboard {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26) !important;
+}
+
+
+/* ========================================
+   TOPA-LE NAVBAR LINK COLOR
+   ======================================== */
+
+#nav-item a,
+.nav-item a,
+#nav-block #nav-item a {
+
+    color:
+        #8f9ea4 !important;
+}
+
+
+/* ========================================
+   TOPA-LE TILE1 NASEN ENTFERNEN
+   Entfernt nur die kaputten Power/Stop/Reboot Icons
+   in der linken Dashboard-Box
+   ======================================== */
+
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-stop-circle,
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-refresh,
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-power-off {
+    display: none !important;
+}
+
+
+/* ========================================
+   TOPA-LE TILE1 NASEN ENTFERNEN
+   Entfernt nur die kaputten Power/Stop/Reboot Icons
+   in der linken Dashboard-Box
+   ======================================== */
+
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-stop-circle,
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-refresh,
+div#tile1 table#db_box1.dashboard .tile-header-right .fa-power-off {
+    display: none !important;
+}
+
+
+/* ========================================
+   TOPA-LE RED FONT COLOR
+   ======================================== */
+
+font[style*="255, 0, 0"] {
+
+    color:
+        #bb251a !important;
+}
+
+
+/* ========================================
+   TOPA-LE RED FONT COLOR
+   ======================================== */
+
+font[style*="color: rgb(255, 0, 0)"] {
+    color: #bb251a !important;
+}
+
+
+/* ========================================
+   TOPA-LE RED FONT COLOR UPDATE
+   ======================================== */
+
+font[style*="color: rgb(255, 0, 0)"] {
+    color: #e5685e !important;
+}
+
+
+/* ========================================
+   TOPA-LE USER ACCOUNT CARD
+   ======================================== */
+
+div.user-list {
+
+    padding:
+        6px !important;
+}
+
+/* einzelne User-Kachel */
+
+div.user-list a.info {
+
+    display:
+        block !important;
+
+    background:
+        #243136 !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-radius:
+        4px !important;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.26) !important;
+
+    overflow:
+        hidden !important;
+
+    transition:
+        all 0.16s ease !important;
+}
+
+/* Hover */
+
+div.user-list a.info:hover {
+
+    background:
+        #2b3a3f !important;
+
+    border:
+        1px solid rgba(44,52,58,1) !important;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.34) !important;
+}
+
+
+/* ========================================
+   TOPA-LE TITLE BORDER DARKER
+   ======================================== */
+
+#title {
+
+    border-bottom:
+        1px solid rgba(18,22,24,0.95) !important;
+}
+
+
+/* ========================================
+   TOPA-LE INLINE LIGHT STYLE FIX
+   ======================================== */
+
+[style*="background: #F0F0F0"] {
+
+    color:
+        #d8dee4 !important;
+
+    background:
+        #243136 !important;
+
+    text-shadow:
+        none !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-radius:
+        4px !important;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.22) !important;
+}
+
+
+/* ========================================
+   TOPA-LE INLINE LIGHT STYLE FIX
+   ======================================== */
+
+[style*="background: #F0F0F0"] {
+
+    color:
+        #d8dee4 !important;
+
+    background:
+        #243136 !important;
+
+    text-shadow:
+        none !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-radius:
+        4px !important;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.22) !important;
+}
+
+
+/* ========================================
+   TOPA-LE MODAL BORDER DARKER
+   ======================================== */
+
+.ui-dialog,
+.ui-dialog-content,
+.ui-widget-content,
+.ui-widget.ui-widget-content {
+
+    border:
+        1px solid rgba(18,22,24,0.96) !important;
+}
+
+/* Header ebenfalls dunkler */
+
+.ui-dialog-titlebar,
+.ui-widget-header {
+
+    border-bottom:
+        1px solid rgba(18,22,24,0.96) !important;
+}
+
+
+/* ========================================
+   TOPA-LE SETTINGSFORM CONTENT BOX
+   Gezielt: form#settingsForm
+   ======================================== */
+
+form#settingsForm {
+
+    max-width:
+        980px !important;
+
+    margin:
+        28px auto 40px auto !important;
+
+    padding:
+        28px 34px !important;
+
+    background:
+        #243136 !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-radius:
+        4px !important;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.28) !important;
+}
+
+form#settingsForm table,
+form#settingsForm tbody,
+form#settingsForm tr,
+form#settingsForm td {
+
+    background:
+        transparent !important;
+}
+
+
+/* ========================================
+   TOPA-LE SEARCH AREA BG
+   ======================================== */
+
+.searchArea {
+
+    background-color:
+        #13181a !important;
+}
+
+
+/* ========================================
+   TOPA-LE SEARCHBOX
+   ======================================== */
+
+#searchBox {
+
+    background:
+        #243136 !important;
+
+    color:
+        #d8dee4 !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-radius:
+        4px !important;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0,0,0,0.18) !important;
+}
+
+/* Placeholder */
+
+#searchBox::placeholder {
+
+    color:
+        #8f9ea4 !important;
+
+    opacity:
+        1 !important;
+}
+
+/* Focus */
+
+#searchBox:focus {
+
+    background:
+        #2b3a3f !important;
+
+    border:
+        1px solid rgba(48,58,64,1) !important;
+
+    outline:
+        none !important;
+
+    box-shadow:
+        0 0 0 1px rgba(80,96,108,0.22) !important;
+}
+
+
+/* ========================================
+   TOPA-LE SEARCHBOX TOP SPACING
+   ======================================== */
+
+.searchArea {
+
+    padding-top:
+        6px !important;
+}
+
+
+/* ========================================
+   TOPA-LE SEARCH SUBMIT
+   ======================================== */
+
+.searchSubmit {
+
+    background:
+        #243136 !important;
+
+    color:
+        #c9d4dc !important;
+
+    border:
+        1px solid rgba(33,37,41,0.96) !important;
+
+    border-left:
+        0 !important;
+
+    border-radius:
+        0 4px 4px 0 !important;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0,0,0,0.18) !important;
+}
+
+.searchSubmit:hover {
+
+    background:
+        #2b3a3f !important;
+
+    color:
+        #ffffff !important;
+}
+
+.searchSubmit i,
+.searchSubmit svg,
+.searchSubmit:before {
+
+    color:
+        #c9d4dc !important;
+}
+
+
+/* ========================================
+   TOPA-LE DATETIME CONTENT BOX
+   Nur Datum/Uhrzeit Seite
+   ======================================== */
+
+form[name="datetime_settings"] {
+
+    max-width:
+        980px !important;
+
+    margin:
+        36px auto 60px auto !important;
+
+    padding:
+        42px 60px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(27,36,42,0.92) 0%,
+            rgba(22,30,36,0.96) 100%
+        ) !important;
+
+    border:
+        1px solid rgba(58,72,82,0.92) !important;
+
+    border-radius:
+        10px !important;
+
+    box-shadow:
+        0 10px 34px rgba(0,0,0,0.34) !important;
+
+    backdrop-filter:
+        blur(4px) !important;
+}
+
+/* Innenbereich ruhiger */
+
+form[name="datetime_settings"] table,
+form[name="datetime_settings"] tbody,
+form[name="datetime_settings"] tr,
+form[name="datetime_settings"] td {
+
+    background:
+        transparent !important;
+}
+
+
+/* ========================================
+   TOPA-LE SETTINGS CONTENT BOX V1
+   Für Settings/Form Seiten
+   ======================================== */
+
+form[name="disk_settings"],
+form[name="datetime_settings"],
+form[name="docker_settings"],
+form[name="ident_settings"] {
+
+    max-width:
+        1180px !important;
+
+    margin:
+        38px auto 60px auto !important;
+
+    padding:
+        42px 70px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(46,60,68,0.76) 0%,
+            rgba(34,47,55,0.82) 100%
+        ) !important;
+
+    border:
+        1px solid rgba(150,170,185,0.22) !important;
+
+    border-radius:
+        16px !important;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.34) !important;
+
+    backdrop-filter:
+        blur(6px) !important;
+}
+
+/* Innen etwas mehr Luft */
+
+form[name="disk_settings"] dl,
+form[name="datetime_settings"] dl,
+form[name="docker_settings"] dl,
+form[name="ident_settings"] dl {
+
+    row-gap:
+        12px !important;
+}
+
+/* Select/Input Linien sauber */
+
+form[name="disk_settings"] input,
+form[name="disk_settings"] select,
+form[name="datetime_settings"] input,
+form[name="datetime_settings"] select,
+form[name="docker_settings"] input,
+form[name="docker_settings"] select,
+form[name="ident_settings"] input,
+form[name="ident_settings"] select {
+
+    background:
+        rgba(15,20,24,0.18) !important;
+}
+
+
+/* ========================================
+   TOPA-LE TAB1 CONTENT BOX
+   Gezielt: Start > Datenträger Einstellungen
+   ======================================== */
+
+section#tab1-panel.tab-content.content {
+    max-width: 1180px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 38px 58px !important;
+    background: linear-gradient(
+        180deg,
+        rgba(46,60,68,0.82) 0%,
+        rgba(34,47,55,0.90) 100%
+    ) !important;
+    border: 1px solid rgba(150,170,185,0.22) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.34) !important;
+    overflow: hidden !important;
+}
+
+section#tab1-panel.tab-content.content form,
+section#tab1-panel.tab-content.content dl,
+section#tab1-panel.tab-content.content div,
+section#tab1-panel.tab-content.content table,
+section#tab1-panel.tab-content.content tbody,
+section#tab1-panel.tab-content.content tr,
+section#tab1-panel.tab-content.content td {
+    background: transparent !important;
+}
+
+
+/* ========================================
+   STEP 49 – smSelect Dropdown Dark
+   gezielt gegen braune Select-Auswahl
+   ======================================== */
+
+select[name="smSelect"],
+select[name="smSelect"] option {
+    background-color: #0c0e0f !important;
+    color: #f2f2f2 !important;
+}
+
+select[name="smSelect"]:hover,
+select[name="smSelect"]:focus {
+    background-color: #0c0e0f !important;
+    color: #ffffff !important;
+    border-color: #7fbf4d !important;
+    outline: none !important;
+}
+
+select[name="smSelect"] option:checked {
+    background-color: #2b373b !important;
+    color: #ffffff !important;
+}
+
+
+/* ========================================
+   STEP 50 – Form-Elemente vereinheitlichen
+   Inputs / Selects / Textarea dunkel
+   ======================================== */
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+    background-color: #0c0e0f !important;
+    color: #f2f2f2 !important;
+    border-color: rgba(255,255,255,0.28) !important;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+input[type="url"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="file"]:hover,
+textarea:hover,
+select:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+    background-color: #0c0e0f !important;
+    color: #ffffff !important;
+    border-color: #7fbf4d !important;
+    outline: none !important;
+}
+
+select option {
+    background-color: #0c0e0f !important;
+    color: #f2f2f2 !important;
+}
+
+select option:checked {
+    background-color: #2b373b !important;
+    color: #ffffff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(242,242,242,0.58) !important;
+}
+
+
+/* ========================================
+   STEP 52 – Dashboard CPU Balken / Prozentwerte
+   gezielt auf ProcessorInformation begrenzt
+   ======================================== */
+
+#ProcessorInformation span.cpu.load.resize {
+    color: rgb(79, 138, 16) !important;
+}
+
+#ProcessorInformation div.usage-disk.sys > span,
+#ProcessorInformation div.usage-disk.sys .usage {
+    background-color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   STEP 52 FINAL – CPU Usage Balken
+   ======================================== */
+
+#ProcessorInformation .usage-disk.sys > span {
+    background-color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   STEP 52.2 – altes Balken-Grün ersetzen
+   ======================================== */
+
+#ProcessorInformation .usage-disk.sys span[style*="#4CAF50"],
+#ProcessorInformation .usage-disk.sys span[style*="#4caf50"] {
+    background-color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   STEP 52 FINAL FIX – CPU Balken
+   ======================================== */
+
+.usage-disk > span:first-child {
+    background-color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   STEP 53 – Dashboard System-Ringe
+   ======================================== */
+
+/* Innenfläche */
+
+div.pie::after {
+    background-color: #0c0e0f !important;
+}
+
+/* ungenutzter Ringbereich */
+
+div.pie {
+    box-shadow: inset 0 0 0 999px rgba(68,68,68,0.35) !important;
+}
+
+/* Prozentwerte */
+
+div.pie span {
+    color: rgb(79, 138, 16) !important;
+}
+
+
+/* ========================================
+   STEP 53.1 – Dashboard Ring Aktivfarbe
+   ======================================== */
+
+
+
+}
+
+
+
+/* ========================================
+   STEP 59 – Pie Außenring neutralisieren
+   ======================================== */
+
+div.pie[style*="rgb(215, 126, 13)"] {
+    background:
+    conic-gradient(
+        rgb(120,120,120) 0%,
+        rgb(120,120,120) 6%,
+        rgb(79,138,16) 6%,
+        rgb(79,138,16) 6%,
+        rgb(68,68,68) 6%,
+        rgb(68,68,68) 100%
+    ) !important;
+}
+
+
+
+/* ========================================
+   STEP 62 – Dynamix Shade Hintergrund
+   ======================================== */
+
+:root,
+body.dark {
+    --shade-bg-color: #1d2529 !important;
+}
+
+
+/* ========================================
+   STEP 63.2 – Tabellen Zebra Braun entfernen
+   ======================================== */
+
+:root,
+.unraid_content {
+
+    --dynamix-tablesorter-tbody-row-alt-bg-color: #1d2528 !important;
+
+}
+
+
+/* ========================================
+   STEP 63.3 – Routing Tabelle Zebra Braun direkt entfernen
+   ======================================== */
+
+tbody#route_list tr:nth-child(even),
+tbody#route_list tr:nth-child(even) td {
+    background-color: #1d2528 !important;
+}
+
+tbody#route_list tr:nth-child(odd),
+tbody#route_list tr:nth-child(odd) td {
+    background-color: #243238 !important;
+}
+
+tbody#route_list tr:hover,
+tbody#route_list tr:hover td {
+    background-color: #2b3a40 !important;
+}
+
+
+
+/* ========================================
+
+/* ========================================
+   STEP 71 – User Hover Tooltip
+   ======================================== */
+
+.user-list a.info span,
+.user-list a.info:hover span {
+    background-color: #0c0e0f !important;
+    color: #f2f2f2 !important;
+    border: 1px solid #3a4a4f !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+}
+
+
+
+/* ========================================
+   STEP 72 – User Panel Max Width
+   ======================================== */
+
+section#tab1-panel.tab-content.content {
+    max-width: 1200px !important;
+}
+
+
+/* ========================================
+   STEP 73 – Plugin installieren Contentbox
+   ======================================== */
+
+section#tab2-panel.tab-content.content {
+    max-width: 1200px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 38px 58px !important;
+    background: linear-gradient(
+        180deg,
+        rgba(46, 60, 68, 0.82) 0%,
+        rgba(34, 47, 55, 0.90) 100%
+    ) !important;
+    border: 1px solid rgba(150, 170, 185, 0.22) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.26) !important;
+}
+
+
+/* ========================================
+   STEP 74 – Plugin Install Feinschliff
+   ======================================== */
+
+/* weißer Strich unten entfernen */
+#plugin_tree.textarea.h-50.overflow-y-auto {
+    border-bottom-width: 0 !important;
+    border-bottom: 0 !important;
+}
+
+/* Ordnerliste größer */
+#plugin_tree .jqueryFileTree a {
+    font-size: 1.08rem !important;
+    color: #8eaec0 !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Hover schöner */
+#plugin_tree .jqueryFileTree a:hover {
+    color: #d7e4ec !important;
+    background-color: rgba(120,140,155,0.10) !important;
+    border-radius: 4px !important;
+}
+
+/* etwas mehr Abstand */
+#plugin_tree .jqueryFileTree li {
+    margin-bottom: 4px !important;
+}
+
+
+/* ========================================
+   STEP 75 – Ordner Schrift größer
+   ======================================== */
+
+#plugin_tree .jqueryFileTree a {
+    font-size: 1.18rem !important;
+    line-height: 1.6 !important;
+}
+
+
+/* ========================================
+   STEP 76 – Ordner Schrift extra groß
+   ======================================== */
+
+#plugin_tree .jqueryFileTree a {
+    font-size: 1.32rem !important;
+    line-height: 1.7 !important;
+}
+
+
+/* ========================================
+   STEP 77 – Ordner Icons zur Schrift ausrichten
+   ======================================== */
+
+#plugin_tree .jqueryFileTree li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 6px !important;
+}
+
+#plugin_tree .jqueryFileTree li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1.35 !important;
+}
+
+#plugin_tree .jqueryFileTree li.directory {
+    background-position: 0 center !important;
+}
+
+
+/* ========================================
+   STEP 78 – Orange Text heller
+   ======================================== */
+
+span.orange-text {
+    color: #f0a84a !important;
+}
+
+
+/* ========================================
+   STEP 79 – Apps linkes Menü
+   ======================================== */
+
+ul.caMenu,
+ul.unselectedMenu {
+    background-color: #0c0e0f !important;
+    border: 1px solid #3a4a4f !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+ul.caMenu li,
+ul.unselectedMenu li {
+    background-color: transparent !important;
+}
+
+ul.caMenu li a,
+ul.unselectedMenu li a {
+    color: #8eaec0 !important;
+}
+
+ul.caMenu li:hover,
+ul.unselectedMenu li:hover {
+    background-color: #1d2528 !important;
+}
+
+ul.caMenu li:hover a,
+ul.unselectedMenu li:hover a {
+    color: #d7e4ec !important;
+}
+
+
+/* ========================================
+
+/* ========================================
+   STEP 82 – Search Submit Height
+   ======================================== */
+
+.searchSubmit {
+    height: 3.3rem !important;
+}
+
+
+/* ========================================
+   STEP 83 – SearchBox Höhe
+   ======================================== */
+
+#searchBox {
+    height: 37px !important;
+}
+
+
+/* ========================================
+   STEP 84 – Search Submit Alignment
+   ======================================== */
+
+span.searchSubmit {
+    height: 37px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* ========================================
+   STEP 85 – Search Button Position
+   ======================================== */
+
+span.searchSubmit {
+    height: 37px !important;
+    width: 37px !important;
+    min-width: 37px !important;
+    padding: 0 !important;
+    top: 0 !important;
+    left: -1px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: top !important;
+}
+
+
+/* ========================================
+   STEP 86 – Search Button Höhe feinjustieren
+   ======================================== */
+
+span.searchSubmit {
+    height: 36px !important;
+    width: 36px !important;
+    min-width: 36px !important;
+}
+
+
+/* ========================================
+   STEP 87 – Search Button linker Radius
+   ======================================== */
+
+span.searchSubmit {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+}
+
+
+/* ========================================
+   STEP 88 – Search Button kompletter Radius
+   ======================================== */
+
+span.searchSubmit {
+    border-radius: 5px !important;
+}
+
+
+/* ========================================
+   STEP 89 – Apps Karten Design
+   ======================================== */
+
+.ca_holder {
+    background: linear-gradient(
+        180deg,
+        rgba(46, 60, 68, 0.82) 0%,
+        rgba(34, 47, 55, 0.92) 100%
+    ) !important;
+    border: 1px solid rgba(150, 170, 185, 0.22) !important;
+    border-radius: 5px !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22) !important;
+    overflow: hidden !important;
+}
+
+.ca_holder:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(54, 70, 78, 0.90) 0%,
+        rgba(39, 54, 62, 0.96) 100%
+    ) !important;
+    border-color: rgba(160, 185, 200, 0.34) !important;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.30) !important;
+}
+
+
+/* ========================================
+   STEP 90 – Apps Karten Border
+   ======================================== */
+
+.ca_holder {
+    border-radius: 6px !important;
+    border-width: 2px !important;
+}
+
+
+/* ========================================
+   STEP 91 – Apps Karten Border Schwarz
+   ======================================== */
+
+.ca_holder {
+    border-color: #0c0e0f !important;
+}
+
+.ca_holder:hover {
+    border-color: #0c0e0f !important;
+}
+
+
+/* ========================================
+   STEP 92 – Apps Karten Border 1px
+   ======================================== */
+
+.ca_holder {
+    border-width: 1px !important;
+}
+
+
+/* ========================================
+   STEP 93 – Apps Karten Corner Badges
+   ======================================== */
+
+.officialCardBackground,
+.spotlightCardBackground,
+.warningCardBackground,
+.betaCardBackground,
+.greenCardBackground,
+.LTOofficialCardBackground {
+    border-top-right-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+.ca_holder .officialCardBackground,
+.ca_holder .spotlightCardBackground,
+.ca_holder .warningCardBackground,
+.ca_holder .betaCardBackground,
+.ca_holder .greenCardBackground,
+.ca_holder .LTOofficialCardBackground {
+    border-top: 1px solid #0c0e0f !important;
+    border-right: 1px solid #0c0e0f !important;
+}
+
+.ca_holder {
+    border-radius: 6px !important;
+    border: 1px solid #0c0e0f !important;
+    overflow: hidden !important;
+}
+
+
+/* ========================================
+   STEP 94 – Apps Badge Border Schwarz
+   ======================================== */
+
+.officialCardBackground,
+.spotlightCardBackground,
+.warningCardBackground,
+.betaCardBackground,
+.greenCardBackground,
+.LTOofficialCardBackground {
+    box-shadow:
+        inset -1px 0 0 #0c0e0f,
+        inset 0 1px 0 #0c0e0f !important;
+}
+
+
+/* ========================================
+   STEP 95 – Disk Stats weißer Strich oben
+   ======================================== */
+
+.mybar {
+    box-shadow: none !important;
+    border-top: 0 !important;
+}
+
+div[style*="mybar whitebar"] {
+    border-top: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* ========================================
+
+/* ========================================
+
+/* ========================================
+
+/* ==========================================================
+   topa-LE LOGIN THEME V1
+   Ziel: Braun/Orange entfernen, dunkler topa-LE Login
+   ========================================================== */
+
+body.dark #login,
+#login.shadow {
+  background: #1d2428 !important;
+  border: 1px solid #050607 !important;
+  box-shadow: 0 18px 50px rgba(0,0,0,.55) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+body.dark #login .logo,
+#login .logo {
+  background: #0c0e0f !important;
+}
+
+body.dark #login .logo.angle::after,
+#login .logo.angle::after {
+  background: #13181a !important;
+}
+
+body.dark #login .content,
+#login .content {
+  background: #1d2428 !important;
+  color: #f4f4f4 !important;
+}
+
+body.dark #login h1,
+#login h1 {
+  color: #ffffff !important;
+}
+
+body.dark #login h2,
+#login h2 {
+  color: #d8dedf !important;
+}
+
+body.dark #login input[type="text"],
+body.dark #login input[type="password"],
+#login input[type="text"],
+#login input[type="password"] {
+  background: #e9ecec !important;
+  color: #1c1f20 !important;
+  border: 1px solid #050607 !important;
+  box-shadow: none !important;
+}
+
+body.dark #login input[type="text"]:focus,
+body.dark #login input[type="password"]:focus,
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+  border-color: #7fbf4d !important;
+  outline: none !important;
+}
+
+body.dark #login .button,
+#login .button {
+  background: #7fbf4d !important;
+  color: #101410 !important;
+  border: 1px solid #050607 !important;
+  box-shadow: none !important;
+}
+
+body.dark #login .button:hover,
+#login .button:hover {
+  background: #91cc60 !important;
+  color: #101410 !important;
+}
+
+/* ==========================================================
+   topa-LE – INPUT INSTRUCTIONS NORMAL
+   ========================================================== */
+
+.orange-text,
+.warning {
+    color: #ffb347 !important;
+}
+
+.input-instructions {
+    font-style: normal !important;
+    opacity: .85 !important;
+}
+
+
+/* ==========================================================
+   topa-LE – Plugin Row Card Style
+   ========================================================== */
+
+table.tablesorter tbody tr {
+    background: #2a353c !important;
+    border: 1px solid #101416 !important;
+    transition: background .18s ease;
+}
+
+table.tablesorter tbody tr:nth-child(even) {
+    background: #303c44 !important;
+}
+
+table.tablesorter tbody tr:hover {
+    background: #394852 !important;
+}
+
+table.tablesorter tbody td {
+    border-top: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.04) !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+}
+
+/* etwas optische Trennung */
+table.tablesorter tbody tr + tr td {
+    border-top: 10px solid transparent !important;
+}
+
+/* Plugin Titel stärker */
+table.tablesorter tbody td:first-child strong,
+table.tablesorter tbody td:first-child b {
+    color: #ffffff !important;
+}
+
+
+/* ==========================================================
+   topa-LE – Legacy font color red override
+   ========================================================== */
+
+font[color="red"] {
+    color: #944141 !important;
+}
+
+
+/* ==========================================================
+   topa-LE – Log Viewer Dark Blue
+   ========================================================== */
+
+unraid-log-viewer .bg-background {
+    background: #11181d !important;
+    border-color: #1f2c33 !important;
+}
+
+unraid-log-viewer .border-muted > *,
+unraid-log-viewer .border-border {
+    border-color: rgba(255,255,255,.06) !important;
+}
+
+unraid-log-viewer input,
+unraid-log-viewer select {
+    background: #182127 !important;
+    border-color: #24333b !important;
+    color: #e6ecef !important;
+}
+
+
+/* ==========================================================
+   topa-LE – Unraid Table Brown Removal
+   ========================================================== */
+
+table.unraid tbody tr:nth-child(odd) {
+    background: #26343c !important;
+}
+
+table.unraid tbody tr:nth-child(even) {
+    background: #2d3b43 !important;
+}
+
+table.unraid tbody tr:hover {
+    background: #36464f !important;
+}
+
+
+/* ==========================================================
+   topa-LE – DropdownChecklist Bottom Border
+   ========================================================== */
+
+.ui-dropdownchecklist {
+    border-bottom: 1px solid #24333b !important;
+}
+
+
+/* ========================================
+   🎨 topa-LE – LOGIN BOX CLEANUP
+======================================== */
+
+#login {
+    width: 500px;
+    margin: 6rem auto;
+
+    background: #223247 !important;
+    border: 1px solid #34495e !important;
+
+    border-radius: 8px !important;
+
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,0.25),
+        0 6px 18px rgba(0,0,0,0.35) !important;
+}
+
+
+/* ========================================
+   🎨 STEP 100 – LOGIN BOX EXACT SELECTOR
+======================================== */
+
+html.Theme--black body.dark section#login.shadow,
+body.dark section#login.shadow,
+section#login.shadow,
+#login.shadow,
+#login {
+    background: #223247 !important;
+    border: 1px solid #34495e !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.38) !important;
+}
+
+
+/* ========================================
+   🎨 STEP 104 – SELECT BG TEST #101314
+======================================== */
+
+select,
+.ui-dropdownchecklist,
+.ui-dropdownchecklist-selector,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+.driversearch input,
+#driversearch,
+input {
+    background: #101314 !important;
+}
+
+
+/* ========================================
+   🎨 STEP 105 – FINAL SELECT BG
+======================================== */
+
+select,
+.ui-dropdownchecklist,
+.ui-dropdownchecklist-selector,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+.driversearch input,
+#driversearch,
+input {
+    background: #13181a !important;
+}
+
+
+/* ========================================
+   🎨 STEP 106 – FOOTER FONT SIZE
+======================================== */
+
+.footer-right,
+#copyright {
+    font-size: 1.4rem !important;
+}
+
+
+/* ========================================
+   🎨 STEP 107 – FOOTER LINK STYLE
+======================================== */
+
+a.footer-link,
+#copyright a,
+.footer-right a {
+    color: #6f8ea3 !important;
+    font-size: 1.5rem !important;
+    transition: color 0.15s ease;
+}
+
+a.footer-link:hover,
+#copyright a:hover,
+.footer-right a:hover {
+    color: #8fb2ca !important;
+}
+
+
+/* ========================================
+   🎨 STEP 108 – FTP FORM SOFT WORK BOX TEST
+======================================== */
+
+div.content > form[action="/update.php"][target="progressFrame"] {
+    max-width: 760px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 22px 28px !important;
+
+    background: rgba(19,24,26,0.55) !important;
+    border: 1px solid #24333b !important;
+    border-radius: 4px !important;
+
+    box-shadow: none !important;
+}
+
+div.content > form[action="/update.php"][target="progressFrame"] dl {
+    margin-bottom: 14px !important;
+}
+
+
+/* ========================================
+   🎨 STEP 109 – FTP FORM SOFT BOX DEZENTER
+======================================== */
+
+div.content > form[action="/update.php"][target="progressFrame"] {
+    max-width: 720px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 18px 24px !important;
+
+    background: rgba(19,24,26,0.34) !important;
+    border: 1px solid #2a3a42 !important;
+    border-radius: 4px !important;
+
+    box-shadow: none !important;
+}
+
+
+/* ========================================
+   🎨 STEP 110 – FTP FORM BOX ULTRA SOFT
+======================================== */
+
+div.content > form[action="/update.php"][target="progressFrame"] {
+    background: rgba(19,24,26,0.22) !important;
+    border: 1px solid rgba(58,78,88,0.55) !important;
+}
+
+
+/* ========================================
+   🎨 STEP 111 – FTP FORM BORDER FINAL
+======================================== */
+
+div.content > form[action="/update.php"][target="progressFrame"] {
+    border: 1px solid rgba(88,112,124,0.52) !important;
+}
+
+
+/* ========================================
+   🎨 STEP 112 – FTP FORM RADIUS
+======================================== */
+
+div.content > form[action="/update.php"][target="progressFrame"] {
+    border-radius: 8px !important;
+}
+
+
+/* ========================================
+   🎨 STEP 113 – IDENTIFICATION FORM PANEL
+======================================== */
+
+div.content > form[name="NameSettings"] {
+    max-width: 720px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 18px 24px !important;
+
+    background: rgba(19,24,26,0.22) !important;
+
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+}
+
+
+/* ========================================
+   🎨 STEP 114 – DATETIME SETTINGS STANDARD
+======================================== */
+
+form[name="datetime_settings"] {
+    max-width: 720px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 18px 24px !important;
+
+    background: rgba(19,24,26,0.22) !important;
+
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Inputs/Selects angleichen */
+form[name="datetime_settings"] select,
+form[name="datetime_settings"] input,
+form[name="datetime_settings"] textarea {
+    background: #13181a !important;
+}
+
+
+/* ========================================
+   🎨 STEP 115 – DISK SETTINGS FORM PANEL
+======================================== */
+
+div.content > form[action="/update.htm"][target="progressFrame"] {
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 15px 15px 15px 15px !important;
+    border-radius: 8px !important;
+}
+
+div.content > form[action="/update.htm"][target="progressFrame"] {
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 15px 15px 15px 15px !important;
+    border-radius: 8px !important;
+}
+
+
+/* ========================================
+   🎨 STEP 116 – VM MANAGER SOFT PANEL
+======================================== */
+
+form#settingsForm {
+    background: rgba(19,24,26,0.22) !important;
+
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Inputs/Selects angleichen */
+form#settingsForm select,
+form#settingsForm input,
+form#settingsForm textarea {
+    background: #13181a !important;
+}
+
+
+/* ========================================
+   🎨 STEP 117 – API STATUS PANEL CLEANUP
+======================================== */
+
+/* API Status Hauptbox */
+unraid-api-status-manager .bg-muted,
+unraid-api-status-manager div[class*="bg-muted"] {
+    background: rgba(19,24,26,0.22) !important;
+
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Innere Statusbox */
+unraid-api-status-manager .border-muted,
+unraid-api-status-manager div[class*="border-muted"] {
+    background: #13181a !important;
+
+    border: 1px solid rgba(88,112,124,0.38) !important;
+    border-radius: 6px !important;
+}
+
+/* Orange/Braun Variablen neutralisieren */
+:root,
+body.dark {
+    --shade-bg-color: #13181a !important;
+    --color-border: #383735 !important;
+}
+
+
+/* ========================================
+   🎨 STEP 118 – API STATUS ORANGE TEXT CLEANUP
+======================================== */
+
+unraid-api-status-manager .text-orange-500,
+unraid-api-status-manager span[class*="text-orange-500"] {
+    color: #8fb2ca !important;
+}
+
+
+/* ========================================
+   🎨 STEP 118B – API STATUS DEZENT ORANGE
+======================================== */
+
+unraid-api-status-manager .text-orange-500,
+unraid-api-status-manager span[class*="text-orange-500"] {
+    color: #EFAA71 !important;
+}
+
+
+/* ============================================================
+   LOGIN PAGE – topa-LE TEST
+   ============================================================ */
+
+body.dark section#login {
+  background: #13181a !important;
+  border: 1px solid rgba(88,112,124,0.52) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.45) !important;
+}
+
+body.dark section#login div.content {
+  background: #1d2528 !important;
+}
+
+body.dark section#login .logo_angle {
+  background: linear-gradient(135deg, #13181a 0%, #2b373b 55%, #944141 100%) !important;
+}
+
+body.dark section#login h1,
+body.dark section#login h2 {
+  color: #e8e8e8 !important;
+}
+
+body.dark section#login input,
+body.dark section#login select,
+body.dark section#login textarea {
+  background: #13181a !important;
+  color: #e8e8e8 !important;
+  border: 1px solid rgba(88,112,124,0.52) !important;
+}
+
+body.dark section#login a {
+  color: #EFAA71 !important;
+}
+
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – ARRAY OPERATION PANEL WIDTH
+   START
+========================================================= */
+div.content > form[action="/update.htm"][target="progressFrame"] {
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 15px 15px 15px 15px !important;
+    border-radius: 8px !important;
+}
+/* =========================================================
+   END MAIN PAGE – ARRAY OPERATION PANEL WIDTH
+========================================================= */
+
+
+/* =========================================================
+   MAIN PAGE – ARRAY OPERATION TABLES WIDTH
+   START
+========================================================= */
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+/* =========================================================
+   END MAIN PAGE – ARRAY OPERATION TABLES WIDTH
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – ARRAY TABLES WIDTH + SPACING
+   START
+========================================================= */
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+}
+/* =========================================================
+   END MAIN PAGE – ARRAY TABLES WIDTH + SPACING
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – ARRAY INNER LINE REMOVE
+   START
+========================================================= */
+table.ArrayOperation-Table.array_status td.line {
+    border: none !important;
+    background: transparent !important;
+    height: 0 !important;
+}
+/* =========================================================
+   END MAIN PAGE – ARRAY INNER LINE REMOVE
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – MOVER SCHEDULE INNER TABLE MARGIN FIX
+   START
+========================================================= */
+form[name="mover_schedule"] table.ArrayOperation-Table.array_status.noshift {
+    margin-top: 0 !important;
+}
+/* =========================================================
+   END MAIN PAGE – MOVER SCHEDULE INNER TABLE MARGIN FIX
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – BOX 1 INNER TABLE MARGIN FIX
+   START
+========================================================= */
+div.content > form[name="arrayOps"] table.ArrayOperation-Table.array_status {
+    margin-top: 0 !important;
+}
+/* =========================================================
+   END MAIN PAGE – BOX 1 INNER TABLE MARGIN FIX
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – BOX 2 4 SOFT PANEL
+   START
+========================================================= */
+html body table.ArrayOperation-Table.array_status.noshift {
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 15px 15px 15px 15px !important;
+    border-radius: 8px !important;
+}
+/* =========================================================
+   END MAIN PAGE – BOX 2 4 SOFT PANEL
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – BOX 2 4 INNER TD PANEL
+   START
+========================================================= */
+html body table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+/* =========================================================
+   END MAIN PAGE – BOX 2 4 INNER TD PANEL
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE – BOX 1 FINAL CLEAN LOOK
+   START
+========================================================= */
+
+/* ÄUSSEREN FORM-RAHMEN ENTFERNEN */
+div.content > form[name="arrayOps"] {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* INNEREN SCHWARZEN CONTAINER SAUBER EINRAHMEN */
+html body table.ArrayOperation-Table.array_status {
+    max-width: 1150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: 1px solid rgba(88, 112, 124, 0.42) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* =========================================================
+   END MAIN PAGE – BOX 1 FINAL CLEAN LOOK
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+/* =========================================================
+========================================================= */
+
+
+/* =========================================================
+   SWEET ALERT BORDER CLEAN
+   START
+========================================================= */
+
+body.dark .sweet-alert {
+    border-color: #191c1f !important;
+}
+
+/* =========================================================
+   END SWEET ALERT BORDER CLEAN
+========================================================= */
+
+
+/* =========================================================
+   TOPA-LE TOOLTIP SYSTEM – GLOBAL DARK ALIGNMENT
+   START
+========================================================= */
+
+.tooltip,
+.tooltip-inner,
+.ui-tooltip,
+.ui-tooltip-content,
+.tooltipster-base,
+.tooltipster-box,
+.qtip,
+.qtip-content,
+.tippy-box,
+.webui-popover,
+.popover,
+.popover-content {
+    background: #0c0e0f !important;
+    background-color: #0c0e0f !important;
+    color: #f2f2f2 !important;
+    border: 1px solid #3a4a4f !important;
+    border-radius: 4px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+}
+
+.tooltip *,
+.ui-tooltip *,
+.tooltipster-base *,
+.qtip *,
+.tippy-box *,
+.webui-popover *,
+.popover * {
+    color: #f2f2f2 !important;
+}
+
+/* =========================================================
+   END TOPA-LE TOOLTIP SYSTEM – GLOBAL DARK ALIGNMENT
+========================================================= */
+
+
+/******************************************
+
+/******************************************
+ * USER AVATAR FINAL CLEAN
+ ******************************************/
+
+/* Benutzer Übersicht */
+.user-list img.picture {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border-radius: 50% !important;
+    border: 1px solid rgba(160,185,195,0.35) !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    filter: none !important;
+}
+
+/* Wrapper */
+.user-list a.info {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Edit Seite */
+img[src*="/plugins/dynamix/users/"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+    filter: none !important;
+}
+
+
+/******************************************
+ * USER IMAGE PREVIEW CLEANUP
+ ******************************************/
+
+/* Upload/Preview Box */
+.qq-upload-button,
+.qq-upload-drop-area,
+.qq-upload-list,
+.qq-upload-success,
+.qq-upload-fail {
+
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Preview Wrapper */
+.qq-upload-list li,
+.qq-upload-list span,
+.qq-upload-list div {
+
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+}
+
+/* Avatar selbst */
+.qq-upload-list img,
+img[src*="/plugins/dynamix/users/"] {
+
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+    border-radius: 50% !important;
+}
+
+
+/******************************************
+ * USER AVATAR BOX – TOPA-LE STYLE
+ ******************************************/
+
+/* Gesamte Uploadbox */
+.qq-uploader,
+.qq-upload-drop-area,
+.qq-upload-button {
+
+    background: rgba(19,24,26,0.22) !important;
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+/* Hover */
+.qq-upload-button:hover {
+
+    background: rgba(34,50,71,0.65) !important;
+    border-color: rgba(140,170,185,0.55) !important;
+}
+
+/* Innerer weißer Bereich */
+.qq-upload-list,
+.qq-upload-list li,
+.qq-upload-list div,
+.qq-upload-list span {
+
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Avatar selbst */
+.qq-upload-list img,
+img[src*="/plugins/dynamix/users/"] {
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border-radius: 50% !important;
+    border: 1px solid rgba(160,185,195,0.35) !important;
+
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Braune/alte Statusfarben entfernen */
+.qq-upload-success,
+.qq-upload-fail {
+
+    background: transparent !important;
+    border: none !important;
+    color: #cfd8dc !important;
+}
+
+
+/******************************************
+ * USER EDIT DROPBOX – TOPA-LE STYLE
+ ******************************************/
+
+span#dropbox {
+    background: rgba(19,24,26,0.22) !important;
+    background-color: rgba(19,24,26,0.22) !important;
+    background-image: none !important;
+
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    box-shadow: none !important;
+    padding: 8px 12px !important;
+}
+
+/* Avatar im Dropbereich */
+span#dropbox img {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border-radius: 50% !important;
+    border: 1px solid rgba(160,185,195,0.35) !important;
+
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Hover sauber im Theme */
+span#dropbox:hover {
+    background: rgba(34,50,71,0.55) !important;
+    border-color: rgba(140,170,185,0.55) !important;
+}
+
+/* Papierkorb Icon neutral halten */
+span#dropbox i,
+span#dropbox .fa,
+span#dropbox .far,
+span#dropbox .fas {
+    color: #cfd8dc !important;
+}
+
+span#dropbox i:hover,
+span#dropbox .fa:hover,
+span#dropbox .far:hover,
+span#dropbox .fas:hover {
+    color: #efaa71 !important;
+}
+
+
+/******************************************
+ * REMOVE ITALIC EM
+ ******************************************/
+
+em {
+    font-style: normal !important;
+}
+
+
+/******************************************
+ * USER EDIT DROPBOX SIZE FIX
+ ******************************************/
+
+span#dropbox {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 72px !important;
+    min-width: 72px !important;
+    height: 72px !important;
+    min-height: 72px !important;
+
+    padding: 8px !important;
+    line-height: normal !important;
+
+    background: rgba(19,24,26,0.22) !important;
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+}
+
+/* Bild im Uploadfeld wieder passend groß */
+span#dropbox img {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    object-fit: cover !important;
+
+    border-radius: 50% !important;
+    padding: 0 !important;
+}
+
+span#dropbox:hover {
+    background: rgba(34,50,71,0.55) !important;
+    border-color: rgba(140,170,185,0.55) !important;
+}
+
+
+/******************************************
+ * USER EDIT DROPBOX ICON + HOVER FINAL
+ ******************************************/
+
+span#dropbox {
+    position: relative !important;
+
+    background: rgba(19,24,26,0.32) !important;
+    border-color: rgba(70,86,92,0.70) !important;
+}
+
+/* Papierkorb rechts oben */
+span#dropbox i.fa-trash,
+span#dropbox .fa-trash {
+    position: absolute !important;
+    top: 4px !important;
+    right: 5px !important;
+    z-index: 5 !important;
+
+    color: rgba(207,216,220,0.70) !important;
+    font-size: 13px !important;
+}
+
+/* Hover im Theme, nicht blau */
+span#dropbox:hover {
+    background: rgba(19,24,26,0.48) !important;
+    border-color: rgba(239,170,113,0.45) !important;
+}
+
+/* Papierkorb Hover dezent orange */
+span#dropbox i.fa-trash:hover,
+span#dropbox .fa-trash:hover {
+    color: #efaa71 !important;
+}
+
+
+/******************************************
+ * USER DROPBOX HOVER BORDER FIX
+ ******************************************/
+
+span#dropbox:hover {
+    background: rgba(19,24,26,0.48) !important;
+    border-color: rgba(88,112,124,0.72) !important;
+}
+
+
+/******************************************
+ * DEFAULT AVATAR DARKEN
+ ******************************************/
+
+/* Innerer Avatar-Kreis */
+span#dropbox img {
+    background: rgba(8,12,14,0.55) !important;
+    background-color: rgba(8,12,14,0.55) !important;
+
+    border-radius: 50% !important;
+
+    border: 1px solid rgba(88,112,124,0.45) !important;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,0.35),
+        0 0 6px rgba(0,0,0,0.15) !important;
+}
+
+/* Default Benutzerbild etwas dunkler */
+span#dropbox img[src*="default"],
+span#dropbox img[src*="user"] {
+    filter: brightness(0.82) contrast(1.08) !important;
+}
+
+
+/******************************************
+ * DROPBOX BORDER DARKER
+ ******************************************/
+
+span#dropbox {
+    border-color: rgba(58,72,78,0.82) !important;
+}
+
+span#dropbox:hover {
+    border-color: rgba(78,96,104,0.88) !important;
+}
+
+
+/******************************************
+ * DROPBOX BORDER THEME BLACK
+ ******************************************/
+
+span#dropbox {
+    border-color: #13181a !important;
+}
+
+span#dropbox:hover {
+    border-color: #0c0e0f !important;
+}
+
+
+/******************************************
+ * DROPBOX BORDER FINAL BALANCE
+ ******************************************/
+
+/* Normal */
+span#dropbox {
+    border-color: rgba(58,72,78,0.78) !important;
+}
+
+/* Hover */
+span#dropbox:hover {
+    border-color: rgba(96,118,128,0.88) !important;
+}
+
+
+/******************************************
+ * USEREDIT FORM BOX FINAL
+ ******************************************/
+
+/* UserEdit: obere Benutzer-/Avatar-Box */
+div.content > form[onsubmit*="upload"] {
+    background: rgba(19,24,26,0.18) !important;
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    max-width: 1150px !important;
+    margin: 28px auto 0 auto !important;
+    padding: 28px 32px 32px 32px !important;
+
+    box-sizing: border-box !important;
+}
+
+/* UserEdit: Passwort-Box passend dazu */
+div.content > form[onsubmit*="checkPassword"] {
+    background: rgba(19,24,26,0.18) !important;
+    border: 1px solid rgba(88,112,124,0.52) !important;
+    border-radius: 8px !important;
+
+    max-width: 1150px !important;
+    margin: 24px auto 0 auto !important;
+    padding: 28px 32px 32px 32px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/******************************************
+ * USERLIST DEFAULT AVATAR DARKEN
+ ******************************************/
+
+.user-list img.picture[src*="/webGui/images/user.png"] {
+    background: rgba(8,12,14,0.55) !important;
+    background-color: rgba(8,12,14,0.55) !important;
+    background-image: none !important;
+
+    border-radius: 50% !important;
+    border: 1px solid rgba(88,112,124,0.45) !important;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,0.35),
+        0 0 6px rgba(0,0,0,0.15) !important;
+
+    filter: brightness(0.82) contrast(1.08) !important;
+}
+
+
+/******************************************
+ * SSH PLUGIN – WHITE TABLE FIX
+ ******************************************/
+
+/* SSH Plugin: weiße Tabellenköpfe/Inline-Styles überschreiben */
+div.content table tr[style*="background:#F0F0F0"],
+div.content table tr[style*="background: #F0F0F0"],
+div.content table tr[style*="background:#FFFFFF"],
+div.content table tr[style*="background: #FFFFFF"] {
+    background: #13181a !important;
+    background-color: #13181a !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+}
+
+/* Zellen im betroffenen Header ebenfalls dunkel */
+div.content table tr[style*="background:#F0F0F0"] td,
+div.content table tr[style*="background: #F0F0F0"] td,
+div.content table tr[style*="background:#FFFFFF"] td,
+div.content table tr[style*="background: #FFFFFF"] td {
+    background: #13181a !important;
+    background-color: #13181a !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+    border-color: rgba(88,112,124,0.52) !important;
+}
+
+/* Plugin-Zeilen passend abdunkeln */
+div.content table tr[style*="background:#FFFFFF"] {
+    background: rgba(19,24,26,0.22) !important;
+    background-color: rgba(19,24,26,0.22) !important;
+}
+
+/* Text/Links innerhalb der Plugin-Tabelle */
+div.content table tr[style*="background:#FFFFFF"] td,
+div.content table tr[style*="background: #FFFFFF"] td {
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+}
+
+div.content table tr[style*="background:#FFFFFF"] a,
+div.content table tr[style*="background: #FFFFFF"] a {
+    color: #8fb8d8 !important;
+    text-shadow: none !important;
+}
+
+
+/******************************************
+ * SSH PLUGIN – SOFT PANEL POLISH
+ ******************************************/
+
+/* SSH Plugin: Tabellen optisch in topa-LE Panels integrieren */
+div.content table:has(td),
+div.content table:has(th) {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Helle Plugin-Header/Inline-Header überschreiben */
+div.content table tr[style*="background:#F0F0F0"],
+div.content table tr[style*="background: #F0F0F0"],
+div.content table tr[style*="background:#FFFFFF"],
+div.content table tr[style*="background: #FFFFFF"],
+div.content table tr[style*="background:#FFF"],
+div.content table tr[style*="background: #FFF"] {
+    background: #13181a !important;
+    background-color: #13181a !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+}
+
+/* Zellen in diesen Plugin-Zeilen */
+div.content table tr[style*="background:#F0F0F0"] td,
+div.content table tr[style*="background: #F0F0F0"] td,
+div.content table tr[style*="background:#FFFFFF"] td,
+div.content table tr[style*="background: #FFFFFF"] td,
+div.content table tr[style*="background:#FFF"] td,
+div.content table tr[style*="background: #FFF"] td {
+    background: transparent !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+    padding: 10px 14px !important;
+    line-height: 1.45 !important;
+    border-color: rgba(88,112,124,0.28) !important;
+}
+
+/* Erste Tabellenzeile als Header mit etwas Luft */
+div.content table tr:first-child td {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+}
+
+/* Plugin-Tabellen abrunden, wenn sie direkt sichtbar sind */
+div.content table {
+    overflow: hidden !important;
+    border-radius: 6px !important;
+}
+
+/* Plugin-Links harmonisieren */
+div.content table a {
+    color: #8fb8d8 !important;
+    text-shadow: none !important;
+}
+
+div.content table a:hover {
+    color: #c9d8e2 !important;
+}
+
+/* Control-Boxen: Inhalte nicht direkt an den Rand kleben lassen */
+div.content table td {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+/* Plugin-Buttons in Tabellen mit etwas Abstand */
+div.content table input[type="button"],
+div.content table input[type="submit"],
+div.content table button {
+    margin: 6px 0 !important;
+}
+
+
+/******************************************
+ * SSH PLUGIN – SOFT PANEL POLISH
+ ******************************************/
+
+/* SSH Plugin: Tabellen optisch in topa-LE Panels integrieren */
+div.content table:has(td),
+div.content table:has(th) {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Helle Plugin-Header/Inline-Header überschreiben */
+div.content table tr[style*="background:#F0F0F0"],
+div.content table tr[style*="background: #F0F0F0"],
+div.content table tr[style*="background:#FFFFFF"],
+div.content table tr[style*="background: #FFFFFF"],
+div.content table tr[style*="background:#FFF"],
+div.content table tr[style*="background: #FFF"] {
+    background: #13181a !important;
+    background-color: #13181a !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+}
+
+/* Zellen in diesen Plugin-Zeilen */
+div.content table tr[style*="background:#F0F0F0"] td,
+div.content table tr[style*="background: #F0F0F0"] td,
+div.content table tr[style*="background:#FFFFFF"] td,
+div.content table tr[style*="background: #FFFFFF"] td,
+div.content table tr[style*="background:#FFF"] td,
+div.content table tr[style*="background: #FFF"] td {
+    background: transparent !important;
+    color: #cfd8dc !important;
+    text-shadow: none !important;
+    padding: 10px 14px !important;
+    line-height: 1.45 !important;
+    border-color: rgba(88,112,124,0.28) !important;
+}
+
+/* Erste Tabellenzeile als Header mit etwas Luft */
+div.content table tr:first-child td {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+}
+
+/* Plugin-Tabellen abrunden, wenn sie direkt sichtbar sind */
+div.content table {
+    overflow: hidden !important;
+    border-radius: 6px !important;
+}
+
+/* Plugin-Links harmonisieren */
+div.content table a {
+    color: #8fb8d8 !important;
+    text-shadow: none !important;
+}
+
+div.content table a:hover {
+    color: #c9d8e2 !important;
+}
+
+/* Control-Boxen: Inhalte nicht direkt an den Rand kleben lassen */
+div.content table td {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+/* Plugin-Buttons in Tabellen mit etwas Abstand */
+div.content table input[type="button"],
+div.content table input[type="submit"],
+div.content table button {
+    margin: 6px 0 !important;
+}
+

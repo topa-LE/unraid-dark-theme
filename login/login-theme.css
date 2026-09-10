@@ -1,0 +1,80 @@
+/* topa-LE Unraid Dark Theme - Login */
+
+body {
+  background: #13181a !important;
+}
+
+section#login {
+  background: #0c0e0f !important;
+  border: 1px solid #050607 !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.85), 0 18px 55px rgba(0,0,0,0.62), 0 0 28px rgba(88,112,124,0.16) !important;
+}
+
+section#login div.content {
+  background: #0c0e0f !important;
+  border-radius: 0 0 5px 5px !important;
+}
+
+section#login div.logo_angle {
+  background: #0c0e0f !important;
+  border-radius: 5px 5px 0 0 !important;
+}
+
+section#login h2 {
+  font-family: Titillium Web, clear-sans, sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 300 !important;
+  letter-spacing: .15px !important;
+  line-height: 1.2 !important;
+  color: #999797 !important;
+}
+
+section#login button.button.button--small {
+  background: #111516 !important;
+  color: #d6d6d6 !important;
+  border: 1px solid #1a2225 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  padding: .7rem 1.4rem !important;
+}
+
+section#login button.button.button--small:hover {
+  background: #1a2022 !important;
+  color: #ffffff !important;
+  border-color: #3a4a50 !important;
+}
+
+section#login .case {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+section#login .topa-login-avatar {
+  width: 104px !important;
+  height: 104px !important;
+  max-width: 104px !important;
+  max-height: 104px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  margin-top: 8px !important;
+  margin-left: 8px !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
+}
+
+#login .error {
+  color: #992828 !important;
+  margin-top: 1rem !important;
+}
+
+.topa-login-footer-link {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.topa-login-github-link {
+  font-size: 0.85rem;
+}
