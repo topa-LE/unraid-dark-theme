@@ -17,18 +17,45 @@ section#login div.content {
   border-radius: 0 0 5px 5px !important;
 }
 
-section#login div.logo_angle {
+section#login div.logo.angle {
   background: #0c0e0f !important;
   border-radius: 5px 5px 0 0 !important;
 }
 
+section#login h1 {
+  font-family: 'Titillium Web', clear-sans, sans-serif !important;
+  font-size: 1.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: .3px !important;
+  line-height: 1.15 !important;
+}
+
 section#login h2 {
-  font-family: Titillium Web, clear-sans, sans-serif !important;
+  font-family: 'Titillium Web', clear-sans, sans-serif !important;
   font-size: 1.1rem !important;
   font-weight: 300 !important;
   letter-spacing: .15px !important;
   line-height: 1.2 !important;
   color: #999797 !important;
+}
+
+section#login input {
+  font-family: 'Titillium Web', clear-sans, sans-serif !important;
+  font-size: .98rem !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  background: #e7e7e7 !important;
+  border: 1px solid #1a2225 !important;
+  border-radius: 3px !important;
+}
+
+section#login input:focus {
+  background: #111516 !important;
+  color: #f3f3f3 !important;
+  border: 1px solid #1a2225 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 section#login button.button.button--small {
@@ -46,10 +73,38 @@ section#login button.button.button--small:hover {
   border-color: #3a4a50 !important;
 }
 
+section#login a {
+  font-family: 'Titillium Web', clear-sans, sans-serif !important;
+  font-size: .95rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.3px !important;
+  color: #f3b684 !important;
+  text-decoration: none !important;
+}
+
+section#login a:hover {
+  color: #f3f3f3 !important;
+  text-decoration: none !important;
+}
+
 section#login .case {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+section#login .case span[class^="case-node-"] {
+  font-size: 0 !important;
+  width: 118px !important;
+  height: 118px !important;
+  display: block !important;
+  background-image: url("/webGui/images/topa-le-avatar-login.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
 }
 
 section#login .topa-login-avatar {
@@ -76,5 +131,5 @@ section#login .topa-login-avatar {
 }
 
 .topa-login-github-link {
-  font-size: 0.85rem;
+  font-size: .85rem;
 }
