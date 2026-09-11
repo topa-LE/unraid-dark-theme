@@ -53,7 +53,7 @@ if [[ ! -f "$GO_FILE" ]]; then
   exit 1
 fi
 
-if !grep -Fq "$MARK_START" "$GO_FILE"; then
+if ! grep -Fq "$MARK_START" "$GO_FILE"; then
   printf '\n%s\n%s\n%s\n' "$MARK_START" "$GO_COMMAND" "$MARK_END" >> "$GO_FILE"
   echo "Boot-Hook gesetzt."
 else
