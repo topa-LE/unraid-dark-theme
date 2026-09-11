@@ -747,9 +747,7 @@ div.user-list a.info:hover {
    ======================================== */
 
 #title {
-
-    border-bottom:
-        1px solid rgba(18,22,24,0.95) !important;
+    border-bottom: 1px solid rgb(41 57 65 / 95%) !important;
 }
 
 
@@ -1085,7 +1083,7 @@ section#tab1-panel.tab-content.content {
         rgba(46,60,68,0.82) 0%,
         rgba(34,47,55,0.90) 100%
     ) !important;
-    border: 1px solid rgba(150,170,185,0.22) !important;
+    border: 1px solid rgb(21 24 25 / 22%) !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.34) !important;
     overflow: hidden !important;
