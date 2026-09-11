@@ -2814,3 +2814,9 @@ fieldset.docker {
   cursor: pointer;
   color: #f5903e !important;
 }
+
+/* Horizontal rule */
+hr {
+  color: rgb(38 69 79 / 22%);
+  background-color: #475156;
+}
