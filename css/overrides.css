@@ -2800,3 +2800,17 @@ a.info span {
 .failed {
   color: #f92732 !important;
 }
+
+
+/* Docker fieldset */
+fieldset.docker {
+  border: solid thin;
+  margin-top: 8px;
+  border-color: #34383a;
+}
+
+/* Enabled / home more accent */
+.enabledIcon, .homeMore {
+  cursor: pointer;
+  color: #f5903e !important;
+}
