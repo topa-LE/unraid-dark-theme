@@ -3229,3 +3229,10 @@ unraid-api-status-manager div[class*="border-muted"] {
     border: 1px solid rgba(88, 112, 124, 0.38) !important;
     border-radius: 6px !important;
 }
+
+/* Global theme variables - refined dark colors */
+:root,
+body.dark {
+    --shade-bg-color: #222e32 !important;
+    --color-border: #383735 !important;
+}
