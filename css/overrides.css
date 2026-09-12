@@ -3189,3 +3189,17 @@ div.content > div.preset {
 
     box-sizing: border-box !important;
 }
+
+/* WireGuard - tunnel form panel */
+#block-wg0 > form[name="wg0"] {
+    max-width: 1150px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 38px 58px !important;
+
+    background: rgba(19,24,26,0.22) !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+}
