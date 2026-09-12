@@ -2790,3 +2790,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #boot_device .fa-magic.title {
     background: transparent !important;
 }
+
+/* Array operation buttons */
+.ArrayOperation-Table button,
+.ArrayOperation-Table input[type="button"],
+.ArrayOperation-Table input[type="submit"] {
+    background: #1f292d !important;
+}
+
+.ArrayOperation-Table button:hover,
+.ArrayOperation-Table input[type="button"]:hover,
+.ArrayOperation-Table input[type="submit"]:hover {
+    background: #40535d !important;
+}
