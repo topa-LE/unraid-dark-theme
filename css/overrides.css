@@ -1349,7 +1349,7 @@ section#tab2-panel.tab-content.content {
         rgba(46, 60, 68, 0.82) 0%,
         rgba(34, 47, 55, 0.90) 100%
     ) !important;
-    border: 1px solid rgba(150, 170, 185, 0.22) !important;
+    border: 1px solid #2b3439;
     border-radius: 4px !important;
     box-shadow: 0 14px 32px rgba(0,0,0,0.26) !important;
 }
