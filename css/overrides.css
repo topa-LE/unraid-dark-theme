@@ -3019,3 +3019,26 @@ span[title="Schlüssel aktualisieren"]:focus {
     font-style: normal !important;
     color: #dc9b66 !important;
 }
+
+/* CPU pinning notices - VM and Docker service stopped */
+#displaybox > div.content > div.notice {
+    max-width: 760px !important;
+    margin: 38px 0 46px 0 !important;
+    padding: 34px 40px 34px 110px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+
+    background-color: rgba(19,24,26,0.22) !important;
+    background-position: 34px center !important;
+    background-repeat: no-repeat !important;
+
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+}
