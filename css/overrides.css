@@ -2844,3 +2844,8 @@ section#tab62-panel.tab-content.content > div > div:nth-child(2) table td:first-
 section#tab62-panel.tab-content.content > div > div:nth-child(2) {
     margin-left: 18px !important;
 }
+
+/* Docker Auto Update - left column labels */
+section#tab62-panel.tab-content.content > div > div:first-child table td:first-child {
+    padding-left: 18px !important;
+}
