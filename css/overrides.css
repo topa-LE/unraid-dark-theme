@@ -2827,3 +2827,9 @@ hr {
     text-align: right !important;
     padding-right: 18px !important;
 }
+
+/* Plugin Auto Update - delay field width */
+#myForm input#delay {
+    max-width: none !important;
+    width: 100% !important;
+}
