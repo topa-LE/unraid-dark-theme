@@ -2803,3 +2803,62 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .ArrayOperation-Table input[type="submit"]:hover {
     background: #40535d !important;
 }
+
+/* Boot parameters - section boxes */
+#tab3-panel #menu-mode-controls section.section {
+    max-width: 1200px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 38px 58px !important;
+    background: linear-gradient(
+        180deg,
+        rgba(46,60,68,0.82) 0%,
+        rgba(34,47,55,0.90) 100%
+    ) !important;
+    border: 1px solid rgb(21 24 25 / 22%) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.34) !important;
+    box-sizing: border-box !important;
+}
+
+/* Boot parameters - intro text */
+#tab3-panel > .main-content > p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+}
+
+/* Boot parameters - section header accent */
+#tab3-panel #menu-mode-controls section.section > h1 {
+    color: #dc9b66 !important;
+    border-bottom: 2px solid #dc9b66 !important;
+}
+
+/* Boot parameters - warning accent */
+#tab3-panel #menu-mode-controls .warning-box {
+    border-left: 4px solid #dc9b66 !important;
+}
+
+/** Boot mode / UEFI content box */
+#tab4-panel.tab-content.content {
+    max-width: 760px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 38px 58px !important;
+    background: linear-gradient(
+        180deg,
+        rgba(46,60,68,0.82) 0%,
+        rgba(34,47,55,0.90) 100%
+    ) !important;
+    border: 1px solid rgb(21 24 25 / 22%) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.34) !important;
+    overflow: hidden !important;
+}
+
+#tab4-panel.tab-content.content form,
+#tab4-panel.tab-content.content dl,
+#tab4-panel.tab-content.content div,
+#tab4-panel.tab-content.content table,
+#tab4-panel.tab-content.content tbody,
+#tab4-panel.tab-content.content tr,
+#tab4-panel.tab-content.content td {
+    background: transparent !important;
+}
