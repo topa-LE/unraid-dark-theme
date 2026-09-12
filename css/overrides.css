@@ -1864,7 +1864,7 @@ div.content > form[action="/update.php"][target="progressFrame"] {
   margin: 28px auto 0 auto !important;
   padding: 18px 24px !important;
   background: rgba(19,24,26,0.22) !important;
-  border: 1px solid rgba(88,112,124,0.52) !important;
+  border: 1px solid #2b3439 !important;
   border-radius: 8px !important;
   box-shadow: none !important;
 }
@@ -1885,7 +1885,7 @@ div.content > form[name="NameSettings"] {
 
     background: rgba(19,24,26,0.22) !important;
 
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -1903,7 +1903,7 @@ form[name="datetime_settings"] {
 
     background: rgba(19,24,26,0.22) !important;
 
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -1925,7 +1925,7 @@ form[name="datetime_settings"] textarea {
 form#settingsForm {
     background: rgba(19,24,26,0.22) !important;
 
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -1949,7 +1949,7 @@ unraid-api-status-manager .bg-muted,
 unraid-api-status-manager div[class*="bg-muted"] {
     background: rgba(19,24,26,0.22) !important;
 
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -1989,7 +1989,7 @@ unraid-api-status-manager span[class*="text-orange-500"] {
 
 body.dark section#login {
   background: #13181a !important;
-  border: 1px solid rgba(88,112,124,0.52) !important;
+  border: 1px solid #2b3439 !important;
   border-radius: 8px !important;
   box-shadow: 0 10px 35px rgba(0,0,0,0.45) !important;
 }
@@ -2012,7 +2012,7 @@ body.dark section#login select,
 body.dark section#login textarea {
   background: #13181a !important;
   color: #e8e8e8 !important;
-  border: 1px solid rgba(88,112,124,0.52) !important;
+  border: 1px solid #2b3439 !important;
 }
 
 body.dark section#login a {
@@ -2246,7 +2246,7 @@ img[src*="/plugins/dynamix/users/"] {
 .qq-upload-button {
 
     background: rgba(19,24,26,0.22) !important;
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -2307,7 +2307,7 @@ span#dropbox {
     background-color: rgba(19,24,26,0.22) !important;
     background-image: none !important;
 
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     box-shadow: none !important;
@@ -2376,7 +2376,7 @@ span#dropbox {
     line-height: normal !important;
 
     background: rgba(19,24,26,0.22) !important;
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
 }
@@ -2518,7 +2518,7 @@ span#dropbox:hover {
 /* UserEdit: obere Benutzer-/Avatar-Box */
 div.content > form[onsubmit*="upload"] {
     background: rgba(19,24,26,0.18) !important;
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     max-width: 1150px !important;
@@ -2531,7 +2531,7 @@ div.content > form[onsubmit*="upload"] {
 /* UserEdit: Passwort-Box passend dazu */
 div.content > form[onsubmit*="checkPassword"] {
     background: rgba(19,24,26,0.18) !important;
-    border: 1px solid rgba(88,112,124,0.52) !important;
+    border: 1px solid #2b3439 !important;
     border-radius: 8px !important;
 
     max-width: 1150px !important;
