@@ -3000,3 +3000,8 @@ form[name="onboarding_wizard_settings"] input[type="button"] {
     font-size: 16px !important;
     line-height: 1.2 !important;
 }
+
+/* Array operation - safe mode checkbox alignment */
+table.ArrayOperation-Table label:has(> input[name="safemode"]) {
+    margin-left: -5px !important;
+}
