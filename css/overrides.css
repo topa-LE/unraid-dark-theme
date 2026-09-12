@@ -3208,3 +3208,8 @@ div.content > div.preset {
 div.content > div.preset small {
     font-size: 17px !important;
 }
+
+/* Disabled text color */
+span.disabled {
+    color: #e4edc9 !important;
+}
