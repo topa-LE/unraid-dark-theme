@@ -2834,7 +2834,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* Boot parameters - warning accent */
 #tab3-panel #menu-mode-controls .warning-box {
-    border-left: 4px solid #dc9b66 !important;
+    background-color: #1a2225 !important;
+    border-left: 3px solid #dc9b66 !important;
 }
 
 /** Boot mode / UEFI content box */
@@ -2861,4 +2862,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #tab4-panel.tab-content.content tr,
 #tab4-panel.tab-content.content td {
     background: transparent !important;
+}
+
+/* Boot parameters - boot entry cards */
+#tab3-panel #boot-entries-container .boot-entry {
+    background-color: #202a2f !important;
+    margin-bottom: 12px !important;
+    padding: 12px !important;
+    border: 1px solid #0c0e0f !important;
+    border-radius: 5px !important;
+}
+
+/* Boot parameters - global configuration */
+#tab3-panel .syslinux-section.global-config {
+    background: #202a2f !important;
+    border: 1px solid #0c0e0f !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
 }
