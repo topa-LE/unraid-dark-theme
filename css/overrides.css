@@ -284,7 +284,6 @@ i.green-orb,
 i.fa-circle.green-orb,
 .green.orb-orb::before {
   color: #7fbf4d !important;
-  background-color: #7fbf4d !important;
 }
 
 
@@ -2785,4 +2784,9 @@ input[type="date"] {
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1) !important;
     opacity: 0.85;
+}
+
+/* Internal Boot icon */
+#boot_device .fa-magic.title {
+    background: transparent !important;
 }
