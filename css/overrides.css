@@ -2833,3 +2833,14 @@ hr {
     max-width: none !important;
     width: 100% !important;
 }
+
+/* Docker Auto Update - right column labels */
+section#tab62-panel.tab-content.content > div > div:nth-child(2) table td:first-child {
+    text-align: right !important;
+    padding-right: 18px !important;
+}
+
+/* Docker Auto Update - right column spacing */
+section#tab62-panel.tab-content.content > div > div:nth-child(2) {
+    margin-left: 18px !important;
+}
