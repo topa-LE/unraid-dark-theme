@@ -702,7 +702,8 @@ div.user-list {
 
 /* einzelne User-Kachel */
 
-div.user-list a.info {
+div.user-list a.info,
+div.user-list > a[href^="/Users/UserEdit?name="] {
 
     display:
         block !important;
@@ -728,7 +729,8 @@ div.user-list a.info {
 
 /* Hover */
 
-div.user-list a.info:hover {
+div.user-list a.info:hover,
+div.user-list > a[href^="/Users/UserEdit?name="]:hover {
 
     background:
         #2b3a3f !important;
@@ -2175,7 +2177,8 @@ body.dark .sweet-alert {
 }
 
 /* Wrapper */
-.user-list a.info {
+.user-list a.info,
+.user-list > a[href^="/Users/UserEdit?name="] {
     background: transparent !important;
     box-shadow: none !important;
 }
