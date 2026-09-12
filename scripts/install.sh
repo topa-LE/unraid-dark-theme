@@ -23,6 +23,7 @@ for FILE in \
   "$SOURCE_DIR/css/loader.css" \
   "$SOURCE_DIR/css/theme.css" \
   "$SOURCE_DIR/css/overrides.css" \
+  "$SOURCE_DIR/js/array-operation.js" \
   "$SOURCE_DIR/img/topa-le-avatar-login.png" \
   "$SOURCE_DIR/login/login-theme.css" \
   "$SOURCE_DIR/scripts/apply.sh" \
@@ -36,10 +37,11 @@ do
   fi
 done
 
-mkdir -p "$TARGET/css" "$TARGET/img" "$TARGET/login" "$TARGET/scripts"
+mkdir -p "$TARGET/css" "$TARGET/js" "$TARGET/img" "$TARGET/login" "$TARGET/scripts"
 
 cp -f "$SOURCE_DIR/VERSION" "$TARGET/VERSION"
 cp -f "$SOURCE_DIR/css/"*.css "$TARGET/css/"
+cp -f "$SOURCE_DIR/js/array-operation.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/img/topa-le-avatar-login.png" "$TARGET/img/"
 cp -f "$SOURCE_DIR/login/login-theme.css" "$TARGET/login/"
 cp -f "$SOURCE_DIR/scripts/apply.sh" \

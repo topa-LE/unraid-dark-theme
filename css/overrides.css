@@ -2031,158 +2031,72 @@ body.dark section#login a {
 ========================================================= */
 
 /* =========================================================
-   MAIN PAGE – ARRAY OPERATION PANEL WIDTH
-   START
-========================================================= */
-div.content > form[action="/update.htm"][target="progressFrame"] {
+   MAIN PAGE – ARRAY OPERATION BOXES
+   ========================================================= */
+
+/*
+ * Einheitlicher äußerer Rahmen für:
+ *   1. Array Stop / Check / History
+ *   2. Spin Up / Spin Down
+ *   3. Mover
+ *   4. Reboot / Shutdown
+ *
+ * Der zweite Container wird gezielt per array-operation.js
+ * ausschließlich um die Tabelle mit #spinup-button erzeugt.
+ */
+html body.dark div#displaybox div.content > form[name="arrayOps"],
+html body.dark div#displaybox div.content > form[name="mover_schedule"],
+html body.dark div#displaybox div.content > form[name="shutdownOps"],
+html body.dark div#displaybox div.content > #topa-le-array-spin-wrapper {
     max-width: 1150px !important;
     margin: 28px auto 0 auto !important;
-    padding: 15px 15px 15px 15px !important;
+    padding: 15px !important;
+    border: 1px solid rgb(38 42 45 / 96%) !important;
     border-radius: 8px !important;
-    border-color: rgb(38 42 45 / 96%) !important;
-    border: 1px solid;
-    background-color: #2b3a3f;
-}
-/* =========================================================
-   END MAIN PAGE – ARRAY OPERATION PANEL WIDTH
-========================================================= */
-
-
-/* =========================================================
-   MAIN PAGE – ARRAY OPERATION TABLES WIDTH
-   START
-========================================================= */
-html body table.ArrayOperation-Table.array_status.noshift {
-    max-width: 1150px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-/* =========================================================
-   END MAIN PAGE – ARRAY OPERATION TABLES WIDTH
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – ARRAY TABLES WIDTH + SPACING
-   START
-========================================================= */
-html body table.ArrayOperation-Table.array_status.noshift {
-    max-width: 1150px !important;
-    margin: 28px auto 0 auto !important;
-}
-/* =========================================================
-   END MAIN PAGE – ARRAY TABLES WIDTH + SPACING
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – ARRAY INNER LINE REMOVE
-   START
-========================================================= */
-table.ArrayOperation-Table.array_status td.line {
-    border: none !important;
-    background: transparent !important;
-    height: 0 !important;
-}
-/* =========================================================
-   END MAIN PAGE – ARRAY INNER LINE REMOVE
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – MOVER SCHEDULE INNER TABLE MARGIN FIX
-   START
-========================================================= */
-form[name="mover_schedule"] table.ArrayOperation-Table.array_status.noshift {
-    margin-top: 0 !important;
-}
-/* =========================================================
-   END MAIN PAGE – MOVER SCHEDULE INNER TABLE MARGIN FIX
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – BOX 1 INNER TABLE MARGIN FIX
-   START
-========================================================= */
-div.content > form[name="arrayOps"] table.ArrayOperation-Table.array_status {
-    margin-top: 0 !important;
-}
-/* =========================================================
-   END MAIN PAGE – BOX 1 INNER TABLE MARGIN FIX
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – BOX 2 4 SOFT PANEL
-   START
-========================================================= */
-html body table.ArrayOperation-Table.array_status.noshift {
-    max-width: 1150px !important;
-    margin: 28px auto 0 auto !important;
-    padding: 15px 15px 15px 15px !important;
-    border-radius: 8px !important;
-}
-/* =========================================================
-   END MAIN PAGE – BOX 2 4 SOFT PANEL
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – BOX 2 4 INNER TD PANEL
-   START
-========================================================= */
-html body table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-}
-/* =========================================================
-   END MAIN PAGE – BOX 2 4 INNER TD PANEL
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
-   MAIN PAGE – BOX 1 FINAL CLEAN LOOK
-   START
-========================================================= */
-
-/* ÄUSSEREN FORM-RAHMEN ENTFERNEN */
-div.content > form[name="arrayOps"] {
-    background: transparent !important;
-    border: none !important;
+    background-color: #2b3a3f !important;
     box-shadow: none !important;
-    padding: 0 !important;
 }
 
-/* INNEREN SCHWARZEN CONTAINER SAUBER EINRAHMEN */
-html body table.ArrayOperation-Table.array_status {
-    max-width: 1150px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+/* Leeren Absatz oberhalb der ersten Array-Tabelle entfernen. */
+html body.dark div#displaybox div.content > form[name="arrayOps"] > p:empty {
+    display: none !important;
+    margin: 0 !important;
+}
+
+/* Innere dunkle Operationstabellen sauber im Außenrahmen halten. */
+html body.dark div#displaybox div.content > form[name="arrayOps"] table.ArrayOperation-Table.array_status,
+html body.dark div#displaybox div.content > form[name="mover_schedule"] table.ArrayOperation-Table.array_status.noshift,
+html body.dark div#displaybox div.content > form[name="shutdownOps"] table.ArrayOperation-Table.array_status.noshift,
+html body.dark div#displaybox div.content > #topa-le-array-spin-wrapper > table.ArrayOperation-Table.array_status.noshift {
+    margin: 0 !important;
     border: 1px solid rgba(88, 112, 124, 0.42) !important;
     border-radius: 8px !important;
     overflow: hidden !important;
 }
 
-/* =========================================================
-   END MAIN PAGE – BOX 1 FINAL CLEAN LOOK
-========================================================= */
+/* Die zweite Box füllt den vom Script erzeugten Wrapper vollständig aus. */
+html body.dark div#displaybox div.content > #topa-le-array-spin-wrapper > table.ArrayOperation-Table.array_status.noshift {
+    width: 100% !important;
+    max-width: 1150px !important;
+}
+
+/* Innenabstand der noshift-Operationstabellen beibehalten. */
+html body.dark div#displaybox div.content > form[name="mover_schedule"] table.ArrayOperation-Table.array_status.noshift > tbody > tr > td,
+html body.dark div#displaybox div.content > form[name="shutdownOps"] table.ArrayOperation-Table.array_status.noshift > tbody > tr > td,
+html body.dark div#displaybox div.content > #topa-le-array-spin-wrapper > table.ArrayOperation-Table.array_status.noshift > tbody > tr > td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Nicht benötigte innere Trennlinie entfernen. */
+html body.dark div#displaybox div.content table.ArrayOperation-Table.array_status td.line {
+    border: none !important;
+    background: transparent !important;
+    height: 0 !important;
+}
 
 /* =========================================================
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
-========================================================= */
-
-/* =========================================================
+   END MAIN PAGE – ARRAY OPERATION BOXES
 ========================================================= */
 
 

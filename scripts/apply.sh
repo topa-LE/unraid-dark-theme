@@ -8,11 +8,13 @@ STATE_DIR="$ROOT/state"
 LOGIN_CASE_ORIGINAL="$STATE_DIR/login-case.original"
 
 CSS_HREF="/boot/config/custom-css/topa-LE/css/loader.css"
+JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 
 echo "===== topa-LE Runtime ====="
 
 for FILE in \
   "$ROOT/css/loader.css" \
+  "$ROOT/js/array-operation.js" \
   "$ROOT/login/login-theme.css" \
   "$ROOT/img/topa-le-avatar-login.png" \
   "$LAYOUT" \
@@ -32,6 +34,15 @@ if ! grep -Fq "$CSS_HREF" "$LAYOUT"; then
   echo "WebGUI-Theme-Hook gesetzt."
 else
   echo "WebGUI-Theme-Hook bereits vorhanden."
+fi
+
+if ! grep -Fq "$JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE Array Operation -->\
+<script src="/boot/config/custom-css/topa-LE/js/array-operation.js"></script>' "$LAYOUT"
+  echo "Array-Operation-Hook gesetzt."
+else
+  echo "Array-Operation-Hook bereits vorhanden."
 fi
 
 
