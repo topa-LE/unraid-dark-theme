@@ -3005,3 +3005,17 @@ form[name="onboarding_wizard_settings"] input[type="button"] {
 table.ArrayOperation-Table label:has(> input[name="safemode"]) {
     margin-left: -5px !important;
 }
+
+/* License indicator - theme colors */
+span[title="Schlüssel aktualisieren"]:hover,
+span[title="Schlüssel aktualisieren"]:focus {
+    border-bottom-color: #EFAA71 !important;
+}
+
+.text-header-text-secondary em,
+.text-header-text-secondary i,
+.text-header-text-secondary strong,
+.text-header-text-secondary .font-semibold strong {
+    font-style: normal !important;
+    color: #dc9b66 !important;
+}
