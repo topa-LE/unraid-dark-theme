@@ -2906,3 +2906,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #tab3-panel .syslinux-section {
     padding: 0 !important;
 }
+
+/* Boot parameters - parameter preview */
+#tab3-panel #params-preview {
+    background-color: #202a2f !important;
+    border: 1px solid #0c0e0f !important;
+    border-radius: 5px !important;
+}
