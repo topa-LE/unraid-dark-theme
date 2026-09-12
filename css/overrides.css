@@ -3221,3 +3221,11 @@ unraid-api-status-manager div[class*="border-muted"] {
     border: 1px solid rgba(88, 112, 124, 0.38) !important;
     border-radius: 6px !important;
 }
+
+/* Unraid API Status Manager - muted panels */
+unraid-api-status-manager .border-muted,
+unraid-api-status-manager div[class*="border-muted"] {
+    background: #212c31 !important;
+    border: 1px solid rgba(88, 112, 124, 0.38) !important;
+    border-radius: 6px !important;
+}
