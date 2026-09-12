@@ -2763,3 +2763,26 @@ section#tab62-panel.tab-content.content > div > div:nth-child(2) {
 section#tab62-panel.tab-content.content > div > div:first-child table td:first-child {
     padding-left: 18px !important;
 }
+
+/* ZFS pool information */
+#zfs-info {
+    width: 680px !important;
+    max-width: 680px !important;
+    font-size: 11px !important;
+}
+
+/* Checkbox accent */
+input[type="checkbox"] {
+    accent-color: #1f2325 !important;
+}
+
+/* Date input */
+input[type="date"] {
+    padding-left: 5px !important;
+    background-color: #13181a !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) !important;
+    opacity: 0.85;
+}
