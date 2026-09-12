@@ -3045,3 +3045,8 @@ span[title="Schlüssel aktualisieren"]:focus {
     line-height: 1.5 !important;
     text-align: left !important;
 }
+
+/* Custom kernel parameter - comment field alignment */
+input#new-custom-comment {
+    margin-left: 0 !important;
+}
