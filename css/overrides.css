@@ -2880,3 +2880,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 8px !important;
     padding: 16px !important;
 }
+
+/* Boot parameters - config preview wrapper */
+#tab3-panel #config-preview {
+    background: none !important;
+    border: none !important;
+}
+
+/* Boot parameters - syslinux section wrapper */
+#tab3-panel .syslinux-section {
+    background: none !important;
+    border: none !important;
+}
+
+/* Boot parameters - config preview labels */
+#tab3-panel #config-preview strong {
+    font-size: 17px !important;
+}
