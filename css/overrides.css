@@ -2805,7 +2805,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - section boxes */
-#tab3-panel #menu-mode-controls section.section {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #menu-mode-controls section.section {
     max-width: 1200px !important;
     margin: 34px auto 60px auto !important;
     padding: 38px 58px !important;
@@ -2821,19 +2821,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - intro text */
-#tab3-panel > .main-content > p {
+:is(#tab3-panel > .main-content, .main-content:has(> #menu-mode-controls)) > p {
     font-size: 17px !important;
     line-height: 1.55 !important;
 }
 
 /* Boot parameters - section header accent */
-#tab3-panel #menu-mode-controls .section-header {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #menu-mode-controls .section-header {
     color: #dc9b66 !important;
     border-bottom: 2px solid #dc9b66 !important;
 }
 
 /* Boot parameters - warning accent */
-#tab3-panel #menu-mode-controls .warning-box {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #menu-mode-controls .warning-box {
     background-color: #1a2225 !important;
     border-left: 3px solid #dc9b66 !important;
 }
@@ -2865,7 +2865,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - boot entry cards */
-#tab3-panel #boot-entries-container .boot-entry {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #boot-entries-container .boot-entry {
     background-color: #202a2f !important;
     margin-bottom: 12px !important;
     padding: 12px !important;
@@ -2874,7 +2874,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - global configuration */
-#tab3-panel .syslinux-section.global-config {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) .syslinux-section.global-config {
     background: #202a2f !important;
     border: 1px solid #0c0e0f !important;
     border-radius: 8px !important;
@@ -2882,34 +2882,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - config preview wrapper */
-#tab3-panel #config-preview {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #config-preview {
     background: none !important;
     border: none !important;
 }
 
 /* Boot parameters - syslinux section wrapper */
-#tab3-panel .syslinux-section {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) .syslinux-section {
     background: none !important;
     border: none !important;
 }
 
 /* Boot parameters - config preview labels */
-#tab3-panel #config-preview strong {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #config-preview strong {
     font-size: 17px !important;
 }
 
 /* Boot parameters - wrapper spacing */
-#tab3-panel #config-preview {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #config-preview {
     padding: 0 !important;
 }
 
-#tab3-panel .syslinux-section {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) .syslinux-section {
     padding: 0 !important;
 }
 
 /* Boot parameters - parameter preview */
-#tab3-panel #params-preview {
+:is(#tab3-panel, .main-content:has(> #menu-mode-controls)) #params-preview {
     background-color: #202a2f !important;
     border: 1px solid #0c0e0f !important;
     border-radius: 5px !important;
+}
+
+/* Usage bar label */
+.usage-bar > span {
+    line-height: 17px !important;
+}
+
+/* Boot parameters - settings page width */
+.main-content:has(> #menu-mode-controls) {
+    max-width: 1200px !important;
 }
