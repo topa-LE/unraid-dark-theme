@@ -3,7 +3,27 @@
 
     const WRAPPER_ID = 'topa-le-array-spin-wrapper';
 
+    function fixArrayOpsSpacing() {
+        const form = document.forms.arrayOps;
+
+        if (!form) {
+            return;
+        }
+
+        Array.from(form.children).forEach((element) => {
+            if (
+                element.tagName === 'P' &&
+                !element.textContent.trim()
+            ) {
+                element.style.setProperty('margin', '0', 'important');
+                element.style.setProperty('display', 'none', 'important');
+            }
+        });
+    }
+
     function applyArraySpinWrapper() {
+        fixArrayOpsSpacing();
+
         const button = document.getElementById('spinup-button');
 
         if (!button) {
