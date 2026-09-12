@@ -2897,3 +2897,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #tab3-panel #config-preview strong {
     font-size: 17px !important;
 }
+
+/* Boot parameters - wrapper spacing */
+#tab3-panel #config-preview {
+    padding: 0 !important;
+}
+
+#tab3-panel .syslinux-section {
+    padding: 0 !important;
+}
