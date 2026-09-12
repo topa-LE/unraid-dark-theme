@@ -3203,3 +3203,8 @@ div.content > div.preset {
 
     box-sizing: border-box !important;
 }
+
+/* WireGuard - preset information text */
+div.content > div.preset small {
+    font-size: 17px !important;
+}
