@@ -2827,7 +2827,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Boot parameters - section header accent */
-#tab3-panel #menu-mode-controls section.section > h1 {
+#tab3-panel #menu-mode-controls .section-header {
     color: #dc9b66 !important;
     border-bottom: 2px solid #dc9b66 !important;
 }
