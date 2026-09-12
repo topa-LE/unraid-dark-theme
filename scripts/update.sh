@@ -35,7 +35,7 @@ tar -xzf "$ARCHIVE" -C "$TMP_DIR"
 
 SOURCE_DIR="$TMP_DIR/unraid-dark-theme-main"
 
-if [[ ! -x "$SOURCE_DIR/scripts/install.sh" ]]; then
+if [[ ! -f "$SOURCE_DIR/scripts/install.sh" ]]; then
   echo "Fehler: install.sh im heruntergeladenen Repository nicht gefunden."
   exit 1
 fi

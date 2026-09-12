@@ -48,7 +48,7 @@ cp -f "$SOURCE_DIR/scripts/apply.sh" \
   "$SOURCE_DIR/scripts/install.sh" \
   "$SOURCE_DIR/scripts/update.sh" \
   "$SOURCE_DIR/scripts/uninstall.sh" "$TARGET/scripts/"
-chmod 755 "$TARGET/scripts/"*.sh
+# Unraid /boot is typically VFAT; scripts are invoked via bash and do not rely on execute bits.
 
 if [[ ! -f "$GO_FILE" ]]; then
   echo "Fehler: /boot/config/go nicht gefunden."
