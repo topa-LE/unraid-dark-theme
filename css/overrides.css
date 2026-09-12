@@ -2821,3 +2821,9 @@ hr {
   color: rgb(38 69 79 / 22%);
   background-color: #475156;
 }
+
+/* Plugin Auto Update - right column labels */
+#myForm > div > div:nth-child(2) table td:first-child {
+    text-align: right !important;
+    padding-right: 18px !important;
+}
