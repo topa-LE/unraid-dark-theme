@@ -2930,3 +2930,26 @@ select.noframe {
     margin-left: -2px !important;
     padding-left: 5px !important;
 }
+
+/* Array stopped notice */
+#displaybox > div.content > p.notice {
+    max-width: 760px !important;
+    margin: 60px auto 0 auto !important;
+    padding: 105px 40px 34px 40px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+
+    background-color: rgba(19,24,26,0.22) !important;
+    background-position: center 30px !important;
+    background-repeat: no-repeat !important;
+
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    text-align: center !important;
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+}
