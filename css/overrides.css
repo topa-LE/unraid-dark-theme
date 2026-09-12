@@ -3170,3 +3170,8 @@ unraid-update-os.unapi > div > div > p {
     font-size: 18px !important;
     line-height: 1.6 !important;
 }
+
+/* Theme orange text */
+span.orange-text {
+    color: #dc9b66 !important;
+}
