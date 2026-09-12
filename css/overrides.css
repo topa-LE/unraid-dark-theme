@@ -3050,3 +3050,38 @@ span[title="Schlüssel aktualisieren"]:focus {
 input#new-custom-comment {
     margin-left: 0 !important;
 }
+
+/* Danksagungen - centered theme panel */
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) {
+    max-width: 1150px !important;
+    margin: 34px auto 60px auto !important;
+    padding: 0 38px 34px 38px !important;
+
+    background: rgba(19,24,26,0.22) !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+}
+
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) > .title {
+    margin: 0 -38px 26px -38px !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) > p,
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) > ul {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+}
+
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) > p {
+    margin-top: 14px !important;
+    margin-bottom: 14px !important;
+}
+
+#displaybox > div.content:has(> p a[href="https://unraid.net/"]) > ul {
+    margin-top: 8px !important;
+    margin-bottom: 18px !important;
+}
