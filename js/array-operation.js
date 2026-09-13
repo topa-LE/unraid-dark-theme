@@ -124,3 +124,52 @@
         initCommunityAppsCategory();
     }
 })();
+
+/* topa-LE WebTerminal Popup Size - START */
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof window.openTerminal !== 'function') {
+        return;
+    }
+
+    window.openTerminal = function(tag, name, more) {
+        if (/MSIE|Edge/.test(navigator.userAgent)) {
+            swal({
+                title: "_(Unsupported Feature)_",
+                text: "_(Sorry, this feature is not supported by MSIE/Edge)_.<br>_(Please try a different browser)_",
+                type: 'error',
+                html: true,
+                animation: 'none',
+                confirmButtonText: "_(Ok)_"
+            });
+            return;
+        }
+
+        name = name.replace(/[ #]/g, "_");
+
+        tty_window = makeWindow(
+            name + (more == '.log' ? more : ''),
+            Math.min(screen.availHeight, 720),
+            Math.min(screen.availWidth, 1280)
+        );
+
+        if (tty_window === null) {
+            throw new Error('Failed to open terminal window');
+        }
+
+        var socket = ['ttyd', 'syslog'].includes(tag)
+            ? '/webterminal/' + tag + '/'
+            : '/logterminal/' + name + (more == '.log' ? more : '') + '/';
+
+        $.get(
+            '/webGui/include/OpenTerminal.php',
+            {tag: tag, name: name, more: more},
+            function() {
+                setTimeout(function() {
+                    tty_window.location = socket;
+                    tty_window.focus();
+                }, 200);
+            }
+        );
+    };
+});
+/* topa-LE WebTerminal Popup Size - END */
