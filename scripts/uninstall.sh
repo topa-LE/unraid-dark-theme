@@ -13,6 +13,12 @@ LOGIN="/usr/local/emhttp/plugins/dynamix/include/.login.php"
 STATE_DIR="$TARGET/state"
 LOGIN_CASE_ORIGINAL="$STATE_DIR/login-case.original"
 
+TTYD_CONFIG="/etc/default/ttyd"
+DYNAMIX_CONFIG="/boot/config/plugins/dynamix/dynamix.cfg"
+TTYD_ORIGINAL="$STATE_DIR/ttyd-options.original"
+DYNAMIX_TTY_ORIGINAL="$STATE_DIR/dynamix-tty.original"
+TTYD_MARKER="# topa-LE WebTerminal Theme"
+
 MARK_START="# topa-LE Unraid Dark Theme - START"
 MARK_END="# topa-LE Unraid Dark Theme - END"
 
@@ -35,6 +41,16 @@ if [[ -f "$LOGIN" ]] && grep -Fq 'class="topa-login-avatar"' "$LOGIN"; then
   fi
 fi
 
+# Ein aktives Terminal-Theme darf nur entfernt werden, wenn der
+# ursprüngliche ttyd-Stand zuverlässig gesichert wurde.
+if [[ -f "$TTYD_CONFIG" ]] && grep -Fqx "$TTYD_MARKER" "$TTYD_CONFIG"; then
+  if [[ ! -s "$TTYD_ORIGINAL" ]]; then
+    echo "Fehler: Originale ttyd-Konfiguration fehlt: $TTYD_ORIGINAL"
+    echo "Deinstallation abgebrochen, damit ttyd nicht beschädigt wird."
+    exit 1
+  fi
+fi
+
 if [[ -f "$GO_FILE" ]] && grep -Fqx "$MARK_START" "$GO_FILE"; then
   sed -i "/^${MARK_START//\//\\/}$/,/^${MARK_END//\//\\/}$/d" "$GO_FILE"
   sed -i '${/^$/d;}' "$GO_FILE"
@@ -45,6 +61,70 @@ if [[ -f "$LAYOUT" ]]; then
   sed -i '/<!-- topa-LE Unraid Dark Theme -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE Array Operation -->/,+1d' "$LAYOUT"
   echo "WebGUI-Theme-Hooks entfernt."
+fi
+
+# WebTerminal auf den vor Installation vorhandenen Unraid-Stand zurücksetzen.
+if [[ -f "$TTYD_CONFIG" ]] && grep -Fqx "$TTYD_MARKER" "$TTYD_CONFIG"; then
+  ORIGINAL_TTYD_LINE="$(cat "$TTYD_ORIGINAL")"
+  TTYD_TMP="/tmp/topa-le-ttyd-restore.$$"
+  TTYD_RESTORED=0
+
+  while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+    if [[ "$LINE" == "$TTYD_MARKER" ]]; then
+      continue
+    fi
+
+    if [[ "$LINE" == TTYD_OPTS=* && $TTYD_RESTORED -eq 0 ]]; then
+      printf '%s\n' "$ORIGINAL_TTYD_LINE" >> "$TTYD_TMP"
+      TTYD_RESTORED=1
+    else
+      printf '%s\n' "$LINE" >> "$TTYD_TMP"
+    fi
+  done < "$TTYD_CONFIG"
+
+  if [[ $TTYD_RESTORED -ne 1 ]]; then
+    rm -f "$TTYD_TMP"
+    echo "Fehler: Originale ttyd-Konfiguration konnte nicht wiederhergestellt werden."
+    exit 1
+  fi
+
+  chmod 0644 "$TTYD_TMP"
+  mv "$TTYD_TMP" "$TTYD_CONFIG"
+  echo "Originale ttyd-Konfiguration wiederhergestellt."
+fi
+
+# Die ursprüngliche Dynamix-Terminalgröße nur dann zurückschreiben,
+# wenn noch unser Theme-Wert 17 aktiv ist. Eine spätere manuelle
+# Benutzeränderung wird dadurch nicht überschrieben.
+if [[ -s "$DYNAMIX_TTY_ORIGINAL" && -f "$DYNAMIX_CONFIG" ]]; then
+  CURRENT_DYNAMIX_TTY="$(grep -m1 '^tty=' "$DYNAMIX_CONFIG" || true)"
+
+  if [[ "$CURRENT_DYNAMIX_TTY" =~ ^tty=\"?17\"?$ ]]; then
+    ORIGINAL_DYNAMIX_TTY="$(cat "$DYNAMIX_TTY_ORIGINAL")"
+    DYNAMIX_TMP="/tmp/topa-le-dynamix-restore.$$"
+    DYNAMIX_RESTORED=0
+
+    while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+      if [[ "$LINE" == tty=* && $DYNAMIX_RESTORED -eq 0 ]]; then
+        printf '%s\n' "$ORIGINAL_DYNAMIX_TTY" >> "$DYNAMIX_TMP"
+        DYNAMIX_RESTORED=1
+      else
+        printf '%s\n' "$LINE" >> "$DYNAMIX_TMP"
+      fi
+    done < "$DYNAMIX_CONFIG"
+
+    if [[ $DYNAMIX_RESTORED -ne 1 ]]; then
+      rm -f "$DYNAMIX_TMP"
+      echo "Fehler: Dynamix-Terminalgröße konnte nicht wiederhergestellt werden."
+      exit 1
+    fi
+
+    chmod 0644 "$DYNAMIX_TMP"
+    mv "$DYNAMIX_TMP" "$DYNAMIX_CONFIG"
+    echo "Originale Dynamix-Terminalgröße wiederhergestellt."
+  else
+    echo "Dynamix-Terminalgröße wurde zwischenzeitlich geändert und bleibt unangetastet."
+  fi
 fi
 
 if [[ -f "$LOGIN" ]]; then
