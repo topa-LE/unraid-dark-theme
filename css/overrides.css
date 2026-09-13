@@ -3383,3 +3383,62 @@ tr.toggle-disk:nth-child(6n+4) {
     border-color: rgba(88, 112, 124, 0.62) !important;
     color: #eef3f4 !important;
 }
+
+/* Community Apps - pagination container */
+.navigationSection,
+.navigationArea.ca_center {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Community Apps - pagination information text */
+.navigationArea.ca_center > span.pageNavigation {
+    display: block !important;
+    margin-bottom: 2px !important;
+    color: #c5d0d4 !important;
+}
+
+/* Community Apps - pagination row */
+.navigationArea.ca_center > div.pageNavigation {
+    margin-top: 2px !important;
+}
+
+/* Community Apps - pagination buttons */
+.navigationArea .pageNavigation .pageNumber {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 30px !important;
+    height: 30px !important;
+    padding: 0 8px !important;
+    margin: 0 3px !important;
+
+    background: #212c31 !important;
+    border: 1px solid rgba(88, 112, 124, 0.38) !important;
+    border-radius: 6px !important;
+
+    color: #c5d0d4 !important;
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Community Apps - pagination hover */
+.navigationArea .pageNavigation a.pageNumber:hover {
+    background: #2b3439 !important;
+    color: #eef3f4 !important;
+}
+
+/* Community Apps - selected page */
+.navigationArea .pageNavigation .pageSelected {
+    background: #2b424e !important;
+    border-color: rgba(88, 112, 124, 0.62) !important;
+    color: #eef3f4 !important;
+}
+
+/* Community Apps - disabled navigation arrow */
+.navigationArea .pageNavigation .pageNavNoClick {
+    opacity: 0.45 !important;
+}
