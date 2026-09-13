@@ -3243,3 +3243,13 @@ body.dark {
         background-color: color-mix(in oklab, #315669 60%, transparent) !important;
     }
 }
+
+/* UnAPI - input background */
+.unapi .bg-input {
+    background-color: #2b3439 !important;
+}
+
+/* UnAPI notifications - subtle separators */
+.unapi div.divide-y > div {
+    border-color: #38474e !important;
+}
