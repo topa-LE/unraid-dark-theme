@@ -3541,3 +3541,13 @@ span[id^="smart-"].fa::before {
 .section-badge {
     color: #f8bb86 !important;
 }
+
+/* ==========================================================
+   Border Muted Section
+   ========================================================== */
+
+.border-muted.mt-6.border-t.pt-4 {
+    background-color: #2c373d !important;
+    padding-left: 15px !important;
+    padding-bottom: 15px !important;
+}
