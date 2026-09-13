@@ -3507,3 +3507,8 @@ tr.toggle-disk:nth-child(6n+4) {
 .unapi .text-green-500 {
     color: oklch(0.83 0.16 151.18) !important;
 }
+
+/* Dashboard SMART status icons - restore Font Awesome glyphs */
+span[id^="smart-"].fa::before {
+    font-family: FontAwesome !important;
+}
