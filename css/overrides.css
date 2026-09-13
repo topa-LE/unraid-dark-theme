@@ -3258,3 +3258,8 @@ body.dark {
 .unapi .bg-primary {
     background-color: hsl(24deg 63.63% 48.6%) !important;
 }
+
+/* UnAPI - active state primary background */
+.unapi .data-\[state\=active\]\:bg-primary[data-state=active] {
+    background-color: hsl(24deg 63.63% 48.6%) !important;
+}
