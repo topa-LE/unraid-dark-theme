@@ -3278,3 +3278,21 @@ tr.toggle-disk:nth-child(6n+4) {
 .warning {
     color: #dc9b66 !important;
 }
+
+/* Apps search area - transparent background and refined sizing */
+.searchArea {
+    background-color: transparent !important;
+    margin-top: 8px !important;
+}
+
+.searchArea input {
+    height: 40px !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+}
+
+.searchArea button {
+    width: 40px !important;
+    height: 40px !important;
+    box-sizing: border-box !important;
+}
