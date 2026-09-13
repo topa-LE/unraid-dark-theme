@@ -3296,3 +3296,90 @@ tr.toggle-disk:nth-child(6n+4) {
     height: 40px !important;
     box-sizing: border-box !important;
 }
+
+/* Community Apps - unified left menu container */
+.menuItems.menuAdjust {
+    background: #212c31 !important;
+    border: 1px solid rgba(88, 112, 124, 0.38) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: 8px 10px !important;
+}
+
+/* Community Apps - keep nested menu elements transparent */
+.menuItems.menuAdjust ul,
+.menuItems.menuAdjust li,
+.menuItems.menuAdjust span,
+.menuItems.menuAdjust a {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Community Apps - remove nested list box styling */
+.menuItems.menuAdjust ul.caMenu {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Community Apps - subtle separators */
+.menuItems.menuAdjust hr {
+    background: #38474e !important;
+    border: 0 !important;
+    height: 1px !important;
+    margin: 7px 0 !important;
+}
+
+/* Community Apps - calmer menu text */
+.menuItems.menuAdjust a,
+.menuItems.menuAdjust li.caMenuItem,
+.menuItems.menuAdjust li.categoryMenu {
+    color: #c5d0d4 !important;
+}
+
+/* Community Apps - hover only brightens text */
+.menuItems.menuAdjust a:hover,
+.menuItems.menuAdjust li.caMenuItem:hover,
+.menuItems.menuAdjust li.categoryMenu:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #eef3f4 !important;
+}
+
+.menuItems.menuAdjust li:hover,
+.menuItems.menuAdjust ul:hover,
+.menuItems.menuAdjust span:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Community Apps - sort options as theme buttons */
+#sortIconArea a.sortIcons {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 30px !important;
+    padding: 5px 10px !important;
+    margin-right: 6px !important;
+
+    background: #212c31 !important;
+    border: 1px solid rgba(88, 112, 124, 0.38) !important;
+    border-radius: 6px !important;
+
+    color: #c5d0d4 !important;
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+}
+
+#sortIconArea a.sortIcons:hover {
+    background: #2b3439 !important;
+    color: #eef3f4 !important;
+}
+
+#sortIconArea a.sortIcons.enabledIcon {
+    background: #2b424e !important;
+    border-color: rgba(88, 112, 124, 0.62) !important;
+    color: #eef3f4 !important;
+}
