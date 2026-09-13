@@ -3512,3 +3512,24 @@ tr.toggle-disk:nth-child(6n+4) {
 span[id^="smart-"].fa::before {
     font-family: FontAwesome !important;
 }
+
+/* ==========================================================
+   Dynamix File Manager – Dialog
+   ========================================================== */
+
+.ui-dialog.ui-dfm,
+.ui-dialog.ui-dfm.ui-widget.ui-widget-content {
+    background-color: #171c1f !important;
+}
+
+.ui-dialog.ui-dfm > .ui-dialog-titlebar {
+    background-color: #171c1f !important;
+}
+
+.ui-dialog.ui-dfm > .ui-dialog-content.ui-widget-content {
+    background-color: #1f282c !important;
+}
+
+.ui-dialog.ui-dfm > .ui-dialog-buttonpane.ui-widget-content {
+    background-color: #171c1f !important;
+}
