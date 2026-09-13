@@ -3533,3 +3533,11 @@ span[id^="smart-"].fa::before {
 .ui-dialog.ui-dfm > .ui-dialog-buttonpane.ui-widget-content {
     background-color: #171c1f !important;
 }
+
+/* ==========================================================
+   Section Badge
+   ========================================================== */
+
+.section-badge {
+    color: #f8bb86 !important;
+}
