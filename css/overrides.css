@@ -3442,3 +3442,52 @@ tr.toggle-disk:nth-child(6n+4) {
 .navigationArea .pageNavigation .pageNavNoClick {
     opacity: 0.45 !important;
 }
+
+/* Community Apps - results per page button */
+#maxPerPage.caButton.maxPerPage {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 5px 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    background: #212c31 !important;
+    border: 1px solid rgba(88, 112, 124, 0.38) !important;
+    border-radius: 6px !important;
+
+    color: #c5d0d4 !important;
+    font-style: normal !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Community Apps - active category */
+.searchArea .category.categoryLine {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 5px 13px !important;
+    margin-top: -3px !important;
+    margin-bottom: 0 !important;
+
+    background: #33483f !important;
+    border: 1px solid rgba(110, 136, 119, 0.45) !important;
+    border-radius: 6px !important;
+
+    color: #d7e3da !important;
+    font-style: normal !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Community Apps - hide duplicate alternative category label */
+.searchArea .category.altCategoryLine {
+    display: none !important;
+}
