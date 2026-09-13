@@ -3253,3 +3253,8 @@ body.dark {
 .unapi div.divide-y > div {
     border-color: #38474e !important;
 }
+
+/* UnAPI - primary background */
+.unapi .bg-primary {
+    background-color: hsl(24deg 63.63% 48.6%) !important;
+}
