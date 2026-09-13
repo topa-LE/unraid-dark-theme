@@ -3119,7 +3119,8 @@ input#new-custom-comment {
 /* UnAPI license page - theme colors */
 .unapi .bg-background,
 .unapi .bg-background\/90 {
-    background-color: #1a2327 !important;
+    /* previous: background-color: #1a2327 !important; */
+    background-color: #1f282c !important;
 }
 
 .unapi .border-muted {
@@ -3132,9 +3133,6 @@ input#new-custom-comment {
 }
 
 /* UnAPI license page - dark border */
-.unapi .dark\:border-gray-700\:where(.dark,.dark *) {
-    border-color: #161a1c !important;
-}
 
 /* UnAPI license page - override legacy inline card background */
 .unapi .rounded-lg.border[style*="background-color"] {
@@ -3490,4 +3488,22 @@ tr.toggle-disk:nth-child(6n+4) {
 /* Community Apps - hide duplicate alternative category label */
 .searchArea .category.altCategoryLine {
     display: none !important;
+}
+
+/* UnAPI - final theme color refinements */
+.unapi .rounded-lg.border.border-gray-200.p-4 {
+    background-color: #13181a !important;
+    border-color: #161a1c !important;
+}
+
+.unapi .dark\:border-gray-700:where(.dark,.dark *) {
+    border-color: #161a1c !important;
+}
+
+.unapi .to-orange {
+    --tw-gradient-to: #f3bb8e !important;
+}
+
+.unapi .text-green-500 {
+    color: oklch(0.83 0.16 151.18) !important;
 }
