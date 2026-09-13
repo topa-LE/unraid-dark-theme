@@ -3551,3 +3551,12 @@ span[id^="smart-"].fa::before {
     padding-left: 15px !important;
     padding-bottom: 15px !important;
 }
+
+/* ==========================================================
+   WLAN Tab Icon
+   ========================================================== */
+
+#tab2 i.fa.fa-wifi.title {
+    background: transparent !important;
+    background-color: transparent !important;
+}
