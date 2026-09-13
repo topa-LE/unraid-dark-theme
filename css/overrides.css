@@ -3236,3 +3236,10 @@ body.dark {
     --shade-bg-color: #222e32 !important;
     --color-border: #383735 !important;
 }
+
+/* UnAPI - muted 60 background */
+@supports (color: color-mix(in lab, red, red)) {
+    .unapi .bg-muted\/60 {
+        background-color: color-mix(in oklab, #315669 60%, transparent) !important;
+    }
+}
