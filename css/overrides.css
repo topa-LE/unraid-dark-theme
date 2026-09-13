@@ -214,7 +214,8 @@ table a,
 tbody a,
 .disk_status a,
 .share_status a {
-  color: #6f93ad !important;
+  /* vorher: color: #6f93ad !important; */
+  color: #7da0b9 !important;
 }
 
 .content a:hover,
