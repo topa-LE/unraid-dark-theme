@@ -66,3 +66,61 @@
         subtree: true
     });
 })();
+
+
+/* topa-LE Community Apps category label
+ * Hide the category pill when Community Apps supplies only &nbsp;.
+ * Show it again when a real category name is present.
+ */
+(() => {
+    const syncCommunityAppsCategory = () => {
+        const el = document.querySelector(
+            '.searchArea .category.categoryLine'
+        );
+
+        if (!el) {
+            return;
+        }
+
+        const hasText = el.textContent.trim().length > 0;
+
+        el.style.setProperty(
+            'display',
+            hasText ? 'inline-flex' : 'none',
+            'important'
+        );
+    };
+
+    const initCommunityAppsCategory = () => {
+        if (window.topaCommunityAppsCategoryObserver) {
+            window.topaCommunityAppsCategoryObserver.disconnect();
+        }
+
+        syncCommunityAppsCategory();
+
+        const searchArea = document.querySelector('.searchArea');
+
+        if (!searchArea) {
+            return;
+        }
+
+        window.topaCommunityAppsCategoryObserver =
+            new MutationObserver(syncCommunityAppsCategory);
+
+        window.topaCommunityAppsCategoryObserver.observe(searchArea, {
+            childList: true,
+            characterData: true,
+            subtree: true
+        });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener(
+            'DOMContentLoaded',
+            initCommunityAppsCategory,
+            { once: true }
+        );
+    } else {
+        initCommunityAppsCategory();
+    }
+})();
