@@ -3561,3 +3561,12 @@ span[id^="smart-"].fa::before {
     background: transparent !important;
     background-color: transparent !important;
 }
+
+/* ==========================================================
+   Title Right Hint Text
+   ========================================================== */
+
+.title.nocontrol > .right > i {
+    font-style: normal !important;
+    color: #7f9fae !important;
+}
