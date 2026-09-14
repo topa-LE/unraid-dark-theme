@@ -1674,7 +1674,7 @@ body.dark #login .button:hover,
    ========================================================== */
 
 table.tablesorter tbody tr {
-    background: #2a353c !important;
+    background: #2c3d47 !important;
     border: 1px solid #101416 !important;
     transition: background .18s ease;
 }
