@@ -3578,3 +3578,32 @@ span[id^="smart-"].fa::before {
 input[type="radio"] {
     accent-color: #1f2325 !important;
 }
+
+/* ==========================================================
+   Share settings - array stopped hint
+   ========================================================== */
+
+em.topa-array-stop-notice {
+    display: block !important;
+    width: 500px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    margin: 10px 0 0 0 !important;
+    padding: 15px 18px 15px 78px !important;
+
+    background-color: #171c1f !important;
+    background-position: 18px center !important;
+    background-repeat: no-repeat !important;
+
+    border: 1px solid #2b3439 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+
+    color: #7f9fae !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    line-height: 1.35 !important;
+
+    box-sizing: border-box !important;
+}

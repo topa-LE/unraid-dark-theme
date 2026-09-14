@@ -173,3 +173,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 });
 /* topa-LE WebTerminal Popup Size - END */
+
+/* topa-LE Share Settings Array Stop Notice - START */
+document.addEventListener('DOMContentLoaded', function () {
+    const notice = [...document.querySelectorAll('em')].find(el =>
+        el.textContent.trim() === 'Zum Ändern muss das Array gestoppt sein'
+    );
+
+    if (notice) {
+        notice.classList.add('notice', 'topa-array-stop-notice');
+    }
+});
+/* topa-LE Share Settings Array Stop Notice - END */
