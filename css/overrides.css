@@ -1674,7 +1674,7 @@ body.dark #login .button:hover,
    ========================================================== */
 
 table.tablesorter tbody tr {
-    background: #2c3d47 !important;
+    background: none !important;
     border: 1px solid #101416 !important;
     transition: background .18s ease;
 }
@@ -3778,4 +3778,10 @@ em.topa-array-stop-notice {
 
 .sweet-alert.nchan .sa-confirm-button-container > button.confirm:hover {
     background-color: #263238 !important;
+}
+
+/* Docker container row outline */
+#docker_containers #docker_list > tr.sortable {
+    outline: 1px solid #2b3439 !important;
+    outline-offset: -1px !important;
 }
