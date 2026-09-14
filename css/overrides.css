@@ -3640,10 +3640,17 @@ em.topa-array-stop-notice {
     outline: none !important;
 }
 
-/* Troubleshoot feedback hint */
+/* Bug report and troubleshoot feedback hints */
+#bugreport_panel p.note i,
 #troubleshoot_panel p.note i {
     font-style: normal !important;
     font-size: 16px !important;
     line-height: 1.5 !important;
     color: #7f9fae !important;
+}
+
+/* Feedback and footer link color */
+.feedback-footer-nav a,
+#footer a {
+    color: #809fb8 !important;
 }
