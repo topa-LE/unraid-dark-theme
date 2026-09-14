@@ -2730,7 +2730,7 @@ fieldset.docker {
 /* Enabled / home more accent */
 .enabledIcon, .homeMore {
   cursor: pointer;
-  color: #f5903e !important;
+  color: #e69451 !important;
 }
 
 /* Horizontal rule */
