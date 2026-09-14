@@ -187,11 +187,11 @@ document.addEventListener('DOMContentLoaded', function () {
 /* topa-LE Share Settings Array Stop Notice - END */
 
 /* topa-LE GUI Search Placeholder - START */
-(() => {
+document.addEventListener('DOMContentLoaded', function () {
     const applySearchPlaceholder = () => {
         const search = document.querySelector('#guiSearchBox');
 
-        if (search && search.getAttribute('placeholder') !== 'Suchbegriff hier eingeben ...') {
+        if (search) {
             search.setAttribute('placeholder', 'Suchbegriff hier eingeben ...');
         }
     };
@@ -206,5 +206,5 @@ document.addEventListener('DOMContentLoaded', function () {
         childList: true,
         subtree: true
     });
-})();
+});
 /* topa-LE GUI Search Placeholder - END */
