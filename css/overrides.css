@@ -3769,3 +3769,13 @@ em.topa-array-stop-notice {
     font-size: 15px !important;
     border-radius: 0 !important;
 }
+
+/* SweetAlert / Nchan confirm button */
+.sweet-alert.nchan .sa-confirm-button-container > button.confirm {
+    background-color: #1d2529 !important;
+    border: 1px solid rgb(18 17 17) !important;
+}
+
+.sweet-alert.nchan .sa-confirm-button-container > button.confirm:hover {
+    background-color: #263238 !important;
+}
