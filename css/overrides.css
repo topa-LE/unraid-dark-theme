@@ -3718,3 +3718,54 @@ em.topa-array-stop-notice {
 #guiSearchBox.topa-search-user-active::placeholder {
     opacity: 0 !important;
 }
+
+/* ==========================================================
+   SweetAlert / Nchan popup
+   ========================================================== */
+
+/* Complete popup frame */
+.sweet-alert.nchan {
+    border: 2px solid rgb(18 17 17) !important;
+    box-shadow: none !important;
+}
+
+/* Unified header and footer */
+.sweet-alert.nchan > h2,
+.sweet-alert.nchan > .sa-button-container {
+    background:
+        linear-gradient(
+            90deg,
+            #1b2022 0%,
+            #15191b 55%,
+            #101315 100%
+        ) !important;
+    background-color: #15191b !important;
+    box-shadow: none !important;
+}
+
+/* Header */
+.sweet-alert.nchan > h2 {
+    border-bottom: 1px solid rgb(18 17 17) !important;
+}
+
+/* Footer - extend through the popup padding */
+.sweet-alert.nchan > .sa-button-container {
+    margin-top: 0 !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    margin-bottom: -20px !important;
+
+    padding-top: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+
+    border-top: 1px solid rgb(18 17 17) !important;
+    box-sizing: border-box !important;
+}
+
+/* Nchan output content */
+.sweet-alert.nchan pre#swaltext {
+    font-size: 15px !important;
+    border-radius: 0 !important;
+}
