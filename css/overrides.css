@@ -3697,9 +3697,24 @@ em.topa-array-stop-notice {
     box-sizing: border-box !important;
 }
 
-/* GUI search placeholder */
+/* GUI search */
+#guiSearchBox {
+    background-color: #13181a !important;
+    color: #c9d1d5 !important;
+}
+
+#guiSearchBox:focus {
+    background-color: #13181a !important;
+    color: #c9d1d5 !important;
+    outline: none !important;
+}
+
 #guiSearchBox::placeholder {
     color: #7f9fae !important;
     opacity: 0.42 !important;
     font-weight: 300 !important;
+}
+
+#guiSearchBox:focus::placeholder {
+    opacity: 0 !important;
 }
