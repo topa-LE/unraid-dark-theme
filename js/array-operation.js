@@ -188,18 +188,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* topa-LE GUI Search Placeholder - START */
 document.addEventListener('DOMContentLoaded', function () {
-    const applySearchPlaceholder = () => {
+    const setupSearchBox = () => {
         const search = document.querySelector('#guiSearchBox');
 
-        if (search) {
-            search.setAttribute('placeholder', 'Suchbegriff hier eingeben ...');
+        if (!search || search.dataset.topaSearchReady === '1') {
+            return;
         }
+
+        search.dataset.topaSearchReady = '1';
+        search.setAttribute('placeholder', 'Suchbegriff hier eingeben ...');
+
+        search.addEventListener('pointerdown', function () {
+            search.classList.add('topa-search-user-active');
+        });
+
+        search.addEventListener('blur', function () {
+            if (!search.value) {
+                search.classList.remove('topa-search-user-active');
+            }
+        });
     };
 
-    applySearchPlaceholder();
+    setupSearchBox();
 
-    const observer = new MutationObserver(() => {
-        applySearchPlaceholder();
+    const observer = new MutationObserver(function () {
+        setupSearchBox();
     });
 
     observer.observe(document.body, {

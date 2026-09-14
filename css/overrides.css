@@ -3715,6 +3715,6 @@ em.topa-array-stop-notice {
     font-weight: 300 !important;
 }
 
-#guiSearchBox:focus::placeholder {
+#guiSearchBox.topa-search-user-active::placeholder {
     opacity: 0 !important;
 }
