@@ -3696,3 +3696,10 @@ em.topa-array-stop-notice {
 
     box-sizing: border-box !important;
 }
+
+/* GUI search placeholder */
+#guiSearchBox::placeholder {
+    color: #7f9fae !important;
+    opacity: 0.42 !important;
+    font-weight: 300 !important;
+}

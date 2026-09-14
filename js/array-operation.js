@@ -185,3 +185,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 /* topa-LE Share Settings Array Stop Notice - END */
+
+/* topa-LE GUI Search Placeholder - START */
+(() => {
+    const applySearchPlaceholder = () => {
+        const search = document.querySelector('#guiSearchBox');
+
+        if (search && search.getAttribute('placeholder') !== 'Suchbegriff hier eingeben ...') {
+            search.setAttribute('placeholder', 'Suchbegriff hier eingeben ...');
+        }
+    };
+
+    applySearchPlaceholder();
+
+    const observer = new MutationObserver(() => {
+        applySearchPlaceholder();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+})();
+/* topa-LE GUI Search Placeholder - END */
