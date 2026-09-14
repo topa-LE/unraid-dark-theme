@@ -3785,3 +3785,10 @@ em.topa-array-stop-notice {
     outline: 1px solid #2b3439 !important;
     outline-offset: -1px !important;
 }
+
+/* Share status table box */
+table.unraid.share_status {
+    border: 1px solid #1d1d1d !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
