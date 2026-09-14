@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         tty_window = makeWindow(
             name + (more == '.log' ? more : ''),
-            Math.min(screen.availHeight, 720),
-            Math.min(screen.availWidth, 1280)
+            screen.availHeight,
+            screen.availWidth
         );
 
         if (tty_window === null) {
