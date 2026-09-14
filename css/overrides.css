@@ -3607,3 +3607,43 @@ em.topa-array-stop-notice {
 
     box-sizing: border-box !important;
 }
+
+/* ==========================================================
+   Feedback panels
+   ========================================================== */
+
+.feedback-panel-textarea {
+    background: #13181a !important;
+    background-color: #13181a !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 6px !important;
+
+    color: #c9d1d5 !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+
+    padding: 10px 12px !important;
+}
+
+.feedback-panel-textarea::placeholder {
+    color: #7f9fae !important;
+    opacity: 1 !important;
+}
+
+.feedback-panel-textarea:focus {
+    background: #13181a !important;
+    border-color: #38474a !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Troubleshoot feedback hint */
+#troubleshoot_panel p.note i {
+    font-style: normal !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: #7f9fae !important;
+}
