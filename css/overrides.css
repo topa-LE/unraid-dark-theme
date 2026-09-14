@@ -3570,3 +3570,11 @@ span[id^="smart-"].fa::before {
     font-style: normal !important;
     color: #7f9fae !important;
 }
+
+/* ==========================================================
+   Radio button accent
+   ========================================================== */
+
+input[type="radio"] {
+    accent-color: #1f2325 !important;
+}
