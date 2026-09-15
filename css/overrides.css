@@ -4290,14 +4290,14 @@ div.sidenav.sidenavShow .popupDescription.popup_readmore {
    ========================================================== */
 
 div.sidenav.sidenavShow .modComment {
-    width: calc(100% - 56px) !important;
+    width: auto !important;
 
     margin-top: 18px !important;
-    margin-left: 28px !important;
-    margin-right: 28px !important;
+    margin-left: 10px !important;
+    margin-right: 13px !important;
     margin-bottom: 22px !important;
 
-    padding: 18px 22px !important;
+    padding: 18px 20px !important;
 
     background: #552326 !important;
     border: 2px solid #8f3439 !important;
@@ -4307,7 +4307,7 @@ div.sidenav.sidenavShow .modComment {
     font-style: normal !important;
 
     box-shadow: none !important;
-    box-sizing: border-box !important;
+    box-sizing: content-box !important;
 }
 
 div.sidenav.sidenavShow .modComment,
