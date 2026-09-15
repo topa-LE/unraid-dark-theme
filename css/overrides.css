@@ -4103,3 +4103,35 @@ unraid-header-os-version > div::after {
     opacity: .42 !important;
     pointer-events: none !important;
 }
+
+/* ==========================================================
+   File Manager indexer table
+   ========================================================== */
+
+div.TableContainer > table.indexer.tablesorter {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+/* ==========================================================
+   Plugin Manager tablesorter
+   ========================================================== */
+
+section#tab3-panel table.tablesorter {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+/* ==========================================================
+   Community Apps show more links
+   ========================================================== */
+
+span.homeMore {
+    color: #dc9b66 !important;
+}
+
+span.homeMore:hover {
+    color: #b7c8d4 !important;
+}
