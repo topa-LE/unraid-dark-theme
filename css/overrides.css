@@ -4137,3 +4137,150 @@ span.homeMore {
 span.homeMore:hover {
     color: #b7c8d4 !important;
 }
+
+/* ==========================================================
+   Community Applications changelog
+   ========================================================== */
+
+#alternateView .alternateViewContent {
+    width: min(900px, calc(100% - 80px)) !important;
+    max-width: 900px !important;
+    height: auto !important;
+    max-height: calc(100vh - 120px) !important;
+    margin: 52px auto 32px auto !important;
+    padding: 28px 38px !important;
+
+    background: rgba(25, 33, 37, 0.94) !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+}
+
+#alternateView .alternateViewClose {
+    position: absolute !important;
+    top: 110px !important;
+    left: 50% !important;
+    transform: translateX(-450px) !important;
+
+    width: auto !important;
+    min-width: 72px !important;
+    height: 30px !important;
+    padding: 0 13px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #171c1f !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 6px !important;
+    color: #d6dde3 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+#alternateView .alternateViewClose:hover {
+    background: #242a2d !important;
+    color: #dc9b66 !important;
+}
+
+/* ==========================================================
+   Community Applications app info sidebar
+   ========================================================== */
+
+div.sidenav.sidenavShow {
+    position: fixed !important;
+
+    width: min(760px, calc(100vw - 80px)) !important;
+    max-width: 760px !important;
+
+    height: min(760px, calc(100vh - 80px)) !important;
+    max-height: calc(100vh - 80px) !important;
+
+    top: 50% !important;
+    right: 28px !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: translateY(-50%) !important;
+
+    margin: 0 !important;
+    padding: 58px 28px 28px 28px !important;
+
+    background: #192125 !important;
+    border: 2px solid #0d1113 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+/* Remove the unused outer close control */
+div.sidebar > div.sidebarClose {
+    display: none !important;
+}
+
+/* Integrate the internal close area */
+div.sidenav.sidenavShow .popupCloseArea {
+    background: #192125 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Actual Community Applications close button */
+div.sidenav.sidenavShow span.popUpClose.caButton {
+    position: absolute !important;
+    top: 16px !important;
+    right: 72px !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: auto !important;
+    min-width: 72px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 13px !important;
+    margin: 0 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #33483f !important;
+    border: 1px solid rgba(110, 136, 119, 0.45) !important;
+    border-radius: 6px !important;
+
+    color: #d7e3da !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+}
+
+div.sidenav.sidenavShow span.popUpClose.caButton:hover {
+    background: #3d554a !important;
+    color: #ffffff !important;
+}
+
+/* Application icon */
+div.sidenav.sidenavShow img.popupIcon {
+    background: #26343b !important;
+    border: 2px solid #41515a !important;
+    border-radius: 7px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+}
+
+/* Application description */
+div.sidenav.sidenavShow .popupDescription.popup_readmore {
+    background: #e8eef1 !important;
+    border: 2px solid #c7d1d6 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+}
