@@ -4284,3 +4284,34 @@ div.sidenav.sidenavShow .popupDescription.popup_readmore {
     border-radius: 7px !important;
     box-shadow: none !important;
 }
+
+/* ==========================================================
+   Community Applications moderator warning
+   ========================================================== */
+
+div.sidenav.sidenavShow .modComment {
+    width: calc(100% - 56px) !important;
+
+    margin-top: 18px !important;
+    margin-left: 28px !important;
+    margin-right: 28px !important;
+    margin-bottom: 22px !important;
+
+    padding: 18px 22px !important;
+
+    background: #552326 !important;
+    border: 2px solid #8f3439 !important;
+    border-radius: 6px !important;
+
+    color: #f2f2f2 !important;
+    font-style: normal !important;
+
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+div.sidenav.sidenavShow .modComment,
+div.sidenav.sidenavShow .modComment * {
+    color: #f2f2f2 !important;
+    font-style: normal !important;
+}
