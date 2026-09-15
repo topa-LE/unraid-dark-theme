@@ -4568,3 +4568,9 @@ span:has(> svg.lucide-x):hover {
         color: #e06b6b !important;
     }
 }
+
+/* Title / tab Font Awesome icons - transparent background */
+i.fa.title {
+    background: transparent !important;
+    background-color: transparent !important;
+}
