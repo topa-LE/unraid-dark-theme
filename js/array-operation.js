@@ -239,14 +239,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    document.addEventListener('DOMContentLoaded', setupDowngradeReleaseNotes);
+    function initDowngradeReleaseNotes() {
+        setupDowngradeReleaseNotes();
 
-    const observer = new MutationObserver(setupDowngradeReleaseNotes);
+        const observer = new MutationObserver(setupDowngradeReleaseNotes);
 
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener(
+            'DOMContentLoaded',
+            initDowngradeReleaseNotes,
+            { once: true }
+        );
+    } else {
+        initDowngradeReleaseNotes();
+    }
 })();
 /* topa-LE OS Downgrade Release Notes - END */
 
