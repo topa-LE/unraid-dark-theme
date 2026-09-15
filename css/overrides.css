@@ -4583,3 +4583,8 @@ i.fa.title {
     border-radius: 6px !important;
     overflow: hidden !important;
 }
+
+/* Table warning text - theme orange */
+table tbody tr.warn {
+    color: #dc9b66 !important;
+}
