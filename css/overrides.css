@@ -4045,7 +4045,7 @@ a[aria-label="Unraid-Website besuchen"] {
     grid-row: 1 !important;
     display: flex !important;
     align-items: center !important;
-    gap: 11px !important;
+    gap: 16px !important;
     width: max-content !important;
     position: relative !important;
 }
@@ -4054,9 +4054,10 @@ a[aria-label="Unraid-Website besuchen"] {
 unraid-header-os-version
 a[aria-label="Unraid-Website besuchen"]
 .topa-storage-icon {
-    width: 43px !important;
-    height: 43px !important;
-    flex: 0 0 43px !important;
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 48px !important;
+    transform: translateY(3px) !important;
 }
 
 /* Original Unraid logo */

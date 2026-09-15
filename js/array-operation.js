@@ -255,13 +255,19 @@ document.addEventListener('DOMContentLoaded', function () {
    ========================================================== */
 
 (function topaHeaderStorageIcon() {
-    function installStorageIcon() {
-        const link = document.querySelector(
-            'unraid-header-os-version a[aria-label="Unraid-Website besuchen"]'
-        );
+    const selector =
+        'unraid-header-os-version[data-vue-mounted="true"] ' +
+        'a[aria-label="Unraid-Website besuchen"]';
 
-        if (!link || link.querySelector('.topa-storage-icon')) {
+    function installStorageIcon() {
+        const link = document.querySelector(selector);
+
+        if (!link) {
             return false;
+        }
+
+        if (link.querySelector('.topa-storage-icon')) {
+            return true;
         }
 
         const logo = link.querySelector('svg');
@@ -326,6 +332,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 
+    /*
+     * Unraid mounts the Vue header asynchronously.
+     * Try immediately and keep watching until the mounted
+     * header and its original logo are both available.
+     */
     if (installStorageIcon()) {
         return;
     }
@@ -338,6 +349,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     observer.observe(document.documentElement, {
         childList: true,
-        subtree: true
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['data-vue-mounted']
     });
+
+    /*
+     * Fallback for a Vue render that completes without a mutation
+     * useful to the observer. Stop automatically after success.
+     */
+    let attempts = 0;
+
+    const timer = window.setInterval(() => {
+        attempts += 1;
+
+        if (installStorageIcon() || attempts >= 100) {
+            window.clearInterval(timer);
+        }
+    }, 100);
 })();
