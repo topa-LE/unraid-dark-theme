@@ -4411,3 +4411,138 @@ div.ca_holder div.cardDesc::after {
     background: none !important;
     color: #7da0b9 !important;
 }
+
+/* ==========================================================
+   UnAPI notifications – floating dialog
+   ========================================================== */
+
+.unapi [role="dialog"][data-state="open"].bg-background {
+    top: 24px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 540px !important;
+    height: 620px !important;
+    min-height: 0 !important;
+    max-height: 620px !important;
+
+    background: #192125 !important;
+    color: #d6dde3 !important;
+
+    border: 1px solid #2b3439 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Ungelesen / Archiviert */
+.unapi [role="dialog"][data-state="open"]
+div.bg-input.text-foreground {
+    background: #2b3439 !important;
+    color: #d6dde3 !important;
+}
+
+/* Aktiver Haupt-Tab */
+.unapi [role="dialog"][data-state="open"]
+[role="tab"][data-state="active"] {
+    background: #dc9b66 !important;
+    color: #192125 !important;
+}
+
+/* Haupt-Tab Hover */
+.unapi [role="dialog"][data-state="open"]
+[role="tab"] {
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+[role="tab"]:not([data-state="active"]):hover {
+    background: #354047 !important;
+    color: #ffffff !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+[role="tab"][data-state="active"]:hover {
+    background: #e5aa79 !important;
+    color: #192125 !important;
+}
+
+/* Filterleiste */
+.unapi [role="dialog"][data-state="open"]
+.border-border\/60.bg-muted\/60 {
+    background: #20292d !important;
+    border-color: #2b3439 !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+.border-border\/60.bg-muted\/60 > span {
+    color: #a3a3a3 !important;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+.border-border\/60.bg-muted\/60 > span[data-state="on"],
+.unapi [role="dialog"][data-state="open"]
+.border-border\/60.bg-muted\/60 > span[data-state="active"] {
+    background: #2b3439 !important;
+    border-color: #2b3439 !important;
+    color: #d6dde3 !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+.border-border\/60.bg-muted\/60 > span:hover {
+    background: #354047 !important;
+    border-color: #41515a !important;
+    color: #ffffff !important;
+}
+
+/* Meldungs-Trennlinien */
+.unapi [role="dialog"][data-state="open"]
+div.group\/item {
+    border-bottom-color: #282c2f !important;
+}
+
+/* Orange Aktionsbuttons */
+.unapi [role="dialog"][data-state="open"]
+span.bg-primary {
+    background: #dc9b66 !important;
+    color: #192125 !important;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+span.bg-primary:hover {
+    background: #e5aa79 !important;
+    color: #192125 !important;
+}
+
+/* Notification links – z.B. "Anzeigen" */
+.unapi [role="dialog"][data-state="open"] a {
+    color: #7da0b9 !important;
+    transition: color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"] a:hover {
+    color: #b7c8d4 !important;
+}
+
+/* Sammelaktion "Alle archivieren" */
+.unapi [role="dialog"][data-state="open"] button {
+    transition:
+        color 0.15s ease,
+        background-color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"] button:hover {
+    color: #e06b70 !important;
+}
