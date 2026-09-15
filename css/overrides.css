@@ -4280,7 +4280,7 @@ div.sidenav.sidenavShow img.popupIcon {
 /* Application description */
 div.sidenav.sidenavShow .popupDescription.popup_readmore {
     background: #e8eef1 !important;
-    border: 2px solid #c7d1d6 !important;
+    border: 2px solid #e8a160 !important;
     border-radius: 7px !important;
     box-shadow: none !important;
 }
@@ -4359,4 +4359,23 @@ div.sidenav.sidenavShow .modComment * {
     background: #31434c !important;
     border-color: #536873 !important;
     color: #ffffff !important;
+}
+
+/* ==========================================================
+   Community Applications app info trend chart
+   ========================================================== */
+
+div.sidenav.sidenavShow canvas#trendChart.caChart {
+    background: #202b30 !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 6px !important;
+}
+
+div.sidenav.sidenavShow span.charts {
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+}
+
+div.sidenav.sidenavShow span.chartMenu:hover {
+    color: #b7c8d4 !important;
 }
