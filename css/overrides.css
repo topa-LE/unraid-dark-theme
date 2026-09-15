@@ -3799,3 +3799,12 @@ table.unraid.disk_status {
     border-radius: 6px !important;
     overflow: hidden !important;
 }
+
+/* Unassigned Devices table boxes */
+table#usb_devices_list.usb_mounts,
+table.samba_mounts,
+table.usb_absent {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
