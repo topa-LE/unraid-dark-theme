@@ -4581,3 +4581,10 @@ i.fa.title {
     border-radius: 6px !important;
     overflow: hidden !important;
 }
+
+/* Disk identity - table container */
+#tab5-panel > .TableContainer {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
