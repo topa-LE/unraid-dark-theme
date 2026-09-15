@@ -4379,3 +4379,22 @@ div.sidenav.sidenavShow span.charts {
 div.sidenav.sidenavShow span.chartMenu:hover {
     color: #b7c8d4 !important;
 }
+
+/* ==========================================================
+   Community Applications template errors
+   ========================================================== */
+
+div.sidenav.sidenavShow div.templateErrors {
+    margin-top: 18px !important;
+    margin-bottom: 7px !important;
+
+    color: #7da0b9 !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+
+    line-height: 1.3 !important;
+}
+
+div.sidenav.sidenavShow li.templateErrorsList {
+    margin-left: 20px !important;
+}
