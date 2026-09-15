@@ -4574,3 +4574,10 @@ i.fa.title {
     background: transparent !important;
     background-color: transparent !important;
 }
+
+/* Disk attributes - table container */
+#tab3-panel > .TableContainer {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
