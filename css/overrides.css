@@ -4438,21 +4438,19 @@ div.ca_holder div.cardDesc::after {
     box-sizing: border-box !important;
 }
 
-/* Ungelesen / Archiviert */
+/* Haupttabs: Ungelesen / Archiviert */
 .unapi [role="dialog"][data-state="open"]
 div.bg-input.text-foreground {
     background: #2b3439 !important;
     color: #d6dde3 !important;
 }
 
-/* Aktiver Haupt-Tab */
 .unapi [role="dialog"][data-state="open"]
 [role="tab"][data-state="active"] {
     background: #dc9b66 !important;
     color: #192125 !important;
 }
 
-/* Haupt-Tab Hover */
 .unapi [role="dialog"][data-state="open"]
 [role="tab"] {
     transition:
@@ -4472,10 +4470,10 @@ div.bg-input.text-foreground {
     color: #192125 !important;
 }
 
-/* Filterleiste */
+/* Filterleiste – reduzierte Versionsbox-Palette */
 .unapi [role="dialog"][data-state="open"]
 .border-border\/60.bg-muted\/60 {
-    background: #20292d !important;
+    background: #2b3439 !important;
     border-color: #2b3439 !important;
 }
 
@@ -4492,7 +4490,7 @@ div.bg-input.text-foreground {
 .border-border\/60.bg-muted\/60 > span[data-state="on"],
 .unapi [role="dialog"][data-state="open"]
 .border-border\/60.bg-muted\/60 > span[data-state="active"] {
-    background: #2b3439 !important;
+    background: #192125 !important;
     border-color: #2b3439 !important;
     color: #d6dde3 !important;
 }
@@ -4526,23 +4524,47 @@ span.bg-primary:hover {
     color: #192125 !important;
 }
 
-/* Notification links – z.B. "Anzeigen" */
-.unapi [role="dialog"][data-state="open"] a {
-    color: #7da0b9 !important;
-    transition: color 0.15s ease !important;
+/* Links wie "Anzeigen" – globale Theme-Linkfarbe */
+.unapi [role="dialog"][data-state="open"]
+a.text-primary {
+    color: #809FB8 !important;
+    text-decoration: none !important;
 }
 
-.unapi [role="dialog"][data-state="open"] a:hover {
+.unapi [role="dialog"][data-state="open"]
+a.text-primary:hover {
+    color: #809FB8 !important;
+    text-decoration: underline !important;
+}
+
+/* Settings + Close */
+.unapi [role="dialog"][data-state="open"]
+span:has(> svg.lucide-settings),
+.unapi [role="dialog"][data-state="open"]
+span:has(> svg.lucide-x) {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: #d6dde3 !important;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease !important;
+}
+
+.unapi [role="dialog"][data-state="open"]
+span:has(> svg.lucide-settings):hover,
+.unapi [role="dialog"][data-state="open"]
+span:has(> svg.lucide-x):hover {
+    background: #2b3439 !important;
+    border-color: transparent !important;
     color: #b7c8d4 !important;
 }
 
-/* Sammelaktion "Alle archivieren" */
-.unapi [role="dialog"][data-state="open"] button {
-    transition:
-        color 0.15s ease,
-        background-color 0.15s ease !important;
+/*
+ * Archiv-/Lösch-Sammelaktionen
+ * Einheitlicher heller Rosé-Hover auf dunklem Hintergrund
+ */
+.unapi [role="dialog"][data-state="open"]
+span.cursor-pointer:not(.bg-primary):hover {
+    color: #f2a3a7 !important;
 }
 
-.unapi [role="dialog"][data-state="open"] button:hover {
-    color: #e06b70 !important;
-}
