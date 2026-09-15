@@ -4575,15 +4575,9 @@ i.fa.title {
     background-color: transparent !important;
 }
 
-/* Disk attributes - table container */
-#tab3-panel > .TableContainer {
-    border: 1px solid #242424 !important;
-    border-radius: 6px !important;
-    overflow: hidden !important;
-}
-
-/* Disk identity - table container */
-#tab5-panel > .TableContainer {
+/* Disk tables - attributes and identity */
+.TableContainer:has(tbody#disk_attributes),
+.TableContainer:has(tbody#disk_identify) {
     border: 1px solid #242424 !important;
     border-radius: 6px !important;
     overflow: hidden !important;
