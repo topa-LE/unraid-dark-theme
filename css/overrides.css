@@ -1340,10 +1340,10 @@ section#tab1-panel.tab-content.content {
 
 
 /* ========================================
-   STEP 73 – Plugin installieren Contentbox
+   STEP 73 – Disk self-test content box
    ======================================== */
 
-section.tab-content.content:has(#smart_selftest) {
+section.tab-content.content:has(#selftest) {
     max-width: 1200px !important;
     margin: 34px auto 60px auto !important;
     padding: 38px 58px !important;
@@ -4575,8 +4575,9 @@ i.fa.title {
     background-color: transparent !important;
 }
 
-/* Disk tables - attributes and identity */
+/* Disk tables - attributes, capabilities and identity */
 .TableContainer:has(tbody#disk_attributes),
+.TableContainer:has(#disk_capabilities_table),
 .TableContainer:has(tbody#disk_identify) {
     border: 1px solid #242424 !important;
     border-radius: 6px !important;
