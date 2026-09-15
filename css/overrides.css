@@ -3470,10 +3470,10 @@ tr.toggle-disk:nth-child(6n+4) {
     align-items: center !important;
     justify-content: center !important;
 
-    height: 36px !important;
-    min-height: 36px !important;
+    height: 32px !important;
+    min-height: 32px !important;
     padding: 5px 13px !important;
-    margin-top: -3px !important;
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
 
     background: #33483f !important;
@@ -3484,6 +3484,8 @@ tr.toggle-disk:nth-child(6n+4) {
     font-style: normal !important;
 
     box-sizing: border-box !important;
+    transform: translateY(2px) !important;
+
 }
 
 /* Community Apps - hide duplicate alternative category label */
