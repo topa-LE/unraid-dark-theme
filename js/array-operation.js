@@ -221,3 +221,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 /* topa-LE GUI Search Placeholder - END */
+
+/* topa-LE OS Downgrade Release Notes - START */
+(function () {
+    function setupDowngradeReleaseNotes() {
+        const root = document.querySelector('unraid-downgrade-os');
+
+        if (!root) {
+            return;
+        }
+
+        const releaseNote = [...root.querySelectorAll('span[role="button"]')]
+            .find(el => el.textContent.trim().endsWith('Versionshinweise'));
+
+        if (releaseNote) {
+            releaseNote.classList.add('topa-downgrade-release-notes');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', setupDowngradeReleaseNotes);
+
+    const observer = new MutationObserver(setupDowngradeReleaseNotes);
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+})();
+/* topa-LE OS Downgrade Release Notes - END */

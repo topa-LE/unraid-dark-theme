@@ -3828,3 +3828,81 @@ form[name="remote_test"] div:has(> textarea[name="Status"][title="Result of Remo
     display: block !important;
     margin-bottom: 8px !important;
 }
+
+/* ==========================================================
+   Unraid OS Downgrade
+   ========================================================== */
+
+/* Current version badge */
+unraid-downgrade-os span[title="Versionshinweise anzeigen"]
+    > span.unraid-ui-badge-test {
+    background: #7894a3 !important;
+    color: #111719 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+unraid-downgrade-os span[title="Versionshinweise anzeigen"]:hover
+    > span.unraid-ui-badge-test {
+    background: #8ca6b4 !important;
+    color: #0d1113 !important;
+}
+
+/* Current status badge */
+unraid-downgrade-os span.unraid-ui-badge-test.bg-green-200 {
+    background: #35654a !important;
+    color: #c6dfd0 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Check for updates */
+unraid-downgrade-os span[role="button"][title="Auf Updates prüfen"] {
+    background: #7894a3 !important;
+    color: #111719 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+unraid-downgrade-os span[role="button"][title="Auf Updates prüfen"]:hover {
+    background: #8ca6b4 !important;
+    color: #0d1113 !important;
+}
+
+/* Diagnostics and bug report */
+unraid-downgrade-os span[name="download-diagnostics"],
+unraid-downgrade-os a[href*="/bug-reports"] {
+    background: #a8bac4 !important;
+    color: #111719 !important;
+    border-color: #242424 !important;
+    box-shadow: none !important;
+}
+
+unraid-downgrade-os span[name="download-diagnostics"] *,
+unraid-downgrade-os a[href*="/bug-reports"] * {
+    color: inherit !important;
+}
+
+unraid-downgrade-os span[name="download-diagnostics"]:hover,
+unraid-downgrade-os a[href*="/bug-reports"]:hover {
+    background: #b8c7cf !important;
+    color: #0d1113 !important;
+    border-color: #242424 !important;
+    box-shadow: none !important;
+}
+
+/* Release notes hover */
+unraid-downgrade-os .topa-downgrade-release-notes:hover {
+    color: #dc9b66 !important;
+    background: #242a2d !important;
+    border-color: #2b3439 !important;
+    box-shadow: none !important;
+}
+
+unraid-downgrade-os .topa-downgrade-release-notes:hover * {
+    color: #dc9b66 !important;
+}
