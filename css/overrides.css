@@ -4560,3 +4560,11 @@ span:has(> svg.lucide-x):hover {
 }
 
 
+
+/* UnAPI destructive link hover */
+@media (hover: hover) {
+    .unapi .hover\:text-destructive:hover,
+    .unapi .hover\:text-destructive\/80:hover {
+        color: #e06b6b !important;
+    }
+}
