@@ -4559,12 +4559,4 @@ span:has(> svg.lucide-x):hover {
     color: #b7c8d4 !important;
 }
 
-/*
- * Archiv-/Lösch-Sammelaktionen
- * Einheitlicher heller Rosé-Hover auf dunklem Hintergrund
- */
-.unapi [role="dialog"][data-state="open"]
-span.cursor-pointer:not(.bg-primary):hover {
-    color: #f2a3a7 !important;
-}
 
