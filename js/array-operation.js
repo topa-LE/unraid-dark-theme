@@ -249,3 +249,95 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })();
 /* topa-LE OS Downgrade Release Notes - END */
+
+/* ==========================================================
+   Header branding - storage icon
+   ========================================================== */
+
+(function topaHeaderStorageIcon() {
+    function installStorageIcon() {
+        const link = document.querySelector(
+            'unraid-header-os-version a[aria-label="Unraid-Website besuchen"]'
+        );
+
+        if (!link || link.querySelector('.topa-storage-icon')) {
+            return false;
+        }
+
+        const logo = link.querySelector('svg');
+
+        if (!logo) {
+            return false;
+        }
+
+        const icon = document.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'svg'
+        );
+
+        icon.setAttribute('class', 'topa-storage-icon');
+        icon.setAttribute('viewBox', '0 0 48 48');
+        icon.setAttribute('aria-hidden', 'true');
+        icon.setAttribute('focusable', 'false');
+
+        icon.innerHTML = `
+            <defs>
+                <linearGradient
+                    id="topa-header-storage-gradient"
+                    x1="5"
+                    y1="43"
+                    x2="43"
+                    y2="5"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#e32929"></stop>
+                    <stop offset="1" stop-color="#ff8d30"></stop>
+                </linearGradient>
+            </defs>
+
+            <g
+                fill="none"
+                stroke="url(#topa-header-storage-gradient)"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <ellipse cx="24" cy="10" rx="16" ry="6"></ellipse>
+
+                <path d="
+                    M8 10v10
+                    c0 3.3 7.2 6 16 6
+                    s16-2.7 16-6V10
+                "></path>
+
+                <path d="
+                    M8 20v10
+                    c0 3.3 7.2 6 16 6
+                    s16-2.7 16-6V20
+                "></path>
+
+                <path d="
+                    M8 30v8
+                    c0 3.3 7.2 6 16 6
+                    s16-2.7 16-6v-8
+                "></path>
+            </g>
+        `;
+
+        link.insertBefore(icon, logo);
+        return true;
+    }
+
+    if (installStorageIcon()) {
+        return;
+    }
+
+    const observer = new MutationObserver(() => {
+        if (installStorageIcon()) {
+            observer.disconnect();
+        }
+    });
+
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
+})();
