@@ -4315,3 +4315,48 @@ div.sidenav.sidenavShow .modComment * {
     color: #f2f2f2 !important;
     font-style: normal !important;
 }
+
+/* ==========================================================
+   Community Applications bottom action buttons
+   ========================================================== */
+
+.multi_installDiv {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.multi_installDiv > input.multi_installButton,
+.multi_installDiv > input.multi_installAll,
+.multi_installDiv > input.multi_installClear {
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 13px !important;
+
+    background: #26343b !important;
+    border: 1px solid #41515a !important;
+    border-radius: 6px !important;
+
+    color: #d6dde3 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    opacity: 1 !important;
+}
+
+.multi_installDiv > input.multi_installButton:disabled,
+.multi_installDiv > input.multi_installAll:disabled,
+.multi_installDiv > input.multi_installClear:disabled {
+    background: #26343b !important;
+    border-color: #41515a !important;
+    color: #82939d !important;
+    opacity: 1 !important;
+}
+
+.multi_installDiv > input.multi_installButton:not(:disabled):hover,
+.multi_installDiv > input.multi_installAll:not(:disabled):hover,
+.multi_installDiv > input.multi_installClear:not(:disabled):hover {
+    background: #31434c !important;
+    border-color: #536873 !important;
+    color: #ffffff !important;
+}
