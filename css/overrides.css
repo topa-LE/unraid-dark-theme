@@ -4398,3 +4398,16 @@ div.sidenav.sidenavShow div.templateErrors {
 div.sidenav.sidenavShow li.templateErrorsList {
     margin-left: 20px !important;
 }
+
+/* ==========================================================
+   Community Applications app card details
+   ========================================================== */
+
+div.ca_holder {
+    border-color: #242424 !important;
+}
+
+div.ca_holder div.cardDesc::after {
+    background: none !important;
+    color: #7da0b9 !important;
+}
