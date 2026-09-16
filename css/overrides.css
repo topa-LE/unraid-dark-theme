@@ -4678,3 +4678,46 @@ table tbody tr.warn {
 #sys.graph1 rect[stroke="#ffffff"] {
     stroke: #3a474d !important;
 }
+
+/* ==========================================================
+   GUI search results
+   ========================================================== */
+
+/* Search result popup */
+#guiSearchBoxSpan .awesomplete > ul {
+    margin-top: 10px !important;
+    border: 2px solid #0e1011 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Search result rows */
+#guiSearchBoxSpan .awesomplete > ul > li {
+    color: #c9d1d5 !important;
+}
+
+/* Hover and selected result */
+#guiSearchBoxSpan .awesomplete > ul > li:hover,
+#guiSearchBoxSpan .awesomplete > ul > li[aria-selected="true"] {
+    background: #2b3439 !important;
+    background-color: #2b3439 !important;
+    color: #ffffff !important;
+}
+
+/* Matching text in search results */
+#guiSearchBoxSpan .awesomplete > ul > li mark {
+    background: rgba(230, 148, 81, 0.22) !important;
+    background-color: rgba(230, 148, 81, 0.22) !important;
+    color: #f3bb8e !important;
+    border-radius: 2px !important;
+}
+
+/* Search term in the selected result */
+#guiSearchBoxSpan .awesomplete > ul > li[aria-selected="true"] mark {
+    background: none !important;
+    background-color: transparent !important;
+    color: oklch(0.83 0.16 151.18) !important;
+    border-radius: 0 !important;
+}
