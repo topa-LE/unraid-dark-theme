@@ -4778,3 +4778,8 @@ table.share_status {
 #tab4-panel table.share_status:has(tbody#cpu) {
     background: rgba(19, 24, 26, 0.22) !important;
 }
+
+/* System Information - overview background */
+#tab1-panel table.share_status {
+    background: rgba(19, 24, 26, 0.22) !important;
+}
