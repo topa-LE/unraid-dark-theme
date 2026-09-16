@@ -3958,20 +3958,38 @@ div[data-reka-menu-content][role="menu"]
 
 /* Header OS version trigger - hover / focus */
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"]:hover,
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+):hover,
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"]:focus,
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+):focus,
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"][data-state="open"] {
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+)[data-state="open"] {
     color: #dc9b66 !important;
 }
 
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"]:hover *,
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+):hover *,
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"]:focus *,
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+):focus *,
 unraid-header-os-version
-span[role="button"][title="Versionsinformationen"][data-state="open"] * {
+span[role="button"]:is(
+    [title="Versionsinformationen"],
+    [title="Version Information"]
+)[data-state="open"] * {
     color: inherit !important;
 }
 
