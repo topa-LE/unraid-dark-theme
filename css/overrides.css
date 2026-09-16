@@ -4743,3 +4743,23 @@ table tbody tr.warn {
     color: oklch(0.83 0.16 151.18) !important;
     border-radius: 0 !important;
 }
+
+/* =========================================================
+   Unraid Connect popup
+   ========================================================= */
+
+/* Connect dropdown hover */
+#unraid-api-modals-virtual .dropdown-item-hover:hover {
+    background: #394a52 !important;
+}
+
+/* Connect divider */
+#unraid-api-modals-virtual hr.from-unraid-red.to-orange {
+    background: linear-gradient(
+        to right,
+        rgba(199, 91, 57, 0.25) 0%,
+        rgba(226, 154, 103, 0.70) 35%,
+        rgba(243, 187, 142, 0.70) 65%,
+        rgba(243, 187, 142, 0.20) 100%
+    ) !important;
+}
