@@ -215,7 +215,7 @@ tbody a,
 .disk_status a,
 .share_status a {
   /* vorher: color: #6f93ad !important; */
-  color: #7da0b9 !important;
+  color: #809FB8 !important;
 }
 
 .content a:hover,
@@ -4587,4 +4587,41 @@ i.fa.title {
 /* Table warning text - theme orange */
 table tbody tr.warn {
     color: #dc9b66 !important;
+}
+
+/* ==========================================================
+   Community Apps - application popup buttons
+   ========================================================== */
+
+/*
+ * Keep the native Community Apps button colors and hover behavior.
+ * Only unify the button frame and corner radius.
+ */
+#sidenavContent .caButton.actionsPopup,
+#sidenavContent .caButton.supportPopup,
+#sidenavContent .caButton.pinPopup,
+#sidenavContent .caButton.popupProfile,
+#sidenavContent .caButton.repoPopup,
+#sidenavContent .caButton.ca_favouriteRepo {
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #536a76 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Support Forum is a link and needs stronger contrast on the blue button */
+#sidenavContent .caButton.supportPopup,
+#sidenavContent .caButton.supportPopup > a,
+#sidenavContent .caButton.supportPopup > a > span,
+#sidenavContent .caButton.supportPopup .ca_fa-support {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+#sidenavContent .caButton.supportPopup:hover,
+#sidenavContent .caButton.supportPopup:hover > a,
+#sidenavContent .caButton.supportPopup:hover > a > span,
+#sidenavContent .caButton.supportPopup:hover .ca_fa-support {
+    color: #ffffff !important;
 }
