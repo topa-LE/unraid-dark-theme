@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
 (function topaHeaderStorageIcon() {
     const selector =
         'unraid-header-os-version[data-vue-mounted="true"] ' +
-        'a[aria-label="Unraid-Website besuchen"]';
+        'a[href="https://unraid.net"]';
 
     function installStorageIcon() {
         const link = document.querySelector(selector);

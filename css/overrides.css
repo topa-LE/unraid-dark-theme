@@ -4042,7 +4042,7 @@ unraid-header-os-version > div {
 
 /* Logo group */
 unraid-header-os-version
-a[aria-label="Unraid-Website besuchen"] {
+a[href="https://unraid.net"] {
     grid-column: 1 !important;
     grid-row: 1 !important;
     display: flex !important;
@@ -4054,7 +4054,7 @@ a[aria-label="Unraid-Website besuchen"] {
 
 /* Storage icon */
 unraid-header-os-version
-a[aria-label="Unraid-Website besuchen"]
+a[href="https://unraid.net"]
 .topa-storage-icon {
     width: 48px !important;
     height: 48px !important;
@@ -4064,7 +4064,7 @@ a[aria-label="Unraid-Website besuchen"]
 
 /* Original Unraid logo */
 unraid-header-os-version
-a[aria-label="Unraid-Website besuchen"]
+a[href="https://unraid.net"]
 > svg:not(.topa-storage-icon) {
     width: 190px !important;
     max-height: none !important;
@@ -4074,7 +4074,7 @@ a[aria-label="Unraid-Website besuchen"]
 
 /* Version information to the right of the logo */
 unraid-header-os-version
-a[aria-label="Unraid-Website besuchen"] + div {
+a[href="https://unraid.net"] + div {
     grid-column: 2 !important;
     grid-row: 1 !important;
     width: max-content !important;
@@ -4089,7 +4089,7 @@ span[role="button"][title="Versionsinformationen"] {
 
 /* Remove the former logo-only underline */
 unraid-header-os-version
-a[aria-label="Unraid-Website besuchen"]::after {
+a[href="https://unraid.net"]::after {
     display: none !important;
 }
 
