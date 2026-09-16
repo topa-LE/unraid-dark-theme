@@ -4763,3 +4763,18 @@ table tbody tr.warn {
         rgba(243, 187, 142, 0.20) 100%
     ) !important;
 }
+
+/* ==========================================================
+   System Information tables
+   ========================================================== */
+
+/* Unified information table outline */
+table.share_status {
+    outline: 1px solid #242424 !important;
+    outline-offset: -1px !important;
+}
+
+/* Processor information - inner CPU table */
+#tab4-panel table.share_status:has(tbody#cpu) {
+    background: rgba(19, 24, 26, 0.22) !important;
+}
