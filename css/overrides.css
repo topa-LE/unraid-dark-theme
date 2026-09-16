@@ -4780,6 +4780,6 @@ table.share_status {
 }
 
 /* System Information - overview background */
-#tab1-panel table.share_status {
+section#tab1-panel table.share_status.small {
     background: rgba(19, 24, 26, 0.22) !important;
 }
