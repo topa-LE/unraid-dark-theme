@@ -4783,3 +4783,24 @@ table.share_status {
 section#tab1-panel table.share_status.small {
     background: rgba(19, 24, 26, 0.22) !important;
 }
+
+/* ==========================================================
+   topa-LE – Update / CA Notice
+   ========================================================== */
+
+.upgrade_notice,
+.ca_element_notice {
+    background: #c1d5e9 !important;
+    background-color: #c1d5e9 !important;
+    color: #111719 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+.upgrade_notice *,
+.ca_element_notice * {
+    color: #111719 !important;
+    font-size: inherit !important;
+}
