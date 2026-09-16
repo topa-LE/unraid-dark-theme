@@ -4625,3 +4625,56 @@ table tbody tr.warn {
 #sidenavContent .caButton.supportPopup:hover .ca_fa-support {
     color: #ffffff !important;
 }
+
+/* ==========================================================
+   Dynamix System Stats
+   ========================================================== */
+
+/* Keep the Highcharts graph inside its available content area */
+#sys.graph1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+}
+
+#sys.graph1 > .highcharts-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Highcharts text colors */
+#sys.graph1 text.highcharts-title {
+    fill: #c9d1d5 !important;
+}
+
+#sys.graph1 text.highcharts-subtitle {
+    fill: #7f9fae !important;
+}
+
+#sys.graph1 text[fill="rgb(153,153,153)"],
+#sys.graph1 text[fill="rgb(153, 153, 153)"] {
+    fill: #9aadb6 !important;
+}
+
+#sys.graph1 text[fill="rgb(255,255,255)"],
+#sys.graph1 text[fill="rgb(255, 255, 255)"] {
+    fill: #c9d1d5 !important;
+}
+
+/* De-emphasize the original white Highcharts grid */
+#sys.graph1 path[stroke="rgb(255,255,255)"],
+#sys.graph1 path[stroke="rgb(255, 255, 255)"],
+#sys.graph1 path[stroke="#FFFFFF"],
+#sys.graph1 path[stroke="#ffffff"] {
+    stroke: #344047 !important;
+}
+
+/* De-emphasize the original white bar outlines */
+#sys.graph1 rect[stroke="rgb(255,255,255)"],
+#sys.graph1 rect[stroke="rgb(255, 255, 255)"],
+#sys.graph1 rect[stroke="#FFFFFF"],
+#sys.graph1 rect[stroke="#ffffff"] {
+    stroke: #3a474d !important;
+}

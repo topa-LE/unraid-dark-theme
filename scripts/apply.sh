@@ -20,12 +20,14 @@ EOF
 
 CSS_HREF="/boot/config/custom-css/topa-LE/css/loader.css"
 JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
+SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
 
 echo "===== topa-LE Runtime ====="
 
 for FILE in \
   "$ROOT/css/loader.css" \
   "$ROOT/js/array-operation.js" \
+  "$ROOT/js/system-stats.js" \
   "$ROOT/login/login-theme.css" \
   "$ROOT/img/topa-le-avatar-login.png" \
   "$LAYOUT" \
@@ -132,6 +134,15 @@ if ! grep -Fq "$JS_HREF" "$LAYOUT"; then
   echo "Array-Operation-Hook gesetzt."
 else
   echo "Array-Operation-Hook bereits vorhanden."
+fi
+
+if ! grep -Fq "$SYSTEM_STATS_JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE System Stats -->\
+<script src="/boot/config/custom-css/topa-LE/js/system-stats.js"></script>' "$LAYOUT"
+  echo "System-Stats-Hook gesetzt."
+else
+  echo "System-Stats-Hook bereits vorhanden."
 fi
 
 

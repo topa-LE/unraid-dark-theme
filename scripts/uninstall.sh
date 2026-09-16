@@ -60,6 +60,7 @@ fi
 if [[ -f "$LAYOUT" ]]; then
   sed -i '/<!-- topa-LE Unraid Dark Theme -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE Array Operation -->/,+1d' "$LAYOUT"
+  sed -i '/<!-- topa-LE System Stats -->/,+1d' "$LAYOUT"
   echo "WebGUI-Theme-Hooks entfernt."
 fi
 
