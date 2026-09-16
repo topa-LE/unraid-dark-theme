@@ -4804,3 +4804,9 @@ section#tab1-panel table.share_status.small {
     color: #111719 !important;
     font-size: inherit !important;
 }
+
+/* Help / inline help - stronger separators */
+blockquote {
+    border-top: 3px solid rgb(0 0 0 / 25%) !important;
+    border-bottom: 3px solid rgb(0 0 0 / 25%) !important;
+}
