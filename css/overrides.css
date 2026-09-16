@@ -4686,6 +4686,8 @@ table tbody tr.warn {
 /* Search result popup */
 #guiSearchBoxSpan .awesomplete > ul {
     margin-top: 10px !important;
+    background: #192125 !important;
+    background-color: #192125 !important;
     border: 2px solid #0e1011 !important;
     border-radius: 6px !important;
     box-shadow: none !important;
@@ -4695,6 +4697,8 @@ table tbody tr.warn {
 
 /* Search result rows */
 #guiSearchBoxSpan .awesomplete > ul > li {
+    background: #192125 !important;
+    background-color: #192125 !important;
     color: #c9d1d5 !important;
 }
 
