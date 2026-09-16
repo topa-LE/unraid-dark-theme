@@ -4810,3 +4810,10 @@ blockquote {
     border-top: 3px solid rgb(0 0 0 / 25%) !important;
     border-bottom: 3px solid rgb(0 0 0 / 25%) !important;
 }
+
+/* Disk capabilities - table frame */
+section#tab11-panel #disk_capabilities_div table#disk_capabilities_table3 {
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
