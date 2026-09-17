@@ -1,8 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+I18N="$SCRIPT_DIR/lib/i18n.sh"
+
+if [[ ! -f "$I18N" ]]; then
+  echo "Error: Language library not found: $I18N" >&2
+  exit 1
+fi
+
+source "$I18N"
+
 if [[ $EUID -ne 0 ]]; then
-  echo "Fehler: Update muss als root ausgeführt werden."
+  topa_msg error_root_update
   exit 1
 fi
 
@@ -15,20 +25,20 @@ cleanup() {
 }
 trap cleanup EXIT
 
-echo "===== topa-LE Theme Update ====="
+topa_msg update_heading
 echo
 
 if ! command -v curl >/dev/null 2>&1; then
-  echo "Fehler: curl wurde nicht gefunden."
+  topa_msg error_curl_missing
   exit 1
 fi
 
 if ! command -v tar >/dev/null 2>&1; then
-  echo "Fehler: tar wurde nicht gefunden."
+  topa_msg error_tar_missing
   exit 1
 fi
 
-echo "Aktuelle Version wird von GitHub geladen ..."
+topa_msg update_download
 curl -fsSL "$REPO_URL" -o "$ARCHIVE"
 
 tar -xzf "$ARCHIVE" -C "$TMP_DIR"
@@ -36,11 +46,11 @@ tar -xzf "$ARCHIVE" -C "$TMP_DIR"
 SOURCE_DIR="$TMP_DIR/unraid-dark-theme-main"
 
 if [[ ! -f "$SOURCE_DIR/scripts/install.sh" ]]; then
-  echo "Fehler: install.sh im heruntergeladenen Repository nicht gefunden."
+  topa_msg error_install_script_missing
   exit 1
 fi
 
-bash "$SOURCE_DIR/scripts/install.sh"
+TOPA_LANG="$TOPA_LANG" bash "$SOURCE_DIR/scripts/install.sh"
 
 echo
-echo "===== Update fertig ====="
+topa_msg update_finished

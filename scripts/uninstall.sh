@@ -1,8 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
+ROOT="/boot/config/custom-css/topa-LE"
+I18N="$ROOT/scripts/lib/i18n.sh"
+
+if [[ ! -f "$I18N" ]]; then
+  echo "Error: Language library not found: $I18N" >&2
+  exit 1
+fi
+
+source "$I18N"
+
 if [[ $EUID -ne 0 ]]; then
-  echo "Fehler: Deinstallation muss als root ausgeführt werden."
+  topa_msg error_root_uninstall
   exit 1
 fi
 
@@ -16,7 +26,7 @@ STATE_DIR="$TARGET/state"
 # Eigenen Theme-Hook der Reboot-/Shutdown-Seite rückstandsfrei entfernen.
 if [[ -f "$BOOT_PAGE" ]] && grep -Fq 'topa-LE Reboot Shutdown Theme' "$BOOT_PAGE"; then
   sed -i '/<!-- topa-LE Reboot Shutdown Theme -->/,+1d' "$BOOT_PAGE"
-  echo "Reboot-/Shutdown-Theme-Hook entfernt."
+  topa_msg reboot_hook_removed
 fi
 LOGIN_CASE_ORIGINAL="$STATE_DIR/login-case.original"
 
@@ -29,21 +39,21 @@ TTYD_MARKER="# topa-LE WebTerminal Theme"
 MARK_START="# topa-LE Unraid Dark Theme - START"
 MARK_END="# topa-LE Unraid Dark Theme - END"
 
-echo "===== topa-LE Deinstallation ====="
+topa_msg uninstall_heading
 echo
 
 # Vor jeder Änderung prüfen, ob ein vorhandener topa-LE Login-Case
 # auch zuverlässig auf den ursprünglichen Unraid-Stand zurückgesetzt werden kann.
 if [[ -f "$LOGIN" ]] && grep -Fq 'class="topa-login-avatar"' "$LOGIN"; then
   if [[ ! -s "$LOGIN_CASE_ORIGINAL" ]]; then
-    echo "Fehler: Originaler Login-Case fehlt: $LOGIN_CASE_ORIGINAL"
-    echo "Deinstallation abgebrochen, damit .login.php nicht beschädigt wird."
+    topa_msg error_login_original_missing "$LOGIN_CASE_ORIGINAL"
+    topa_msg error_uninstall_login_protection
     exit 1
   fi
 
   if ! grep -Fq '<div class="case">' "$LOGIN_CASE_ORIGINAL"; then
-    echo "Fehler: Gesicherter Login-Case ist ungültig."
-    echo "Deinstallation abgebrochen, damit .login.php nicht beschädigt wird."
+    topa_msg error_login_original_invalid
+    topa_msg error_uninstall_login_protection
     exit 1
   fi
 fi
@@ -52,8 +62,8 @@ fi
 # ursprüngliche ttyd-Stand zuverlässig gesichert wurde.
 if [[ -f "$TTYD_CONFIG" ]] && grep -Fqx "$TTYD_MARKER" "$TTYD_CONFIG"; then
   if [[ ! -s "$TTYD_ORIGINAL" ]]; then
-    echo "Fehler: Originale ttyd-Konfiguration fehlt: $TTYD_ORIGINAL"
-    echo "Deinstallation abgebrochen, damit ttyd nicht beschädigt wird."
+    topa_msg error_ttyd_original_uninstall_missing "$TTYD_ORIGINAL"
+    topa_msg error_uninstall_ttyd_protection
     exit 1
   fi
 fi
@@ -61,14 +71,14 @@ fi
 if [[ -f "$GO_FILE" ]] && grep -Fqx "$MARK_START" "$GO_FILE"; then
   sed -i "/^${MARK_START//\//\\/}$/,/^${MARK_END//\//\\/}$/d" "$GO_FILE"
   sed -i '${/^$/d;}' "$GO_FILE"
-  echo "Boot-Hook entfernt."
+  topa_msg boot_hook_removed
 fi
 
 if [[ -f "$LAYOUT" ]]; then
   sed -i '/<!-- topa-LE Unraid Dark Theme -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE Array Operation -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE System Stats -->/,+1d' "$LAYOUT"
-  echo "WebGUI-Theme-Hooks entfernt."
+  topa_msg webgui_hooks_removed
 fi
 
 # WebTerminal auf den vor Installation vorhandenen Unraid-Stand zurücksetzen.
@@ -92,13 +102,13 @@ if [[ -f "$TTYD_CONFIG" ]] && grep -Fqx "$TTYD_MARKER" "$TTYD_CONFIG"; then
 
   if [[ $TTYD_RESTORED -ne 1 ]]; then
     rm -f "$TTYD_TMP"
-    echo "Fehler: Originale ttyd-Konfiguration konnte nicht wiederhergestellt werden."
+    topa_msg error_ttyd_restore
     exit 1
   fi
 
   chmod 0644 "$TTYD_TMP"
   mv "$TTYD_TMP" "$TTYD_CONFIG"
-  echo "Originale ttyd-Konfiguration wiederhergestellt."
+  topa_msg ttyd_restored
 fi
 
 # Die ursprüngliche Dynamix-Terminalgröße nur dann zurückschreiben,
@@ -123,15 +133,15 @@ if [[ -s "$DYNAMIX_TTY_ORIGINAL" && -f "$DYNAMIX_CONFIG" ]]; then
 
     if [[ $DYNAMIX_RESTORED -ne 1 ]]; then
       rm -f "$DYNAMIX_TMP"
-      echo "Fehler: Dynamix-Terminalgröße konnte nicht wiederhergestellt werden."
+      topa_msg error_dynamix_tty_restore
       exit 1
     fi
 
     chmod 0644 "$DYNAMIX_TMP"
     mv "$DYNAMIX_TMP" "$DYNAMIX_CONFIG"
-    echo "Originale Dynamix-Terminalgröße wiederhergestellt."
+    topa_msg dynamix_tty_restored
   else
-    echo "Dynamix-Terminalgröße wurde zwischenzeitlich geändert und bleibt unangetastet."
+    topa_msg dynamix_tty_changed
   fi
 fi
 
@@ -192,17 +202,17 @@ if [[ -f "$LOGIN" ]]; then
       }
     ' "$LOGIN" > "$TMP" || {
       rm -f "$TMP"
-      echo "Fehler: Originaler Login-Case konnte nicht wiederhergestellt werden."
+      topa_msg error_login_restore
       exit 1
     }
 
     mv "$TMP" "$LOGIN"
-    echo "Originaler Login-Case wiederhergestellt."
+    topa_msg login_restored
   fi
 
   sed -i '/<!-- topa-LE Login Theme -->/,/<\/style>/d' "$LOGIN"
   sed -i '/<div class="topa-login-footer-link">/,/<\/div>/d' "$LOGIN"
-  echo "Login-CSS und GitHub-Link entfernt."
+  topa_msg login_css_github_removed
 fi
 
 # Reste der alten externen Login-Architektur entfernen.
@@ -213,5 +223,5 @@ rm -f \
 rm -rf "$TARGET"
 
 echo
-echo "===== Deinstallation fertig ====="
-echo "Browser danach vollständig neu laden."
+topa_msg uninstall_finished
+topa_msg reload_browser
