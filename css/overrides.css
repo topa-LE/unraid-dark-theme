@@ -4817,3 +4817,28 @@ section#tab11-panel #disk_capabilities_div table#disk_capabilities_table3 {
     border-radius: 6px !important;
     overflow: hidden !important;
 }
+
+/* ==========================================================
+   topa-LE – Header Restart Required Button
+   ========================================================== */
+
+unraid-header-os-version span[role="button"]:is(
+    [title="Neustart erforderlich für Update"],
+    [title="Restart required for update"]
+) {
+    background: #30483b !important;
+    background-color: #30483b !important;
+    color: #d5ddd8 !important;
+    border: 1px solid #405f4d !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    padding: 4px 9px !important;
+}
+
+unraid-header-os-version span[role="button"]:is(
+    [title="Neustart erforderlich für Update"],
+    [title="Restart required for update"]
+) * {
+    color: inherit !important;
+}
+
