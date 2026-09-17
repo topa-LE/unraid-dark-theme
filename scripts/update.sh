@@ -1,7 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Run the updater from an immutable temporary copy. install.sh replaces the
+# persistent update.sh during an update, so continuing to execute directly
+# from /boot could make Bash read newly written script contents mid-run.
+if [[ "${TOPA_UPDATE_TEMP_COPY:-0}" != "1" ]]; then
+  UPDATE_SOURCE="$(readlink -f "${BASH_SOURCE[0]}")"
+  UPDATE_TEMP="$(mktemp /tmp/topa-le-update.XXXXXX.sh)"
+
+  cp -f "$UPDATE_SOURCE" "$UPDATE_TEMP"
+
+  TOPA_UPDATE_TEMP_COPY=1 \
+  TOPA_UPDATE_SCRIPT_DIR="$(cd "$(dirname "$UPDATE_SOURCE")" && pwd)" \
+  exec bash "$UPDATE_TEMP" "$@"
+fi
+
+SCRIPT_DIR="${TOPA_UPDATE_SCRIPT_DIR:?Missing original update script directory}"
 I18N="$SCRIPT_DIR/lib/i18n.sh"
 
 if [[ ! -f "$I18N" ]]; then
@@ -22,6 +36,10 @@ ARCHIVE="$TMP_DIR/theme.tar.gz"
 
 cleanup() {
   rm -rf "$TMP_DIR"
+
+  if [[ "${TOPA_UPDATE_TEMP_COPY:-0}" == "1" ]]; then
+    rm -f "${BASH_SOURCE[0]}"
+  fi
 }
 trap cleanup EXIT
 
