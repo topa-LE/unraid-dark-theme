@@ -4909,3 +4909,15 @@ unraid-update-os.unapi span[role="button"] > span svg,
 unraid-update-os.unapi span[role="button"] > span svg * {
     color: inherit !important;
 }
+
+/* Language page */
+#displaybox > .content:has(> .user #xml_file) > .user {
+  max-width: 760px !important;
+  margin: 34px auto 60px auto !important;
+  padding: 38px 58px !important;
+  background: rgba(19,24,26,0.22) !important;
+  border: 1px solid #2b3439 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}
