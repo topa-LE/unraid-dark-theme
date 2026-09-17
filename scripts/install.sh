@@ -20,6 +20,7 @@ echo
 for FILE in \
   "$SOURCE_DIR/VERSION" \
   "$SOURCE_DIR/css/base.css" \
+  "$SOURCE_DIR/css/boot.css" \
   "$SOURCE_DIR/css/loader.css" \
   "$SOURCE_DIR/css/theme.css" \
   "$SOURCE_DIR/css/overrides.css" \

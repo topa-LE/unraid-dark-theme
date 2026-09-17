@@ -28,6 +28,7 @@ echo "===== topa-LE Runtime ====="
 
 for FILE in \
   "$ROOT/css/loader.css" \
+  "$ROOT/css/boot.css" \
   "$ROOT/js/array-operation.js" \
   "$ROOT/js/system-stats.js" \
   "$ROOT/login/login-theme.css" \
