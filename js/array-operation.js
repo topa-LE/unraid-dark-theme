@@ -380,3 +380,76 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 100);
 })();
+
+/* topa-LE OS Update Button Hover - START */
+document.addEventListener('DOMContentLoaded', function () {
+    const setupUpdateOsHover = () => {
+        const root = document.querySelector('unraid-update-os.unapi');
+
+        if (!root || root.dataset.topaUpdateHoverReady === '1') {
+            return;
+        }
+
+        root.dataset.topaUpdateHoverReady = '1';
+
+        const actionButtons = root.querySelectorAll(
+            '.inline-flex.shrink-0.grow.flex-col.items-center.gap-4 > span[role="button"]'
+        );
+
+        actionButtons.forEach((button, index) => {
+            button.addEventListener('pointerenter', function () {
+                if (index === 0) {
+                    button.style.setProperty(
+                        'background',
+                        'linear-gradient(90deg, #f16a45 0%, #f49a70 55%, #f6c7a4 100%)',
+                        'important'
+                    );
+                } else {
+                    button.style.setProperty('background', '#c1d5e9', 'important');
+                    button.style.setProperty('background-color', '#c1d5e9', 'important');
+                }
+            });
+
+            button.addEventListener('pointerleave', function () {
+                if (index === 0) {
+                    button.style.setProperty(
+                        'background',
+                        'linear-gradient(90deg, #ef5b32 0%, #f28a5c 55%, #f3bb8e 100%)',
+                        'important'
+                    );
+                } else {
+                    button.style.setProperty('background', '#aebfc8', 'important');
+                    button.style.setProperty('background-color', '#aebfc8', 'important');
+                }
+            });
+        });
+
+        const versionButton = root.querySelector(
+            '.inline-flex.flex-wrap.items-center.justify-start.gap-2 > span[role="button"]'
+        );
+
+        const versionBadge = versionButton?.querySelector('span.bg-gray-200');
+
+        if (versionButton && versionBadge) {
+            versionButton.addEventListener('pointerenter', function () {
+                versionBadge.style.setProperty('background', '#405f4d', 'important');
+                versionBadge.style.setProperty('background-color', '#405f4d', 'important');
+            });
+
+            versionButton.addEventListener('pointerleave', function () {
+                versionBadge.style.setProperty('background', '#30483b', 'important');
+                versionBadge.style.setProperty('background-color', '#30483b', 'important');
+            });
+        }
+    };
+
+    setupUpdateOsHover();
+
+    const observer = new MutationObserver(setupUpdateOsHover);
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});
+/* topa-LE OS Update Button Hover - END */

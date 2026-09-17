@@ -4842,3 +4842,70 @@ unraid-header-os-version span[role="button"]:is(
     color: inherit !important;
 }
 
+
+/* ==========================================================
+   topa-LE – OS Update Status / Action Controls
+   ========================================================== */
+
+/* Current version badge */
+unraid-update-os.unapi .inline-flex.flex-wrap.items-center.justify-start.gap-2
+> span[role="button"]
+> span.bg-gray-200 {
+    background: #30483b !important;
+    background-color: #30483b !important;
+    color: #d5ddd8 !important;
+    border: 1px solid #405f4d !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+/* Restart-required status badge */
+unraid-update-os.unapi .inline-flex.flex-wrap.items-center.justify-start.gap-2
+> span.bg-yellow-100 {
+    background: #aebfc8 !important;
+    background-color: #aebfc8 !important;
+    color: #111719 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+/* Reboot / install action */
+unraid-update-os.unapi
+.inline-flex.shrink-0.grow.flex-col.items-center.gap-4
+> span[role="button"]:first-child {
+    background: linear-gradient(
+        90deg,
+        #ef5b32 0%,
+        #f28a5c 55%,
+        #f3bb8e 100%
+    ) !important;
+    color: #ffffff !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+/* Secondary update actions */
+unraid-update-os.unapi
+.inline-flex.shrink-0.grow.flex-col.items-center.gap-4
+> span[role="button"]:not(:first-child) {
+    background: #aebfc8 !important;
+    background-color: #aebfc8 !important;
+    color: #111719 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+/* Keep icons/text synchronized with control color */
+unraid-update-os.unapi span[role="button"] svg,
+unraid-update-os.unapi span[role="button"] svg *,
+unraid-update-os.unapi span[role="button"] > span svg,
+unraid-update-os.unapi span[role="button"] > span svg * {
+    color: inherit !important;
+}
