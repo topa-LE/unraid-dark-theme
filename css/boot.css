@@ -1,0 +1,19 @@
+/* ==========================================================
+   topa-LE – Reboot / Shutdown Page
+   ========================================================== */
+
+body {
+    background: #13181a !important;
+}
+
+.js-bootTitle {
+    color: #c9d1d5 !important;
+}
+
+.js-arrayStatus {
+    color: #dc9b66 !important;
+}
+
+.js-powerStatus {
+    color: #c9d1d5 !important;
+}

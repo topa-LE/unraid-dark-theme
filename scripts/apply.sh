@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="/boot/config/custom-css/topa-LE"
 LAYOUT="/usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout.php"
 LOGIN="/usr/local/emhttp/plugins/dynamix/include/.login.php"
+BOOT_PAGE="/usr/local/emhttp/plugins/dynamix/include/Boot.php"
 STATE_DIR="$ROOT/state"
 LOGIN_CASE_ORIGINAL="$STATE_DIR/login-case.original"
 
@@ -19,6 +20,7 @@ EOF
 )"
 
 CSS_HREF="/boot/config/custom-css/topa-LE/css/loader.css"
+BOOT_CSS_HREF="/boot/config/custom-css/topa-LE/css/boot.css"
 JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
 
@@ -117,6 +119,21 @@ else
   exit 1
 fi
 
+
+# Reboot-/Shutdown-Seite läuft außerhalb des DefaultPageLayout.
+# Deshalb erhält Boot.php einen eigenen, kleinen Theme-Hook.
+if [[ -f "$BOOT_PAGE" ]]; then
+  if ! grep -Fq "$BOOT_CSS_HREF" "$BOOT_PAGE"; then
+    sed -i '/<\/head>/i\
+<!-- topa-LE Reboot Shutdown Theme -->\
+<link type="text/css" rel="stylesheet" href="/boot/config/custom-css/topa-LE/css/boot.css" />' "$BOOT_PAGE"
+    echo "Reboot-/Shutdown-Theme-Hook gesetzt."
+  else
+    echo "Reboot-/Shutdown-Theme-Hook bereits vorhanden."
+  fi
+else
+  echo "Warnung: Boot.php wurde nicht gefunden: $BOOT_PAGE"
+fi
 
 if ! grep -Fq "$CSS_HREF" "$LAYOUT"; then
   sed -i '/<\/head>/i\

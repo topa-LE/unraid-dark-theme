@@ -10,7 +10,14 @@ TARGET="/boot/config/custom-css/topa-LE"
 GO_FILE="/boot/config/go"
 LAYOUT="/usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout.php"
 LOGIN="/usr/local/emhttp/plugins/dynamix/include/.login.php"
+BOOT_PAGE="/usr/local/emhttp/plugins/dynamix/include/Boot.php"
 STATE_DIR="$TARGET/state"
+
+# Eigenen Theme-Hook der Reboot-/Shutdown-Seite rückstandsfrei entfernen.
+if [[ -f "$BOOT_PAGE" ]] && grep -Fq 'topa-LE Reboot Shutdown Theme' "$BOOT_PAGE"; then
+  sed -i '/<!-- topa-LE Reboot Shutdown Theme -->/,+1d' "$BOOT_PAGE"
+  echo "Reboot-/Shutdown-Theme-Hook entfernt."
+fi
 LOGIN_CASE_ORIGINAL="$STATE_DIR/login-case.original"
 
 TTYD_CONFIG="/etc/default/ttyd"
