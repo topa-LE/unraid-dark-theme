@@ -4921,3 +4921,19 @@ unraid-update-os.unapi span[role="button"] > span svg * {
   box-shadow: none !important;
   box-sizing: border-box !important;
 }
+
+/* Notification group titles */
+.notifications-checkbox-group-title {
+  display: inline-block !important;
+  width: 150px !important;
+  padding: 5px 10px !important;
+  background: #2b424e !important;
+  color: #eef3f4 !important;
+  border: 1px solid rgba(88,112,124,0.62) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
