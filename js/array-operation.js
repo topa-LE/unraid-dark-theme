@@ -474,11 +474,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /*
      * Oberen Erklärungstext in den bestätigten Info-Container setzen.
      */
-    const directParagraphs = [...content.children].filter(el =>
-        el.tagName === 'P'
-    );
-
-    const infoParagraphs = directParagraphs.filter(p => {
+    const infoParagraphs = [...content.querySelectorAll(':scope > p')].filter(p => {
         const text = p.textContent.trim();
 
         return (

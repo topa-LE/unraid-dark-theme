@@ -4947,7 +4947,7 @@ unraid-update-os.unapi span[role="button"] > span svg * {
  * Dadurch bleiben die Regeln vollständig auf diese Seite beschränkt.
  */
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-info {
+#displaybox > .content > .topa-newconfig-info {
     max-width: 1180px !important;
     margin: 24px auto 18px auto !important;
     padding: 18px 24px !important;
@@ -4959,18 +4959,18 @@ unraid-update-os.unapi span[role="button"] > span svg * {
     box-sizing: border-box !important;
 }
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-info > p {
+#displaybox > .content > .topa-newconfig-info > p {
     margin: 0 0 14px 0 !important;
 }
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-info > p:last-child {
+#displaybox > .content > .topa-newconfig-info > p:last-child {
     margin-bottom: 0 !important;
 }
 
 
 /* Kritische New-Configuration-Warnung */
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-danger-row {
+#displaybox > .content > .topa-newconfig-danger-row {
     width: 100% !important;
     max-width: 1180px !important;
     margin: 0 auto !important;
@@ -4978,7 +4978,7 @@ unraid-update-os.unapi span[role="button"] > span svg * {
     box-sizing: border-box !important;
 }
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-danger {
+#displaybox > .content > .topa-newconfig-danger-row > .topa-newconfig-danger {
     display: inline-block !important;
 
     margin-right: 7px !important;
@@ -4999,7 +4999,7 @@ unraid-update-os.unapi span[role="button"] > span svg * {
 
 /* Erklärung unterhalb der kritischen Warnung */
 
-#displaybox .content form[name="newConfig"] .topa-newconfig-danger-explanation {
+#displaybox > .content > .topa-newconfig-danger-explanation {
     max-width: 1180px !important;
     margin: 12px auto 18px auto !important;
     padding: 14px 24px !important;
