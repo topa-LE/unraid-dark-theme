@@ -453,3 +453,202 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 /* topa-LE OS Update Button Hover - END */
+
+/* topa-LE New Configuration Page - START */
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#displaybox .content form[name="newConfig"]');
+
+    if (!form || form.dataset.topaNewConfigReady === '1') {
+        return;
+    }
+
+    form.dataset.topaNewConfigReady = '1';
+
+    const content = form.closest('.content');
+
+    if (!content) {
+        return;
+    }
+
+
+    /*
+     * Oberen Erklärungstext in den bestätigten Info-Container setzen.
+     */
+    const directParagraphs = [...content.children].filter(el =>
+        el.tagName === 'P'
+    );
+
+    const infoParagraphs = directParagraphs.filter(p => {
+        const text = p.textContent.trim();
+
+        return (
+            text.startsWith('Mit diesem Dienstprogramm') ||
+            text.startsWith('Das ist nützlich') ||
+            text.includes('"Aktuelle Zuweisungen beibehalten"')
+        );
+    });
+
+    if (infoParagraphs.length === 3) {
+        const info = document.createElement('div');
+        info.className = 'topa-newconfig-info';
+
+        infoParagraphs[0].parentNode.insertBefore(
+            info,
+            infoParagraphs[0]
+        );
+
+        infoParagraphs.forEach(p => {
+            info.appendChild(p);
+        });
+    }
+
+
+    /*
+     * Kritische Warnung:
+     * <strong> bleibt der rote Warnblock.
+     * Der nachfolgende Erklärungstext wird in einen eigenen Container
+     * unterhalb der Warnung verschoben.
+     */
+    const danger = [...content.querySelectorAll('strong')].find(el =>
+        el.textContent.trim().startsWith(
+            'BENUTZE DIESES DIENSTPROGRAMM NICHT'
+        )
+    );
+
+    if (danger) {
+        const dangerParagraph = danger.parentElement;
+
+        if (dangerParagraph && dangerParagraph.tagName === 'P') {
+            danger.classList.add('topa-newconfig-danger');
+            dangerParagraph.classList.add('topa-newconfig-danger-row');
+
+            const restNodes = [];
+            let node = danger.nextSibling;
+
+            while (node) {
+                const next = node.nextSibling;
+                restNodes.push(node);
+                node = next;
+            }
+
+            if (restNodes.length) {
+                const explanation = document.createElement('div');
+                explanation.className =
+                    'topa-newconfig-danger-explanation';
+
+                restNodes.forEach(restNode => {
+                    explanation.appendChild(restNode);
+                });
+
+                dangerParagraph.insertAdjacentElement(
+                    'afterend',
+                    explanation
+                );
+            }
+        }
+    }
+
+
+    /*
+     * Zeile "Aktuelle Zuweisungen beibehalten" auf die gemeinsame
+     * 1180-px-Flucht setzen.
+     */
+    const assignmentLabel = [...form.querySelectorAll('*')]
+        .filter(el => el.children.length === 0)
+        .find(el =>
+            el.textContent.trim() ===
+            'Aktuelle Zuweisungen beibehalten:'
+        );
+
+    if (assignmentLabel) {
+        let assignmentRow = assignmentLabel.parentElement;
+
+        while (
+            assignmentRow &&
+            assignmentRow !== form &&
+            !assignmentRow.querySelector('select')
+        ) {
+            assignmentRow = assignmentRow.parentElement;
+        }
+
+        if (assignmentRow && assignmentRow !== form) {
+            assignmentRow.classList.add(
+                'topa-newconfig-assignments'
+            );
+        }
+    }
+
+
+    /*
+     * Vorhandenen Stop-Hinweis der New-Configuration-Seite durch
+     * dieselbe bereits bestätigte Warnbox ersetzen, die auch bei den
+     * Share Settings verwendet wird.
+     */
+    const stopText = 'Zum Ändern muss das Array gestoppt sein';
+
+    const stopSpan = [...form.querySelectorAll('span')].find(el =>
+        el.textContent.trim() === stopText
+    );
+
+    if (stopSpan) {
+        const originalRow = stopSpan.parentElement;
+
+        const stopRow = document.createElement('div');
+        stopRow.className = 'topa-newconfig-array-stop-row';
+
+        const notice = document.createElement('em');
+        notice.className = 'notice topa-array-stop-notice';
+        notice.textContent = stopText;
+
+        stopRow.appendChild(notice);
+
+        stopSpan.style.display = 'none';
+
+        if (originalRow) {
+            originalRow.insertAdjacentElement(
+                'afterend',
+                stopRow
+            );
+        }
+    }
+
+
+    /*
+     * Gemeinsamen Bereich von ANWENDEN und FERTIG auf dieselbe Flucht
+     * setzen. Button-Design selbst bleibt unverändert.
+     */
+    const buttons = [...form.querySelectorAll(
+        'input[type="submit"], input[type="button"], button'
+    )];
+
+    const applyButton = buttons.find(el =>
+        (el.value || el.textContent || '')
+            .trim()
+            .toUpperCase() === 'ANWENDEN'
+    );
+
+    const doneButton = buttons.find(el =>
+        (el.value || el.textContent || '')
+            .trim()
+            .toUpperCase() === 'FERTIG'
+    );
+
+    if (applyButton && doneButton) {
+        let buttonRow = applyButton.parentElement;
+
+        while (
+            buttonRow &&
+            buttonRow !== form &&
+            !buttonRow.contains(doneButton)
+        ) {
+            buttonRow = buttonRow.parentElement;
+        }
+
+        if (buttonRow && buttonRow !== form) {
+            buttonRow.classList.add(
+                'topa-newconfig-buttons'
+            );
+        }
+    }
+});
+/* topa-LE New Configuration Page - END */

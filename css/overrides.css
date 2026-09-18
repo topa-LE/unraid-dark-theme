@@ -4937,3 +4937,117 @@ unraid-update-os.unapi span[role="button"] > span svg * {
   font-weight: 400 !important;
   font-style: normal !important;
 }
+
+/* topa-LE New Configuration Page - START */
+
+/*
+ * Tools -> New Configuration
+ *
+ * Die DOM-Hilfsklassen werden gezielt durch array-operation.js gesetzt.
+ * Dadurch bleiben die Regeln vollständig auf diese Seite beschränkt.
+ */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-info {
+    max-width: 1180px !important;
+    margin: 24px auto 18px auto !important;
+    padding: 18px 24px !important;
+
+    background: rgba(19, 24, 26, 0.42) !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+
+    box-sizing: border-box !important;
+}
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-info > p {
+    margin: 0 0 14px 0 !important;
+}
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-info > p:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+/* Kritische New-Configuration-Warnung */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-danger-row {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+
+    box-sizing: border-box !important;
+}
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-danger {
+    display: inline-block !important;
+
+    margin-right: 7px !important;
+    padding: 7px 12px !important;
+
+    background: #8f3030 !important;
+    border: 1px solid #b84a4a !important;
+    border-radius: 5px !important;
+
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    vertical-align: middle !important;
+
+    box-shadow: none !important;
+}
+
+
+/* Erklärung unterhalb der kritischen Warnung */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-danger-explanation {
+    max-width: 1180px !important;
+    margin: 12px auto 18px auto !important;
+    padding: 14px 24px !important;
+
+    background: rgba(19, 24, 26, 0.42) !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px !important;
+
+    line-height: 1.45 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* Aktuelle Zuweisungen */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-assignments {
+    width: 100% !important;
+    max-width: 1180px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Array muss gestoppt sein */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-array-stop-row {
+    width: 100% !important;
+    max-width: 1180px !important;
+
+    margin: 16px auto 0 auto !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Anwenden / Fertig */
+
+#displaybox .content form[name="newConfig"] .topa-newconfig-buttons {
+    width: 100% !important;
+    max-width: 1180px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    box-sizing: border-box !important;
+}
+
+/* topa-LE New Configuration Page - END */
