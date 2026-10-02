@@ -5069,6 +5069,14 @@ unraid-update-os.unapi span[role="button"] > span svg * {
         0 !important;
 }
 
+.ui-dialog:has(> #dialogWindow) > #dialogWindow {
+    background:
+        transparent !important;
+
+    background-color:
+        transparent !important;
+}
+
 .ui-dialog:has(> #dialogWindow) > .ui-dialog-titlebar,
 .ui-dialog:has(> #dialogWindow) > .ui-dialog-buttonpane {
     background:
