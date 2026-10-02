@@ -5051,3 +5051,32 @@ unraid-update-os.unapi span[role="button"] > span svg * {
 }
 
 /* topa-LE New Configuration Page - END */
+
+/* ========================================
+   TOPA-LE POOL ADD DIALOG
+   Gezielt nur: "Pool hinzufügen" (#dialogWindow)
+   Andere Unraid-Dialoge bleiben unverändert.
+   ======================================== */
+
+.ui-dialog:has(> #dialogWindow) {
+    background:
+        #243038 !important;
+
+    border:
+        2px solid #0c0e0f !important;
+
+    padding:
+        0 !important;
+}
+
+.ui-dialog:has(> #dialogWindow) > .ui-dialog-titlebar,
+.ui-dialog:has(> #dialogWindow) > .ui-dialog-buttonpane {
+    background:
+        #0c0e0f !important;
+
+    background-color:
+        #0c0e0f !important;
+
+    border-color:
+        #0c0e0f !important;
+}
