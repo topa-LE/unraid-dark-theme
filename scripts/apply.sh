@@ -12,6 +12,8 @@ fi
 source "$I18N"
 
 LAYOUT="/usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout.php"
+UPDATE_PAGE="/usr/local/emhttp/update.htm"
+LOGGING_PAGE="/usr/local/emhttp/logging.htm"
 LOGIN="/usr/local/emhttp/plugins/dynamix/include/.login.php"
 BOOT_PAGE="/usr/local/emhttp/plugins/dynamix/include/Boot.php"
 STATE_DIR="$ROOT/state"
@@ -129,6 +131,24 @@ else
   exit 1
 fi
 
+
+# Progress- und Logging-iFrames an das Dark Theme anpassen.
+# Die Funktion der iFrames bleibt vollständig erhalten; nur der helle
+# Unraid-Standardhintergrund #f2f2f2 wird transparent.
+for PROGRESS_PAGE in "$UPDATE_PAGE" "$LOGGING_PAGE"; do
+  if [[ -f "$PROGRESS_PAGE" ]]; then
+    if grep -Fq 'background:#f2f2f2' "$PROGRESS_PAGE"; then
+      sed -i 's/background:#f2f2f2/background:transparent/g' "$PROGRESS_PAGE"
+      echo "Progress-Hintergrund transparent gesetzt: $PROGRESS_PAGE"
+    elif grep -Fq 'background:transparent' "$PROGRESS_PAGE"; then
+      echo "Progress-Hintergrund bereits transparent: $PROGRESS_PAGE"
+    else
+      echo "WARNUNG: Erwarteter Progress-Hintergrund nicht gefunden: $PROGRESS_PAGE" >&2
+    fi
+  else
+    echo "WARNUNG: Runtime-Datei fehlt: $PROGRESS_PAGE" >&2
+  fi
+done
 
 # Reboot-/Shutdown-Seite läuft außerhalb des DefaultPageLayout.
 # Deshalb erhält Boot.php einen eigenen, kleinen Theme-Hook.
