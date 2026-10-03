@@ -5098,3 +5098,13 @@ table#t1 {
     border:
         1px solid #242424 !important;
 }
+
+/* ========================================
+   TOPA-LE RED TEXT AND FAILED
+   ======================================== */
+
+.red-text,
+.failed {
+    color:
+        #f15b62 !important;
+}
