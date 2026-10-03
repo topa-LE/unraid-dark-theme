@@ -5088,3 +5088,13 @@ unraid-update-os.unapi span[role="button"] > span svg * {
     border-color:
         #0c0e0f !important;
 }
+
+/* ========================================
+   TOPA-LE TABLE T1 BORDER
+   Gezielt nur Tabelle #t1.
+   ======================================== */
+
+table#t1 {
+    border:
+        1px solid #242424 !important;
+}
