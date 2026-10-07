@@ -5118,3 +5118,25 @@ table#t1 {
     margin-left:
         0 !important;
 }
+
+/* ========================================
+   TOPA-LE DOCKER FIELDSET
+   Gezielt nur Docker-Fieldsets.
+   ======================================== */
+
+fieldset.docker {
+    border:
+        solid thin !important;
+
+    margin-top:
+        8px !important;
+
+    border-color:
+        #44484a !important;
+
+    border-radius:
+        5px !important;
+
+    background-color:
+        #121618 !important;
+}
