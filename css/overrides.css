@@ -5140,3 +5140,17 @@ fieldset.docker {
     background-color:
         #121618 !important;
 }
+
+/* ========================================
+   TOPA-LE DOCKER TABLE HOVER
+   Nur Docker-Container-Tabelle.
+   ======================================== */
+
+#docker_containers.tablesorter tbody tr:hover,
+#docker_containers.tablesorter tbody tr:hover > td {
+    background:
+        #374751 !important;
+
+    background-color:
+        #374751 !important;
+}
