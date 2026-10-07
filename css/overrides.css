@@ -5108,3 +5108,13 @@ table#t1 {
     color:
         #f15b62 !important;
 }
+
+/* ========================================
+   TOPA-LE ARRAY OPTIONCORRECT ALIGNMENT
+   Nur Checkbox "Korrekturen auf Parität schreiben".
+   ======================================== */
+
+.ArrayOperation-Table input[name="optionCorrect"] {
+    margin-left:
+        0 !important;
+}
