@@ -28,25 +28,47 @@ Additional Unraid versions will be tested before being listed as supported.
 
 ## Installation
 
-The installation workflow is currently being prepared for the public repository.
+Run the following command as root on your Unraid server:
 
-The installer will provide:
+```bash
+curl -fsSL https://raw.githubusercontent.com/topa-LE/unraid-dark-theme/main/scripts/bootstrap.sh | bash
+```
 
-- Persistent installation of the theme files
-- WebGUI CSS loader configuration
-- Customized login page installation
-- Controlled rollback of modified Unraid files
-- Idempotent installation without duplicate modifications
+The installer downloads the latest version from GitHub and installs the theme under:
+
+```text
+/boot/config/custom-css/topa-LE/
+```
+
+The theme is automatically applied after reboot through a dedicated entry in /boot/config/go.
+
+The WebTerminal theme uses a persistent font size of **17**.
+
+Original configuration values needed for rollback are stored in the theme's state directory.
 
 ## Updating
 
-Updates will be distributed through this GitHub repository.
+To update an existing installation, run as root:
 
-The goal is to update an installed theme directly from the repository without manually copying CSS files.
+```bash
+bash /boot/config/custom-css/topa-LE/scripts/update.sh
+```
+
+The updater downloads the latest repository version and reapplies the theme while retaining existing rollback state.
 
 ## Uninstall and rollback
 
-A clean uninstall and rollback procedure will be provided with the installer.
+To uninstall the theme, run as root:
+
+```bash
+bash /boot/config/custom-css/topa-LE/scripts/uninstall.sh
+```
+
+The uninstaller removes theme hooks and restores saved Unraid settings where applicable.
+
+If the WebTerminal font size was manually changed after installation, that later change is preserved.
+
+**Note:** Back up your Unraid flash configuration before installation. Complete automatic rollback after every possible installation failure is not guaranteed.
 
 ## Repository structure
 

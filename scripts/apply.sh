@@ -114,23 +114,26 @@ topa_msg webterminal_theme_set
 # Unraid schreibt beim Öffnen eines WebTerminals die in dynamix.cfg
 # gespeicherte Schriftgröße erneut nach /etc/default/ttyd.
 # Deshalb wird der freigegebene Wert 17 zusätzlich persistent gesetzt.
-if [[ ! -s "$DYNAMIX_TTY_ORIGINAL" ]]; then
-  if ! grep -m1 '^tty=' "$DYNAMIX_CONFIG" > "$DYNAMIX_TTY_ORIGINAL"; then
+DYNAMIX_TTY_CREATED="$STATE_DIR/dynamix-tty.created"
+
+# Den urspruenglichen Zustand nur einmal erfassen.
+# Eine frische Unraid-Installation besitzt moeglicherweise noch kein tty=.
+if [[ ! -e "$DYNAMIX_TTY_ORIGINAL" && ! -e "$DYNAMIX_TTY_CREATED" ]]; then
+  if grep -m1 '^tty=' "$DYNAMIX_CONFIG" > "$DYNAMIX_TTY_ORIGINAL"; then
+    topa_msg dynamix_tty_original_saved
+  else
     rm -f "$DYNAMIX_TTY_ORIGINAL"
-    topa_msg error_dynamix_tty_missing "$DYNAMIX_CONFIG"
-    exit 1
+    : > "$DYNAMIX_TTY_CREATED"
   fi
-  topa_msg dynamix_tty_original_saved
 fi
 
 if grep -q '^tty=' "$DYNAMIX_CONFIG"; then
   sed -i 's/^tty=.*/tty="17"/' "$DYNAMIX_CONFIG"
-  topa_msg webterminal_font_size_set
 else
-  topa_msg error_dynamix_tty_missing "$DYNAMIX_CONFIG"
-  exit 1
+  printf '%s\n' 'tty="17"' >> "$DYNAMIX_CONFIG"
 fi
 
+topa_msg webterminal_font_size_set
 
 # Progress- und Logging-iFrames an das Dark Theme anpassen.
 # Die Funktion der iFrames bleibt vollständig erhalten; nur der helle

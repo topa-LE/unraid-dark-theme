@@ -111,6 +111,44 @@ if [[ -f "$TTYD_CONFIG" ]] && grep -Fqx "$TTYD_MARKER" "$TTYD_CONFIG"; then
   topa_msg ttyd_restored
 fi
 
+# Bei einer frischen Unraid-Installation existierte urspruenglich
+# kein tty-Eintrag. Nur den von uns erzeugten Wert 17 entfernen.
+# Eine spaetere Benutzeraenderung bleibt erhalten.
+DYNAMIX_TTY_CREATED="$STATE_DIR/dynamix-tty.created"
+
+if [[ -f "$DYNAMIX_TTY_CREATED" && -f "$DYNAMIX_CONFIG" ]]; then
+  CURRENT_DYNAMIX_TTY="$(grep -m1 '^tty=' "$DYNAMIX_CONFIG" || true)"
+
+  if [[ "$CURRENT_DYNAMIX_TTY" == 'tty="17"' ||
+        "$CURRENT_DYNAMIX_TTY" == 'tty=17' ]]; then
+    DYNAMIX_TMP="$(mktemp /tmp/topa-le-dynamix-remove.XXXXXX)"
+
+    DYNAMIX_REMOVED=0
+
+    while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+      if [[ "$LINE" == 'tty="17"' || "$LINE" == 'tty=17' ]] &&
+         [[ $DYNAMIX_REMOVED -eq 0 ]]; then
+        DYNAMIX_REMOVED=1
+        continue
+      fi
+
+      printf '%s\n' "$LINE" >> "$DYNAMIX_TMP"
+    done < "$DYNAMIX_CONFIG"
+
+    if [[ $DYNAMIX_REMOVED -ne 1 ]]; then
+      rm -f "$DYNAMIX_TMP"
+      echo "FEHLER: Theme-TTY-Eintrag nicht gefunden." >&2
+      exit 1
+    fi
+
+    chmod --reference="$DYNAMIX_CONFIG" "$DYNAMIX_TMP"
+    mv "$DYNAMIX_TMP" "$DYNAMIX_CONFIG"
+    echo "Von topa-LE erzeugten tty-Eintrag entfernt."
+  else
+    echo "Dynamix tty wurde geaendert oder entfernt; keine Aenderung."
+  fi
+fi
+
 # Die ursprüngliche Dynamix-Terminalgröße nur dann zurückschreiben,
 # wenn noch unser Theme-Wert 17 aktiv ist. Eine spätere manuelle
 # Benutzeränderung wird dadurch nicht überschrieben.
