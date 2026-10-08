@@ -4744,6 +4744,53 @@ table tbody tr.warn {
     border-radius: 0 !important;
 }
 
+
+/* =========================================================
+   topa-LE – Unraid Connect license success dialog
+   ========================================================= */
+
+/* Dialograhmen: gleichmaessiger orangefarbener Leuchtschatten */
+.unapi [role="dialog"]
+.max-w-\[640px\].shadow-green-600\/30 {
+    --tw-shadow-color: rgba(220, 155, 102, 0.45) !important;
+    box-shadow: 0 0 18px 3px rgba(220, 155, 102, 0.40) !important;
+}
+
+/* Erfolgsmeldung */
+.unapi [role="dialog"]
+.max-w-\[640px\] p.text-lg {
+    color: #dc9b66 !important;
+}
+
+/* Lizenzhinweis: hell, gerade, gut lesbar */
+.unapi [role="dialog"]
+.max-w-\[640px\] p[title^="Berechtigt für kostenlose"],
+.unapi [role="dialog"]
+.max-w-\[640px\] p[title^="Eligible for free"] {
+    color: #f0f3f4 !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+}
+
+/* Oberes Schliessen-X */
+.unapi [role="dialog"]
+.max-w-\[640px\] [aria-label="Schließen"],
+.unapi [role="dialog"]
+.max-w-\[640px\] [aria-label="Close"] {
+    color: #f0f3f4 !important;
+}
+
+/* Untere Schliessen-Aktion einschliesslich X */
+.unapi [role="dialog"]
+.max-w-\[640px\] footer span[role="button"] {
+    color: #f0f3f4 !important;
+}
+
+.unapi [role="dialog"]
+.max-w-\[640px\] footer span[role="button"] svg {
+    color: inherit !important;
+}
+
 /* =========================================================
    Unraid Connect popup
    ========================================================= */
