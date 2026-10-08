@@ -183,6 +183,67 @@ if [[ -s "$DYNAMIX_TTY_ORIGINAL" && -f "$DYNAMIX_CONFIG" ]]; then
   fi
 fi
 
+
+# Das urspruengliche native Dynamix-Farbschema wiederherstellen.
+# Nur unser Wert black darf veraendert werden.
+DYNAMIX_THEME_ORIGINAL="$STATE_DIR/dynamix-theme.original"
+DYNAMIX_THEME_CREATED="$STATE_DIR/dynamix-theme.created"
+
+if [[ -f "$DYNAMIX_CONFIG" ]]; then
+  CURRENT_DYNAMIX_THEME="$(grep -m1 '^theme=' "$DYNAMIX_CONFIG" || true)"
+
+  if [[ "$CURRENT_DYNAMIX_THEME" == 'theme="black"' ||
+        "$CURRENT_DYNAMIX_THEME" == 'theme=black' ]]; then
+
+    if [[ -f "$DYNAMIX_THEME_CREATED" ]]; then
+      DYNAMIX_TMP="$(mktemp /tmp/topa-le-theme-remove.XXXXXX)"
+
+      while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+        if [[ "$LINE" != theme=* ]]; then
+          printf "%s\n" "$LINE" >> "$DYNAMIX_TMP"
+        fi
+      done < "$DYNAMIX_CONFIG"
+
+      chmod --reference="$DYNAMIX_CONFIG" "$DYNAMIX_TMP"
+      mv "$DYNAMIX_TMP" "$DYNAMIX_CONFIG"
+
+      echo "Von topa-LE erzeugten Dynamix-Theme-Eintrag entfernt."
+
+    elif [[ -s "$DYNAMIX_THEME_ORIGINAL" ]]; then
+      ORIGINAL_DYNAMIX_THEME="$(cat "$DYNAMIX_THEME_ORIGINAL")"
+      DYNAMIX_TMP="$(mktemp /tmp/topa-le-theme-restore.XXXXXX)"
+
+      DYNAMIX_RESTORED=0
+
+      while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+        if [[ "$LINE" == theme=* && $DYNAMIX_RESTORED -eq 0 ]]; then
+          printf "%s\n" "$ORIGINAL_DYNAMIX_THEME" >> "$DYNAMIX_TMP"
+          DYNAMIX_RESTORED=1
+        else
+          printf "%s\n" "$LINE" >> "$DYNAMIX_TMP"
+        fi
+      done < "$DYNAMIX_CONFIG"
+
+      if [[ $DYNAMIX_RESTORED -ne 1 ]]; then
+        rm -f "$DYNAMIX_TMP"
+        echo "FEHLER: Dynamix-Farbschema nicht wiederhergestellt." >&2
+        exit 1
+      fi
+
+      chmod --reference="$DYNAMIX_CONFIG" "$DYNAMIX_TMP"
+      mv "$DYNAMIX_TMP" "$DYNAMIX_CONFIG"
+
+      echo "Urspruengliches Dynamix-Farbschema wiederhergestellt."
+
+    else
+      echo "Kein gesicherter Dynamix-Theme-Ursprung; keine Aenderung."
+    fi
+
+  else
+    echo "Dynamix-Farbschema wurde geaendert oder entfernt; keine Aenderung."
+  fi
+fi
+
 if [[ -f "$LOGIN" ]]; then
   if grep -Fq 'class="topa-login-avatar"' "$LOGIN"; then
     TMP="/tmp/topa-le-login-restore.$$"

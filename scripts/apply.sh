@@ -135,6 +135,43 @@ fi
 
 topa_msg webterminal_font_size_set
 
+# Das native Dynamix-Farbschema muss ebenfalls dunkel sein.
+# Den urspruenglichen Zustand unabhaengig von der tty-Einstellung sichern.
+DYNAMIX_THEME_ORIGINAL="$STATE_DIR/dynamix-theme.original"
+DYNAMIX_THEME_CREATED="$STATE_DIR/dynamix-theme.created"
+
+if [[ ! -e "$DYNAMIX_THEME_ORIGINAL" && ! -e "$DYNAMIX_THEME_CREATED" ]]; then
+  if grep -m1 '^theme=' "$DYNAMIX_CONFIG" > "$DYNAMIX_THEME_ORIGINAL"; then
+    echo "Originales Dynamix-Farbschema gesichert."
+  else
+    rm -f "$DYNAMIX_THEME_ORIGINAL"
+    : > "$DYNAMIX_THEME_CREATED"
+  fi
+fi
+
+DYNAMIX_THEME_TMP="$(mktemp /tmp/topa-le-theme-apply.XXXXXX)"
+DYNAMIX_THEME_FOUND=0
+
+while IFS= read -r LINE || [[ -n "$LINE" ]]; do
+  if [[ "$LINE" == theme=* ]]; then
+    if [[ $DYNAMIX_THEME_FOUND -eq 0 ]]; then
+      printf "%s\n" 'theme="black"' >> "$DYNAMIX_THEME_TMP"
+      DYNAMIX_THEME_FOUND=1
+    fi
+  else
+    printf "%s\n" "$LINE" >> "$DYNAMIX_THEME_TMP"
+  fi
+done < "$DYNAMIX_CONFIG"
+
+if [[ $DYNAMIX_THEME_FOUND -eq 0 ]]; then
+  printf "%s\n" 'theme="black"' >> "$DYNAMIX_THEME_TMP"
+fi
+
+chmod --reference="$DYNAMIX_CONFIG" "$DYNAMIX_THEME_TMP"
+mv "$DYNAMIX_THEME_TMP" "$DYNAMIX_CONFIG"
+
+echo "Dynamix-Farbschema persistent auf Schwarz gesetzt."
+
 # Progress- und Logging-iFrames an das Dark Theme anpassen.
 # Die Funktion der iFrames bleibt vollständig erhalten; nur der helle
 # Unraid-Standardhintergrund #f2f2f2 wird transparent.
