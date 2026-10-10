@@ -5334,7 +5334,7 @@ body.dark .topa-vm-selection > .vmtemplate:hover {
 
 /* TOPA-LE VM CONFIGURATION – CONTENT BOX */
 body.dark form#vmform {
-    width: 900px !important;
+    width: 1200px !important;
     max-width: 100% !important;
     margin: 18px auto 24px !important;
 
@@ -5360,4 +5360,22 @@ body.dark form#vmform #form_content > .formview > table {
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+}
+
+/* ========================================
+   TOPA-LE VM CONFIGURATION – CPU BOXES
+   Scoped to the VM configuration form.
+   ======================================== */
+
+/* TOPA-LE VM CONFIGURATION – CPU BOXES */
+body.dark form#vmform .cpu-box {
+    background: #17242b !important;
+    border: 1px solid #0e171c !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.20) !important;
+}
+
+body.dark form#vmform .cpu-box:hover {
+    background: #263a44 !important;
+    border-color: #48616d !important;
 }
