@@ -5295,16 +5295,33 @@ form:has(> #configLocation):has(> #configLocationAdvanced) {
     margin-right: auto !important;
 }
 
-/* TOPA-LE VM TEMPLATE SELECTION – FINAL */
+/* TOPA-LE VM TEMPLATE SELECTION – INDIVIDUAL ICON TILES */
+
+/* Remove the oversized background panel. */
 body.dark .topa-vm-selection {
-    background: linear-gradient(
-        180deg,
-        rgb(36 46 53 / 82%) 0%,
-        rgba(34, 47, 55, 0.90) 100%
-    ) !important;
-    border: 1px solid rgba(21, 24, 25, 0.22) !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
-    padding: 14px 18px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Style only the individual operating system templates. */
+body.dark .topa-vm-selection > .vmtemplate {
+    background: #27343a !important;
+    border: 1px solid #151a1d !important;
+    border-radius: 20px !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24) !important;
     box-sizing: border-box !important;
+    width: 120px !important;
+    min-width: 120px !important;
+    height: 115px !important;
+    min-height: 115px !important;
+    padding: 10px !important;
+}
+
+/* Hover effect for operating system tiles only. */
+body.dark .topa-vm-selection > .vmtemplate:hover {
+    background: #374751 !important;
+    border-color: #647e8a !important;
 }
