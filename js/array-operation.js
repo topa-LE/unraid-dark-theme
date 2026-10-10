@@ -648,3 +648,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 /* topa-LE New Configuration Page - END */
+
+/* topa-LE VM Template Selection Container - START */
+(() => {
+    'use strict';
+
+    function applyVMTemplateContainer() {
+        const content = document.querySelector('#displaybox > .content');
+
+        if (!content) return;
+
+        const templates = [...content.querySelectorAll('.vmtemplate')];
+
+        if (!templates.length) return;
+
+        const parent = templates[0].parentElement;
+
+        if (!parent || parent.classList.contains('topa-vm-selection')) {
+            return;
+        }
+
+        const sections = [...parent.children].filter(element =>
+            element.classList.contains('vmheader') ||
+            element.classList.contains('vmtemplate')
+        );
+
+        if (!sections.length) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'topa-vm-selection';
+
+        parent.insertBefore(wrapper, sections[0]);
+        sections.forEach(element => wrapper.appendChild(element));
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener(
+            'DOMContentLoaded',
+            applyVMTemplateContainer,
+            { once: true }
+        );
+    } else {
+        applyVMTemplateContainer();
+    }
+})();
+/* topa-LE VM Template Selection Container - END */

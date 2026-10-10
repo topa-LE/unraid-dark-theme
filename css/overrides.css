@@ -5294,3 +5294,17 @@ form:has(> #configLocation):has(> #configLocationAdvanced) {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* TOPA-LE VM TEMPLATE SELECTION – FINAL */
+body.dark .topa-vm-selection {
+    background: linear-gradient(
+        180deg,
+        rgba(46, 60, 68, 0.82) 0%,
+        rgba(34, 47, 55, 0.90) 100%
+    ) !important;
+    border: 1px solid rgba(21, 24, 25, 0.22) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+}
