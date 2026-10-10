@@ -5272,3 +5272,16 @@ p#logBody.logLine fieldset.CMD > legend {
     font-weight: 400 !important;
     line-height: 1.4 !important;
 }
+
+/* TOPA-LE DOCKER FORM – CONTAINER BOX */
+form:has(> #configLocation):has(> #configLocationAdvanced) {
+    background: #222e32 !important;
+    border: 1px solid #566871 !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 750px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
