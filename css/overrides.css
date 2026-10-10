@@ -5325,3 +5325,39 @@ body.dark .topa-vm-selection > .vmtemplate:hover {
     background: #374751 !important;
     border-color: #647e8a !important;
 }
+
+/* ========================================
+   TOPA-LE VM CONFIGURATION – CONTENT BOX
+   Only the VM configuration form.
+   Does not affect VM template selection.
+   ======================================== */
+
+/* TOPA-LE VM CONFIGURATION – CONTENT BOX */
+body.dark form#vmform {
+    width: 900px !important;
+    max-width: 100% !important;
+    margin: 18px auto 24px !important;
+
+    background: linear-gradient(
+        180deg,
+        #26343b 0%,
+        #1b262d 100%
+    ) !important;
+
+    border: 1px solid #11191d !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.42) !important;
+    padding: 18px 22px !important;
+    box-sizing: border-box !important;
+}
+
+/* Remove individual table backgrounds from the VM form.
+   Preserve the separate XML editor view. */
+body.dark form#vmform > table,
+body.dark form#vmform #form_content > .formview > table {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
