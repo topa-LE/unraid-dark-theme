@@ -5379,3 +5379,13 @@ body.dark form#vmform .cpu-box:hover {
     background: #263a44 !important;
     border-color: #48616d !important;
 }
+
+/* TOPA VM CPU CHECKBOX GREEN – selected CPU cores */
+body.dark form#vmform .cpu-box .cpu-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
+}
+
+body.dark form#vmform .cpu-box .cpu-checkbox input[type="checkbox"]:not(:checked) + .checkmark {
+    background-color: #808080 !important;
+}
