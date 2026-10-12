@@ -5423,7 +5423,7 @@ body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file a {
 }
 
 /* TOPA VM AUTOSTART SWITCH FINAL */
-body.dark #kvm_list .switch-button-background {
+html body.dark #kvm_list div.switch-button-background {
     background: #777f83 !important;
     background-color: #777f83 !important;
     background-image: none !important;
@@ -5433,7 +5433,7 @@ body.dark #kvm_list .switch-button-background {
     opacity: 1 !important;
 }
 
-body.dark #kvm_list .switch-button-background.checked {
+html body.dark #kvm_list div.switch-button-background.checked {
     background: #4caf50 !important;
     background-color: #4caf50 !important;
     border-color: #4caf50 !important;
