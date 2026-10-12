@@ -34,6 +34,7 @@ CSS_HREF="/boot/config/custom-css/topa-LE/css/loader.css"
 BOOT_CSS_HREF="/boot/config/custom-css/topa-LE/css/boot.css"
 JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
+FONT_SWITCHER_JS_HREF="/boot/config/custom-css/topa-LE/js/font-switcher.js"
 
 echo "===== topa-LE Runtime ====="
 
@@ -42,6 +43,7 @@ for FILE in \
   "$ROOT/css/boot.css" \
   "$ROOT/js/array-operation.js" \
   "$ROOT/js/system-stats.js" \
+  "$ROOT/js/font-switcher.js" \
   "$ROOT/login/login-theme.css" \
   "$ROOT/img/topa-le-avatar-login.png" \
   "$LAYOUT" \
@@ -233,6 +235,16 @@ else
 fi
 
 
+
+
+if ! grep -Fq "$FONT_SWITCHER_JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE Font Switcher -->\
+<script src="/boot/config/custom-css/topa-LE/js/font-switcher.js"></script>' "$LAYOUT"
+  echo "Font-Switcher-Hook gesetzt."
+else
+  echo "Font-Switcher-Hook bereits vorhanden."
+fi
 
 
 # Login-Case durch den topa-LE Avatar ersetzen.

@@ -35,6 +35,7 @@ for FILE in \
     "$SOURCE_DIR/css/overrides.css" \
     "$SOURCE_DIR/js/array-operation.js" \
     "$SOURCE_DIR/js/system-stats.js" \
+    "$SOURCE_DIR/js/font-switcher.js" \
     "$SOURCE_DIR/img/topa-le-avatar-login.png" \
     "$SOURCE_DIR/login/login-theme.css" \
     "$SOURCE_DIR/scripts/lib/i18n.sh" \
@@ -60,6 +61,7 @@ cp -f "$SOURCE_DIR/VERSION" "$TARGET/VERSION"
 cp -f "$SOURCE_DIR/css/"*.css "$TARGET/css/"
 cp -f "$SOURCE_DIR/js/array-operation.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/system-stats.js" "$TARGET/js/"
+cp -f "$SOURCE_DIR/js/font-switcher.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/img/topa-le-avatar-login.png" "$TARGET/img/"
 cp -f "$SOURCE_DIR/login/login-theme.css" "$TARGET/login/"
 cp -f "$SOURCE_DIR/scripts/lib/i18n.sh" "$TARGET/scripts/lib/"

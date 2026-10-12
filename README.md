@@ -14,6 +14,31 @@ A modern dark theme for the Unraid WebGUI with a customized login page, dark gre
 - GitHub-based installation and update workflow
 - Clean uninstall and rollback support
 
+## Font Switcher
+
+### Phase 1 - Aa button
+
+The authenticated Unraid WebGUI includes a compact Aa button
+immediately to the left of the language selector.
+
+- Button dimensions: 28 x 28 px
+- Navigation wrapper: 34 x 40 px
+- Styled to match the topa-LE dark theme
+- Implemented in `js/font-switcher.js`
+- Integrated into the installation and runtime scripts
+- Visually tested on unraid-112-fitness
+- Login and password-reset pages remain unchanged
+
+Phase 1 provides the button only. It does not yet open a
+dropdown or change the active font.
+
+### Planned extensions
+
+- Font-selection dropdown
+- Default Unraid font
+- Locally hosted Titillium Web, Inter and Maven Pro
+- Persistent font selection across page reloads
+
 ## Screenshots
 
 Screenshots of the customized WebGUI and login page will be added as the project documentation grows.
