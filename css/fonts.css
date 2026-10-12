@@ -1,0 +1,50 @@
+/* topa-LE Unraid Dark Theme - Local Fonts */
+/* Self-hosted WOFF2 files. No external font requests. */
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("/boot/config/custom-css/topa-LE/fonts/titillium-web/TitilliumWeb-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("/boot/config/custom-css/topa-LE/fonts/titillium-web/TitilliumWeb-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("/boot/config/custom-css/topa-LE/fonts/titillium-web/TitilliumWeb-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("/boot/config/custom-css/topa-LE/fonts/titillium-web/TitilliumWeb-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/boot/config/custom-css/topa-LE/fonts/inter/InterVariable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maven Pro";
+    src: url("/boot/config/custom-css/topa-LE/fonts/maven-pro/MavenPro.woff2") format("woff2");
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}

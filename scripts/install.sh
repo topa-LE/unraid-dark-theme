@@ -51,6 +51,7 @@ do
 done
 
 mkdir -p \
+    "$TARGET/fonts" \
     "$TARGET/css" \
     "$TARGET/js" \
     "$TARGET/img" \
@@ -59,6 +60,7 @@ mkdir -p \
 
 cp -f "$SOURCE_DIR/VERSION" "$TARGET/VERSION"
 cp -f "$SOURCE_DIR/css/"*.css "$TARGET/css/"
+cp -a "$SOURCE_DIR/fonts/." "$TARGET/fonts/"
 cp -f "$SOURCE_DIR/js/array-operation.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/system-stats.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/font-switcher.js" "$TARGET/js/"
