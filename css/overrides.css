@@ -5421,3 +5421,32 @@ body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file:hov
 body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file a {
     color: #b9c5cc !important;
 }
+
+/* TOPA VM AUTOSTART SWITCH FINAL */
+body.dark #kvm_list .switch-button-background {
+    background-color: #777f83 !important;
+    background-image: none !important;
+    border: 1px solid #777f83 !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+body.dark #kvm_list .switch-button-background.checked {
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
+}
+
+body.dark #kvm_list .switch-button-background .switch-button-button {
+    background-color: #f2f2f2 !important;
+    background-image: none !important;
+    border-radius: 3px !important;
+}
+
+body.dark #kvm_list .switch-button-label.off {
+    color: #d5dadd !important;
+}
+
+body.dark #kvm_list .switch-button-label.on {
+    color: #4caf50 !important;
+}
