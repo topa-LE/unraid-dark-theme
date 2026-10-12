@@ -1,15 +1,22 @@
 /*
  * topa-LE Unraid Dark Theme
- * Font Switcher – Phase 1
+ * Font Switcher - Phase 2
  *
- * Compact Aa button in the authenticated WebGUI.
- * Font selection and dropdown will follow later.
+ * Dropdown UI only. Font loading and selection
+ * will be implemented separately.
  */
 
 (function topaFontSwitcher() {
     "use strict";
 
     const ID = "topa-font-switcher";
+
+    const fonts = [
+        "Standard (Unraid)",
+        "Titillium Web",
+        "Inter",
+        "Maven Pro"
+    ];
 
     function install() {
         const language = document.querySelector(
@@ -50,6 +57,8 @@
             "aria-label",
             "Schriftart auswählen"
         );
+        button.setAttribute("aria-haspopup", "true");
+        button.setAttribute("aria-expanded", "false");
 
         button.style.cssText = [
             "display: flex !important",
@@ -71,11 +80,91 @@
             "line-height: 1 !important",
             "box-shadow: none !important",
             "text-transform: none !important",
-            "cursor: default !important"
+            "cursor: pointer !important"
         ].join(";") + ";";
+
+        const menu = document.createElement("div");
+        menu.className = "topa-font-menu";
+        menu.id = "topa-font-menu";
+        menu.hidden = true;
+        menu.setAttribute("aria-label", "Schriftart auswählen");
+
+        button.setAttribute("aria-controls", menu.id);
+
+        const title = document.createElement("div");
+        title.className = "topa-font-menu-title";
+        title.textContent = "Schriftart auswählen";
+        menu.appendChild(title);
+
+        const divider = document.createElement("div");
+        divider.className = "topa-font-menu-divider";
+        menu.appendChild(divider);
+
+        fonts.forEach((font, index) => {
+            const item = document.createElement("button");
+            item.type = "button";
+            item.className = "topa-font-menu-item";
+            item.textContent = font;
+            item.setAttribute(
+                "aria-checked",
+                index === 0 ? "true" : "false"
+            );
+
+            item.addEventListener("click", () => {
+                // Phase 2: selection UI only.
+                // Font application follows after local font installation.
+                closeMenu();
+                button.focus();
+            });
+
+            menu.appendChild(item);
+        });
+
+        function closeMenu() {
+            menu.hidden = true;
+            button.setAttribute("aria-expanded", "false");
+        }
+
+        function positionMenu() {
+            const rect = button.getBoundingClientRect();
+            menu.style.top = `${rect.bottom + 12}px`;
+            menu.style.right = `${Math.max(8, window.innerWidth - rect.right)}px`;
+        }
+
+        button.addEventListener("click", () => {
+            const shouldOpen = menu.hidden;
+            if (shouldOpen) positionMenu();
+            menu.hidden = !shouldOpen;
+            button.setAttribute(
+                "aria-expanded",
+                shouldOpen ? "true" : "false"
+            );
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!root.contains(event.target) &&
+                !menu.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !menu.hidden) {
+                closeMenu();
+                button.focus();
+            }
+        });
 
         root.appendChild(button);
         language.parentElement.insertBefore(root, language);
+        document.body.appendChild(menu);
+
+        window.addEventListener("resize", () => {
+            if (!menu.hidden) positionMenu();
+        });
+        window.addEventListener("scroll", () => {
+            if (!menu.hidden) positionMenu();
+        }, true);
 
         return true;
     }
