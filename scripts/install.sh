@@ -60,7 +60,49 @@ mkdir -p \
 
 cp -f "$SOURCE_DIR/VERSION" "$TARGET/VERSION"
 cp -f "$SOURCE_DIR/css/"*.css "$TARGET/css/"
-cp -a "$SOURCE_DIR/fonts/." "$TARGET/fonts/"
+# Keep the managed font directory identical to the repository.
+# Stage all files before replacing the existing font collection.
+FONT_STAGE="$(mktemp -d /tmp/topa-le-fonts.XXXXXX)"
+trap 'rm -rf "$FONT_STAGE"' EXIT
+
+cp -a "$SOURCE_DIR/fonts/." "$FONT_STAGE/"
+
+if [[ -z "$(find "$FONT_STAGE" -type f -name '*.woff2' -print -quit)" ]]; then
+    echo "Error: No WOFF2 font files found in source." >&2
+    exit 1
+fi
+
+# Prepare the complete new font collection on the target filesystem.
+FONT_NEW="$TARGET/fonts.new"
+FONT_OLD="$TARGET/fonts.old"
+
+if [[ -e "$FONT_NEW" || -e "$FONT_OLD" ]]; then
+    echo "Error: Previous font synchronization directories exist." >&2
+    exit 1
+fi
+
+mkdir "$FONT_NEW"
+if ! cp -a "$FONT_STAGE/." "$FONT_NEW/"; then
+    rm -rf "$FONT_NEW"
+    echo "Error: Could not prepare new font collection." >&2
+    exit 1
+fi
+
+# Replace the managed collection only after successful preparation.
+if ! mv "$TARGET/fonts" "$FONT_OLD"; then
+    echo "Error: Could not preserve existing fonts." >&2
+    exit 1
+fi
+
+if mv "$FONT_NEW" "$TARGET/fonts"; then
+    rm -rf "$FONT_OLD"
+else
+    if ! mv "$FONT_OLD" "$TARGET/fonts"; then
+        echo "CRITICAL: Previous fonts remain in $FONT_OLD" >&2
+    fi
+    echo "Error: Font replacement failed." >&2
+    exit 1
+fi
 cp -f "$SOURCE_DIR/js/array-operation.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/system-stats.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/font-switcher.js" "$TARGET/js/"
