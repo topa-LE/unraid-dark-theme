@@ -14,7 +14,13 @@
         "Standard (Unraid)",
         "Titillium Web",
         "Inter",
-        "Maven Pro"
+        "Maven Pro",
+        "Saira Condensed",
+        "Roboto Condensed",
+        "Ubuntu Condensed",
+        "Dosis",
+        "Cuprum",
+        "Play"
     ];
 
 
@@ -23,7 +29,13 @@
         "Standard (Unraid)": '"topa-unraid-clear-sans", sans-serif',
         "Titillium Web": '"Titillium Web", sans-serif',
         "Inter": '"Inter", sans-serif',
-        "Maven Pro": '"Maven Pro", sans-serif'
+        "Maven Pro": '"Maven Pro", sans-serif',
+        "Saira Condensed": '"Saira Condensed", sans-serif',
+        "Roboto Condensed": '"Roboto Condensed", sans-serif',
+        "Ubuntu Condensed": '"Ubuntu Condensed", sans-serif',
+        "Dosis": '"Dosis", sans-serif',
+        "Cuprum": '"Cuprum", sans-serif',
+        "Play": '"Play", sans-serif'
     };
 
     function getChoice() {

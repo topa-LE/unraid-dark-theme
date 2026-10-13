@@ -100,7 +100,7 @@
 /* Original Unraid Clear Sans – locally bundled */
 @font-face {
     font-family: "topa-unraid-clear-sans";
-    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans.woff") format("woff");
+    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -108,24 +108,128 @@
 
 @font-face {
     font-family: "topa-unraid-clear-sans";
-    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans-bold.woff") format("woff");
+    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans-bold.woff2") format("woff2");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "topa-unraid-clear-sans";
-    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans-italic.woff") format("woff");
-    font-style: italic;
-    font-weight: 400;
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "topa-unraid-clear-sans";
-    src: url("/boot/config/custom-css/topa-LE/fonts/clear-sans/clear-sans-bold-italic.woff") format("woff");
-    font-style: italic;
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Bold.woff2") format("woff2");
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Saira Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/saira-condensed/SairaCondensed-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/roboto-condensed/RobotoCondensed-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu Condensed";
+    src: url("/boot/config/custom-css/topa-LE/fonts/ubuntu-condensed/UbuntuCondensed-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dosis";
+    src: url("/boot/config/custom-css/topa-LE/fonts/dosis/Dosis-Variable.woff2") format("woff2");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("/boot/config/custom-css/topa-LE/fonts/cuprum/Cuprum-Variable.woff2") format("woff2");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Play";
+    src: url("/boot/config/custom-css/topa-LE/fonts/play/Play-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Play";
+    src: url("/boot/config/custom-css/topa-LE/fonts/play/Play-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
     font-display: swap;
 }
