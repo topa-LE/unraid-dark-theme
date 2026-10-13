@@ -259,7 +259,7 @@ th,
 span,
 div,
 a {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: var(--topa-font-family, 'Titillium Web', sans-serif) !important;
 }
 
 
@@ -353,7 +353,7 @@ body,
 #main,
 .content,
 .page_content {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: var(--topa-font-family, 'Titillium Web', sans-serif) !important;
   font-weight: 400 !important;
   font-style: normal !important;
 }
@@ -365,7 +365,7 @@ button,
 .button,
 input[type="button"],
 input[type="submit"] {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: var(--topa-font-family, 'Titillium Web', sans-serif) !important;
   font-weight: 600 !important;
   font-style: normal !important;
 }
@@ -5265,7 +5265,7 @@ p#logBody.logLine fieldset.CMD {
 /* TOPA-LE DOCKER INSTALL LOG – TYPOGRAPHY */
 p#logBody.logLine fieldset.CMD,
 p#logBody.logLine fieldset.CMD * {
-    font-family: "Titillium Web", sans-serif !important;
+    font-family: var(--topa-font-family, 'Titillium Web', sans-serif) !important;
     font-size: 14px !important;
     font-weight: 300 !important;
     line-height: 1.6 !important;
@@ -5451,4 +5451,12 @@ body.dark #kvm_list .switch-button-label.off {
 
 body.dark #kvm_list .switch-button-label.on {
     color: #4caf50 !important;
+}
+
+/* ========================================
+   TOPA-LE NAVIGATION FONT-WEIGHT 600
+   ======================================== */
+#nav-block #nav-item a,
+.nav-item > a {
+    font-weight: 600 !important;
 }

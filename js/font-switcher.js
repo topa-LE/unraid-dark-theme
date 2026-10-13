@@ -1,9 +1,8 @@
 /*
  * topa-LE Unraid Dark Theme
- * Font Switcher - Phase 2
+ * Font Switcher - Phase 3B
  *
- * Dropdown UI only. Font loading and selection
- * will be implemented separately.
+ * Local font selection with persistent browser preference.
  */
 
 (function topaFontSwitcher() {
@@ -18,7 +17,57 @@
         "Maven Pro"
     ];
 
+
+    const STORAGE_KEY = "topa-font-choice";
+    const FONT_VALUES = {
+        "Standard (Unraid)": '"topa-unraid-clear-sans", sans-serif',
+        "Titillium Web": '"Titillium Web", sans-serif',
+        "Inter": '"Inter", sans-serif',
+        "Maven Pro": '"Maven Pro", sans-serif'
+    };
+
+    function getChoice() {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (Object.prototype.hasOwnProperty.call(FONT_VALUES, saved)) {
+                return saved;
+            }
+        } catch (error) {
+            // Storage may be disabled.
+        }
+        return "Titillium Web";
+    }
+
+    function applyChoice(choice) {
+        const html = document.documentElement;
+
+        html.setAttribute(
+            "data-topa-font",
+            choice === "Standard (Unraid)" ? "standard" : "custom"
+        );
+        html.style.setProperty("--topa-font-family", FONT_VALUES[choice]);
+    }
+
+    function saveChoice(choice) {
+        try {
+            localStorage.setItem(STORAGE_KEY, choice);
+        } catch (error) {
+            // Switching still works for the current page.
+        }
+    }
+
+    function updateChecks(menu, choice) {
+        menu.querySelectorAll(".topa-font-menu-item").forEach((item) => {
+            item.setAttribute(
+                "aria-checked",
+                item.textContent === choice ? "true" : "false"
+            );
+        });
+    }
+
     function install() {
+        const selectedFont = getChoice();
+        applyChoice(selectedFont);
         const language = document.querySelector(
             ".nav-item.LanguageButton.util"
         );
@@ -74,7 +123,7 @@
             "color: #dc9b66 !important",
             "border: 1px solid #303b40 !important",
             "border-radius: 5px !important",
-            "font-family: Arial, sans-serif !important",
+            "font-family: Titillium Web, sans-serif !important",
             "font-size: 13px !important",
             "font-weight: 600 !important",
             "line-height: 1 !important",
@@ -107,12 +156,13 @@
             item.textContent = font;
             item.setAttribute(
                 "aria-checked",
-                index === 0 ? "true" : "false"
+                font === selectedFont ? "true" : "false"
             );
 
             item.addEventListener("click", () => {
-                // Phase 2: selection UI only.
-                // Font application follows after local font installation.
+                applyChoice(font);
+                saveChoice(font);
+                updateChecks(menu, font);
                 closeMenu();
                 button.focus();
             });
