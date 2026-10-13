@@ -4936,6 +4936,30 @@ unraid-header-os-version span[role="button"]:is(
 }
 
 
+/* Header OS update available – same green as restart required */
+html body.dark unraid-header-os-version
+span[role="button"][title*="Update verfügbar"] {
+    background: #30483b !important;
+    background-color: #30483b !important;
+    color: #d5ddd8 !important;
+    border: 1px solid #405f4d !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    padding: 4px 9px !important;
+    transition: background-color 150ms ease !important;
+}
+
+html body.dark unraid-header-os-version
+span[role="button"][title*="Update verfügbar"]:hover {
+    background: #405f4d !important;
+    background-color: #405f4d !important;
+}
+
+html body.dark unraid-header-os-version
+span[role="button"][title*="Update verfügbar"] * {
+    color: inherit !important;
+}
+
 /* ==========================================================
    topa-LE – OS Update Status / Action Controls
    ========================================================== */
