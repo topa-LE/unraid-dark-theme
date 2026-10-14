@@ -2117,9 +2117,8 @@ body.dark .sweet-alert {
 
 
 /* =========================================================
-   TOPA-LE TOOLTIP SYSTEM – GLOBAL DARK ALIGNMENT
-   START
-========================================================= */
+   TOPA-LE TOOLTIP SYSTEM – UNIFIED DARK DESIGN
+   ========================================================= */
 
 .tooltip,
 .tooltip-inner,
@@ -2132,13 +2131,16 @@ body.dark .sweet-alert {
 .tippy-box,
 .webui-popover,
 .popover,
-.popover-content {
-    background: #0c0e0f !important;
-    background-color: #0c0e0f !important;
-    color: #f2f2f2 !important;
-    border: 1px solid #3a4a4f !important;
-    border-radius: 4px !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+.popover-content,
+body.dark .bg-popover[data-state][data-side],
+a.info span.help-content,
+a.info span {
+    background: #192125 !important;
+    background-color: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
 }
 
 .tooltip *,
@@ -2148,12 +2150,12 @@ body.dark .sweet-alert {
 .tippy-box *,
 .webui-popover *,
 .popover * {
-    color: #f2f2f2 !important;
+    color: #d6dde3 !important;
 }
 
 /* =========================================================
-   END TOPA-LE TOOLTIP SYSTEM – GLOBAL DARK ALIGNMENT
-========================================================= */
+   END TOPA-LE TOOLTIP SYSTEM – UNIFIED DARK DESIGN
+   ========================================================= */
 
 
 /******************************************
@@ -2696,16 +2698,6 @@ table.usb_absent tbody#historical-table-body tr:nth-child(even) > td {
 table.usb_absent tbody#historical-table-body tr:hover,
 table.usb_absent tbody#historical-table-body tr:hover > td {
   background: #40535d !important;
-}
-
-/* Unraid info tooltips */
-a.info span.help-content {
-  background-color: #202f37 !important;
-}
-
-/* Unraid info tooltips */
-a.info span {
-  background-color: #202f37 !important;
 }
 
 /* Dropdown menus */
