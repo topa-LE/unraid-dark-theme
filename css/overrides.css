@@ -3010,9 +3010,15 @@ table.ArrayOperation-Table label:has(> input[name="safemode"]) {
 }
 
 /* License indicator - theme colors */
-span[title="Schlüssel aktualisieren"]:hover,
-span[title="Schlüssel aktualisieren"]:focus {
-    border-bottom-color: #EFAA71 !important;
+span:is(
+    [title="Schlüssel aktualisieren"],
+    [title="Upgrade Key"]
+):hover,
+span:is(
+    [title="Schlüssel aktualisieren"],
+    [title="Upgrade Key"]
+):focus {
+    border-bottom-color: #dc9b66 !important;
 }
 
 .text-header-text-secondary em,
@@ -4937,7 +4943,7 @@ unraid-header-os-version span[role="button"]:is(
 
 /* Header OS update available – same green as restart required */
 html body.dark unraid-header-os-version
-span[role="button"][title*="Update verfügbar"] {
+span[role="button"]:is([title*="Update verfügbar"], [title*="Update Available"]) {
     background: #30483b !important;
     background-color: #30483b !important;
     color: #d5ddd8 !important;
@@ -4949,13 +4955,13 @@ span[role="button"][title*="Update verfügbar"] {
 }
 
 html body.dark unraid-header-os-version
-span[role="button"][title*="Update verfügbar"]:hover {
+span[role="button"]:is([title*="Update verfügbar"], [title*="Update Available"]):hover {
     background: #405f4d !important;
     background-color: #405f4d !important;
 }
 
 html body.dark unraid-header-os-version
-span[role="button"][title*="Update verfügbar"] * {
+span[role="button"]:is([title*="Update verfügbar"], [title*="Update Available"]) * {
     color: inherit !important;
 }
 
