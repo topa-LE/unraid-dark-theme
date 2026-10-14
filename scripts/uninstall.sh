@@ -78,6 +78,8 @@ if [[ -f "$LAYOUT" ]]; then
   sed -i '/<!-- topa-LE Unraid Dark Theme -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE Array Operation -->/,+1d' "$LAYOUT"
   sed -i '/<!-- topa-LE System Stats -->/,+1d' "$LAYOUT"
+  sed -i '/<!-- topa-LE Font Switcher -->/,+1d' "$LAYOUT"
+  sed -i '/<!-- topa-LE Language Switch Fix -->/,+1d' "$LAYOUT"
   topa_msg webgui_hooks_removed
 fi
 
