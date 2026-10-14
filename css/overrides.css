@@ -5483,3 +5483,29 @@ body.dark #kvm_list .switch-button-label.on {
 .nav-item > a {
     font-weight: 600 !important;
 }
+
+/* ========================================
+   TOPA-LE ARRAY SETTINGS HINT BOX
+   ======================================== */
+body.dark dd > em:has(> b) {
+    display: table !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 4px 0 !important;
+    padding: 5px 12px !important;
+    background: #30483b !important;
+    color: #d5ddd8 !important;
+    border: 1px solid #405f4d !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+}
+
+body.dark dd > em:has(> b) b {
+    color: #d5ddd8 !important;
+    font-weight: 700 !important;
+}
