@@ -39,6 +39,41 @@ dropdown or change the active font.
 - Locally hosted Titillium Web, Inter and Maven Pro
 - Persistent font selection across page reloads
 
+## Language Switch Fix / Sprachwechsel-Reparatur
+
+### English
+
+The theme includes a compatibility fix for Unraid's native language
+switcher. It remembers the previously selected language when switching
+to English and restores it if Unraid's locale cookie is missing.
+
+- Supports language identifiers such as `de_DE` without hardcoding German.
+- Preserves the selected language in browser local storage.
+- Uses Unraid's existing language-switching mechanism.
+- Implemented in `js/language-switch-fix.js`.
+- Installed automatically through `scripts/install.sh`.
+- Integrated into the WebGUI through `scripts/apply.sh`.
+- No separate installation script is required.
+- Successfully tested with repeated German-English-German switching
+  on Unraid 7.3.2.
+
+### Deutsch
+
+Das Theme enthaelt eine Kompatibilitaetskorrektur fuer den nativen
+Unraid-Sprachumschalter. Beim Wechsel auf Englisch wird die zuvor
+ausgewaehlte Sprache gespeichert. Fehlt anschliessend der Locale-Cookie,
+kann die vorherige Sprache wiederhergestellt werden.
+
+- Unterstuetzt Sprachkennungen wie `de_DE`, ohne Deutsch fest vorzugeben.
+- Speichert die vorherige Sprache im lokalen Browserspeicher.
+- Verwendet weiterhin den vorhandenen Sprachwechselmechanismus von Unraid.
+- Implementiert in `js/language-switch-fix.js`.
+- Automatische Installation ueber `scripts/install.sh`.
+- Einbindung in die WebGUI ueber `scripts/apply.sh`.
+- Kein separates Installationsskript erforderlich.
+- Erfolgreich mit wiederholtem Wechsel Deutsch-Englisch-Deutsch
+  auf Unraid 7.3.2 getestet.
+
 ## Screenshots
 
 Screenshots of the customized WebGUI and login page will be added as the project documentation grows.

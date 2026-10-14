@@ -35,6 +35,7 @@ BOOT_CSS_HREF="/boot/config/custom-css/topa-LE/css/boot.css"
 JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
 FONT_SWITCHER_JS_HREF="/boot/config/custom-css/topa-LE/js/font-switcher.js"
+LANGUAGE_FIX_JS_HREF="/boot/config/custom-css/topa-LE/js/language-switch-fix.js"
 
 echo "===== topa-LE Runtime ====="
 
@@ -44,6 +45,7 @@ for FILE in \
   "$ROOT/js/array-operation.js" \
   "$ROOT/js/system-stats.js" \
   "$ROOT/js/font-switcher.js" \
+  "$ROOT/js/language-switch-fix.js" \
   "$ROOT/login/login-theme.css" \
   "$ROOT/img/topa-le-avatar-login.png" \
   "$LAYOUT" \
@@ -244,6 +246,16 @@ if ! grep -Fq "$FONT_SWITCHER_JS_HREF" "$LAYOUT"; then
   echo "Font-Switcher-Hook gesetzt."
 else
   echo "Font-Switcher-Hook bereits vorhanden."
+fi
+
+
+if ! grep -Fq "$LANGUAGE_FIX_JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE Language Switch Fix -->\
+<script src="/boot/config/custom-css/topa-LE/js/language-switch-fix.js"></script>' "$LAYOUT"
+  echo "Language-Switch-Fix-Hook gesetzt."
+else
+  echo "Language-Switch-Fix-Hook bereits vorhanden."
 fi
 
 
