@@ -3535,9 +3535,15 @@ table#usb_devices_list.usb_mounts tbody#disk-table-body tr.toggle-disk:hover > t
     color: oklch(0.83 0.16 151.18) !important;
 }
 
-/* Dashboard SMART status icons - restore Font Awesome glyphs */
-span[id^="smart-"].fa::before {
+/* TOPA-LE FONT AWESOME – PRESERVE ICON FONTS */
+/* Keep selected text fonts while restoring Font Awesome icons globally. */
+body.dark .fa,
+body.dark .fa::before,
+body.dark .fa::after,
+body.dark .fa[class*="fa-"]::before {
     font-family: FontAwesome !important;
+    font-style: normal !important;
+    font-weight: normal !important;
 }
 
 /* ==========================================================
