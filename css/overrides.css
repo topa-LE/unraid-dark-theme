@@ -1103,90 +1103,6 @@ section#tab1-panel.tab-content.content td {
 
 
 /* ========================================
-   STEP 49 – smSelect Dropdown Dark
-   gezielt gegen braune Select-Auswahl
-   ======================================== */
-
-select[name="smSelect"],
-select[name="smSelect"] option {
-    background-color: #0c0e0f !important;
-    color: #f2f2f2 !important;
-}
-
-select[name="smSelect"]:hover,
-select[name="smSelect"]:focus {
-    background-color: #0c0e0f !important;
-    color: #ffffff !important;
-    border-color: #7fbf4d !important;
-    outline: none !important;
-}
-
-select[name="smSelect"] option:checked {
-    background-color: #2b373b !important;
-    color: #ffffff !important;
-}
-
-
-/* ========================================
-   STEP 50 – Form-Elemente vereinheitlichen
-   Inputs / Selects / Textarea dunkel
-   ======================================== */
-
-input[type="text"],
-input[type="password"],
-input[type="number"],
-input[type="url"],
-input[type="email"],
-input[type="date"],
-input[type="file"],
-textarea,
-select {
-    background-color: #0c0e0f !important;
-    color: #f2f2f2 !important;
-    border-color: rgba(255,255,255,0.28) !important;
-}
-
-input[type="text"]:hover,
-input[type="password"]:hover,
-input[type="number"]:hover,
-input[type="url"]:hover,
-input[type="email"]:hover,
-input[type="date"]:hover,
-input[type="file"]:hover,
-textarea:hover,
-select:hover,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="url"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus,
-input[type="file"]:focus,
-textarea:focus,
-select:focus {
-    background-color: #0c0e0f !important;
-    color: #ffffff !important;
-    border-color: #7fbf4d !important;
-    outline: none !important;
-}
-
-select option {
-    background-color: #0c0e0f !important;
-    color: #f2f2f2 !important;
-}
-
-select option:checked {
-    background-color: #2b373b !important;
-    color: #ffffff !important;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: rgba(242,242,242,0.58) !important;
-}
-
-
-/* ========================================
    STEP 52 – Dashboard CPU Balken / Prozentwerte
    gezielt auf ProcessorInformation begrenzt
    ======================================== */
@@ -1797,40 +1713,6 @@ section#login.shadow,
     border: 1px solid #34495e !important;
     border-radius: 10px !important;
     box-shadow: 0 8px 22px rgba(0,0,0,0.38) !important;
-}
-
-
-/* ========================================
-   🎨 STEP 104 – SELECT BG TEST #101314
-======================================== */
-
-select,
-.ui-dropdownchecklist,
-.ui-dropdownchecklist-selector,
-input[type="text"],
-input[type="password"],
-input[type="search"],
-.driversearch input,
-#driversearch,
-input {
-    background: #101314 !important;
-}
-
-
-/* ========================================
-   🎨 STEP 105 – FINAL SELECT BG
-======================================== */
-
-select,
-.ui-dropdownchecklist,
-.ui-dropdownchecklist-selector,
-input[type="text"],
-input[type="password"],
-input[type="search"],
-.driversearch input,
-#driversearch,
-input {
-    background: #13181a !important;
 }
 
 
@@ -5967,3 +5849,156 @@ body.dark div.content table:has(
 }
 
 /* TOPA-LE SSH SETTINGS BOXES – END */
+
+/* TOPA-LE GLOBAL FORM DESIGN – START */
+/* Einheitlicher Formularstandard nach der VM-Referenz */
+
+body.dark input:is(
+    [type="text"],
+    [type="number"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="search"]
+):not([hidden]),
+body.dark textarea,
+body.dark select:not([multiple]):not([size]) {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    min-height: 30px !important;
+    transition: border-color 0.15s ease !important;
+}
+
+body.dark input:is(
+    [type="text"],
+    [type="number"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="search"]
+):not([hidden]) {
+    padding: 4px 8px !important;
+}
+
+body.dark input:is(
+    [type="text"],
+    [type="number"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="search"]
+):not([hidden]):hover,
+body.dark textarea:hover,
+body.dark select:not([multiple]):not([size]):hover {
+    border-color: #607982 !important;
+}
+
+body.dark input:is(
+    [type="text"],
+    [type="number"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="search"]
+):not([hidden]):focus,
+body.dark textarea:focus,
+body.dark select:not([multiple]):not([size]):focus {
+    outline: none !important;
+    border: 1px solid #648d83 !important;
+    box-shadow: none !important;
+}
+
+body.dark input:is(
+    [type="text"],
+    [type="number"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="search"]
+)::placeholder,
+body.dark textarea::placeholder {
+    color: #626e74 !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+}
+
+/* Geschlossene Dropdowns */
+
+body.dark select:not([multiple]):not([size]) {
+    appearance: base-select !important;
+    color-scheme: dark !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+    height: 30px !important;
+    padding: 3px 8px !important;
+}
+
+body.dark select:not([multiple]):not([size])::picker-icon {
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    align-self: center !important;
+    color: #d6dde3 !important;
+}
+
+/* Geoeffnete Dropdowns */
+
+body.dark select:not([multiple]):not([size])::picker(select) {
+    appearance: base-select !important;
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    padding: 5px !important;
+    margin-top: 6px !important;
+    scrollbar-color: #405158 #181818 !important;
+    scrollbar-width: thin !important;
+}
+
+body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar {
+    width: 8px !important;
+    background: #181818 !important;
+}
+
+body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-track {
+    background: #181818 !important;
+    border-radius: 6px !important;
+}
+
+body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-thumb {
+    background: #405158 !important;
+    border-radius: 6px !important;
+}
+
+/* Dropdown-Optionen */
+
+body.dark select:not([multiple]):not([size]) option {
+    background: transparent !important;
+    color: #d6dde3 !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    min-height: 0 !important;
+    line-height: 1.35 !important;
+    margin: 4px 0 !important;
+}
+
+body.dark select:not([multiple]):not([size]) option:checked {
+    background: #2b3a40 !important;
+    color: #d6dde3 !important;
+}
+
+body.dark select:not([multiple]):not([size]) option:hover,
+body.dark select:not([multiple]):not([size]) option:focus {
+    background: #394a52 !important;
+    color: #d6dde3 !important;
+}
+
+/* TOPA-LE GLOBAL FORM DESIGN – END */
