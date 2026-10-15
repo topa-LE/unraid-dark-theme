@@ -5821,3 +5821,112 @@ li.file > a:focus {
 /* =========================================================
    TOPA-LE VM ISO AND WEBUI - END
    ========================================================= */
+
+/* =========================================================
+   TOPA-LE SSH SETTINGS FORM – START
+   Scoped SSH configuration form styling
+   ========================================================= */
+
+body.dark form#ssh_settings select,
+body.dark form#ssh_settings input[type="text"] {
+    background: #192125 !important;
+    background-color: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    field-sizing: fixed !important;
+    width: 132px !important;
+    min-width: 132px !important;
+    max-width: 132px !important;
+    font-size: inherit !important;
+}
+
+body.dark form#ssh_settings select:not([multiple]),
+body.dark form#ssh_settings input[type="text"] {
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 4px 8px !important;
+}
+
+body.dark form#ssh_settings select:not([multiple]) {
+    appearance: base-select !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    gap: 8px !important;
+    padding: 4px 9px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+}
+
+body.dark form#ssh_settings select:not([multiple])::picker-icon {
+    display: inline-block !important;
+    position: static !important;
+    flex: 0 0 auto !important;
+    align-self: center !important;
+    margin: 0 0 0 8px !important;
+    padding: 0 !important;
+    color: #a8b7bf !important;
+    opacity: 1 !important;
+}
+
+body.dark form#ssh_settings select:not([multiple])::picker(select) {
+    appearance: base-select !important;
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    padding: 4px !important;
+}
+
+body.dark form#ssh_settings select:not([multiple]) option {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    padding: 5px 9px !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
+}
+
+body.dark form#ssh_settings select:not([multiple]) option:hover,
+body.dark form#ssh_settings select:not([multiple]) option:checked {
+    background: #394a52 !important;
+}
+
+body.dark form#ssh_settings select[multiple] {
+    appearance: auto !important;
+    border-radius: 8px !important;
+    min-height: 83px !important;
+    padding: 4px 2px 4px 6px !important;
+}
+
+body.dark form#ssh_settings select[multiple] option {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    padding: 3px 5px !important;
+}
+
+body.dark form#ssh_settings select[multiple] option:checked {
+    background: #394a52 linear-gradient(#394a52, #394a52) !important;
+    color: #ffffff !important;
+}
+
+body.dark form#ssh_settings select:hover,
+body.dark form#ssh_settings input[type="text"]:hover {
+    border-color: #607982 !important;
+}
+
+body.dark form#ssh_settings select:focus,
+body.dark form#ssh_settings input[type="text"]:focus {
+    outline: none !important;
+    border-color: #648d83 !important;
+    box-shadow: none !important;
+}
+
+/* =========================================================
+   TOPA-LE SSH SETTINGS FORM – END
+   ========================================================= */
