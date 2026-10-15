@@ -5754,3 +5754,102 @@ span.width > div.textarea.fileTree li > a:active {
 /* =========================================================
    TOPA-LE VM FORM REFINEMENTS - END
    ========================================================= */
+
+/* =========================================================
+   TOPA-LE VM ISO AND WEBUI - START
+   Final VM URL input and ISO file picker refinements
+   ========================================================= */
+
+/* WebUI URL input */
+body.dark:has(select[name="domain[usbmode]"])
+input[type="url"] {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    min-height: 30px !important;
+    box-sizing: border-box !important;
+    padding: 4px 8px !important;
+    transition: border-color 0.15s ease !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[type="url"]:hover {
+    border-color: #607982 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[type="url"]:focus {
+    outline: none !important;
+    border: 1px solid #648d83 !important;
+    box-shadow: none !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[type="url"]::placeholder {
+    color: #626e74 !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+}
+
+/* ISO picker: preserve native CD icons and compact row spacing */
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree {
+    left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #192125 !important;
+    background-color: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    padding: 5px 8px !important;
+    margin-top: 6px !important;
+    overflow: auto !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+ul.jqueryFileTree {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+li.file {
+    background-color: transparent !important;
+    margin: 4px 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-radius: 5px !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+li.file:hover {
+    background-color: #394a52 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+li.file > a,
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+li.file > a:hover,
+body.dark:has(select[name="domain[usbmode]"])
+input[name="media[cdrom]"] + div.textarea.fileTree
+li.file > a:focus {
+    background: transparent !important;
+    color: #d6dde3 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* =========================================================
+   TOPA-LE VM ISO AND WEBUI - END
+   ========================================================= */
