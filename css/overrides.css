@@ -6009,3 +6009,84 @@ body.dark #menu-mode-controls blockquote.inline_help {
     padding-left: 6px !important;
 }
 /* TOPA-LE BOOT INLINE HELP – END */
+
+/* TOPA-LE MINI NAVIGATION – START */
+/* DE: Einheitliche kompakte Navigationsbuttons inklusive Font-Switcher. */
+/* EN: Unified compact navigation buttons including the font switcher. */
+
+body.dark .nav-item.util {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 34px !important;
+    height: 41px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+body.dark .nav-item.util > a,
+body.dark button[title="Schriftart auswählen"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    width: 23px !important;
+    height: 23px !important;
+    min-width: 23px !important;
+    min-height: 23px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #29363c !important;
+    border: 1px solid #405158 !important;
+    border-radius: 6px !important;
+    color: #94a8b1 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+body.dark .nav-item.util > a:hover,
+body.dark .nav-item.util > a:focus-visible,
+body.dark button[title="Schriftart auswählen"]:hover,
+body.dark button[title="Schriftart auswählen"]:focus-visible {
+    background: #394a52 !important;
+    border: 1px solid #607982 !important;
+    border-radius: 6px !important;
+    color: #c2d0d6 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+body.dark .nav-item.util:hover,
+body.dark .nav-item.util:focus-within {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+}
+
+body.dark .nav-item.util::before,
+body.dark .nav-item.util::after,
+body.dark .nav-item.util > a::after {
+    content: none !important;
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* DE: Originale Unraid-Icon-Fonts optisch um 1px absenken. */
+/* EN: Lower the original Unraid icon fonts visually by 1px. */
+body.dark .nav-item.util > a > b.system {
+    position: relative !important;
+    top: 1px !important;
+}
+
+/* DE: Versteckte Menuebeschriftungen bleiben unveraendert. */
+/* EN: Hidden navigation labels remain unchanged. */
+
+/* TOPA-LE MINI NAVIGATION – END */
