@@ -1323,10 +1323,12 @@ tbody#route_list tr:hover td {
 
 .user-list a.info span,
 .user-list a.info:hover span {
-    background-color: #0c0e0f !important;
-    color: #f2f2f2 !important;
-    border: 1px solid #3a4a4f !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+    background: #192125 !important;
+    background-color: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
 }
 
 
