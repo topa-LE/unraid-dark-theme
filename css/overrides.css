@@ -5427,38 +5427,6 @@ body.dark form#vmform .cpu-box .cpu-checkbox input[type="checkbox"]:not(:checked
     background-color: #808080 !important;
 }
 
-/* TOPA VM ISO DROPDOWN FINAL – dark ISO file selection */
-body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree {
-    left: 0 !important;
-    width: 280px !important;
-    box-sizing: border-box !important;
-    margin-top: 5px !important;
-    background: #080a0b !important;
-    border: 1px solid #394a52 !important;
-    border-radius: 6px !important;
-    padding: 4px 0 !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .45) !important;
-    z-index: 1000 !important;
-}
-
-body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree .jqueryFileTree {
-    background: transparent !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file {
-    background-color: transparent !important;
-}
-
-body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file:hover {
-    background-color: #394a52 !important;
-}
-
-body.dark form#vmform .width:has(> input.cdrom) > .textarea.fileTree li.file a {
-    color: #b9c5cc !important;
-}
-
 /* TOPA VM AUTOSTART SWITCH FINAL */
 html body.dark #kvm_list div.switch-button-background {
     background: #777f83 !important;
