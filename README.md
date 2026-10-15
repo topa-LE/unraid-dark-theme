@@ -306,15 +306,24 @@ local fonts and supporting documentation in this repository.
 
 ---
 
+## 📜 License
+
+The original theme source code and project documentation are released under
+the **[MIT License](LICENSE)**.
+
+Copyright © 2026 topa-LE.
+
+The bundled fonts are third-party assets and remain subject to their
+respective license and copyright terms. Their license files are retained
+in the corresponding subdirectories of [`fonts/`](fonts/).
+
+---
+
 ## 👤 Author
 
 Created and maintained by **[topa-LE](https://github.com/topa-LE)**.
 
 <div align="center">
-
----
-
-**Made for a cleaner, darker and more customizable Unraid experience.**
 
 [⬆ Back to top](#-topa-le-unraid-dark-theme)
 
