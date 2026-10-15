@@ -5930,3 +5930,40 @@ body.dark form#ssh_settings input[type="text"]:focus {
 /* =========================================================
    TOPA-LE SSH SETTINGS FORM – END
    ========================================================= */
+
+/* TOPA-LE SSH SETTINGS BOXES – START */
+/* Configuration table: border and spacing */
+
+body.dark form#ssh_settings table.settings {
+    border: 1px solid #242424 !important;
+    border-radius: 8px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+}
+
+/* Control Actions: only the SSH control table */
+
+body.dark div.content table:has(
+    td[colspan="2"]
+):has(
+    input[value="Stop"],
+    input[value="STOP"]
+):has(
+    input[value="Restart"],
+    input[value="RESTART"]
+) {
+    border: 1px solid #242424 !important;
+    border-radius: 8px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* TOPA-LE SSH SETTINGS BOXES – END */
