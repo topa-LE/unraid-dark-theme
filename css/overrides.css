@@ -6089,4 +6089,19 @@ body.dark .nav-item.util > a > b.system {
 /* DE: Versteckte Menuebeschriftungen bleiben unveraendert. */
 /* EN: Hidden navigation labels remain unchanged. */
 
+/* TOPA-LE AA CONTAINER ALIGNMENT – START */
+/* DE: Aa-Schalter vertikal mit den originalen Unraid-Navigationsbuttons ausrichten. */
+/* EN: Vertically align the Aa switcher with the native Unraid navigation buttons. */
+body.dark div:has(> button[title="Schriftart auswählen"]) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 41px !important;
+    min-height: 41px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+/* TOPA-LE AA CONTAINER ALIGNMENT – END */
+
 /* TOPA-LE MINI NAVIGATION – END */
