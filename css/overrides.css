@@ -5523,3 +5523,96 @@ body.dark dd > em:has(> b) b {
     color: #d5ddd8 !important;
     font-weight: 700 !important;
 }
+
+/* =========================================================
+   TOPA-LE VM SELECT PICKER – START
+   Modern dropdowns for Unraid VM configuration
+   ========================================================= */
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size]) {
+    appearance: base-select !important;
+    color-scheme: dark !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+    min-height: 30px !important;
+    height: 30px !important;
+    padding: 3px 8px !important;
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 7px !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size])::picker-icon {
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    align-self: center !important;
+    color: #d6dde3 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size])::picker(select) {
+    appearance: base-select !important;
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    padding: 5px !important;
+    margin-top: 6px !important;
+    scrollbar-color: #405158 #181818 !important;
+    scrollbar-width: thin !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar {
+    width: 8px !important;
+    background: #181818 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-track {
+    background: #181818 !important;
+    border-radius: 6px !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-thumb {
+    background: #405158 !important;
+    border-radius: 6px !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size]) option {
+    background: transparent !important;
+    color: #d6dde3 !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    min-height: 0 !important;
+    line-height: 1.35 !important;
+    margin: 4px 0 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size]) option:checked {
+    background: #2b3a40 !important;
+    color: #d6dde3 !important;
+}
+
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size]) option:hover,
+body.dark:has(select[name="domain[usbmode]"])
+select:not([multiple]):not([size]) option:focus {
+    background: #394a52 !important;
+    color: #d6dde3 !important;
+}
+
+/* =========================================================
+   TOPA-LE VM SELECT PICKER – END
+   ========================================================= */
