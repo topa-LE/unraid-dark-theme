@@ -6002,3 +6002,10 @@ body.dark select:not([multiple]):not([size]) option:focus {
 }
 
 /* TOPA-LE GLOBAL FORM DESIGN – END */
+
+/* TOPA-LE BOOT INLINE HELP – START */
+/* Einheitlicher linker Textabstand in aufklappbaren Boot-Hilfeboxen. */
+body.dark #menu-mode-controls blockquote.inline_help {
+    padding-left: 6px !important;
+}
+/* TOPA-LE BOOT INLINE HELP – END */
