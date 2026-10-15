@@ -317,12 +317,6 @@ The bundled fonts are third-party assets and remain subject to their
 respective license and copyright terms. Their license files are retained
 in the corresponding subdirectories of [`fonts/`](fonts/).
 
----
-
-## 👤 Author
-
-Created and maintained by **[topa-LE](https://github.com/topa-LE)**.
-
 <div align="center">
 
 [⬆ Back to top](#-topa-le-unraid-dark-theme)
