@@ -9,7 +9,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-Dark%20Styling-1572B6?style=for-the-badge&logo=css&logoColor=white)](css/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](js/)
 [![Bash](https://img.shields.io/badge/Bash-Installer-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)](scripts/)
-[![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher)
+[![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher) [![English](https://img.shields.io/badge/🇬🇧-English-3274A1?style=for-the-badge)](README.md) ![Deutsch](https://img.shields.io/badge/🇩🇪-Deutsch-555555?style=for-the-badge)
 
 **Dark WebGUI · Custom Login · Font Switcher · Persistent Installation**
 
