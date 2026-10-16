@@ -6226,3 +6226,86 @@ span[role="button"][data-grace-area-trigger] svg {
 }
 
 /* TOPA-LE UNRAID API MORE OPTIONS – END */
+
+/* TOPA-LE ARCHIVE CONFIRMATION – START */
+/*
+ * DE: Kompakter Bestaetigungsdialog fuer das Archivieren
+ *     aller Benachrichtigungen. Nur diesen Dialog anpassen.
+ *
+ * EN: Compact confirmation dialog for archiving all
+ *     notifications. Apply styling only to this dialog.
+ *
+ * DE: Die Dialog-ID stammt aus dem Unraid-Reka-Dialogsystem.
+ * EN: The dialog ID belongs to Unraid's Reka dialog system.
+ */
+
+body.dark #unraid-api-modals-virtual
+#reka-dialog-content-v-0-0-0:has(
+    h2
+) {
+    /*
+     * DE: Diese allgemeine Regel bleibt bewusst leer.
+     *     Die konkrete Archivierungsregel folgt unten.
+     *
+     * EN: This general rule intentionally has no declarations.
+     *     The specific archive confirmation rule follows below.
+     */
+}
+
+/*
+ * DE: Der Archivierungsdialog wird ueber seinen Titel erkannt.
+ *     Andere Unraid-Dialoge bleiben unveraendert.
+ *
+ * EN: Identify the archive confirmation by its title.
+ *     Other Unraid dialogs remain unchanged.
+ */
+
+body.dark #unraid-api-modals-virtual
+div[role="alertdialog"]:has(
+    h2
+),
+body.dark #unraid-api-modals-virtual
+div[id^="reka-dialog-content"]:has(
+    h2
+) {
+    /*
+     * DE: Nur bei passender Dialogstruktur anwenden.
+     * EN: Apply only to matching dialog structures.
+     */
+}
+
+/*
+ * DE: Archivierungs-Bestaetigung gezielt ueber die
+ *     vorhandene Dialogstruktur und ihre Buttons gestalten.
+ *
+ * EN: Target the archive confirmation through its
+ *     existing dialog structure and buttons.
+ */
+
+body.dark #unraid-api-modals-virtual
+div[role="alertdialog"]:has(
+    button
+) {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    right: auto !important;
+    bottom: auto !important;
+    translate: -50% -50% !important;
+    transform: none !important;
+
+    width: min(460px, calc(100vw - 32px)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100dvh - 32px) !important;
+
+    overflow-y: auto !important;
+    padding: 24px !important;
+
+    background: #151e22 !important;
+    border: 2px solid #121212 !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+}
+
+/* TOPA-LE ARCHIVE CONFIRMATION – END */
