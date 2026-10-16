@@ -36,6 +36,35 @@
             '/Tools/PageMap';
     }
 
+    function installNavigationIcon() {
+        const navigation = document.querySelector('#menu .nav-tile.right');
+
+        if (!navigation ||
+            document.getElementById('topa-le-pagemap-nav')) {
+            return;
+        }
+
+        const item = document.createElement('div');
+        item.id = 'topa-le-pagemap-nav';
+        item.className = 'nav-item topa-le-pagemap-nav util';
+
+        const link = document.createElement('a');
+        link.href = '/Tools/PageMap';
+        link.title = 'PageMap – Seitenverzeichnis';
+        link.setAttribute('aria-label', 'PageMap – Seitenverzeichnis');
+
+        const icon = document.createElement('b');
+        icon.className = 'fa fa-sitemap system';
+        icon.setAttribute('aria-hidden', 'true');
+
+        const label = document.createElement('span');
+        label.textContent = 'PageMap';
+
+        link.append(icon, label);
+        item.appendChild(link);
+        navigation.appendChild(item);
+    }
+
     function iconFor(title) {
         const key = title.toLowerCase().replace(/[^a-z]/g, '');
 
@@ -339,6 +368,7 @@
 
         requestAnimationFrame(() => {
             scheduled = false;
+            installNavigationIcon();
             install();
         });
     }
