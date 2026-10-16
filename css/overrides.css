@@ -6483,10 +6483,10 @@ body.dark .sweet-alert.nchan pre#swalbody {
 /* Internal Boot only – standard topa-LE content box */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) {
-    width: calc(100% - 52px) !important;
-    max-width: 900px !important;
-    margin: 28px 26px !important;
-    padding: 28px 32px 32px !important;
+    width: 760px !important;
+    max-width: calc(100% - 40px) !important;
+    margin: 28px auto !important;
+    padding: 44px 53px !important;
     background: linear-gradient(
         180deg,
         rgba(46, 60, 68, 0.82) 0%,
@@ -6496,6 +6496,8 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
     border-radius: 10px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
     box-sizing: border-box !important;
+    min-height: 350px !important;
+    height: auto !important;
 }
 
 /* Internal Boot heading */
@@ -6506,7 +6508,7 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:first-child strong {
-    font-size: 20px !important;
+    font-size: 30px !important;
     font-weight: 600 !important;
     color: #e6edf0 !important;
 }
@@ -6514,8 +6516,8 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 /* Internal Boot description */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:nth-child(2) {
-    font-size: 16px !important;
-    line-height: 1.65 !important;
+    font-size: 21px !important;
+    line-height: 1.55 !important;
     color: #d3dce0 !important;
     margin-bottom: 24px !important;
 }
