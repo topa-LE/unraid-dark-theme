@@ -27,18 +27,18 @@
 
 <table width="100%">
   <thead>
-    <tr><th>Component</th><th>Description</th></tr>
+    <tr><th width="225">Component</th><th width="612">Description</th></tr>
   </thead>
   <tbody>
-    <tr><td>🎨 Dark WebGUI</td><td>Dark grey and blue styling with extensive CSS customization</td></tr>
-    <tr><td>🔐 Custom Login</td><td>Themed login screen, custom avatar and repository link</td></tr>
-    <tr><td>🔤 Font Switcher</td><td>Ten selectable font options, including the Unraid standard</td></tr>
-    <tr><td>💾 Persistent Setup</td><td>Theme files and boot integration stored on the Unraid flash drive</td></tr>
-    <tr><td>🌐 Language Fix</td><td>Compatibility fix for the native Unraid language selector</td></tr>
-    <tr><td>📊 System Statistics</td><td>Dedicated JavaScript integration for system statistics</td></tr>
-    <tr><td>⚙️ Array Operations</td><td>Dedicated JavaScript integration for array-operation UI elements</td></tr>
-    <tr><td>🖥️ WebTerminal</td><td>Custom terminal colors, font settings and persistent font size</td></tr>
-    <tr><td>🔄 Maintenance</td><td>GitHub-based installation, updating and uninstall support</td></tr>
+    <tr><td width="225">🎨 Dark WebGUI</td><td width="612">Dark grey and blue styling with extensive CSS customization</td></tr>
+    <tr><td width="225">🔐 Custom Login</td><td width="612">Themed login screen, custom avatar and repository link</td></tr>
+    <tr><td width="225">🔤 Font Switcher</td><td width="612">Ten selectable font options, including the Unraid standard</td></tr>
+    <tr><td width="225">💾 Persistent Setup</td><td width="612">Theme files and boot integration stored on the Unraid flash drive</td></tr>
+    <tr><td width="225">🌐 Language Fix</td><td width="612">Compatibility fix for the native Unraid language selector</td></tr>
+    <tr><td width="225">📊 System Statistics</td><td width="612">Dedicated JavaScript integration for system statistics</td></tr>
+    <tr><td width="225">⚙️ Array Operations</td><td width="612">Dedicated JavaScript integration for array-operation UI elements</td></tr>
+    <tr><td width="225">🖥️ WebTerminal</td><td width="612">Custom terminal colors, font settings and persistent font size</td></tr>
+    <tr><td width="225">🔄 Maintenance</td><td width="612">GitHub-based installation, updating and uninstall support</td></tr>
   </tbody>
 </table>
 
@@ -60,72 +60,72 @@ applies it immediately without requiring a page reload.
 <table width="100%">
   <thead>
     <tr>
-      <th align="center">#</th>
-      <th>Font</th>
-      <th>Visual character</th>
-      <th>Source</th>
+      <th align="center" width="55">#</th>
+      <th width="180">Font</th>
+      <th width="390">Visual character</th>
+      <th width="212">Source</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center">01</td>
-      <td><strong>Standard (Unraid)</strong></td>
-      <td>Original Clear Sans appearance</td>
-      <td>Local</td>
+      <td align="center" width="55">01</td>
+      <td width="180"><strong>Standard (Unraid)</strong></td>
+      <td width="390">Original Clear Sans appearance</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">02</td>
-      <td><strong>Titillium Web</strong></td>
-      <td>Modern, technical and versatile</td>
-      <td>Local</td>
+      <td align="center" width="55">02</td>
+      <td width="180"><strong>Titillium Web</strong></td>
+      <td width="390">Modern, technical and versatile</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">03</td>
-      <td><strong>Inter</strong></td>
-      <td>Neutral, clean and highly legible</td>
-      <td>Local</td>
+      <td align="center" width="55">03</td>
+      <td width="180"><strong>Inter</strong></td>
+      <td width="390">Neutral, clean and highly legible</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">04</td>
-      <td><strong>Maven Pro</strong></td>
-      <td>Contemporary, soft geometric shapes</td>
-      <td>Local</td>
+      <td align="center" width="55">04</td>
+      <td width="180"><strong>Maven Pro</strong></td>
+      <td width="390">Contemporary, soft geometric shapes</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">05</td>
-      <td><strong>Saira Condensed</strong></td>
-      <td>Narrow, bold and distinctive</td>
-      <td>Local</td>
+      <td align="center" width="55">05</td>
+      <td width="180"><strong>Saira Condensed</strong></td>
+      <td width="390">Narrow, bold and distinctive</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">06</td>
-      <td><strong>Roboto Condensed</strong></td>
-      <td>Compact and functional</td>
-      <td>Local</td>
+      <td align="center" width="55">06</td>
+      <td width="180"><strong>Roboto Condensed</strong></td>
+      <td width="390">Compact and functional</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">07</td>
-      <td><strong>Ubuntu Condensed</strong></td>
-      <td>Narrow with a recognizable character</td>
-      <td>Local</td>
+      <td align="center" width="55">07</td>
+      <td width="180"><strong>Ubuntu Condensed</strong></td>
+      <td width="390">Narrow with a recognizable character</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">08</td>
-      <td><strong>Dosis</strong></td>
-      <td>Light, rounded and friendly</td>
-      <td>Local</td>
+      <td align="center" width="55">08</td>
+      <td width="180"><strong>Dosis</strong></td>
+      <td width="390">Light, rounded and friendly</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">09</td>
-      <td><strong>Cuprum</strong></td>
-      <td>Technical and space-efficient</td>
-      <td>Local</td>
+      <td align="center" width="55">09</td>
+      <td width="180"><strong>Cuprum</strong></td>
+      <td width="390">Technical and space-efficient</td>
+      <td width="212">Local</td>
     </tr>
     <tr>
-      <td align="center">10</td>
-      <td><strong>Play</strong></td>
-      <td>Geometric and structured</td>
-      <td>Local</td>
+      <td align="center" width="55">10</td>
+      <td width="180"><strong>Play</strong></td>
+      <td width="390">Geometric and structured</td>
+      <td width="212">Local</td>
     </tr>
   </tbody>
 </table>
@@ -141,42 +141,42 @@ as locally hosted WOFF2 files.
 <table width="100%">
   <thead>
     <tr>
-      <th>Setting</th>
-      <th>Behavior</th>
+      <th width="225">Setting</th>
+      <th width="612">Behavior</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Default theme selection</td>
-      <td>Titillium Web</td>
+      <td width="225">Default theme selection</td>
+      <td width="612">Titillium Web</td>
     </tr>
     <tr>
-      <td>Native Unraid appearance</td>
-      <td>Standard (Unraid)</td>
+      <td width="225">Native Unraid appearance</td>
+      <td width="612">Standard (Unraid)</td>
     </tr>
     <tr>
-      <td>Selection method</td>
-      <td>Aa dropdown in the top navigation</td>
+      <td width="225">Selection method</td>
+      <td width="612">Aa dropdown in the top navigation</td>
     </tr>
     <tr>
-      <td>Application</td>
-      <td>Immediate CSS font-family update</td>
+      <td width="225">Application</td>
+      <td width="612">Immediate CSS font-family update</td>
     </tr>
     <tr>
-      <td>Persistence</td>
-      <td>Browser <code>localStorage</code></td>
+      <td width="225">Persistence</td>
+      <td width="612">Browser <code>localStorage</code></td>
     </tr>
     <tr>
-      <td>Storage key</td>
-      <td><code>topa-font-choice</code></td>
+      <td width="225">Storage key</td>
+      <td width="612"><code>topa-font-choice</code></td>
     </tr>
     <tr>
-      <td>Scope</td>
-      <td>Authenticated WebGUI</td>
+      <td width="225">Scope</td>
+      <td width="612">Authenticated WebGUI</td>
     </tr>
     <tr>
-      <td>Login and password-reset pages</td>
-      <td>Independently styled</td>
+      <td width="225">Login and password-reset pages</td>
+      <td width="612">Independently styled</td>
     </tr>
   </tbody>
 </table>
@@ -192,26 +192,26 @@ It is not a server-wide setting shared between browsers or devices.
 <table width="100%">
   <thead>
     <tr>
-      <th>File</th>
-      <th>Purpose</th>
+      <th width="225">File</th>
+      <th width="612">Purpose</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="js/font-switcher.js"><code>js/font-switcher.js</code></a></td>
-      <td>Dropdown, font selection and persistence</td>
+      <td width="225"><a href="js/font-switcher.js"><code>js/font-switcher.js</code></a></td>
+      <td width="612">Dropdown, font selection and persistence</td>
     </tr>
     <tr>
-      <td><a href="css/font-switcher.css"><code>css/font-switcher.css</code></a></td>
-      <td>Font-switcher styling</td>
+      <td width="225"><a href="css/font-switcher.css"><code>css/font-switcher.css</code></a></td>
+      <td width="612">Font-switcher styling</td>
     </tr>
     <tr>
-      <td><a href="css/fonts.css"><code>css/fonts.css</code></a></td>
-      <td>Local font definitions</td>
+      <td width="225"><a href="css/fonts.css"><code>css/fonts.css</code></a></td>
+      <td width="612">Local font definitions</td>
     </tr>
     <tr>
-      <td><a href="fonts/"><code>fonts/</code></a></td>
-      <td>WOFF2 assets and font license files</td>
+      <td width="225"><a href="fonts/"><code>fonts/</code></a></td>
+      <td width="612">WOFF2 assets and font license files</td>
     </tr>
   </tbody>
 </table>
@@ -229,34 +229,34 @@ be remembered and restored if the Unraid locale cookie is missing.
 <table width="100%">
   <thead>
     <tr>
-      <th>Feature</th>
-      <th>Implementation</th>
+      <th width="225">Feature</th>
+      <th width="612">Implementation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Language identifiers</td>
-      <td>Supports identifiers such as <code>de_DE</code></td>
+      <td width="225">Language identifiers</td>
+      <td width="612">Supports identifiers such as <code>de_DE</code></td>
     </tr>
     <tr>
-      <td>Persistence</td>
-      <td>Browser local storage</td>
+      <td width="225">Persistence</td>
+      <td width="612">Browser local storage</td>
     </tr>
     <tr>
-      <td>Switching</td>
-      <td>Uses Unraid's native mechanism</td>
+      <td width="225">Switching</td>
+      <td width="612">Uses Unraid's native mechanism</td>
     </tr>
     <tr>
-      <td>Script</td>
-      <td><a href="js/language-switch-fix.js"><code>js/language-switch-fix.js</code></a></td>
+      <td width="225">Script</td>
+      <td width="612"><a href="js/language-switch-fix.js"><code>js/language-switch-fix.js</code></a></td>
     </tr>
     <tr>
-      <td>Installation</td>
-      <td>Integrated into the standard installer</td>
+      <td width="225">Installation</td>
+      <td width="612">Integrated into the standard installer</td>
     </tr>
     <tr>
-      <td>Verified behavior</td>
-      <td>Repeated German-English-German switching on Unraid 7.3.2</td>
+      <td width="225">Verified behavior</td>
+      <td width="612">Repeated German-English-German switching on Unraid 7.3.2</td>
     </tr>
   </tbody>
 </table>
@@ -390,34 +390,34 @@ persistent terminal font settings.
 <table width="100%">
   <thead>
     <tr>
-      <th>Setting</th>
-      <th>Theme configuration</th>
+      <th width="225">Setting</th>
+      <th width="612">Theme configuration</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Background</td>
-      <td>Dark</td>
+      <td width="225">Background</td>
+      <td width="612">Dark</td>
     </tr>
     <tr>
-      <td>Foreground</td>
-      <td>Light</td>
+      <td width="225">Foreground</td>
+      <td width="612">Light</td>
     </tr>
     <tr>
-      <td>Cursor</td>
-      <td>Warm accent</td>
+      <td width="225">Cursor</td>
+      <td width="612">Warm accent</td>
     </tr>
     <tr>
-      <td>Font family</td>
-      <td>Cascadia Mono, Consolas, monospace</td>
+      <td width="225">Font family</td>
+      <td width="612">Cascadia Mono, Consolas, monospace</td>
     </tr>
     <tr>
-      <td>Font size</td>
-      <td>17</td>
+      <td width="225">Font size</td>
+      <td width="612">17</td>
     </tr>
     <tr>
-      <td>Line height</td>
-      <td>1.15</td>
+      <td width="225">Line height</td>
+      <td width="612">1.15</td>
     </tr>
   </tbody>
 </table>
