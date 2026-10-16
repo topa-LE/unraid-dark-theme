@@ -3612,7 +3612,36 @@ em.topa-array-stop-notice {
 }
 
 /* GUI search */
+/*
+ * DE: Suchcontainer auf 320 px begrenzen, damit die
+ *     rechten Navigationsicons ihre Position behalten.
+ *     Der Innenabstand trennt Placeholder und Suchsymbol.
+ *
+ * EN: Limit the search container to 320 px so the
+ *     right navigation icons retain their positions.
+ *     Input padding separates placeholder and search icon.
+ */
+body.dark #guiSearchBoxSpan {
+    width: 320px !important;
+    min-width: 0 !important;
+    max-width: 320px !important;
+    flex: 0 0 320px !important;
+    box-sizing: border-box !important;
+}
+
+body.dark #guiSearchBoxSpan > .awesomplete {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
 #guiSearchBox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 30px !important;
+    padding-right: 12px !important;
     background-color: #13181a !important;
     color: #c9d1d5 !important;
 }
