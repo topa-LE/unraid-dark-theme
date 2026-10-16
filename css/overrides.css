@@ -6170,3 +6170,59 @@ body.dark #unraid-api-modals-virtual [role="switch"] > span {
 }
 
 /* TOPA-LE UNRAID API DIALOG – END */
+
+/* TOPA-LE UNRAID API MORE OPTIONS – START */
+/* DE: Sekundaeren Button in Unraid-API-Dialogen einheitlich gestalten. */
+/* EN: Apply consistent styling to the secondary button in Unraid API dialogs. */
+
+/*
+ * DE: Der Button ist ein SPAN mit role="button" und
+ *     data-grace-area-trigger. Die Klasse hover:bg-accent
+ *     verursacht den unerwuenschten braunen Hover-Hintergrund.
+ *
+ * EN: The button is a SPAN with role="button" and
+ *     data-grace-area-trigger. Its hover:bg-accent class
+ *     causes the unwanted brown hover background.
+ */
+
+body.dark #unraid-api-modals-virtual
+span[role="button"][data-grace-area-trigger] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex-shrink: 0 !important;
+
+    padding: 8px 12px !important;
+    background: #29363c !important;
+    color: #a8bec8 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+body.dark #unraid-api-modals-virtual
+span[role="button"][data-grace-area-trigger]:hover,
+body.dark #unraid-api-modals-virtual
+span[role="button"][data-grace-area-trigger]:focus-visible {
+    background: #394a52 !important;
+    color: #d6dde3 !important;
+    border-color: #607982 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+/* DE: Externes Link-Symbol vor dem Umbruch schuetzen. */
+/* EN: Prevent the external-link icon from shrinking. */
+
+body.dark #unraid-api-modals-virtual
+span[role="button"][data-grace-area-trigger] svg {
+    flex-shrink: 0 !important;
+}
+
+/* TOPA-LE UNRAID API MORE OPTIONS – END */
