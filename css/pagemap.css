@@ -1,0 +1,191 @@
+/*
+ * topa-LE Unraid Dark Theme
+ * PageMap Dashboard
+ *
+ * Outer background: #263138
+ * Outer border:     #121212
+ * Theme accent:     #dc9b66
+ */
+
+#topa-le-pagemap-dashboard {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    padding: 20px !important;
+    background: #263138 !important;
+    border: 1px solid #121212 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, .36) !important;
+    color: #dce4e8 !important;
+}
+
+#topa-le-pagemap-dashboard *,
+#topa-le-pagemap-dashboard *::before,
+#topa-le-pagemap-dashboard *::after {
+    box-sizing: border-box;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-header {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+    margin-bottom: 20px;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: #edf2f4 !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-count {
+    font-size: 13px;
+    color: #aab9c0;
+    white-space: nowrap;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-search {
+    display: block !important;
+    width: 280px !important;
+    max-width: 100% !important;
+    min-height: 38px !important;
+    margin: 0 0 0 auto !important;
+    padding: 8px 12px !important;
+    background: #111b20 !important;
+    border: 1px solid #40535c !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    color: #e4edf1 !important;
+    font: inherit !important;
+    font-size: 13px !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-search:focus {
+    outline: none !important;
+    border-color: #dc9b66 !important;
+    box-shadow: 0 0 0 2px rgba(220, 155, 102, .12) !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-search::placeholder {
+    color: #91a2ab !important;
+    opacity: 1;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-grid {
+    display: grid !important;
+    grid-template-columns:
+        repeat(var(--topa-pagemap-columns, 3), minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: start;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-column {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0;
+    gap: 18px !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-card {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 15px 17px !important;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(46, 60, 68, .96) 0%,
+            rgba(34, 47, 55, .98) 100%
+        ) !important;
+    border: 1px solid #465962 !important;
+    border-radius: 10px !important;
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .035) !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-card:hover {
+    border-color: rgba(220, 155, 102, .5) !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-card-title {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px !important;
+    padding: 0 0 9px !important;
+    border-bottom: 1px solid rgba(220, 155, 102, .2);
+    color: #edf2f4 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    text-decoration: none !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-card-title .fa {
+    display: inline-block;
+    flex: 0 0 24px;
+    width: 24px;
+    color: #dc9b66 !important;
+    font-size: 20px !important;
+    text-align: center;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-link {
+    display: block !important;
+    width: 100%;
+    padding: 3px 5px !important;
+    border-radius: 4px;
+    color: #c7d5db !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-level-3 {
+    padding-left: 15px !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-level-4 {
+    padding-left: 25px !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-link:hover,
+#topa-le-pagemap-dashboard .topa-pagemap-card-title:hover {
+    color: #dc9b66 !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-link:hover {
+    background: rgba(220, 155, 102, .08) !important;
+}
+
+#topa-le-pagemap-dashboard .topa-pagemap-card[hidden],
+#topa-le-pagemap-dashboard .topa-pagemap-link[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    #topa-le-pagemap-dashboard {
+        padding: 14px !important;
+    }
+
+    #topa-le-pagemap-dashboard .topa-pagemap-header {
+        align-items: flex-start;
+    }
+
+    #topa-le-pagemap-dashboard .topa-pagemap-search {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}

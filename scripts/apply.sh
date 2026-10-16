@@ -36,6 +36,7 @@ JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
 FONT_SWITCHER_JS_HREF="/boot/config/custom-css/topa-LE/js/font-switcher.js"
 LANGUAGE_FIX_JS_HREF="/boot/config/custom-css/topa-LE/js/language-switch-fix.js"
+PAGEMAP_JS_HREF="/boot/config/custom-css/topa-LE/js/pagemap.js"
 
 echo "===== topa-LE Runtime ====="
 
@@ -46,6 +47,7 @@ for FILE in \
   "$ROOT/js/system-stats.js" \
   "$ROOT/js/font-switcher.js" \
   "$ROOT/js/language-switch-fix.js" \
+  "$ROOT/js/pagemap.js" \
   "$ROOT/login/login-theme.css" \
   "$ROOT/img/topa-le-avatar-login.png" \
   "$LAYOUT" \
@@ -258,6 +260,16 @@ else
   echo "Language-Switch-Fix-Hook bereits vorhanden."
 fi
 
+
+# topa-LE PageMap Dashboard
+if ! grep -Fq "$PAGEMAP_JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE PageMap Dashboard -->\
+<script src="/boot/config/custom-css/topa-LE/js/pagemap.js"></script>' "$LAYOUT"
+  echo "PageMap-Hook gesetzt."
+else
+  echo "PageMap-Hook bereits vorhanden."
+fi
 
 # Login-Case durch den topa-LE Avatar ersetzen.
 if ! grep -Fq 'class="topa-login-avatar"' "$LOGIN"; then

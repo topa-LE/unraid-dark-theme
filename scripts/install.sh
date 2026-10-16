@@ -37,6 +37,7 @@ for FILE in \
     "$SOURCE_DIR/js/system-stats.js" \
     "$SOURCE_DIR/js/font-switcher.js" \
     "$SOURCE_DIR/js/language-switch-fix.js" \
+    "$SOURCE_DIR/js/pagemap.js" \
     "$SOURCE_DIR/img/topa-le-avatar-login.png" \
     "$SOURCE_DIR/login/login-theme.css" \
     "$SOURCE_DIR/scripts/lib/i18n.sh" \
@@ -108,6 +109,7 @@ cp -f "$SOURCE_DIR/js/array-operation.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/system-stats.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/font-switcher.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/js/language-switch-fix.js" "$TARGET/js/"
+cp -f "$SOURCE_DIR/js/pagemap.js" "$TARGET/js/"
 cp -f "$SOURCE_DIR/img/topa-le-avatar-login.png" "$TARGET/img/"
 cp -f "$SOURCE_DIR/login/login-theme.css" "$TARGET/login/"
 cp -f "$SOURCE_DIR/scripts/lib/i18n.sh" "$TARGET/scripts/lib/"
