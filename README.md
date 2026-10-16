@@ -27,7 +27,7 @@
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">Component</th><th width="70%">Description</th></tr>
+    <tr><th>Component</th><th>Description</th></tr>
   </thead>
   <tbody>
     <tr><td>🎨 Dark WebGUI</td><td>Dark grey and blue styling with extensive CSS customization</td></tr>
