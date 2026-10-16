@@ -6456,3 +6456,22 @@ body.dark .sweet-alert.nchan pre#swalbody {
 }
 
 /* END topa-LE SMART attributes */
+
+/* ==========================================================
+   topa-LE Parity Check Tuning - form and logging dropdown
+   ========================================================== */
+
+/* Keep the Donate button and payment icons inside the form */
+#parityTuningPage {
+    padding-bottom: 73px !important;
+    box-sizing: border-box !important;
+}
+
+/* Show the complete logging target without changing font size */
+#parityTuningPage select[name="parityTuningLogTarget"] {
+    width: 195px !important;
+    min-width: 195px !important;
+    max-width: 195px !important;
+}
+
+/* END topa-LE Parity Check Tuning */
