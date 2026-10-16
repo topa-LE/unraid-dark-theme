@@ -6368,3 +6368,25 @@ body.dark .sweet-alert.nchan.showSweetAlert
 }
 
 /* TOPA-LE RELEASE NOTES FOOTER FIX – END */
+
+/* ==========================================================
+   TOPA-LE NCHAN CONTENT CORNER FIX
+   ========================================================== */
+
+/*
+ * DE: Den urspruenglichen 4px-Radius des Nchan-Innencontainers
+ *     entfernen. Dadurch verschwinden die hellen Ecken rechts
+ *     an den Uebergaengen zwischen Kopf, Inhalt und Fuss.
+ *     Live auf Unraid .12 getestet und freigegeben.
+ *
+ * EN: Remove the original 4px radius from the Nchan content
+ *     container. This eliminates bright corners at the right
+ *     transitions between header, content and footer.
+ *     Live-tested and approved on Unraid .12.
+ */
+
+body.dark .sweet-alert.nchan pre#swalbody {
+    border-radius: 0 !important;
+}
+
+/* TOPA-LE NCHAN CONTENT CORNER FIX – END */
