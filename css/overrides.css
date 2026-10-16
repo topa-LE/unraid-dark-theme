@@ -6298,3 +6298,47 @@ body.dark #unraid-api-modals-virtual > div[role="dialog"]:has(> div.flex.flex-co
 }
 
 /* TOPA-LE ARCHIVE CONFIRMATION – END */
+
+/* ==========================================================
+   TOPA-LE OS DOWNGRADE UPDATE BUTTONS
+   ========================================================== */
+
+/*
+ * DE: Nur die beiden oberen orangefarbenen Update-Hinweise
+ *     auf das einheitliche gruene Button-Design umstellen.
+ *     Der eigentliche Downgrade-Button bleibt unveraendert.
+ *
+ * EN: Apply the consistent green button design only to
+ *     the two upper update notices.
+ *     Leave the actual downgrade button unchanged.
+ */
+
+body.dark span.bg-orange,
+body.dark span.bg-orange-dark {
+    background: #33483f !important;
+    background-image: none !important;
+    border: 1px solid rgba(110, 136, 119, 0.45) !important;
+    border-radius: 6px !important;
+    color: #d7e3da !important;
+    box-shadow: none !important;
+}
+
+body.dark span.bg-orange:hover,
+body.dark span.bg-orange-dark:hover {
+    background: #405b4d !important;
+    color: #ffffff !important;
+}
+
+/*
+ * DE: Symmetrischer orangefarbener Hover-Schatten
+ *     fuer die grosse Downgrade-Containerbox.
+ *
+ * EN: Symmetric orange hover shadow for the
+ *     large downgrade container card.
+ */
+
+body.dark .group\/card:has(span.group.text-center.font-semibold):hover {
+    box-shadow: 0 0 18px 3px rgba(220, 155, 102, 0.40) !important;
+}
+
+/* TOPA-LE OS DOWNGRADE UPDATE BUTTONS – END */
