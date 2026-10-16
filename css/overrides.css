@@ -3640,7 +3640,7 @@ body.dark #guiSearchBoxSpan > .awesomplete {
     min-width: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    padding-left: 30px !important;
+    padding-left: 25px !important;
     padding-right: 12px !important;
     background-color: #13181a !important;
     color: #c9d1d5 !important;
@@ -5891,7 +5891,7 @@ body.dark input:is(
     [type="search"]
 ):not([hidden]),
 body.dark textarea,
-body.dark select:not([multiple]):not([size]) {
+body.dark select:not([multiple]):not([size]:not([size="1"])) {
     background: #192125 !important;
     color: #d6dde3 !important;
     border: 1px solid #405158 !important;
@@ -5922,7 +5922,7 @@ body.dark input:is(
     [type="search"]
 ):not([hidden]):hover,
 body.dark textarea:hover,
-body.dark select:not([multiple]):not([size]):hover {
+body.dark select:not([multiple]):not([size]:not([size="1"])):hover {
     border-color: #607982 !important;
 }
 
@@ -5935,7 +5935,7 @@ body.dark input:is(
     [type="search"]
 ):not([hidden]):focus,
 body.dark textarea:focus,
-body.dark select:not([multiple]):not([size]):focus {
+body.dark select:not([multiple]):not([size]:not([size="1"])):focus {
     outline: none !important;
     border: 1px solid #648d83 !important;
     box-shadow: none !important;
@@ -5957,7 +5957,7 @@ body.dark textarea::placeholder {
 
 /* Geschlossene Dropdowns */
 
-body.dark select:not([multiple]):not([size]) {
+body.dark select:not([multiple]):not([size]:not([size="1"])) {
     appearance: base-select !important;
     color-scheme: dark !important;
     display: inline-flex !important;
@@ -5970,7 +5970,7 @@ body.dark select:not([multiple]):not([size]) {
     padding: 3px 8px !important;
 }
 
-body.dark select:not([multiple]):not([size])::picker-icon {
+body.dark select:not([multiple]):not([size]:not([size="1"]))::picker-icon {
     margin-left: auto !important;
     flex-shrink: 0 !important;
     align-self: center !important;
@@ -5979,7 +5979,7 @@ body.dark select:not([multiple]):not([size])::picker-icon {
 
 /* Geoeffnete Dropdowns */
 
-body.dark select:not([multiple]):not([size])::picker(select) {
+body.dark select:not([multiple]):not([size]:not([size="1"]))::picker(select) {
     appearance: base-select !important;
     background: #192125 !important;
     color: #d6dde3 !important;
@@ -5992,24 +5992,24 @@ body.dark select:not([multiple]):not([size])::picker(select) {
     scrollbar-width: thin !important;
 }
 
-body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar {
+body.dark select:not([multiple]):not([size]:not([size="1"]))::picker(select)::-webkit-scrollbar {
     width: 8px !important;
     background: #181818 !important;
 }
 
-body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-track {
+body.dark select:not([multiple]):not([size]:not([size="1"]))::picker(select)::-webkit-scrollbar-track {
     background: #181818 !important;
     border-radius: 6px !important;
 }
 
-body.dark select:not([multiple]):not([size])::picker(select)::-webkit-scrollbar-thumb {
+body.dark select:not([multiple]):not([size]:not([size="1"]))::picker(select)::-webkit-scrollbar-thumb {
     background: #405158 !important;
     border-radius: 6px !important;
 }
 
 /* Dropdown-Optionen */
 
-body.dark select:not([multiple]):not([size]) option {
+body.dark select:not([multiple]):not([size]:not([size="1"])) option {
     background: transparent !important;
     color: #d6dde3 !important;
     border-radius: 5px !important;
@@ -6019,13 +6019,13 @@ body.dark select:not([multiple]):not([size]) option {
     margin: 4px 0 !important;
 }
 
-body.dark select:not([multiple]):not([size]) option:checked {
+body.dark select:not([multiple]):not([size]:not([size="1"])) option:checked {
     background: #2b3a40 !important;
     color: #d6dde3 !important;
 }
 
-body.dark select:not([multiple]):not([size]) option:hover,
-body.dark select:not([multiple]):not([size]) option:focus {
+body.dark select:not([multiple]):not([size]:not([size="1"])) option:hover,
+body.dark select:not([multiple]):not([size]:not([size="1"])) option:focus {
     background: #394a52 !important;
     color: #d6dde3 !important;
 }
