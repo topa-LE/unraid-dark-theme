@@ -11,9 +11,10 @@
 [![Bash](https://img.shields.io/badge/Bash-Installer-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)](scripts/)
 [![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher) [![English](https://img.shields.io/badge/🇬🇧-English-3274A1?style=for-the-badge)](README.md) ![Deutsch](https://img.shields.io/badge/🇩🇪-Deutsch-C65A16?style=for-the-badge)
 
-**Dark WebGUI · Custom Login · Font Switcher · Persistent Installation**
+**Dark WebGUI · Custom Login · PageMap · Font Switcher · Persistent Installation**
 
 [Features](#-features) •
+[PageMap](#-pagemap) •
 [Font Switcher](#-font-switcher) •
 [Installation](#-installation) •
 [Updates](#-updating) •
@@ -32,6 +33,7 @@
   <tbody>
     <tr><td width="225">🎨 Dark WebGUI</td><td width="612">Dark grey and blue styling with extensive CSS customization</td></tr>
     <tr><td width="225">🔐 Custom Login</td><td width="612">Themed login screen, custom avatar and repository link</td></tr>
+    <tr><td width="225">🗺️ PageMap</td><td width="612">Searchable Unraid page directory with grouped cards, search and a Font Awesome navigation shortcut</td></tr>
     <tr><td width="225">🔤 Font Switcher</td><td width="612">Ten selectable font options, including the Unraid standard</td></tr>
     <tr><td width="225">💾 Persistent Setup</td><td width="612">Theme files and boot integration stored on the Unraid flash drive</td></tr>
     <tr><td width="225">🌐 Language Fix</td><td width="612">Compatibility fix for the native Unraid language selector</td></tr>
@@ -44,6 +46,51 @@
 
 The theme also contains detailed styling for navigation elements, forms,
 tables, buttons, dialogs, hover effects and other WebGUI components.
+
+---
+
+## 🗺️ PageMap
+
+PageMap provides a searchable overview of the pages available
+in the Unraid WebGUI.
+
+The dashboard is accessible under **Tools → PageMap** at
+`/Tools/PageMap`.
+
+A dedicated Font Awesome `fa-sitemap` icon provides direct access
+from the right-hand navigation area.
+
+### PageMap features
+
+<table width="100%">
+  <thead>
+    <tr><th width="225">Component</th><th width="612">Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td width="225">Page directory</td><td width="612">Grouped cards with links to Unraid pages</td></tr>
+    <tr><td width="225">Search</td><td width="612">Searchable page overview</td></tr>
+    <tr><td width="225">Card layout</td><td width="612">Balanced multi-column presentation</td></tr>
+    <tr><td width="225">Navigation shortcut</td><td width="612">Font Awesome <code>fa-sitemap</code> icon in the top navigation</td></tr>
+    <tr><td width="225">Dynamic content</td><td width="612">Page and group counts depend on the Unraid installation and installed plugins</td></tr>
+  </tbody>
+</table>
+
+### PageMap implementation
+
+<table width="100%">
+  <thead>
+    <tr><th width="225">File</th><th width="612">Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td width="225"><a href="js/pagemap.js"><code>js/pagemap.js</code></a></td><td width="612">Dashboard generation, search and navigation shortcut</td></tr>
+    <tr><td width="225"><a href="css/pagemap.css"><code>css/pagemap.css</code></a></td><td width="612">PageMap layout and styling</td></tr>
+  </tbody>
+</table>
+
+PageMap is included in the regular theme installation and update
+process. No separate installation command is required.
+
+The dashboard and navigation shortcut were tested on Unraid 7.3.2.
 
 ---
 
@@ -440,6 +487,7 @@ unraid-dark-theme/
 │   ├── fonts.css
 │   ├── loader.css
 │   ├── overrides.css
+│   ├── pagemap.css
 │   └── theme.css
 ├── docs/
 │   ├── unraid-content-box.md
@@ -453,6 +501,7 @@ unraid-dark-theme/
 │   ├── array-operation.js
 │   ├── font-switcher.js
 │   ├── language-switch-fix.js
+│   ├── pagemap.js
 │   └── system-stats.js
 ├── login/
 │   └── login-theme.css
