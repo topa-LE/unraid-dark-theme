@@ -6105,3 +6105,68 @@ body.dark div:has(> button[title="Schriftart auswählen"]) {
 /* TOPA-LE AA CONTAINER ALIGNMENT – END */
 
 /* TOPA-LE MINI NAVIGATION – END */
+
+/* TOPA-LE UNRAID API DIALOG – START */
+/* DE: Unraid-API-Dialoge mittig und innerhalb des Viewports anzeigen. */
+/* EN: Center Unraid API dialogs and keep them within the viewport. */
+
+body.dark #unraid-api-modals-virtual > .fixed {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    right: auto !important;
+    bottom: auto !important;
+    translate: -50% -50% !important;
+    transform: none !important;
+
+    width: min(540px, calc(100vw - 32px)) !important;
+    max-height: calc(100dvh - 32px) !important;
+    overflow-y: auto !important;
+
+    background: #1b2529 !important;
+    border: 2px solid #121212 !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+}
+
+/* DE: Rundes Download-Symbol mit blaugrauem Hintergrund. */
+/* EN: Circular download icon with a blue-gray background. */
+
+body.dark #unraid-api-modals-virtual .bg-primary\/10.rounded-full {
+    background: #34464e !important;
+    border: 2px solid #121212 !important;
+    box-sizing: border-box !important;
+    color: #9bb6c2 !important;
+}
+
+body.dark #unraid-api-modals-virtual .bg-primary\/10.rounded-full svg {
+    color: #9bb6c2 !important;
+    stroke: #9bb6c2 !important;
+}
+
+/* DE: Schiebeschalter im ausgeschalteten Zustand. */
+/* EN: Toggle switch in the unchecked state. */
+
+body.dark #unraid-api-modals-virtual [role="switch"][data-state="unchecked"] {
+    background: #34464e !important;
+    border: 2px solid #121212 !important;
+    box-sizing: border-box !important;
+}
+
+/* DE: Schiebeschalter im eingeschalteten Zustand. */
+/* EN: Toggle switch in the checked state. */
+
+body.dark #unraid-api-modals-virtual [role="switch"][data-state="checked"] {
+    background: #456574 !important;
+    border: 2px solid #121212 !important;
+    box-sizing: border-box !important;
+}
+
+/* DE: Heller Schalterknopf fuer guten Kontrast. */
+/* EN: Light switch thumb for clear contrast. */
+
+body.dark #unraid-api-modals-virtual [role="switch"] > span {
+    background: #a8bec8 !important;
+}
+
+/* TOPA-LE UNRAID API DIALOG – END */
