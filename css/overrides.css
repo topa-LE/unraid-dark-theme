@@ -6482,7 +6482,7 @@ body.dark .sweet-alert.nchan pre#swalbody {
 
 /* Internal Boot only – standard topa-LE content box */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) {
     width: calc(100% - 52px) !important;
     max-width: 900px !important;
     margin: 28px 26px !important;
@@ -6500,12 +6500,12 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 
 /* Internal Boot heading */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] > p:first-child {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:first-child {
     margin: 0 0 18px !important;
 }
 
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] > p:first-child strong {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:first-child strong {
     font-size: 20px !important;
     font-weight: 600 !important;
     color: #e6edf0 !important;
@@ -6513,7 +6513,7 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 
 /* Internal Boot description */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] > p:nth-child(2) {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:nth-child(2) {
     font-size: 16px !important;
     line-height: 1.65 !important;
     color: #d3dce0 !important;
@@ -6522,7 +6522,7 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 
 /* Array state warning – keep original safety behavior */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] > p.warning {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p.warning {
     display: flex !important;
     align-items: center !important;
     gap: 12px !important;
@@ -6542,7 +6542,7 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 }
 
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
-#displaybox > .content > div[style*="max-width:64rem"] > p.warning i {
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p.warning i {
     color: #f2b76a !important;
     font-size: 19px !important;
     flex-shrink: 0 !important;
