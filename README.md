@@ -25,17 +25,22 @@
 
 ## ✨ Features
 
-| Component | Description |
-|:--|:--|
-| 🎨 Dark WebGUI | Dark grey and blue styling with extensive CSS customization |
-| 🔐 Custom Login | Themed login screen, custom avatar and repository link |
-| 🔤 Font Switcher | Ten selectable font options, including the Unraid standard |
-| 💾 Persistent Setup | Theme files and boot integration stored on the Unraid flash drive |
-| 🌐 Language Fix | Compatibility fix for the native Unraid language selector |
-| 📊 System Statistics | Dedicated JavaScript integration for system statistics |
-| ⚙️ Array Operations | Dedicated JavaScript integration for array-operation UI elements |
-| 🖥️ WebTerminal | Custom terminal colors, font settings and persistent font size |
-| 🔄 Maintenance | GitHub-based installation, updating and uninstall support |
+<table width="100%">
+  <thead>
+    <tr><th>Component</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>🎨 Dark WebGUI</td><td>Dark grey and blue styling with extensive CSS customization</td></tr>
+    <tr><td>🔐 Custom Login</td><td>Themed login screen, custom avatar and repository link</td></tr>
+    <tr><td>🔤 Font Switcher</td><td>Ten selectable font options, including the Unraid standard</td></tr>
+    <tr><td>💾 Persistent Setup</td><td>Theme files and boot integration stored on the Unraid flash drive</td></tr>
+    <tr><td>🌐 Language Fix</td><td>Compatibility fix for the native Unraid language selector</td></tr>
+    <tr><td>📊 System Statistics</td><td>Dedicated JavaScript integration for system statistics</td></tr>
+    <tr><td>⚙️ Array Operations</td><td>Dedicated JavaScript integration for array-operation UI elements</td></tr>
+    <tr><td>🖥️ WebTerminal</td><td>Custom terminal colors, font settings and persistent font size</td></tr>
+    <tr><td>🔄 Maintenance</td><td>GitHub-based installation, updating and uninstall support</td></tr>
+  </tbody>
+</table>
 
 The theme also contains detailed styling for navigation elements, forms,
 tables, buttons, dialogs, hover effects and other WebGUI components.
@@ -52,18 +57,78 @@ applies it immediately without requiring a page reload.
 
 ### Available fonts
 
-| # | Font | Visual character | Source |
-|:--:|:--|:--|:--|
-| 01 | **Standard (Unraid)** | Original Clear Sans appearance | Local |
-| 02 | **Titillium Web** | Modern, technical and versatile | Local |
-| 03 | **Inter** | Neutral, clean and highly legible | Local |
-| 04 | **Maven Pro** | Contemporary, soft geometric shapes | Local |
-| 05 | **Saira Condensed** | Narrow, bold and distinctive | Local |
-| 06 | **Roboto Condensed** | Compact and functional | Local |
-| 07 | **Ubuntu Condensed** | Narrow with a recognizable character | Local |
-| 08 | **Dosis** | Light, rounded and friendly | Local |
-| 09 | **Cuprum** | Technical and space-efficient | Local |
-| 10 | **Play** | Geometric and structured | Local |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="center">#</th>
+      <th>Font</th>
+      <th>Visual character</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">01</td>
+      <td><strong>Standard (Unraid)</strong></td>
+      <td>Original Clear Sans appearance</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">02</td>
+      <td><strong>Titillium Web</strong></td>
+      <td>Modern, technical and versatile</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">03</td>
+      <td><strong>Inter</strong></td>
+      <td>Neutral, clean and highly legible</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">04</td>
+      <td><strong>Maven Pro</strong></td>
+      <td>Contemporary, soft geometric shapes</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">05</td>
+      <td><strong>Saira Condensed</strong></td>
+      <td>Narrow, bold and distinctive</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">06</td>
+      <td><strong>Roboto Condensed</strong></td>
+      <td>Compact and functional</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">07</td>
+      <td><strong>Ubuntu Condensed</strong></td>
+      <td>Narrow with a recognizable character</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">08</td>
+      <td><strong>Dosis</strong></td>
+      <td>Light, rounded and friendly</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">09</td>
+      <td><strong>Cuprum</strong></td>
+      <td>Technical and space-efficient</td>
+      <td>Local</td>
+    </tr>
+    <tr>
+      <td align="center">10</td>
+      <td><strong>Play</strong></td>
+      <td>Geometric and structured</td>
+      <td>Local</td>
+    </tr>
+  </tbody>
+</table>
 
 All ten font options are defined in
 [`js/font-switcher.js`](js/font-switcher.js).
@@ -73,16 +138,48 @@ as locally hosted WOFF2 files.
 
 ### How font selection works
 
-| Setting | Behavior |
-|:--|:--|
-| Default theme selection | Titillium Web |
-| Native Unraid appearance | Standard (Unraid) |
-| Selection method | Aa dropdown in the top navigation |
-| Application | Immediate CSS font-family update |
-| Persistence | Browser `localStorage` |
-| Storage key | `topa-font-choice` |
-| Scope | Authenticated WebGUI |
-| Login and password-reset pages | Independently styled |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Behavior</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default theme selection</td>
+      <td>Titillium Web</td>
+    </tr>
+    <tr>
+      <td>Native Unraid appearance</td>
+      <td>Standard (Unraid)</td>
+    </tr>
+    <tr>
+      <td>Selection method</td>
+      <td>Aa dropdown in the top navigation</td>
+    </tr>
+    <tr>
+      <td>Application</td>
+      <td>Immediate CSS font-family update</td>
+    </tr>
+    <tr>
+      <td>Persistence</td>
+      <td>Browser <code>localStorage</code></td>
+    </tr>
+    <tr>
+      <td>Storage key</td>
+      <td><code>topa-font-choice</code></td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Authenticated WebGUI</td>
+    </tr>
+    <tr>
+      <td>Login and password-reset pages</td>
+      <td>Independently styled</td>
+    </tr>
+  </tbody>
+</table>
 
 The switcher uses the CSS custom property
 `--topa-font-family` and the `data-topa-font` attribute.
@@ -92,12 +189,32 @@ It is not a server-wide setting shared between browsers or devices.
 
 ### Implementation files
 
-| File | Purpose |
-|:--|:--|
-| [`js/font-switcher.js`](js/font-switcher.js) | Dropdown, font selection and persistence |
-| [`css/font-switcher.css`](css/font-switcher.css) | Font-switcher styling |
-| [`css/fonts.css`](css/fonts.css) | Local font definitions |
-| [`fonts/`](fonts/) | WOFF2 assets and font license files |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="js/font-switcher.js"><code>js/font-switcher.js</code></a></td>
+      <td>Dropdown, font selection and persistence</td>
+    </tr>
+    <tr>
+      <td><a href="css/font-switcher.css"><code>css/font-switcher.css</code></a></td>
+      <td>Font-switcher styling</td>
+    </tr>
+    <tr>
+      <td><a href="css/fonts.css"><code>css/fonts.css</code></a></td>
+      <td>Local font definitions</td>
+    </tr>
+    <tr>
+      <td><a href="fonts/"><code>fonts/</code></a></td>
+      <td>WOFF2 assets and font license files</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -109,14 +226,40 @@ language selector.
 When switching to English, the previously selected language can
 be remembered and restored if the Unraid locale cookie is missing.
 
-| Feature | Implementation |
-|:--|:--|
-| Language identifiers | Supports identifiers such as `de_DE` |
-| Persistence | Browser local storage |
-| Switching | Uses Unraid's native mechanism |
-| Script | [`js/language-switch-fix.js`](js/language-switch-fix.js) |
-| Installation | Integrated into the standard installer |
-| Verified behavior | Repeated German-English-German switching on Unraid 7.3.2 |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Implementation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Language identifiers</td>
+      <td>Supports identifiers such as <code>de_DE</code></td>
+    </tr>
+    <tr>
+      <td>Persistence</td>
+      <td>Browser local storage</td>
+    </tr>
+    <tr>
+      <td>Switching</td>
+      <td>Uses Unraid's native mechanism</td>
+    </tr>
+    <tr>
+      <td>Script</td>
+      <td><a href="js/language-switch-fix.js"><code>js/language-switch-fix.js</code></a></td>
+    </tr>
+    <tr>
+      <td>Installation</td>
+      <td>Integrated into the standard installer</td>
+    </tr>
+    <tr>
+      <td>Verified behavior</td>
+      <td>Repeated German-English-German switching on Unraid 7.3.2</td>
+    </tr>
+  </tbody>
+</table>
 
 The implementation does not hardcode German as the only
 supported previous language.
@@ -244,14 +387,40 @@ settings. Later manual changes to certain settings are preserved.
 The theme includes a custom dark terminal palette and
 persistent terminal font settings.
 
-| Setting | Theme configuration |
-|:--|:--|
-| Background | Dark |
-| Foreground | Light |
-| Cursor | Warm accent |
-| Font family | Cascadia Mono, Consolas, monospace |
-| Font size | 17 |
-| Line height | 1.15 |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Theme configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Background</td>
+      <td>Dark</td>
+    </tr>
+    <tr>
+      <td>Foreground</td>
+      <td>Light</td>
+    </tr>
+    <tr>
+      <td>Cursor</td>
+      <td>Warm accent</td>
+    </tr>
+    <tr>
+      <td>Font family</td>
+      <td>Cascadia Mono, Consolas, monospace</td>
+    </tr>
+    <tr>
+      <td>Font size</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>Line height</td>
+      <td>1.15</td>
+    </tr>
+  </tbody>
+</table>
 
 The original terminal configuration is retained for restoration
 where applicable.
@@ -260,18 +429,46 @@ where applicable.
 
 ## 🧩 Repository Structure
 
-| Directory / File | Purpose |
-|:--|:--|
-| [`css/`](css/) | WebGUI stylesheets and visual overrides |
-| [`js/`](js/) | Interactive enhancements and compatibility fixes |
-| [`fonts/`](fonts/) | Local font files and license information |
-| [`img/`](img/) | Theme images and login avatar |
-| [`login/`](login/) | Login-page stylesheet |
-| [`scripts/`](scripts/) | Bootstrap, install, apply, update and uninstall |
-| [`scripts/lib/`](scripts/lib/) | Shared installer language support |
-| [`docs/`](docs/) | Additional technical documentation |
-| [`reference/`](reference/) | Project reference materials |
-| [`VERSION`](VERSION) | Current project version |
+The following tree shows the tracked project structure. Bundled font assets are summarized for readability.
+
+```text
+unraid-dark-theme/
+├── css/
+│   ├── base.css
+│   ├── boot.css
+│   ├── font-switcher.css
+│   ├── fonts.css
+│   ├── loader.css
+│   ├── overrides.css
+│   └── theme.css
+├── docs/
+│   ├── unraid-content-box.md
+│   ├── unraid-popup-box.md
+│   └── unraid-status-colors.md
+├── fonts/
+│   └── …
+├── img/
+│   └── topa-le-avatar-login.png
+├── js/
+│   ├── array-operation.js
+│   ├── font-switcher.js
+│   ├── language-switch-fix.js
+│   └── system-stats.js
+├── login/
+│   └── login-theme.css
+├── scripts/
+│   ├── lib/
+│   │   └── i18n.sh
+│   ├── apply.sh
+│   ├── bootstrap.sh
+│   ├── install.sh
+│   ├── uninstall.sh
+│   └── update.sh
+├── .gitignore
+├── LICENSE
+├── README.md
+└── VERSION
+```
 
 ### Technical documentation
 
@@ -317,8 +514,4 @@ The bundled fonts are third-party assets and remain subject to their
 respective license and copyright terms. Their license files are retained
 in the corresponding subdirectories of [`fonts/`](fonts/).
 
-<div align="center">
-
-[⬆ Back to top](#-topa-le-unraid-dark-theme)
-
-</div>
+Made with ❤️ by topa-LE · [⬆ Back to top](#-topa-le-unraid-dark-theme)
