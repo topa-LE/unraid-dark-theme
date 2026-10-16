@@ -6503,13 +6503,14 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 /* Internal Boot heading */
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:first-child {
-    margin: 0 0 18px !important;
+    margin: 0 0 26px !important;
 }
 
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:first-child strong {
     font-size: 30px !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    line-height: 1.55 !important;
     color: #e6edf0 !important;
 }
 
@@ -6517,9 +6518,10 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 #displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:nth-child(2) {
     font-size: 21px !important;
+    font-weight: 400 !important;
     line-height: 1.55 !important;
     color: #d3dce0 !important;
-    margin-bottom: 24px !important;
+    margin: 0 0 22px !important;
 }
 
 /* Array state warning – keep original safety behavior */
@@ -6531,7 +6533,7 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
     width: fit-content !important;
     max-width: 100% !important;
     padding: 14px 18px !important;
-    margin: 0 0 25px !important;
+    margin: 0 0 26px !important;
     background: #30291e !important;
     border: 1px solid #a87937 !important;
     border-left: 4px solid #d99a42 !important;
@@ -6551,6 +6553,23 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
 }
 
 /* END TOPA-LE INTERNAL BOOT */
+
+/* Internal Boot wizard button – match Setup Wizard */
+body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) > p:last-child {
+    margin: 0 !important;
+}
+
+body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
+#displaybox > .content div[style*="max-width:64rem"]:has(input[onclick="openInternalBootWizard()"]) input[onclick="openInternalBootWizard()"] {
+    width: 170px !important;
+    height: 49px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-sizing: border-box !important;
+}
+
+
 
 /* ==========================================================
    TOPA-LE SETUP WIZARD – ARRAY WARNING
