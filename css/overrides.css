@@ -6390,3 +6390,69 @@ body.dark .sweet-alert.nchan pre#swalbody {
 }
 
 /* TOPA-LE NCHAN CONTENT CORNER FIX – END */
+
+/* ==========================================================
+   topa-LE SMART attributes - responsive layout and zebra rows
+   ========================================================== */
+
+#displaybox #tab4-panel.tab-content.content:has(#disk_attributes) {
+    width: calc(100% - 40px) !important;
+    max-width: 1200px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 25px auto 24px !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 20px auto 24px !important;
+    padding: 22px !important;
+    background: #28343a !important;
+    border: 1px solid #46555c !important;
+    border-radius: 10px !important;
+    overflow-x: auto !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) table {
+    width: 100% !important;
+    min-width: 950px !important;
+    box-sizing: border-box !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #253137 !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) thead tr,
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) thead td,
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) thead th {
+    background: #35464e !important;
+    color: #e3e9ec !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:nth-child(odd),
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:nth-child(odd) td {
+    background: #29363c !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:nth-child(even),
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:nth-child(even) td {
+    background: #344249 !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:hover,
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) tbody tr:hover td {
+    background: #435760 !important;
+}
+
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) td,
+#displaybox #tab4-panel .TableContainer:has(#disk_attributes) th {
+    padding: 8px 10px !important;
+    border-bottom: 1px solid #405057 !important;
+    white-space: nowrap !important;
+}
+
+/* END topa-LE SMART attributes */
