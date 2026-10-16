@@ -6342,3 +6342,29 @@ body.dark .group\/card:has(span.group.text-center.font-semibold):hover {
 }
 
 /* TOPA-LE OS DOWNGRADE UPDATE BUTTONS – END */
+
+/* ==========================================================
+   TOPA-LE RELEASE NOTES FOOTER FIX
+   ========================================================== */
+
+/*
+ * DE: Bei Versionshinweis-Dialogen den unnoetigen unteren
+ *     Abstand entfernen. Der dunkle Fussbereich schliesst
+ *     buendig mit der abgerundeten Aussenkante ab.
+ *
+ * EN: Remove excess bottom spacing in release-notes dialogs.
+ *     The dark footer meets the rounded outer bottom edge.
+ */
+
+body.dark .sweet-alert.nchan.showSweetAlert {
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+}
+
+body.dark .sweet-alert.nchan.showSweetAlert
+> .sa-button-container {
+    margin-bottom: 0 !important;
+    border-radius: 0 0 7px 7px !important;
+}
+
+/* TOPA-LE RELEASE NOTES FOOTER FIX – END */
