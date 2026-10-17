@@ -616,7 +616,10 @@
 
         if (!groups.length) return;
 
-        // DE: Die finale Ansicht zeigt bewusst nur echte Seiten.\n        // EN: The final view intentionally excludes UI controls.\n\n        const dashboard = document.createElement('div');
+        // DE: Die finale Ansicht zeigt bewusst nur echte Seiten.
+        // EN: The final view intentionally excludes UI controls.
+
+        const dashboard = document.createElement('div');
         dashboard.id = DASHBOARD_ID;
 
         const header = document.createElement('div');
