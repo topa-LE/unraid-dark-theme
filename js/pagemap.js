@@ -461,7 +461,8 @@
 
             for (const item of group.links) {
                 if (assigned.has(item.href) ||
-                    ignored.has(item.href)) {
+                    ignored.has(item.href) ||
+                    originalHeadings.has(item.href)) {
                     continue;
                 }
 
@@ -576,8 +577,8 @@
                 )
         }));
 
-        measurements.sort((a, b) => b.height - a.height);
-
+        // DE: Kartenreihenfolge der finalen Vorlage beibehalten.
+        // EN: Preserve the final layout's original card order.
         grid.replaceChildren();
 
         const containers = [];
