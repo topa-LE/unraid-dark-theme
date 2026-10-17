@@ -6600,3 +6600,192 @@ body:has(#displaybox .content input[onclick="openInternalBootWizard()"])
     font-size: 19px !important;
     flex-shrink: 0 !important;
 }
+
+/* ==========================================================
+   TOPA-LE PLUGIN INSTALLER – FILE BROWSER
+   ========================================================== */
+
+/*
+ * Plugins > Plugin installieren
+ * Breite, dynamische Dateiauswahl im bestehenden topa-LE-Stil.
+ * Live getestet auf Unraid .12.
+ * Das URL-Installationsformular bleibt unverändert.
+ */
+
+body.dark #tab2-panel > div.max-w-20.mx-auto {
+    width: calc(100% - 48px) !important;
+    max-width: 1280px !important;
+    min-width: 0 !important;
+    margin: 20px auto 28px !important;
+    padding: 24px 30px !important;
+    box-sizing: border-box !important;
+
+    background: #263138 !important;
+    border: 1px solid #121212 !important;
+    border-radius: 8px !important;
+
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+@media (max-width: 700px) {
+    body.dark #tab2-panel > div.max-w-20.mx-auto {
+        width: calc(100% - 20px) !important;
+        padding: 16px !important;
+    }
+}
+
+/* END TOPA-LE PLUGIN INSTALLER – FILE BROWSER */
+
+/* ==========================================================
+   TOPA-LE PHP ERROR REPORTING – INFO BOX
+   ========================================================== */
+
+/*
+ * PHP Error Reporting – Erklärungstext oberhalb der Bedienbox.
+ * Originalcontainer verwenden, kein JavaScript-DOM-Umbau.
+ * Beide Boxen erhalten dieselbe Breite und Zentrierung.
+ */
+
+body.dark #displaybox > .content:has(.php-settings-description)
+.php-settings-description {
+    width: 100% !important;
+    max-width: 770px !important;
+    margin: 0 auto 28px !important;
+    padding: 22px 26px !important;
+    box-sizing: border-box !important;
+
+    background: #263138 !important;
+    border: 1px solid rgba(88,112,124,0.38) !important;
+    border-radius: 8px !important;
+}
+
+body.dark #displaybox > .content:has(.php-settings-description)
+.php-settings-description p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    color: #d5dcdf !important;
+    font-weight: 400 !important;
+    margin: 0 0 16px !important;
+}
+
+body.dark #displaybox > .content:has(.php-settings-description)
+.php-settings-description p:last-child {
+    margin-bottom: 0 !important;
+}
+
+body.dark #displaybox > .content:has(.php-settings-description)
+.php-settings-description strong,
+body.dark #displaybox > .content:has(.php-settings-description)
+.php-settings-description b {
+    color: #f0f3f4 !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 800px) {
+    body.dark #displaybox > .content:has(.php-settings-description)
+    .php-settings-description {
+        width: calc(100% - 20px) !important;
+        padding: 16px !important;
+    }
+}
+
+/* END TOPA-LE PHP ERROR REPORTING – INFO BOX */
+
+/* ==========================================================
+   TOPA-LE NOTIFICATION DROPDOWNCHECKLIST – START
+   ========================================================== */
+
+/*
+ * DE: JQuery DropdownChecklist im einheitlichen topa-LE
+ *     VM-Formularstil. Die versteckten Original-Selects
+ *     bleiben unveraendert.
+ *
+ * EN: Style jQuery DropdownChecklist controls consistently
+ *     with topa-LE VM forms. Hidden original select elements
+ *     remain unchanged.
+ */
+
+body.dark .ui-dropdownchecklist-selector-wrapper {
+    background: #192125 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 7px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+body.dark .ui-dropdownchecklist-selector,
+body.dark .ui-dropdownchecklist-selector.ui-state-default {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 0 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+}
+
+body.dark .ui-dropdownchecklist-selector .ui-dropdownchecklist-text {
+    color: #d6dde3 !important;
+}
+
+body.dark .ui-dropdownchecklist-dropcontainer-wrapper {
+    box-sizing: border-box !important;
+    padding-top: 6px !important;
+    border: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+
+body.dark .ui-dropdownchecklist-dropcontainer {
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #405158 !important;
+    border-radius: 8px !important;
+    padding: 5px !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+body.dark .ui-dropdownchecklist-dropcontainer .ui-dropdownchecklist-item {
+    background: transparent !important;
+    color: #d6dde3 !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    padding: 4px 8px !important;
+    margin: 2px 0 !important;
+    box-sizing: border-box !important;
+}
+
+body.dark .ui-dropdownchecklist-dropcontainer .ui-dropdownchecklist-item:hover {
+    background: #394a52 !important;
+}
+
+body.dark .ui-dropdownchecklist-dropcontainer .ui-dropdownchecklist-text {
+    color: #d6dde3 !important;
+}
+
+body.dark .ui-dropdownchecklist-close {
+    text-align: right !important;
+}
+
+/* END TOPA-LE NOTIFICATION DROPDOWNCHECKLIST */
+
+
+/* ==========================================================
+   TOPA-LE STATUS RED – START
+   ========================================================== */
+
+/*
+ * DE: Helleres Status-Rot fuer bessere Erkennbarkeit
+ *     auf dunklen und blaugrauen Hintergruenden.
+ *
+ * EN: Brighter status red for improved visibility
+ *     against dark and blue-grey backgrounds.
+ */
+
+body.dark .red {
+    color: #ec434b !important;
+}
+
+/* END TOPA-LE STATUS RED */
