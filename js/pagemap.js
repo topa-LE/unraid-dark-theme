@@ -116,6 +116,372 @@
         return groups;
     }
 
+
+    // DE: Gepruefte Kartenstruktur aus der finalen Browser-Vorschau.
+    // EN: Verified card layout from the final browser preview.
+    const CARD_LAYOUT = [
+    {
+        "title": "Dashboard",
+        "icon": "fa fa-dashboard",
+        "links": [
+            "/DashStats"
+        ]
+    },
+    {
+        "title": "UserPreferences",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/Confirmations",
+            "/Console",
+            "/DisplaySettings",
+            "/Scheduler",
+            "/MoverSettings",
+            "/TrimSettings"
+        ]
+    },
+    {
+        "title": "Notifications",
+        "icon": "fa fa-bell-o",
+        "links": [
+            "/Notifications",
+            "/SmtpSettings",
+            "/NotificationAgents"
+        ]
+    },
+    {
+        "title": "CPUset",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/CPUvms",
+            "/CPUpin",
+            "/CPUisol"
+        ]
+    },
+    {
+        "title": "Network & Remote Access",
+        "icon": "fa fa-globe",
+        "links": [
+            "/FTP",
+            "/OutgoingProxy",
+            "/SyslogSettings"
+        ]
+    },
+    {
+        "title": "Stats",
+        "icon": "fa fa-bar-chart",
+        "links": [
+            "/SystemDisks",
+            "/SystemStats",
+            "/StatSettings",
+            "/TempSettings"
+        ]
+    },
+    {
+        "title": "ManagementAccess",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/ApiStatus",
+            "/Connect",
+            "/ApiKeys"
+        ]
+    },
+    {
+        "title": "Wizards",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/OnboardingWizard",
+            "/InternalBootWizard"
+        ]
+    },
+    {
+        "title": "Users",
+        "icon": "fa fa-users",
+        "links": [
+            "/UserList",
+            "/UserAdd",
+            "/UserEdit"
+        ]
+    },
+    {
+        "title": "Docker",
+        "icon": "fa fa-cubes",
+        "links": [
+            "/DockerContainers",
+            "/dockerUpdateApps",
+            "/DockerSafeNewPerms",
+            "/DockerSettings"
+        ]
+    },
+    {
+        "title": "SystemInformation",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/SystemProfiler",
+            "/Overview",
+            "/Bios",
+            "/Motherboard",
+            "/Processor",
+            "/CacheMemory",
+            "/MemorySummary",
+            "/MemoryDevices",
+            "/Ethernet"
+        ]
+    },
+    {
+        "title": "VPN",
+        "icon": "fa fa-shield",
+        "links": [
+            "/Tailscale",
+            "/VPNmanager",
+            "/WG0"
+        ]
+    },
+    {
+        "title": "WebGui",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/Language",
+            "/PHPsettings",
+            "/PageMap",
+            "/Vars"
+        ]
+    },
+    {
+        "title": "UnassignedDevicesSettings",
+        "icon": "fa fa-puzzle-piece",
+        "links": [
+            "/UnassignedDevicesCommon",
+            "/UnassignedDevicesSMB",
+            "/UnassignedDevicesNFS",
+            "/UnassignedDevicesPassword",
+            "/UnassignedDevicesUUID",
+            "/UnassignedDevicesZFS",
+            "/UnassignedDevicesRemoteTest"
+        ]
+    },
+    {
+        "title": "NetworkSettings",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/Eth0",
+            "/NetworkExtra",
+            "/RoutingTable"
+        ]
+    },
+    {
+        "title": "UNRAID-OS",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/Diagnostics",
+            "/HardwareProfile",
+            "/LogViewer",
+            "/NewConfig",
+            "/NewPerms",
+            "/Processes",
+            "/SysDevs",
+            "/SysDrivers",
+            "/Syslog",
+            "/Terminal"
+        ]
+    },
+    {
+        "title": "NFS & SMB",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/NFS",
+            "/SMB",
+            "/SMBsettings",
+            "/SMBExtras",
+            "/SMBWorkGroup"
+        ]
+    },
+    {
+        "title": "Shares",
+        "icon": "fa fa-folder-open-o",
+        "links": [
+            "/ShareList",
+            "/DiskList",
+            "/ShareSettings"
+        ]
+    },
+    {
+        "title": "PowerMode",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/PowerModeCpu",
+            "/PowerModeButton"
+        ]
+    },
+    {
+        "title": "About",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/Update",
+            "/Downgrade",
+            "/Registration",
+            "/InstallKey",
+            "/Credits",
+            "/EULA"
+        ]
+    },
+    {
+        "title": "UPSsettings",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/UPSdetails",
+            "/VMSettings"
+        ]
+    },
+    {
+        "title": "Parity",
+        "icon": "fa fa-hdd-o",
+        "links": [
+            "/ParityCheck",
+            "/Parity.check.tuning",
+            "/Parity.check.problems"
+        ]
+    },
+    {
+        "title": "Array & Boot",
+        "icon": "fa fa-hdd-o",
+        "links": [
+            "/ArrayDevices",
+            "/CacheDevices",
+            "/BootDevice",
+            "/UnassignedDevices",
+            "/ArrayOperation",
+            "/BootParameters"
+        ]
+    },
+    {
+        "title": "System Configuration",
+        "icon": "fa fa-cogs",
+        "links": [
+            "/DateTime",
+            "/DiskSettings",
+            "/Identification"
+        ]
+    },
+    {
+        "title": "Plugins",
+        "icon": "fa fa-puzzle-piece",
+        "links": [
+            "/PluginInstall",
+            "/PluginsError"
+        ]
+    },
+    {
+        "title": "Utilities",
+        "icon": "fa fa-sitemap",
+        "links": [
+            "/AutoUpdateApps",
+            "/AutoUpdate",
+            "/CleanUpAppdata",
+            "/FixProblems",
+            "/ca_settings",
+            "/corefreq",
+            "/corefreqMain",
+            "/corefreqModules",
+            "/snmp"
+        ]
+    }
+];
+
+    // DE: Unraid bleibt die Quelle fuer vorhandene Menuepunkte.
+    // EN: Unraid remains the source of available menu entries.
+    function transformGroups(sourceGroups) {
+        const available = new Map();
+        const originalHeadings = new Map();
+
+        for (const group of sourceGroups) {
+            originalHeadings.set(group.href, group);
+
+            for (const link of group.links) {
+                if (!available.has(link.href)) {
+                    available.set(link.href, link);
+                }
+            }
+        }
+
+        const assigned = new Set();
+        const result = [];
+
+        for (const definition of CARD_LAYOUT) {
+            const links = [];
+
+            for (const href of definition.links) {
+                const item = available.get(href);
+
+                if (!item || assigned.has(href)) continue;
+
+                links.push({
+                    title: item.title,
+                    href: item.href,
+                    depth: item.depth
+                });
+
+                assigned.add(href);
+            }
+
+            if (!links.length) continue;
+
+            const original = sourceGroups.find(
+                group => group.title === definition.title
+            );
+
+            result.push({
+                title: definition.title,
+                href: original ? original.href : null,
+                icon: definition.icon,
+                links
+            });
+        }
+
+        // DE: Zusaetzliche Plugin-Seiten nicht verlieren.
+        // EN: Preserve additional pages supplied by installed plugins.
+        const ignored = new Set([
+            '/LanguageButton',
+            '/TempButton',
+            '/gui_search',
+            '/LogoutButton',
+            '/BrowseButton',
+            '/FeedbackButton',
+            '/InfoButton',
+            '/LogButton',
+            '/HelpButton',
+            '/Parity.check.refresh',
+            '/CA_notices',
+            '/PluginHelpers'
+        ]);
+
+        // DE: Nicht zugeordnete Plugin-Seiten nach Hauptbereich gruppieren.
+        // EN: Group unassigned plugin pages by their original top-level area.
+        for (const group of sourceGroups) {
+            const additional = [];
+
+            for (const item of group.links) {
+                if (assigned.has(item.href) ||
+                    ignored.has(item.href)) {
+                    continue;
+                }
+
+                assigned.add(item.href);
+                additional.push(item);
+            }
+
+            if (!additional.length) continue;
+
+            result.push({
+                title: group.title + ' – Additional',
+                href: null,
+                icon: 'fa ' + iconFor(group.title),
+                links: additional
+            });
+        }
+
+        return result;
+    }
+
     function createLink(item, className) {
         const link = document.createElement('a');
 
@@ -130,13 +496,19 @@
         const card = document.createElement('section');
         card.className = 'topa-pagemap-card';
 
-        const heading = createLink(
-            group,
-            'topa-pagemap-card-title'
-        );
+        // DE: Nur originale Kartenueberschriften sind Links.
+        // EN: Only original card headings are clickable links.
+        const heading = group.href
+            ? createLink(group, 'topa-pagemap-card-title')
+            : document.createElement('div');
+
+        if (!group.href) {
+            heading.className = 'topa-pagemap-card-title';
+            heading.textContent = group.title;
+        }
 
         const icon = document.createElement('i');
-        icon.className = 'fa ' + iconFor(group.title);
+        icon.className = group.icon || 'fa ' + iconFor(group.title);
         icon.setAttribute('aria-hidden', 'true');
 
         heading.prepend(icon);
@@ -151,6 +523,9 @@
                 'topa-pagemap-link topa-pagemap-level-' + item.depth
             );
 
+            link.style.fontSize = '15px';
+            link.style.paddingLeft = '5px';
+            link.style.lineHeight = '1.5';
             links.appendChild(link);
         }
 
@@ -161,9 +536,10 @@
 
     function columnCount() {
         if (window.innerWidth < 760) return 1;
-        if (window.innerWidth < 1150) return 2;
+        if (window.innerWidth < 1050) return 2;
+        if (window.innerWidth < 1400) return 3;
 
-        return 3;
+        return 4;
     }
 
     function balanceCards(grid) {
@@ -236,40 +612,11 @@
             return;
         }
 
-        const groups = collectGroups(source);
+        const groups = transformGroups(collectGroups(source));
 
         if (!groups.length) return;
 
-        const originalLinks = Array.from(
-            source.querySelectorAll('a[href]')
-        ).map(link => link.getAttribute('href'));
-
-        const collectedLinks = groups.flatMap(group => [
-            group.href,
-            ...group.links.map(link => link.href)
-        ]);
-
-        const sortedOriginal = [...originalLinks].sort();
-        const sortedCollected = [...collectedLinks].sort();
-
-        if (
-            sortedOriginal.length !== sortedCollected.length ||
-            sortedOriginal.some(
-                (href, index) => href !== sortedCollected[index]
-            )
-        ) {
-            console.error(
-                '[topa-LE PageMap] Linkvergleich fehlgeschlagen. ' +
-                'Original-Sitemap bleibt erhalten.',
-                {
-                    original: originalLinks.length,
-                    dashboard: collectedLinks.length
-                }
-            );
-            return;
-        }
-
-        const dashboard = document.createElement('div');
+        // DE: Die finale Ansicht zeigt bewusst nur echte Seiten.\n        // EN: The final view intentionally excludes UI controls.\n\n        const dashboard = document.createElement('div');
         dashboard.id = DASHBOARD_ID;
 
         const header = document.createElement('div');

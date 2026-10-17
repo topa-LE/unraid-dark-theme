@@ -77,7 +77,7 @@
 #topa-le-pagemap-dashboard .topa-pagemap-grid {
     display: grid !important;
     grid-template-columns:
-        repeat(var(--topa-pagemap-columns, 3), minmax(0, 1fr)) !important;
+        repeat(var(--topa-pagemap-columns, 4), minmax(0, 1fr)) !important;
     gap: 18px !important;
     align-items: start;
 }
@@ -147,18 +147,19 @@
     padding: 3px 5px !important;
     border-radius: 4px;
     color: #c7d5db !important;
-    font-size: 13px !important;
-    line-height: 1.45 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
     text-decoration: none !important;
     overflow-wrap: anywhere;
 }
 
-#topa-le-pagemap-dashboard .topa-pagemap-level-3 {
-    padding-left: 15px !important;
-}
-
+/*
+ * DE: Alle Menueebenen linksbuendig mit 5 px Abstand.
+ * EN: Align all menu levels consistently with 5 px left padding.
+ */
+#topa-le-pagemap-dashboard .topa-pagemap-level-3,
 #topa-le-pagemap-dashboard .topa-pagemap-level-4 {
-    padding-left: 25px !important;
+    padding-left: 5px !important;
 }
 
 #topa-le-pagemap-dashboard .topa-pagemap-link:hover,
