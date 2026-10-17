@@ -166,8 +166,19 @@
     color: #dc9b66 !important;
 }
 
-#topa-le-pagemap-dashboard .topa-pagemap-link:hover {
-    background: rgba(220, 155, 102, .08) !important;
+/*
+ * DE: Page-Map-Links beim Hover nur goldorange darstellen.
+ *     Kein Hintergrund und kein Schatten.
+ *
+ * EN: Show Page Map links in gold-orange on hover only.
+ *     No background and no shadow.
+ */
+#topa-le-pagemap-dashboard .topa-pagemap-link:hover,
+#topa-le-pagemap-dashboard .topa-pagemap-link:focus-visible {
+    color: #dc9b66 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
 }
 
 #topa-le-pagemap-dashboard .topa-pagemap-card[hidden],
