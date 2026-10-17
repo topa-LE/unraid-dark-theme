@@ -437,48 +437,10 @@
             });
         }
 
-        // DE: Zusaetzliche Plugin-Seiten nicht verlieren.
-        // EN: Preserve additional pages supplied by installed plugins.
-        const ignored = new Set([
-            '/LanguageButton',
-            '/TempButton',
-            '/gui_search',
-            '/LogoutButton',
-            '/BrowseButton',
-            '/FeedbackButton',
-            '/InfoButton',
-            '/LogButton',
-            '/HelpButton',
-            '/Parity.check.refresh',
-            '/CA_notices',
-            '/PluginHelpers'
-        ]);
-
-        // DE: Nicht zugeordnete Plugin-Seiten nach Hauptbereich gruppieren.
-        // EN: Group unassigned plugin pages by their original top-level area.
-        for (const group of sourceGroups) {
-            const additional = [];
-
-            for (const item of group.links) {
-                if (assigned.has(item.href) ||
-                    ignored.has(item.href) ||
-                    originalHeadings.has(item.href)) {
-                    continue;
-                }
-
-                assigned.add(item.href);
-                additional.push(item);
-            }
-
-            if (!additional.length) continue;
-
-            result.push({
-                title: group.title + ' – Additional',
-                href: null,
-                icon: 'fa ' + iconFor(group.title),
-                links: additional
-            });
-        }
+        // DE: Nur die 26 geprueften Karten der finalen Vorlage anzeigen.
+        // DE: Unraid-Navigationsueberschriften nicht als Seiten ausgeben.
+        // EN: Display only the 26 verified cards from the final layout.
+        // EN: Do not expose Unraid navigation headings as page links.
 
         return result;
     }
@@ -633,8 +595,10 @@
         const count = document.createElement('span');
         count.className = 'topa-pagemap-count';
 
+        // DE: Nur echte Menueintraege zaehlen, keine Kartenueberschriften.
+        // EN: Count actual menu links, not card headings.
         const totalLinks = groups.reduce(
-            (sum, group) => sum + group.links.length + 1,
+            (sum, group) => sum + group.links.length,
             0
         );
 
