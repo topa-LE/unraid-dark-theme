@@ -6845,3 +6845,63 @@ unraid-api-key-manager.unapi
 span[role="button"][id^="reka-menu-trigger"]:hover {
     opacity: 0.6 !important;
 }
+
+/* ==========================================================
+   TOPA-LE API KEY DIALOG – START
+
+   DE: Dialog zum Erstellen eines API-Schluessels.
+       Farben anhand der Browser-Livetests 1115–1120.
+       Der Selektor begrenzt die Regeln auf die Dialogstruktur
+       mit maximal 3xl Breite und scrollbarem Inhalt.
+
+   EN: Create API Key dialog.
+       Colors verified in browser live tests 1115–1120.
+       The selector targets the dialog structure with
+       max-3xl width and scrollable content.
+
+   DE: Benachrichtigungsdialog und API-Key-Hauptseite
+       bleiben unveraendert.
+   EN: Notification dialog and API Keys main page
+       remain unchanged.
+   ========================================================== */
+
+/* DE/EN: Dialog background matches notification dialog. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden {
+    background: #1b2529 !important;
+    color: #d6dde3 !important;
+}
+
+/* DE/EN: Brighter input and selection surfaces. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+input.bg-background,
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+span[role="combobox"] {
+    background: #35434a !important;
+}
+
+/* DE/EN: Input borders. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+input.bg-background {
+    border-color: #405158 !important;
+}
+
+/* DE/EN: Dashed empty-permissions area. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+.border-dashed {
+    border-color: #405158 !important;
+}
+
+/* DE/EN: Effective Permissions summary box. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+.bg-muted\/50.border-muted {
+    background: #263239 !important;
+    border-color: #405158 !important;
+}
+
+/* DE/EN: Approved lighter error text. */
+body.dark .unapi [role="dialog"][data-state="open"].bg-background.max-w-3xl.overflow-hidden
+.text-red-500 {
+    color: #ff7777 !important;
+}
+
+/* TOPA-LE API KEY DIALOG – END */
