@@ -146,8 +146,7 @@
         "icon": "fa fa-sitemap",
         "links": [
             "/CPUvms",
-            "/CPUpin",
-            "/CPUisol"
+            "/CPUpin"
         ]
     },
     {
@@ -290,7 +289,6 @@
         "icon": "fa fa-folder-open-o",
         "links": [
             "/ShareList",
-            "/DiskList",
             "/ShareSettings"
         ]
     },
@@ -303,7 +301,7 @@
         ]
     },
     {
-        "title": "About",
+        "title": "Unraid – Lizenz & Version",
         "icon": "fa fa-sitemap",
         "links": [
             "/Update",
@@ -483,11 +481,14 @@
     }
 
     function columnCount() {
+        // DE: Responsive Spaltenzahl, maximal fuenf auf breiten Displays.
+        // EN: Responsive column count, up to five on wide displays.
         if (window.innerWidth < 760) return 1;
         if (window.innerWidth < 1050) return 2;
         if (window.innerWidth < 1400) return 3;
+        if (window.innerWidth < 1800) return 4;
 
-        return 4;
+        return 5;
     }
 
     function balanceCards(grid) {
