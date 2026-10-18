@@ -315,17 +315,17 @@ supported previous language.
 
 ## 🖼️ Screenshots
 
-### Custom login avatar
+<p align="center">
+  <img src="assets/screenshots/unraid-theme-01.png" alt="topa-LE Unraid Dark Theme screenshot 01" width="837">
+</p>
 
-<div align="center">
+<p align="center">
+  <img src="assets/screenshots/unraid-theme-02.png" alt="topa-LE Unraid Dark Theme screenshot 02" width="837">
+</p>
 
-<img src="img/topa-le-avatar-login.png" alt="topa-LE custom login avatar" width="160">
-
-</div>
-
-Additional screenshots of the complete login page, dashboard,
-font-selection menu and other themed WebGUI components can be
-added as the visual documentation grows.
+<p align="center">
+  <img src="assets/screenshots/unraid-theme-03.png" alt="topa-LE Unraid Dark Theme screenshot 03" width="837">
+</p>
 
 ---
 
