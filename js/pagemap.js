@@ -172,15 +172,7 @@
             "/TempSettings"
         ]
     },
-    {
-        "title": "ManagementAccess",
-        "icon": "fa fa-sitemap",
-        "links": [
-            "/ApiStatus",
-            "/Connect",
-            "/ApiKeys"
-        ]
-    },
+
     {
         "title": "Wizards",
         "icon": "fa fa-sitemap",
@@ -190,11 +182,14 @@
         ]
     },
     {
-        "title": "Users",
+        "title": "Users, Access & API",
         "icon": "fa fa-users",
         "links": [
             "/UserList",
-            "/UserAdd"
+            "/UserAdd",
+            "/ApiStatus",
+            "/Connect",
+            "/ApiKeys"
         ]
     },
     {
