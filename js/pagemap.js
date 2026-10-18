@@ -153,12 +153,14 @@
         ]
     },
     {
-        "title": "Network & Remote Access",
+        "title": "Remote Access, UPS & VMs",
         "icon": "fa fa-globe",
         "links": [
             "/FTP",
             "/OutgoingProxy",
-            "/SyslogSettings"
+            "/SyslogSettings",
+            "/UPSdetails",
+            "/VMSettings"
         ]
     },
     {
@@ -251,15 +253,7 @@
             "/UnassignedDevicesRemoteTest"
         ]
     },
-    {
-        "title": "NetworkSettings",
-        "icon": "fa fa-sitemap",
-        "links": [
-            "/Eth0",
-            "/NetworkExtra",
-            "/RoutingTable"
-        ]
-    },
+
     {
         "title": "UNRAID-OS",
         "icon": "fa fa-sitemap",
@@ -288,11 +282,14 @@
         ]
     },
     {
-        "title": "Shares",
-        "icon": "fa fa-folder-open-o",
+        "title": "Shares & Network",
+        "icon": "fa fa-sitemap",
         "links": [
             "/ShareList",
-            "/ShareSettings"
+            "/ShareSettings",
+            "/Eth0",
+            "/NetworkExtra",
+            "/RoutingTable"
         ]
     },
 
@@ -308,14 +305,7 @@
             "/EULA"
         ]
     },
-    {
-        "title": "UPSsettings",
-        "icon": "fa fa-sitemap",
-        "links": [
-            "/UPSdetails",
-            "/VMSettings"
-        ]
-    },
+
     {
         "title": "Parity",
         "icon": "fa fa-hdd-o",
