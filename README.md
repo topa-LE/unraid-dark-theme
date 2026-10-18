@@ -315,17 +315,82 @@ supported previous language.
 
 ## 🖼️ Screenshots
 
-<p align="center">
-  <img src="assets/screenshots/unraid-theme-01.png" alt="topa-LE Unraid Dark Theme screenshot 01" width="837">
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/unraid-theme-02.png" alt="topa-LE Unraid Dark Theme screenshot 02" width="837">
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/unraid-theme-03.png" alt="topa-LE Unraid Dark Theme screenshot 03" width="837">
-</p>
+<table width="100%">
+  <tbody>
+    <tr>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-01.png">
+          <img src="assets/screenshots/unraid-theme-01.png" alt="topa-LE Unraid Dark Theme screenshot 01" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-02.png">
+          <img src="assets/screenshots/unraid-theme-02.png" alt="topa-LE Unraid Dark Theme screenshot 02" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-03.png">
+          <img src="assets/screenshots/unraid-theme-03.png" alt="topa-LE Unraid Dark Theme screenshot 03" width="261">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-04.png">
+          <img src="assets/screenshots/unraid-theme-04.png" alt="topa-LE Unraid Dark Theme screenshot 04" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-05.png">
+          <img src="assets/screenshots/unraid-theme-05.png" alt="topa-LE Unraid Dark Theme screenshot 05" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-06.png">
+          <img src="assets/screenshots/unraid-theme-06.png" alt="topa-LE Unraid Dark Theme screenshot 06" width="261">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-07.png">
+          <img src="assets/screenshots/unraid-theme-07.png" alt="topa-LE Unraid Dark Theme screenshot 07" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-08.png">
+          <img src="assets/screenshots/unraid-theme-08.png" alt="topa-LE Unraid Dark Theme screenshot 08" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-09.png">
+          <img src="assets/screenshots/unraid-theme-09.png" alt="topa-LE Unraid Dark Theme screenshot 09" width="261">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-10.png">
+          <img src="assets/screenshots/unraid-theme-10.png" alt="topa-LE Unraid Dark Theme screenshot 10" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-11.png">
+          <img src="assets/screenshots/unraid-theme-11.png" alt="topa-LE Unraid Dark Theme screenshot 11" width="261">
+        </a>
+      </td>
+      <td width="27"></td>
+      <td width="261"></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
