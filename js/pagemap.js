@@ -164,7 +164,7 @@
         ]
     },
     {
-        "title": "Statistik & Sensoren",
+        "title": "Statistics & Sensors",
         "icon": "fa fa-bar-chart",
         "links": [
             "/Stats",
@@ -284,7 +284,7 @@
     },
 
     {
-        "title": "Unraid – Lizenz & Version",
+        "title": "Unraid – License & Version",
         "icon": "fa fa-sitemap",
         "links": [
             "/Update",
@@ -307,22 +307,17 @@
     },
 
     {
-        "title": "System Configuration",
+        "title": "System Configuration & Plugins",
         "icon": "fa fa-cogs",
         "links": [
             "/DateTime",
             "/DiskSettings",
-            "/Identification"
-        ]
-    },
-    {
-        "title": "Plugins",
-        "icon": "fa fa-puzzle-piece",
-        "links": [
+            "/Identification",
             "/PluginInstall",
             "/PluginsError"
         ]
     },
+
     {
         "title": "System Utilities",
         "icon": "fa fa-wrench",
