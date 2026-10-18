@@ -174,11 +174,14 @@
     },
 
     {
-        "title": "Wizards",
-        "icon": "fa fa-sitemap",
+        "title": "Wizard & WebGUI",
+        "icon": "fa fa-cogs",
         "links": [
             "/OnboardingWizard",
-            "/InternalBootWizard"
+            "/InternalBootWizard",
+            "/Language",
+            "/PHPsettings",
+            "/Vars"
         ]
     },
     {
@@ -226,15 +229,7 @@
             "/WG0"
         ]
     },
-    {
-        "title": "WebGui",
-        "icon": "fa fa-sitemap",
-        "links": [
-            "/Language",
-            "/PHPsettings",
-            "/Vars"
-        ]
-    },
+
     {
         "title": "UnassignedDevicesSettings",
         "icon": "fa fa-puzzle-piece",
