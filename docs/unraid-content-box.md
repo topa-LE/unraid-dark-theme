@@ -1,5 +1,44 @@
 # topa-LE Content-Box
 
+## Verbindlicher Designstandard – FINAL
+
+Status: Visuell freigegeben am 18.10.2026.
+
+Diese Content-Box ist die verbindliche topa-LE Designvorlage
+fuer zusammengehoerige Inhaltsbereiche.
+
+Der dokumentierte Farbverlauf, Rahmen, Radius, Schatten und
+Innenabstand sollen bei neuen Content-Boxen einheitlich
+uebernommen werden.
+
+### Schatten – finale Entscheidung
+
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16) !important;
+
+Der Schatten ist bewusst dezent und symmetrisch:
+- Horizontaler Versatz: 0 px
+- Vertikaler Versatz: 0 px
+- Unschaerfe: 8 px
+- Deckkraft: 16 %
+
+Der fruehere Schatten mit 10 px vertikalem Versatz,
+30 px Unschaerfe und 34 % Deckkraft gehoert nicht mehr
+zum Content-Box-Standard.
+
+### Zukuenftige Theme-Varianten
+
+Die Vorlage gilt fuer das aktuelle topa-LE Dark Theme.
+
+Bei kuenftigen Theme-Varianten, beispielsweise Blue Dark,
+duerfen Farben oder Kontraste bewusst angepasst werden.
+
+Solche Aenderungen muessen erneut visuell getestet und
+anschliessend zentral in dieser Dokumentation festgehalten
+werden.
+
+Keine abweichenden Content-Box-Farben oder Schattenwerte
+ohne bewusste Designentscheidung einfuehren.
+
 ## Zweck
 
 Einheitlicher Designstandard fuer zusammengehoerige Inhaltsbereiche
@@ -23,7 +62,7 @@ background: linear-gradient(
 
 border: 1px solid rgb(21 24 25 / 22%) !important;
 border-radius: 10px !important;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.16) !important;
 padding: 14px 18px !important;
 box-sizing: border-box !important;
 ```
@@ -68,6 +107,23 @@ Docker-Container hinzufuegen/bearbeiten:
 ```css
 form:has(> #configLocation):has(> #configLocationAdvanced)
 ```
+
+## API-Keys-Seite
+
+DE: Der Inhaltsbereich der API-Keys-Seite verwendet denselben
+topa-LE Content-Box-Standard.
+
+EN: The API Keys content area uses the same topa-LE
+content box standard.
+
+Verifizierte DOM-Struktur:
+- Komponente: `.unapi`
+- Ueberschrift: `h2` mit Text `API Keys`
+- Inhaltscontainer: `.grid.max-w-\\[1024px\\]`
+
+Die dauerhafte CSS-Regel muss auf die API-Keys-Komponente
+begrenzt bleiben. Der Button wird separat nach dem
+Primary-Action-Button-Standard gestaltet.
 
 ## Projektkonvention
 

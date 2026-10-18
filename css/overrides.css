@@ -5208,7 +5208,7 @@ p#logBody.logLine fieldset.CMD {
     border-radius: 10px !important;
     padding: 14px 18px !important;
     margin: 12px 0 !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16) !important;
 }
 
 /* TOPA-LE DOCKER INSTALL LOG – TYPOGRAPHY */
@@ -5235,7 +5235,7 @@ form:has(> #configLocation):has(> #configLocationAdvanced) {
     ) !important;
     border: 1px solid rgb(21 24 25 / 22%) !important;
     border-radius: 10px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16) !important;
     padding: 14px 18px !important;
     box-sizing: border-box !important;
     width: 100% !important;
@@ -6790,3 +6790,58 @@ body.dark .red {
 }
 
 /* END TOPA-LE STATUS RED */
+
+/*
+ * TOPA-LE API KEYS – FINAL CONTENT BOX AND PRIMARY ACTION
+ *
+ * DE: API-Keys-Inhalt nach dem verbindlichen Content-Box-Standard.
+ * EN: API Keys content using the documented content box standard.
+ *
+ * Reference: docs/unraid-content-box.md
+ */
+unraid-api-key-manager.unapi
+div.mx-auto.grid.w-full.max-w-\[1024px\]:has(h2) {
+    background: linear-gradient(
+        180deg,
+        rgba(46, 60, 68, 0.82) 0%,
+        rgba(34, 47, 55, 0.90) 100%
+    ) !important;
+    border: 1px solid rgb(21 24 25 / 22%) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16) !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+}
+
+/*
+ * DE: Original-Unraid-Verlauf fuer Create API Key.
+ * EN: Original Unraid gradient for Create API Key.
+ *
+ * Reference: docs/unraid-primary-action-button.md
+ */
+unraid-api-key-manager.unapi
+span[role="button"][id^="reka-menu-trigger"] {
+    background: linear-gradient(
+        to right in oklab,
+        #E22828 0%,
+        #F3BB8E 100%
+    ) !important;
+    background-origin: border-box !important;
+    background-clip: border-box !important;
+    color: #FFFFFF !important;
+    border: 0 !important;
+    border-radius: 7.5px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-weight: 600 !important;
+    transition: opacity 150ms ease-in-out !important;
+}
+
+/*
+ * DE: Hover-Verhalten entsprechend dem freigegebenen Live-Test.
+ * EN: Hover behavior matching the approved live test.
+ */
+unraid-api-key-manager.unapi
+span[role="button"][id^="reka-menu-trigger"]:hover {
+    opacity: 0.6 !important;
+}
