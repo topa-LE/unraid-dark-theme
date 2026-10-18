@@ -3179,6 +3179,7 @@ table#usb_devices_list.usb_mounts tbody#disk-table-body tr.toggle-disk:hover > t
 
 
 /* Orange and warning text - unified theme color */
+.orange,
 .orange-text,
 .warning {
     color: #dc9b66 !important;
