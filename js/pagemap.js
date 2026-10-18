@@ -142,11 +142,14 @@
         ]
     },
     {
-        "title": "CPUset",
-        "icon": "fa fa-sitemap",
+        "title": "CPU, Power & Boot",
+        "icon": "fa fa-microchip",
         "links": [
             "/CPUvms",
-            "/CPUpin"
+            "/CPUpin",
+            "/PowerModeCpu",
+            "/PowerModeButton",
+            "/BootParameters"
         ]
     },
     {
@@ -292,14 +295,7 @@
             "/ShareSettings"
         ]
     },
-    {
-        "title": "PowerMode",
-        "icon": "fa fa-sitemap",
-        "links": [
-            "/PowerModeCpu",
-            "/PowerModeButton"
-        ]
-    },
+
     {
         "title": "Unraid – Lizenz & Version",
         "icon": "fa fa-sitemap",
@@ -329,13 +325,7 @@
             "/Parity.check.problems"
         ]
     },
-    {
-        "title": "Array & Boot",
-        "icon": "fa fa-hdd-o",
-        "links": [
-            "/BootParameters"
-        ]
-    },
+
     {
         "title": "System Configuration",
         "icon": "fa fa-cogs",
