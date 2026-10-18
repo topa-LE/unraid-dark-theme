@@ -121,13 +121,6 @@
     // EN: Verified card layout from the final browser preview.
     const CARD_LAYOUT = [
     {
-        "title": "Dashboard",
-        "icon": "fa fa-dashboard",
-        "links": [
-            "/DashStats"
-        ]
-    },
-    {
         "title": "UserPreferences",
         "icon": "fa fa-sitemap",
         "links": [
@@ -167,11 +160,10 @@
         ]
     },
     {
-        "title": "Stats",
+        "title": "Statistik & Sensoren",
         "icon": "fa fa-bar-chart",
         "links": [
-            "/SystemDisks",
-            "/SystemStats",
+            "/Stats",
             "/StatSettings",
             "/TempSettings"
         ]
@@ -198,8 +190,7 @@
         "icon": "fa fa-users",
         "links": [
             "/UserList",
-            "/UserAdd",
-            "/UserEdit"
+            "/UserAdd"
         ]
     },
     {
@@ -242,7 +233,6 @@
         "links": [
             "/Language",
             "/PHPsettings",
-            "/PageMap",
             "/Vars"
         ]
     },
@@ -345,11 +335,6 @@
         "title": "Array & Boot",
         "icon": "fa fa-hdd-o",
         "links": [
-            "/ArrayDevices",
-            "/CacheDevices",
-            "/BootDevice",
-            "/UnassignedDevices",
-            "/ArrayOperation",
             "/BootParameters"
         ]
     },
@@ -371,18 +356,13 @@
         ]
     },
     {
-        "title": "Utilities",
-        "icon": "fa fa-sitemap",
+        "title": "System Utilities",
+        "icon": "fa fa-wrench",
         "links": [
             "/AutoUpdateApps",
             "/AutoUpdate",
             "/CleanUpAppdata",
-            "/FixProblems",
-            "/ca_settings",
-            "/corefreq",
-            "/corefreqMain",
-            "/corefreqModules",
-            "/snmp"
+            "/FixProblems"
         ]
     }
 ];
@@ -395,6 +375,16 @@
 
         for (const group of sourceGroups) {
             originalHeadings.set(group.href, group);
+
+            // DE: Originale Menueueberschriften auch als Seiten erfassen.
+            // EN: Include original navigation headings as page candidates.
+            if (!available.has(group.href)) {
+                available.set(group.href, {
+                    title: group.title,
+                    href: group.href,
+                    depth: 1
+                });
+            }
 
             for (const link of group.links) {
                 if (!available.has(link.href)) {
@@ -459,16 +449,11 @@
         const card = document.createElement('section');
         card.className = 'topa-pagemap-card';
 
-        // DE: Nur originale Kartenueberschriften sind Links.
-        // EN: Only original card headings are clickable links.
-        const heading = group.href
-            ? createLink(group, 'topa-pagemap-card-title')
-            : document.createElement('div');
-
-        if (!group.href) {
-            heading.className = 'topa-pagemap-card-title';
-            heading.textContent = group.title;
-        }
+        // DE: Kartenueberschriften sind niemals anklickbar.
+        // EN: Card headings are never clickable.
+        const heading = document.createElement('div');
+        heading.className = 'topa-pagemap-card-title';
+        heading.textContent = group.title;
 
         const icon = document.createElement('i');
         icon.className = group.icon || 'fa ' + iconFor(group.title);
