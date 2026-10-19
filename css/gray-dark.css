@@ -1,0 +1,18 @@
+/*
+ * topa-LE Unraid Dark Theme
+ * Gray Dark – default color variant
+ *
+ * Contains the original Gray Dark color values.
+ * Shared layout and component rules remain in overrides.css.
+ */
+
+html[data-topa-theme="gray-dark"] {
+    --main-bg-color: radial-gradient(
+        ellipse at center,
+        rgba(87, 108, 117, 1) 0%,
+        rgba(37, 50, 55, 1) 100.2%
+    ) center center / cover no-repeat fixed;
+
+    --topa-dashboard-bg: #243136;
+    --topa-dashboard-hover-bg: #2b3a3f;
+}

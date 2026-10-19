@@ -455,8 +455,7 @@ div#tile2 {
 
 div#tile2 > table#db_box2.dashboard {
 
-    background:
-        #243136 !important;
+    background: var(--topa-dashboard-bg, #243136) !important;
 
     border-radius:
         6px !important;
@@ -473,8 +472,7 @@ div#tile2 > table#db_box2.dashboard {
 div#tile2 table#db_box2.dashboard tbody,
 div#tile2 table#db_box2.dashboard tbody td {
 
-    background:
-        #243136 !important;
+    background: var(--topa-dashboard-bg, #243136) !important;
 }
 
 /* Hover */
@@ -482,7 +480,7 @@ div#tile2 table#db_box2.dashboard tbody td {
 div#tile2 > table#db_box2.dashboard:hover {
 
     background:
-        #2b3a3f !important;
+        var(--topa-dashboard-hover-bg, #2b3a3f) !important;
 
     box-shadow:
         0 8px 22px rgba(0,0,0,0.34) !important;
@@ -516,8 +514,7 @@ div#tile1 > table.dashboard,
 div#tile2 > table.dashboard,
 div#tile3 > table.dashboard {
 
-    background:
-        #243136 !important;
+    background: var(--topa-dashboard-bg, #243136) !important;
 
     border:
         1px solid rgba(22,28,32,0.95) !important;
@@ -546,8 +543,7 @@ div#tile2 table.dashboard tbody td,
 div#tile3 table.dashboard tbody,
 div#tile3 table.dashboard tbody td {
 
-    background:
-        #243136 !important;
+    background: var(--topa-dashboard-bg, #243136) !important;
 }
 
 /* ----------------------------------------
@@ -559,7 +555,7 @@ div#tile2 > table.dashboard:hover,
 div#tile3 > table.dashboard:hover {
 
     background:
-        #2b3a3f !important;
+        var(--topa-dashboard-hover-bg, #2b3a3f) !important;
 
     border:
         1px solid rgba(30,36,40,1) !important;

@@ -32,23 +32,8 @@ html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(even
     background-color: #303f4f !important;
 }
 
-/* Blue Dark dashboard container backgrounds */
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"],
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] table,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] thead,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] tbody,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] tfoot,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] tr,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] td,
-html[data-topa-theme="blue-dark"] body.dark
-table.dashboard[id^="db_box"] th {
-    background-color: #25313e !important;
-    background-image: none !important;
+/* Blue Dark dashboard background */
+html[data-topa-theme="blue-dark"] {
+    --topa-dashboard-bg: #25313e;
+    --topa-dashboard-hover-bg: #25313e;
 }
