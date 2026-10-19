@@ -17,3 +17,12 @@ html[data-topa-theme="black-dark"] {
     --topa-dashboard-bg: #181e24;
     --topa-dashboard-hover-bg: #0a0d0f;
 }
+
+/* Black Dark – table zebra stripes */
+html[data-topa-theme="black-dark"] body.dark table.unraid tbody tr:nth-child(odd) {
+    background-color: #13181a !important;
+}
+
+html[data-topa-theme="black-dark"] body.dark table.unraid tbody tr:nth-child(even) {
+    background-color: #202a30 !important;
+}
