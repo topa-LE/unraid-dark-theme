@@ -6,20 +6,22 @@
  * Gray Dark remains unchanged.
  */
 
-html[data-topa-theme="blue-dark"] body.dark {
-    background: radial-gradient(
+/*
+ * Blue Dark uses the same fixed background structure as Gray Dark.
+ * The custom property is scoped to Blue Dark only.
+ */
+html[data-topa-theme="blue-dark"] {
+    --main-bg-color: radial-gradient(
+        ellipse at center,
         #5e7287 0%,
         #354656 48%,
-        #0a0d0f 100%
-    ) !important;
+        #0a0d0f 100.2%
+    ) center center / cover no-repeat fixed;
 }
 
+html[data-topa-theme="blue-dark"] body.dark,
 html[data-topa-theme="blue-dark"] body.dark #footer {
-    background: radial-gradient(
-        #5e7287 0%,
-        #354656 48%,
-        #0a0d0f 100%
-    ) !important;
+    background: var(--main-bg-color) !important;
 }
 
 html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(odd) {
