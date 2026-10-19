@@ -11,10 +11,11 @@
 [![Bash](https://img.shields.io/badge/Bash-Installer-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)](scripts/)
 [![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher) [![English](https://img.shields.io/badge/🇬🇧-English-3274A1?style=for-the-badge)](README.md) ![Deutsch](https://img.shields.io/badge/🇩🇪-Deutsch-C65A16?style=for-the-badge)
 
-**Dark WebGUI · Custom Login · PageMap · Font Switcher · Persistent Installation**
+**Dark WebGUI · Custom Login · PageMap · Theme Switcher · Font Switcher · Persistent Installation**
 
 [Features](#-features) •
 [PageMap](#-pagemap) •
+[Theme Switcher](#-theme-switcher--three-dark-themes) •
 [Font Switcher](#-font-switcher) •
 [Installation](#-installation) •
 [Updates](#-updating) •
@@ -31,7 +32,8 @@
     <tr><th width="225">Component</th><th width="612">Description</th></tr>
   </thead>
   <tbody>
-    <tr><td width="225">🎨 Dark WebGUI</td><td width="612">Dark grey and blue styling with extensive CSS customization</td></tr>
+    <tr><td width="225">🎨 Dark WebGUI</td><td width="612">Three dark appearances with extensive CSS customization</td></tr>
+  <tr><td width="225">🎨 Theme Switcher</td><td width="612">Switch between Gray Dark, Blue Dark and Black Dark using the palette icon</td></tr>
     <tr><td width="225">🔐 Custom Login</td><td width="612">Themed login screen, custom avatar and repository link</td></tr>
     <tr><td width="225">🗺️ PageMap</td><td width="612">Searchable Unraid page directory with grouped cards, search and a Font Awesome navigation shortcut</td></tr>
     <tr><td width="225">🔤 Font Switcher</td><td width="612">Ten selectable font options, including the Unraid standard</td></tr>
@@ -91,6 +93,44 @@ PageMap is included in the regular theme installation and update
 process. No separate installation command is required.
 
 The dashboard and navigation shortcut were tested on Unraid 7.3.2.
+
+---
+
+## 🎨 Theme Switcher – Three Dark Themes
+
+The **Theme Switcher** lets you choose between three dark appearances
+directly in the authenticated Unraid WebGUI.
+
+Click the **color palette icon** in the upper-right navigation area
+to open the theme menu and select your preferred design.
+
+### Available themes
+
+| Theme | Description |
+| --- | --- |
+| **Gray Dark** | The established dark gray design with subtle blue-gray accents. |
+| **Blue Dark** | A blue-toned dark design with coordinated backgrounds and gradients. |
+| **Black Dark** | A deeper, near-black design with restrained contrast. |
+
+The Theme Switcher is integrated into the WebGUI and does not require
+manual CSS editing.
+
+### Implementation files
+
+| File | Purpose |
+| --- | --- |
+| `js/theme-switcher.js` | Theme selection and switching behavior |
+| `css/theme-switcher.css` | Theme-switcher interface styling |
+| `css/gray-dark.css` | Gray Dark color definitions |
+| `css/blue-dark.css` | Blue Dark color definitions |
+| `css/black-dark.css` | Black Dark color definitions |
+| `css/overrides.css` | Shared WebGUI component styling |
+
+The three themes share common layout rules while theme-specific
+colors and backgrounds are maintained in separate CSS files.
+
+The Theme Switcher is included in the regular installation and
+update process. No separate installation is required.
 
 ---
 
@@ -551,12 +591,16 @@ The following tree shows the tracked project structure. Bundled font assets are 
 unraid-dark-theme/
 ├── css/
 │   ├── base.css
+│   ├── black-dark.css
+│   ├── blue-dark.css
 │   ├── boot.css
 │   ├── font-switcher.css
 │   ├── fonts.css
+│   ├── gray-dark.css
 │   ├── loader.css
 │   ├── overrides.css
 │   ├── pagemap.css
+│   ├── theme-switcher.css
 │   └── theme.css
 ├── docs/
 │   ├── unraid-content-box.md
@@ -571,7 +615,8 @@ unraid-dark-theme/
 │   ├── font-switcher.js
 │   ├── language-switch-fix.js
 │   ├── pagemap.js
-│   └── system-stats.js
+│   ├── system-stats.js
+│   └── theme-switcher.js
 ├── login/
 │   └── login-theme.css
 ├── scripts/
