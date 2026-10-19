@@ -25,11 +25,11 @@ html[data-topa-theme="blue-dark"] body.dark #footer {
 }
 
 html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(odd) {
-    background-color: #263340 !important;
+    background: linear-gradient(90deg, #29313b 0%, #3e4954 100%) !important;
 }
 
 html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(even) {
-    background-color: #303f4f !important;
+    background: linear-gradient(90deg, #202830 0%, #29313b 100%) !important;
 }
 
 /* Blue Dark dashboard background */
