@@ -35,6 +35,7 @@ BOOT_CSS_HREF="/boot/config/custom-css/topa-LE/css/boot.css"
 JS_HREF="/boot/config/custom-css/topa-LE/js/array-operation.js"
 SYSTEM_STATS_JS_HREF="/boot/config/custom-css/topa-LE/js/system-stats.js"
 FONT_SWITCHER_JS_HREF="/boot/config/custom-css/topa-LE/js/font-switcher.js"
+THEME_SWITCHER_JS_HREF="/boot/config/custom-css/topa-LE/js/theme-switcher.js"
 LANGUAGE_FIX_JS_HREF="/boot/config/custom-css/topa-LE/js/language-switch-fix.js"
 PAGEMAP_JS_HREF="/boot/config/custom-css/topa-LE/js/pagemap.js"
 
@@ -46,6 +47,7 @@ for FILE in \
   "$ROOT/js/array-operation.js" \
   "$ROOT/js/system-stats.js" \
   "$ROOT/js/font-switcher.js" \
+  "$ROOT/js/theme-switcher.js" \
   "$ROOT/js/language-switch-fix.js" \
   "$ROOT/js/pagemap.js" \
   "$ROOT/login/login-theme.css" \
@@ -248,6 +250,17 @@ if ! grep -Fq "$FONT_SWITCHER_JS_HREF" "$LAYOUT"; then
   echo "Font-Switcher-Hook gesetzt."
 else
   echo "Font-Switcher-Hook bereits vorhanden."
+fi
+
+
+# topa-LE Theme Switcher – loaded after the Font Switcher.
+if ! grep -Fq "$THEME_SWITCHER_JS_HREF" "$LAYOUT"; then
+  sed -i '/<\/head>/i\
+<!-- topa-LE Theme Switcher -->\
+<script src="/boot/config/custom-css/topa-LE/js/theme-switcher.js"></script>' "$LAYOUT"
+  echo "Theme-Switcher-Hook gesetzt."
+else
+  echo "Theme-Switcher-Hook bereits vorhanden."
 fi
 
 

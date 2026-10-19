@@ -1,0 +1,31 @@
+/*
+ * topa-LE Unraid Dark Theme
+ * Blue Dark – optional color variant
+ *
+ * Active only when the theme switcher selects Blue Dark.
+ * Gray Dark remains unchanged.
+ */
+
+html[data-topa-theme="blue-dark"] body.dark {
+    background: radial-gradient(
+        #5e7287 0%,
+        #354656 48%,
+        #0a0d0f 100%
+    ) !important;
+}
+
+html[data-topa-theme="blue-dark"] body.dark #footer {
+    background: radial-gradient(
+        #5e7287 0%,
+        #354656 48%,
+        #0a0d0f 100%
+    ) !important;
+}
+
+html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(odd) {
+    background-color: #263340 !important;
+}
+
+html[data-topa-theme="blue-dark"] body.dark table.unraid tbody tr:nth-child(even) {
+    background-color: #303f4f !important;
+}

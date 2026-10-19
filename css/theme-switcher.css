@@ -1,0 +1,70 @@
+/*
+ * topa-LE Unraid Dark Theme
+ * Theme Switcher – Gray Dark / Blue Dark
+ *
+ * Independent of the existing font switcher.
+ * No global theme or layout overrides.
+ */
+
+#topa-theme-menu {
+    position: fixed;
+    z-index: 10000;
+    box-sizing: border-box;
+    width: 140px;
+    padding: 4px;
+    background: #192125 !important;
+    color: #d6dde3 !important;
+    border: 1px solid #2b3439 !important;
+    border-radius: 8px;
+    box-shadow: none !important;
+    text-align: left;
+}
+
+#topa-theme-menu[hidden] {
+    display: none !important;
+}
+
+#topa-theme-menu .topa-theme-menu-title {
+    padding: 10px 12px;
+    color: #677a8a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#topa-theme-menu .topa-theme-menu-divider {
+    height: 1px;
+    margin: 4px 0;
+    background: #2b3439;
+}
+
+#topa-theme-menu .topa-theme-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 34px;
+    padding: 7px 12px;
+    background: transparent !important;
+    color: #d6dde3 !important;
+    border: 0 !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#topa-theme-menu .topa-theme-menu-item:hover,
+#topa-theme-menu .topa-theme-menu-item:focus-visible {
+    background: #394a52 !important;
+    color: #dc9b66 !important;
+    box-shadow: none !important;
+}
+
+#topa-theme-menu .topa-theme-menu-item[aria-checked="true"]::after {
+    content: "\2713";
+    color: #dc9b66;
+    font-size: 13px;
+}
