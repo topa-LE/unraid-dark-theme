@@ -11,6 +11,12 @@
  * The custom property is scoped to Blue Dark only.
  */
 html[data-topa-theme="blue-dark"] {
+    --topa-content-box-bg: linear-gradient(
+        180deg,
+        #29313b 0%,
+        #202830 100%
+    );
+
     --main-bg-color: radial-gradient(
         ellipse at center,
         #5e7287 0%,

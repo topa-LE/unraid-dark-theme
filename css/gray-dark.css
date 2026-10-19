@@ -7,6 +7,12 @@
  */
 
 html[data-topa-theme="gray-dark"] {
+    --topa-content-box-bg: linear-gradient(
+        180deg,
+        rgba(46,60,68,0.82) 0%,
+        rgba(34,47,55,0.90) 100%
+    );
+
     --main-bg-color: radial-gradient(
         ellipse at center,
         rgba(87, 108, 117, 1) 0%,

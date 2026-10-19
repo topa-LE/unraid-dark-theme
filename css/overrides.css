@@ -1073,14 +1073,10 @@ form[name="ident_settings"] select {
    ======================================== */
 
 section#tab1-panel.tab-content.content {
-    max-width: 1180px !important;
+    max-width: 1200px !important;
     margin: 34px auto 60px auto !important;
     padding: 38px 58px !important;
-    background: linear-gradient(
-        180deg,
-        rgba(46,60,68,0.82) 0%,
-        rgba(34,47,55,0.90) 100%
-    ) !important;
+    background: var(--topa-content-box-bg) !important;
     border: 1px solid rgb(21 24 25 / 22%) !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.34) !important;
@@ -1243,14 +1239,6 @@ tbody#route_list tr:hover td {
     box-shadow: none !important;
 }
 
-
-/* ========================================
-   STEP 72 – User Panel Max Width
-   ======================================== */
-
-section#tab1-panel.tab-content.content {
-    max-width: 1200px !important;
-}
 
 
 /* ========================================
