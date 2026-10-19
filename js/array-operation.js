@@ -196,7 +196,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         search.dataset.topaSearchReady = '1';
-        search.setAttribute('placeholder', 'Suchbegriff hier eingeben ...');
+
+        let locale = document.documentElement.lang || '';
+
+        if (!locale) {
+            try {
+                if (window.jQuery && jQuery.cookie) {
+                    locale = jQuery.cookie('locale') || '';
+                }
+            } catch (error) {
+                // Keep the German default if no locale is available.
+            }
+        }
+
+        const placeholder = /^en(?:[_-]|$)/i.test(locale)
+            ? 'Enter search term ...'
+            : 'Suchbegriff hier eingeben ...';
+
+        search.setAttribute('placeholder', placeholder);
 
         search.addEventListener('pointerdown', function () {
             search.classList.add('topa-search-user-active');
