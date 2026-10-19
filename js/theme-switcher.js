@@ -32,6 +32,26 @@
         </svg>
     `;
 
+    function getThemeLabel() {
+        let locale = "";
+
+        try {
+            if (window.jQuery && jQuery.cookie) {
+                locale = jQuery.cookie("locale") || "";
+            }
+        } catch (error) {
+            // Fall back to the document language.
+        }
+
+        if (!locale) {
+            locale = document.documentElement.lang || "";
+        }
+
+        return /^en(?:[_-]|$)/i.test(locale)
+            ? "Select color theme"
+            : "Farbschema auswählen";
+    }
+
     function getChoice() {
         try {
             const saved = localStorage.getItem(STORAGE_KEY);
@@ -112,10 +132,10 @@
 
         const button = document.createElement("button");
         button.type = "button";
-        button.title = "Farbschema auswählen";
+        button.title = getThemeLabel();
         button.setAttribute(
             "aria-label",
-            "Farbschema auswählen"
+            getThemeLabel()
         );
         button.setAttribute("aria-haspopup", "true");
         button.setAttribute("aria-expanded", "false");
@@ -149,14 +169,14 @@
         menu.hidden = true;
         menu.setAttribute(
             "aria-label",
-            "Farbschema auswählen"
+            getThemeLabel()
         );
 
         button.setAttribute("aria-controls", menu.id);
 
         const title = document.createElement("div");
         title.className = "topa-theme-menu-title";
-        title.textContent = "Farbschema auswählen";
+        title.textContent = getThemeLabel();
         menu.appendChild(title);
 
         const divider = document.createElement("div");
