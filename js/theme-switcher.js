@@ -1,6 +1,6 @@
 /*
  * topa-LE Unraid Dark Theme
- * Theme Switcher – Gray Dark / Blue Dark
+ * Theme Switcher – Gray Dark / Blue Dark / Black Dark
  *
  * Independent of the font switcher.
  * Only controls the data-topa-theme attribute.
@@ -14,7 +14,8 @@
 
     const themes = [
         { label: "Gray Dark", value: "gray-dark" },
-        { label: "Blue Dark", value: "blue-dark" }
+        { label: "Blue Dark", value: "blue-dark" },
+        { label: "Black Dark", value: "black-dark" }
     ];
 
     const paletteSVG = `
@@ -44,9 +45,13 @@
     }
 
     function applyChoice(choice) {
+        const validChoice = themes.some(
+            (theme) => theme.value === choice
+        );
+
         document.documentElement.setAttribute(
             "data-topa-theme",
-            choice === "blue-dark" ? "blue-dark" : "gray-dark"
+            validChoice ? choice : "gray-dark"
         );
     }
 

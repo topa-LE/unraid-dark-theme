@@ -1,0 +1,19 @@
+/*
+ * topa-LE Unraid Dark Theme
+ * Black Dark – optional color variant
+ *
+ * Dark anthracite background with subtle blue-gray tones.
+ * Shared component and layout rules remain in overrides.css.
+ */
+
+html[data-topa-theme="black-dark"] {
+    --main-bg-color: radial-gradient(
+        ellipse at center,
+        #1c1e21 0%,
+        #28323a 48%,
+        #0a0d0f 100.2%
+    ) center center / cover no-repeat fixed;
+
+    --topa-dashboard-bg: #181e24;
+    --topa-dashboard-hover-bg: #0a0d0f;
+}
