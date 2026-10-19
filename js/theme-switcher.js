@@ -130,6 +130,15 @@
 
         button.style.cursor = "pointer";
 
+        // Match the approved live alignment with the Aa switcher.
+        // The palette container is 40px high; Aa is 41px high.
+        // A 0.5px vertical offset aligns both button centers.
+        root.style.setProperty(
+            "transform",
+            "translateY(0.5px)",
+            "important"
+        );
+
         const menu = document.createElement("div");
         menu.id = "topa-theme-menu";
         menu.hidden = true;
