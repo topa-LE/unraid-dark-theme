@@ -33,18 +33,16 @@
     `;
 
     function getThemeLabel() {
-        let locale = "";
-
-        try {
-            if (window.jQuery && jQuery.cookie) {
-                locale = jQuery.cookie("locale") || "";
-            }
-        } catch (error) {
-            // Fall back to the document language.
-        }
+        let locale = document.documentElement.lang || "";
 
         if (!locale) {
-            locale = document.documentElement.lang || "";
+            try {
+                if (window.jQuery && jQuery.cookie) {
+                    locale = jQuery.cookie("locale") || "";
+                }
+            } catch (error) {
+                // Keep the German default if no locale is available.
+            }
         }
 
         return /^en(?:[_-]|$)/i.test(locale)
