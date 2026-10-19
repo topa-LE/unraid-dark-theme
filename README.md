@@ -387,7 +387,11 @@ supported previous language.
         </a>
       </td>
       <td width="27"></td>
-      <td width="261"></td>
+      <td width="261" align="center" valign="middle">
+        <a href="assets/screenshots/unraid-theme-12.png">
+          <img src="assets/screenshots/unraid-theme-12.png" alt="topa-LE Unraid Dark Theme screenshot 12" width="261">
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>
