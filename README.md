@@ -9,7 +9,8 @@
 [![CSS3](https://img.shields.io/badge/CSS3-Dark%20Styling-1572B6?style=for-the-badge&logo=css&logoColor=white)](css/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](js/)
 [![Bash](https://img.shields.io/badge/Bash-Installer-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)](scripts/)
-[![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher) [![English](https://img.shields.io/badge/🇬🇧-English-3274A1?style=for-the-badge)](README.md) ![Deutsch](https://img.shields.io/badge/🇩🇪-Deutsch-C65A16?style=for-the-badge)
+[![Fonts](https://img.shields.io/badge/Fonts-10%20Choices-8957E5?style=for-the-badge&logo=googlefonts&logoColor=white)](#-font-switcher)
+[![Theme Switcher](https://img.shields.io/badge/Theme%20Switcher-218C91?style=for-the-badge&logo=palette&logoColor=white)](#-theme-switcher--three-dark-themes) [![English](https://img.shields.io/badge/🇬🇧-English-3274A1?style=for-the-badge)](README.md) ![Deutsch](https://img.shields.io/badge/🇩🇪-Deutsch-C65A16?style=for-the-badge)
 
 **Dark WebGUI · Custom Login · PageMap · Theme Switcher · Font Switcher · Persistent Installation**
 
@@ -106,25 +107,35 @@ to open the theme menu and select your preferred design.
 
 ### Available themes
 
-| Theme | Description |
-| --- | --- |
-| **Gray Dark** | The established dark gray design with subtle blue-gray accents. |
-| **Blue Dark** | A blue-toned dark design with coordinated backgrounds and gradients. |
-| **Black Dark** | A deeper, near-black design with restrained contrast. |
+<table width="100%">
+  <thead>
+    <tr><th width="261">Theme</th><th width="576">Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td width="261"><strong>Gray Dark</strong></td><td width="576">The established dark gray design with subtle blue-gray accents.</td></tr>
+    <tr><td width="261"><strong>Blue Dark</strong></td><td width="576">A blue-toned dark design with coordinated backgrounds and gradients.</td></tr>
+    <tr><td width="261"><strong>Black Dark</strong></td><td width="576">A deeper, near-black design with restrained contrast.</td></tr>
+  </tbody>
+</table>
 
 The Theme Switcher is integrated into the WebGUI and does not require
 manual CSS editing.
 
 ### Implementation files
 
-| File | Purpose |
-| --- | --- |
-| `js/theme-switcher.js` | Theme selection and switching behavior |
-| `css/theme-switcher.css` | Theme-switcher interface styling |
-| `css/gray-dark.css` | Gray Dark color definitions |
-| `css/blue-dark.css` | Blue Dark color definitions |
-| `css/black-dark.css` | Black Dark color definitions |
-| `css/overrides.css` | Shared WebGUI component styling |
+<table width="100%">
+  <thead>
+    <tr><th width="261">File</th><th width="576">Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td width="261"><a href="js/theme-switcher.js"><code>js/theme-switcher.js</code></a></td><td width="576">Theme selection and switching behavior</td></tr>
+    <tr><td width="261"><a href="css/theme-switcher.css"><code>css/theme-switcher.css</code></a></td><td width="576">Theme-switcher interface styling</td></tr>
+    <tr><td width="261"><a href="css/gray-dark.css"><code>css/gray-dark.css</code></a></td><td width="576">Gray Dark color definitions</td></tr>
+    <tr><td width="261"><a href="css/blue-dark.css"><code>css/blue-dark.css</code></a></td><td width="576">Blue Dark color definitions</td></tr>
+    <tr><td width="261"><a href="css/black-dark.css"><code>css/black-dark.css</code></a></td><td width="576">Black Dark color definitions</td></tr>
+    <tr><td width="261"><a href="css/overrides.css"><code>css/overrides.css</code></a></td><td width="576">Shared WebGUI component styling</td></tr>
+  </tbody>
+</table>
 
 The three themes share common layout rules while theme-specific
 colors and backgrounds are maintained in separate CSS files.
