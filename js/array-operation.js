@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return true;
         }
 
-        const logo = link.querySelector('svg');
+        const logo = link.querySelector(':scope > img, :scope > svg:not(.topa-storage-icon)');
 
         if (!logo) {
             return false;

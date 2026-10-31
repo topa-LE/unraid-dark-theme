@@ -4009,7 +4009,7 @@ a[href="https://unraid.net"]
 /* Original Unraid logo */
 unraid-header-os-version
 a[href="https://unraid.net"]
-> svg:not(.topa-storage-icon) {
+> :is(svg:not(.topa-storage-icon), img) {
     width: 190px !important;
     max-height: none !important;
     height: auto !important;
